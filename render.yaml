@@ -1,0 +1,42 @@
+# Render.com deployment — https://render.com/docs/blueprint-spec
+# Deploy backend (Python) and frontend (static) from one repo.
+
+services:
+  # ── Backend API ─────────────────────────────────────────────────────────────
+  - type: web
+    name: alphafeed-api
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ALLOWED_ORIGINS
+        # Replace with your Vercel frontend URL after first deploy, e.g.:
+        # value: https://alphafeed.vercel.app
+        value: "*"
+    healthCheckPath: /api/health
+
+  # ── Frontend static site ────────────────────────────────────────────────────
+  - type: web
+    name: alphafeed-ui
+    runtime: static
+    region: oregon
+    plan: free
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_BASE
+        # Set to the alphafeed-api URL from above after first deploy
+        value: ""
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
