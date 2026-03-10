@@ -30,6 +30,9 @@ from pathlib import Path
 import httpx
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
@@ -60,7 +63,10 @@ _cache: dict[str, tuple[float, object]] = {}
 
 # ── App ───────────────────────────────────────────────────────────────────────
 
+limiter = Limiter(key_func=get_remote_address, default_limits=["30/minute"])
 app = FastAPI(title="Alpha Feed API", version="1.0.0", docs_url="/docs", redoc_url=None)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
@@ -183,7 +189,8 @@ def _read_report(name: str) -> dict:
 
 
 @app.get("/api/health")
-def health():
+@limiter.limit("60/minute")
+def health(request: Request):
     return {
         "status": "ok",
         "ts": datetime.now(timezone.utc).isoformat(),
@@ -192,7 +199,8 @@ def health():
 
 
 @app.get("/api/polymarket")
-def polymarket():
+@limiter.limit("30/minute")
+def polymarket(request: Request):
     markets = _cached("polymarket", CACHE_TTL["polymarket"], _fetch_polymarket)
     return {
         "markets": markets,
@@ -202,7 +210,8 @@ def polymarket():
 
 
 @app.get("/api/overview")
-def overview():
+@limiter.limit("30/minute")
+def overview(request: Request):
     def _build():
         markets = _fetch_polymarket()
         high_edge = [m for m in markets if m["edgeScore"] > 0.3]
@@ -219,10 +228,12 @@ def overview():
 
 
 @app.get("/api/kelly-signals")
-def kelly_signals():
+@limiter.limit("30/minute")
+def kelly_signals(request: Request):
     return _read_report("polytraders")
 
 
 @app.get("/api/smart-money")
-def smart_money():
+@limiter.limit("30/minute")
+def smart_money(request: Request):
     return _read_report("hedgepoly")
