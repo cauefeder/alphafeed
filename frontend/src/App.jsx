@@ -129,10 +129,10 @@ export default function AlphaFeed() {
         <div style={{ maxWidth: 1140, margin: "0 auto", padding: "14px 20px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <div className="glow-pulse" style={{
-              width: 36, height: 36, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
-              background: "linear-gradient(135deg,#34d399,#10b981)", boxShadow: "0 0 18px rgba(52,211,153,.22)",
+              width: 36, height: 36, borderRadius: 12, flexShrink: 0, overflow: "hidden",
+              boxShadow: "0 0 18px rgba(52,211,153,.22)",
             }}>
-              <span style={{ fontSize: 11, fontWeight: 900, letterSpacing: "-.02em", color: "#052e16" }}>AF</span>
+              <img src="/logo.png" alt="Alpha Feed" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
             <div>
               <h1 style={{ margin: 0, fontSize: 15, fontWeight: 800, letterSpacing: "-.02em", color: T.text }}>
