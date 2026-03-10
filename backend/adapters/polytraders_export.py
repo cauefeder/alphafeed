@@ -25,13 +25,23 @@ from pathlib import Path
 # ── Resolve paths ─────────────────────────────────────────────────────────────
 
 _HERE = Path(__file__).resolve()
-ALPHA_ROOT = _HERE.parent.parent.parent           # AlphaFeed/
-PROJECTS_ROOT = ALPHA_ROOT.parent                  # Projetos/
-POLYTRADERS_DIR = PROJECTS_ROOT / "PolyTraders"
+ALPHA_ROOT  = _HERE.parent.parent.parent           # AlphaFeed/
 REPORTS_DIR = ALPHA_ROOT / "reports"
 
+# Allow explicit override via env var (required when cloned standalone)
+_pt_env = os.environ.get("POLYTRADERS_DIR", "")
+if _pt_env:
+    POLYTRADERS_DIR = Path(_pt_env).expanduser().resolve()
+else:
+    # Default: sibling directory (monorepo layout)
+    POLYTRADERS_DIR = ALPHA_ROOT.parent / "PolyTraders"
+
 if not POLYTRADERS_DIR.exists():
-    sys.exit(f"[ERROR] PolyTraders directory not found: {POLYTRADERS_DIR}")
+    sys.exit(
+        f"[ERROR] PolyTraders directory not found: {POLYTRADERS_DIR}\n"
+        f"        Set the POLYTRADERS_DIR environment variable to the correct path.\n"
+        f"        Example: POLYTRADERS_DIR=/home/user/projects/PolyTraders"
+    )
 
 sys.path.insert(0, str(POLYTRADERS_DIR))
 

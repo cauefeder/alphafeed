@@ -12,6 +12,7 @@ Usage
 from __future__ import annotations
 
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -19,13 +20,23 @@ from pathlib import Path
 # ── Resolve paths ─────────────────────────────────────────────────────────────
 
 _HERE = Path(__file__).resolve()
-ALPHA_ROOT = _HERE.parent.parent.parent
-PROJECTS_ROOT = ALPHA_ROOT.parent
-HEDGEPOLY_DIR = PROJECTS_ROOT / "HedgePoly" / "prediction-market-analysis"
+ALPHA_ROOT  = _HERE.parent.parent.parent
 REPORTS_DIR = ALPHA_ROOT / "reports"
 
+# Allow explicit override via env var (required when cloned standalone)
+_hp_env = os.environ.get("HEDGEPOLY_DIR", "")
+if _hp_env:
+    HEDGEPOLY_DIR = Path(_hp_env).expanduser().resolve()
+else:
+    # Default: sibling directory (monorepo layout)
+    HEDGEPOLY_DIR = ALPHA_ROOT.parent / "HedgePoly" / "prediction-market-analysis"
+
 if not HEDGEPOLY_DIR.exists():
-    sys.exit(f"[ERROR] HedgePoly directory not found: {HEDGEPOLY_DIR}")
+    sys.exit(
+        f"[ERROR] HedgePoly directory not found: {HEDGEPOLY_DIR}\n"
+        f"        Set the HEDGEPOLY_DIR environment variable to the correct path.\n"
+        f"        Example: HEDGEPOLY_DIR=/home/user/projects/HedgePoly/prediction-market-analysis"
+    )
 
 sys.path.insert(0, str(HEDGEPOLY_DIR))
 

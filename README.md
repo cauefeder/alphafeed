@@ -25,56 +25,88 @@ All external APIs are **free and require no authentication**.
 
 ```
 AlphaFeed/
-├── backend/                # FastAPI server (Python)
-│   ├── server.py           # CORS proxy + report reader
-│   ├── requirements.txt
+├── backend/                    # FastAPI server (Python 3.12)
+│   ├── server.py               # CORS proxy + security headers + report reader
+│   ├── requirements.txt        # Pinned runtime deps
+│   ├── requirements-dev.txt    # pytest + httpx
 │   └── adapters/
-│       ├── polytraders_export.py   # Runs PolyTraders pipeline → reports/polytraders.json
-│       └── hedgepoly_export.py     # Runs HedgePoly pipeline  → reports/hedgepoly.json
-├── frontend/               # Vite + React dashboard
-│   ├── src/App.jsx         # Main component (all tabs)
-│   └── src/main.jsx
-├── reports/                # JSON outputs from adapters (gitignored)
-└── tests/                  # pytest suite
+│       ├── polytraders_export.py   # PolyTraders pipeline → reports/polytraders.json
+│       └── hedgepoly_export.py     # HedgePoly pipeline  → reports/hedgepoly.json
+├── frontend/                   # Vite + React (Node 18+)
+│   ├── src/
+│   │   ├── App.jsx             # Root router (~150 lines)
+│   │   ├── tokens.js           # Design system tokens
+│   │   ├── styles.js           # Global CSS string
+│   │   ├── math.js             # Pure vol / Kelly math
+│   │   ├── api.js              # Data fetchers + seed data
+│   │   ├── components/         # Shared UI primitives
+│   │   └── tabs/               # One file per tab
+│   └── index.html
+├── reports/                    # JSON outputs from adapters (gitignored)
+├── tests/                      # pytest suite
+├── .github/workflows/ci.yml    # CI: pytest + npm build
+├── render.yaml                 # Render.com deploy config
+└── vercel.json                 # Vercel deploy config
 ```
 
-The backend never rewrites the existing Python projects — it imports them via `sys.path` and re-exports their outputs as JSON.
+The backend never modifies the existing Python projects — it imports them via `sys.path` and re-exports their outputs as JSON.
 
 ---
 
 ## Quick Start
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.10+ (3.12 recommended)
 - Node.js 18+
-- The `PolyTraders` and `HedgePoly/prediction-market-analysis` directories must exist as siblings of `AlphaFeed/`
 
-### 1. Backend
+### 1. Clone and set up environment
 
 ```bash
+git clone https://github.com/cauefeder/alphafeed.git
+cd alphafeed
+cp .env.example .env    # edit if needed
+```
+
+### 2. Backend
+
+```bash
+# Linux / macOS
 cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn server:app --reload --port 8000
+
+# Windows (PowerShell)
+cd backend
+python -m venv .venv && .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 uvicorn server:app --reload --port 8000
 ```
 
-API available at `http://localhost:8000`. Docs at `http://localhost:8000/docs`.
+API available at `http://localhost:8000` · Docs at `http://localhost:8000/docs`.
 
-### 2. Populate Alpha signals (optional)
+### 3. Alpha signals (optional)
+
+The Alpha tab shows trade signals from the PolyTraders and HedgePoly projects.
+If you have those projects available, set their paths in `.env`:
+
+```env
+POLYTRADERS_DIR=/path/to/PolyTraders
+HEDGEPOLY_DIR=/path/to/HedgePoly/prediction-market-analysis
+```
+
+Then run the adapters (or schedule via cron/Task Scheduler):
 
 ```bash
-# Run once (or schedule via cron)
 python backend/adapters/polytraders_export.py
 python backend/adapters/hedgepoly_export.py
 ```
 
-This writes `reports/polytraders.json` and `reports/hedgepoly.json`.
-Schedule every 6 hours for fresh signals:
-```cron
-0 */6 * * * cd /path/to/AlphaFeed && python backend/adapters/polytraders_export.py
-0 */6 * * * cd /path/to/AlphaFeed && python backend/adapters/hedgepoly_export.py
-```
+> If these paths are not set, the adapters look for sibling directories
+> (`../PolyTraders` and `../HedgePoly/prediction-market-analysis`).
+> The app works fine without them — the Alpha tab shows seed data.
 
-### 3. Frontend
+### 4. Frontend
 
 ```bash
 cd frontend
@@ -83,7 +115,7 @@ npm run dev
 # Open http://localhost:3000
 ```
 
-The Vite dev server proxies `/api/*` requests to `localhost:8000` automatically.
+The Vite dev server proxies `/api/*` → `localhost:8000` automatically.
 
 ---
 
@@ -134,7 +166,9 @@ Start: uvicorn server:app --host 0.0.0.0 --port $PORT
 ## Running Tests
 
 ```bash
-pip install pytest httpx fastapi
+# Install dev deps (once)
+pip install -r backend/requirements.txt -r backend/requirements-dev.txt
+
 pytest tests/ -v
 ```
 
