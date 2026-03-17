@@ -1,0 +1,50 @@
+name: Refresh Reports
+
+on:
+  schedule:
+    # Run daily at 08:00 UTC and 20:00 UTC
+    - cron: "0 8 * * *"
+    - cron: "0 20 * * *"
+  workflow_dispatch:   # allow manual trigger from GitHub Actions UI
+
+jobs:
+  refresh:
+    name: Regenerate report JSONs
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt requests
+
+      - name: Run poly2_export (Polymarket macro)
+        run: python backend/adapters/poly2_export.py
+        env:
+          POLY2_PAGES: "8"
+
+      - name: Run polytraders_export (Kelly signals)
+        run: python backend/adapters/polytraders_export.py
+        continue-on-error: true   # don't fail the whole job if PolyTraders API is flaky
+        env:
+          POLYTRADERS_TOP_N: "25"
+          POLYTRADERS_BANKROLL: "100"
+          POLYTRADERS_TIME_PERIOD: "WEEK"
+
+      - name: Commit updated reports
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f reports/poly2.json reports/polytraders.json reports/hedgepoly.json 2>/dev/null || true
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "chore: refresh reports $(date -u +'%Y-%m-%d %H:%M UTC')"
+
+      - name: Push
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master

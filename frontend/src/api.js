@@ -133,6 +133,10 @@ export async function fetchSmartMoney() {
   return tryFetch(`${API_BASE}/api/smart-money`, 8_000);
 }
 
+export async function fetchMacroReport() {
+  return tryFetch(`${API_BASE}/api/macro-report`, 8_000);
+}
+
 // ── Seed data (offline / demo) ────────────────────────────────────────────────
 
 const EMP_RV = [42,39,37,35,33,31,30,34,45,48,50,52,54,60,65,68,66,63,61,60,56,50,45,43];
@@ -261,6 +265,15 @@ export function seedSmartMoney() {
       { question: "Fed rate cut at March FOMC meeting?",   side: "YES", traderCount: 3, confidence: 0.71, yesValue: 14200, noValue: 5800, totalValue: 20000, url: "https://polymarket.com" },
       { question: "Ethereum Pectra upgrade by March 31?",  side: "NO",  traderCount: 2, confidence: 0.67, yesValue: 3100,  noValue: 6400, totalValue: 9500,  url: "https://polymarket.com" },
     ],
+  };
+}
+
+export function seedMacroReport() {
+  return {
+    generatedAt: null,
+    totalMarkets: 0,
+    categories: {},
+    topVolume: [],
   };
 }
 

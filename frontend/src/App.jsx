@@ -4,9 +4,9 @@ import { globalCss } from "./styles.js";
 import { getSession, calcRealizedVol, calcWeekdayVol } from "./math.js";
 import {
   fetchBtcPrice, fetchKlines, fetchDvol, fetchHistVol, fetchOptionsBook,
-  fetchBackendPolymarket, fetchPolymarketDirect, fetchKellySignals, fetchSmartMoney,
+  fetchBackendPolymarket, fetchPolymarketDirect, fetchKellySignals, fetchSmartMoney, fetchMacroReport,
   seedDvol, seedHourlyVol, seedWeekdayVol, seedHistVol, seedVolSurface,
-  seedPolymarket, seedKellySignals, seedSmartMoney, EMP_IV,
+  seedPolymarket, seedKellySignals, seedSmartMoney, seedMacroReport, EMP_IV,
 } from "./api.js";
 import { Dot, LiveBadge, SeedBadge } from "./components/primitives.jsx";
 import { OverviewTab }      from "./tabs/Overview.jsx";
@@ -14,6 +14,7 @@ import { VolCurveTab }      from "./tabs/VolCurve.jsx";
 import { TermStructureTab } from "./tabs/TermStructure.jsx";
 import { PolymarketTab }    from "./tabs/Polymarket.jsx";
 import { AlphaTab }         from "./tabs/Alpha.jsx";
+import { MacroReportTab }   from "./tabs/MacroReport.jsx";
 import { BankrollTab }      from "./tabs/Bankroll.jsx";
 import { ConfigTab }        from "./tabs/Config.jsx";
 
@@ -23,6 +24,7 @@ const TABS = [
   { id: "options",    label: "Term Struct", icon: "▣" },
   { id: "polymarket", label: "Polymarket",  icon: "◈" },
   { id: "alpha",      label: "Alpha",       icon: "★" },
+  { id: "macro",      label: "Macro",       icon: "🌐" },
   { id: "bankroll",   label: "Bankroll",    icon: "⚡" },
   { id: "apis",       label: "Config",      icon: "⚙" },
 ];
@@ -33,7 +35,7 @@ export default function AlphaFeed() {
   const [lastUpdate, setLastUpdate] = useState(null);
   const [src, setSrc] = useState({
     price: "seed", dvol: "seed", histVol: "seed",
-    klines: "seed", book: "seed", poly: "seed", alpha: "seed",
+    klines: "seed", book: "seed", poly: "seed", alpha: "seed", macro: "seed",
   });
 
   const [btcPrice,    setBtcPrice]    = useState(67340);
@@ -45,14 +47,16 @@ export default function AlphaFeed() {
   const [polyMarkets, setPolyMarkets] = useState([]);
   const [kellySignals,setKellySignals]= useState(seedKellySignals());
   const [smartMoney,  setSmartMoney]  = useState(seedSmartMoney());
+  const [macroReport, setMacroReport] = useState(seedMacroReport());
 
   const load = useCallback(async () => {
     setLoading(true);
     const s = { ...src };
 
-    const [price, klines, dvol, hv, book, poly, ks, sm] = await Promise.allSettled([
+    const [price, klines, dvol, hv, book, poly, ks, sm, mr] = await Promise.allSettled([
       fetchBtcPrice(), fetchKlines(), fetchDvol(), fetchHistVol(),
       fetchOptionsBook(), fetchBackendPolymarket(), fetchKellySignals(), fetchSmartMoney(),
+      fetchMacroReport(),
     ]);
 
     const lPrice = price.status === "fulfilled" ? price.value : null;
@@ -97,6 +101,9 @@ export default function AlphaFeed() {
 
     const lSm = sm.status === "fulfilled" ? sm.value : null;
     if (lSm?.signals) { setSmartMoney(lSm); if (s.alpha !== "live") s.alpha = "live"; }
+
+    const lMr = mr.status === "fulfilled" ? mr.value : null;
+    if (lMr?.categories) { setMacroReport(lMr); s.macro = "live"; }
 
     // Merge DVOL implied vol into hourly buckets
     setHourlyVol(prev => prev.map(h => {
@@ -178,7 +185,8 @@ export default function AlphaFeed() {
         {tab === "volatility" && <VolCurveTab      hourlyVol={hourlyVol} weekdayVol={weekdayVol} histVol={histVol} nowUTC={nowUTC} srcKlines={src.klines} srcHistVol={src.histVol} />}
         {tab === "options"    && <TermStructureTab volSurface={volSurface} srcBook={src.book} />}
         {tab === "polymarket" && <PolymarketTab    polyAnalysis={polyMarkets} srcPoly={src.poly} />}
-        {tab === "alpha"      && <AlphaTab         kellySignals={kellySignals} smartMoney={smartMoney} srcAlpha={src.alpha} />}
+        {tab === "alpha"      && <AlphaTab         kellySignals={kellySignals} srcAlpha={src.alpha} />}
+        {tab === "macro"      && <MacroReportTab   macroReport={macroReport} srcMacro={src.macro} />}
         {tab === "bankroll"   && <BankrollTab />}
         {tab === "apis"       && <ConfigTab        src={src} />}
       </main>

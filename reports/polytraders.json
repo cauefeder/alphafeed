@@ -1,0 +1,787 @@
+{
+  "generatedAt": "2026-03-09T00:18:50.820765+00:00",
+  "timePeriod": "WEEK",
+  "bankroll": 100.0,
+  "tradersChecked": 25,
+  "positionsScanned": 210,
+  "opportunities": [
+    {
+      "title": "Spread: Grizzlies (-4.5)",
+      "outcome": "Nuggets",
+      "slug": "nba-den-mem-2026-01-25-spread-home-4pt5",
+      "url": "https://polymarket.com/event/nba-den-mem-2026-01-25-spread-home-4pt5",
+      "curPrice": 0.845,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 10.0,
+      "kellyFull": 0.4335,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "sovereign2013",
+        "432614799197"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 16451.31,
+      "weightedAvgEntry": 0.4763
+    },
+    {
+      "title": "Magic vs. Bucks",
+      "outcome": "Magic",
+      "slug": "nba-orl-mil-2026-03-08",
+      "url": "https://polymarket.com/event/nba-orl-mil-2026-03-08",
+      "curPrice": 0.745,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 6.94,
+      "kellyFull": 0.2776,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461",
+        "bcda",
+        "swisstony"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 75937.13,
+      "weightedAvgEntry": 0.6487
+    },
+    {
+      "title": "Will Deportivo Toluca FC win on 2026-03-08?",
+      "outcome": "Yes",
+      "slug": "mex-tol-jua-2026-03-08-tol",
+      "url": "https://polymarket.com/event/mex-tol-jua-2026-03-08-tol",
+      "curPrice": 0.745,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 6.59,
+      "kellyFull": 0.2635,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0p0jogggg",
+        "swisstony"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 14797.01,
+      "weightedAvgEntry": 0.6454
+    },
+    {
+      "title": "Wizards vs. Pelicans: O/U 244.5",
+      "outcome": "Over",
+      "slug": "nba-was-nop-2026-03-08-total-244pt5",
+      "url": "https://polymarket.com/event/nba-was-nop-2026-03-08-total-244pt5",
+      "curPrice": 0.705,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 5.69,
+      "kellyFull": 0.2278,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "sovereign2013",
+        "432614799197"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 25659.76,
+      "weightedAvgEntry": 0.4966
+    },
+    {
+      "title": "Hornets vs. Suns",
+      "outcome": "Hornets",
+      "slug": "nba-cha-phx-2026-03-08",
+      "url": "https://polymarket.com/event/nba-cha-phx-2026-03-08",
+      "curPrice": 0.635,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 4.85,
+      "kellyFull": 0.194,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "212121212121212121212",
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461",
+        "sovereign2013"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 260239.57,
+      "weightedAvgEntry": 0.6277
+    },
+    {
+      "title": "Spread: Pelicans (-11.5)",
+      "outcome": "Wizards",
+      "slug": "nba-was-nop-2026-03-08-spread-home-11pt5",
+      "url": "https://polymarket.com/event/nba-was-nop-2026-03-08-spread-home-11pt5",
+      "curPrice": 0.59,
+      "estimatedEdge": 0.078,
+      "kellyBet": 4.76,
+      "kellyFull": 0.1902,
+      "nSmartTraders": 5,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461",
+        "0p0jogggg",
+        "432614799197",
+        "sovereign2013"
+      ],
+      "countSignal": 0.2,
+      "sizeSignal": 1.0,
+      "totalExposure": 584913.12,
+      "weightedAvgEntry": 0.4921
+    },
+    {
+      "title": "Red Wings vs. Devils: O/U 5.5",
+      "outcome": "Under",
+      "slug": "nhl-det-nj-2026-03-08-total-5pt5",
+      "url": "https://polymarket.com/event/nhl-det-nj-2026-03-08-total-5pt5",
+      "curPrice": 0.59,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 4.32,
+      "kellyFull": 0.1727,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0p0jogggg",
+        "432614799197",
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 127455.37,
+      "weightedAvgEntry": 0.4881
+    },
+    {
+      "title": "Will FC Cincinnati win on 2026-03-08?",
+      "outcome": "No",
+      "slug": "mls-fcc-tor-2026-03-08-fcc",
+      "url": "https://polymarket.com/event/mls-fcc-tor-2026-03-08-fcc",
+      "curPrice": 0.605,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 4.25,
+      "kellyFull": 0.1701,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "432614799197",
+        "swisstony"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 23616.88,
+      "weightedAvgEntry": 0.4589
+    },
+    {
+      "title": "First Round Pool D: Israel vs. Nicaragua",
+      "outcome": "Israel",
+      "slug": "wbc-isr-nic-2026-03-08",
+      "url": "https://polymarket.com/event/wbc-isr-nic-2026-03-08",
+      "curPrice": 0.6,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 4.2,
+      "kellyFull": 0.168,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "432614799197",
+        "0p0jogggg"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 163230.87,
+      "weightedAvgEntry": 0.5484
+    },
+    {
+      "title": "Oilers vs. Golden Knights: O/U 6.5",
+      "outcome": "Over",
+      "slug": "nhl-edm-las-2026-03-08-total-6pt5",
+      "url": "https://polymarket.com/event/nhl-edm-las-2026-03-08-total-6pt5",
+      "curPrice": 0.575,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 4.16,
+      "kellyFull": 0.1666,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "432614799197",
+        "0p0jogggg",
+        "sovereign2013"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 27020.19,
+      "weightedAvgEntry": 0.5599
+    },
+    {
+      "title": "Spread: Bucks (-2.5)",
+      "outcome": "Bucks",
+      "slug": "nba-dal-mil-2026-01-25-spread-home-2pt5",
+      "url": "https://polymarket.com/event/nba-dal-mil-2026-01-25-spread-home-2pt5",
+      "curPrice": 0.595,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 4.15,
+      "kellyFull": 0.1659,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "sovereign2013",
+        "432614799197"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 14254.87,
+      "weightedAvgEntry": 0.4733
+    },
+    {
+      "title": "Will FC Barcelona win on 2026-03-10?",
+      "outcome": "No",
+      "slug": "ucl-new-fcb1-2026-03-10-fcb1",
+      "url": "https://polymarket.com/event/ucl-new-fcb1-2026-03-10-fcb1",
+      "curPrice": 0.555,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 3.98,
+      "kellyFull": 0.1591,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "0p0jogggg",
+        "swisstony"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 27948.8,
+      "weightedAvgEntry": 0.5576
+    },
+    {
+      "title": "Spread: Magic (-6.5)",
+      "outcome": "Magic",
+      "slug": "nba-orl-mil-2026-03-08-spread-away-6pt5",
+      "url": "https://polymarket.com/event/nba-orl-mil-2026-03-08-spread-away-6pt5",
+      "curPrice": 0.5649,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.86,
+      "kellyFull": 0.1544,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0p0jogggg",
+        "sovereign2013"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 35743.6,
+      "weightedAvgEntry": 0.4609
+    },
+    {
+      "title": "Spread: Pelicans (-10.5)",
+      "outcome": "Wizards",
+      "slug": "nba-was-nop-2026-03-08-spread-home-10pt5",
+      "url": "https://polymarket.com/event/nba-was-nop-2026-03-08-spread-home-10pt5",
+      "curPrice": 0.535,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.61,
+      "kellyFull": 0.1445,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0p0jogggg",
+        "DrPufferfish"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 4574.04,
+      "weightedAvgEntry": 0.4572
+    },
+    {
+      "title": "Spread: Hornets (-5.5)",
+      "outcome": "Suns",
+      "slug": "nba-cha-phx-2026-03-08-spread-away-5pt5",
+      "url": "https://polymarket.com/event/nba-cha-phx-2026-03-08-spread-away-5pt5",
+      "curPrice": 0.535,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.61,
+      "kellyFull": 0.1445,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "432614799197",
+        "0p0jogggg"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 16247.59,
+      "weightedAvgEntry": 0.5306
+    },
+    {
+      "title": "Spread: Hornets (-4.5)",
+      "outcome": "Hornets",
+      "slug": "nba-cha-phx-2026-03-08-spread-away-4pt5",
+      "url": "https://polymarket.com/event/nba-cha-phx-2026-03-08-spread-away-4pt5",
+      "curPrice": 0.505,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 3.58,
+      "kellyFull": 0.143,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461",
+        "212121212121212121212",
+        "sovereign2013"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 67734.02,
+      "weightedAvgEntry": 0.4923
+    },
+    {
+      "title": "Lightning vs. Sabres",
+      "outcome": "Lightning",
+      "slug": "nhl-tb-buf-2026-03-08",
+      "url": "https://polymarket.com/event/nhl-tb-buf-2026-03-08",
+      "curPrice": 0.53,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.57,
+      "kellyFull": 0.143,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "432614799197",
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 21700.33,
+      "weightedAvgEntry": 0.5168
+    },
+    {
+      "title": "Spread: Hornets (-4.5)",
+      "outcome": "Suns",
+      "slug": "nba-cha-phx-2026-03-08-spread-away-4pt5",
+      "url": "https://polymarket.com/event/nba-cha-phx-2026-03-08-spread-away-4pt5",
+      "curPrice": 0.495,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 3.5,
+      "kellyFull": 0.1402,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "432614799197",
+        "0p0jogggg"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 142245.53,
+      "weightedAvgEntry": 0.4944
+    },
+    {
+      "title": "Bulls vs. Kings: O/U 236.5",
+      "outcome": "Under",
+      "slug": "nba-chi-sac-2026-03-08-total-236pt5",
+      "url": "https://polymarket.com/event/nba-chi-sac-2026-03-08-total-236pt5",
+      "curPrice": 0.495,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 3.5,
+      "kellyFull": 0.1402,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0p0jogggg",
+        "432614799197",
+        "sovereign2013"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 52326.42,
+      "weightedAvgEntry": 0.482
+    },
+    {
+      "title": "Spread: Pelicans (-8.5)",
+      "outcome": "Pelicans",
+      "slug": "nba-was-nop-2026-03-08-spread-home-8pt5",
+      "url": "https://polymarket.com/event/nba-was-nop-2026-03-08-spread-home-8pt5",
+      "curPrice": 0.51,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.43,
+      "kellyFull": 0.1371,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "sovereign2013",
+        "0p0jogggg"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 7733.21,
+      "weightedAvgEntry": 0.598
+    },
+    {
+      "title": "Rockets vs. Spurs: O/U 222.5",
+      "outcome": "Over",
+      "slug": "nba-hou-sas-2026-03-08-total-222pt5",
+      "url": "https://polymarket.com/event/nba-hou-sas-2026-03-08-total-222pt5",
+      "curPrice": 0.47,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 3.34,
+      "kellyFull": 0.1336,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "sovereign2013",
+        "432614799197",
+        "0p0jogggg"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 26066.1,
+      "weightedAvgEntry": 0.5008
+    },
+    {
+      "title": "Spread: Pelicans (-8.5)",
+      "outcome": "Wizards",
+      "slug": "nba-was-nop-2026-03-08-spread-home-8pt5",
+      "url": "https://polymarket.com/event/nba-was-nop-2026-03-08-spread-home-8pt5",
+      "curPrice": 0.49,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.29,
+      "kellyFull": 0.1318,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461",
+        "DrPufferfish"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 10177.34,
+      "weightedAvgEntry": 0.38
+    },
+    {
+      "title": "Bulls vs. Kings: O/U 235.5",
+      "outcome": "Under",
+      "slug": "nba-chi-sac-2026-03-08-total-235pt5",
+      "url": "https://polymarket.com/event/nba-chi-sac-2026-03-08-total-235pt5",
+      "curPrice": 0.475,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.2,
+      "kellyFull": 0.128,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0p0jogggg",
+        "sovereign2013"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 12065.98,
+      "weightedAvgEntry": 0.4736
+    },
+    {
+      "title": "Spread: Spurs (-5.5)",
+      "outcome": "Rockets",
+      "slug": "nba-hou-sas-2026-03-08-spread-home-5pt5",
+      "url": "https://polymarket.com/event/nba-hou-sas-2026-03-08-spread-home-5pt5",
+      "curPrice": 0.47,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.17,
+      "kellyFull": 0.1268,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "huhaoli",
+        "0p0jogggg"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 17640.47,
+      "weightedAvgEntry": 0.4885
+    },
+    {
+      "title": "Spread: Pelicans (-10.5)",
+      "outcome": "Pelicans",
+      "slug": "nba-was-nop-2026-03-08-spread-home-10pt5",
+      "url": "https://polymarket.com/event/nba-was-nop-2026-03-08-spread-home-10pt5",
+      "curPrice": 0.465,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.14,
+      "kellyFull": 0.1256,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "212121212121212121212",
+        "sovereign2013"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 16922.03,
+      "weightedAvgEntry": 0.5361
+    },
+    {
+      "title": "Spread: Magic (-6.5)",
+      "outcome": "Bucks",
+      "slug": "nba-orl-mil-2026-03-08-spread-away-6pt5",
+      "url": "https://polymarket.com/event/nba-orl-mil-2026-03-08-spread-away-6pt5",
+      "curPrice": 0.435,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 2.97,
+      "kellyFull": 0.1189,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461",
+        "sovereign2013"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 45991.75,
+      "weightedAvgEntry": 0.5104
+    },
+    {
+      "title": "Hornets vs. Suns",
+      "outcome": "Suns",
+      "slug": "nba-cha-phx-2026-03-08",
+      "url": "https://polymarket.com/event/nba-cha-phx-2026-03-08",
+      "curPrice": 0.365,
+      "estimatedEdge": 0.0744,
+      "kellyBet": 2.93,
+      "kellyFull": 0.1172,
+      "nSmartTraders": 4,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "432614799197",
+        "DrPufferfish",
+        "Countryside",
+        "0p0jogggg"
+      ],
+      "countSignal": 0.16,
+      "sizeSignal": 1.0,
+      "totalExposure": 169466.19,
+      "weightedAvgEntry": 0.3712
+    },
+    {
+      "title": "Bulls vs. Kings",
+      "outcome": "Kings",
+      "slug": "nba-chi-sac-2026-03-08",
+      "url": "https://polymarket.com/event/nba-chi-sac-2026-03-08",
+      "curPrice": 0.385,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 2.88,
+      "kellyFull": 0.1151,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0p0jogggg",
+        "212121212121212121212",
+        "432614799197"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 61856.79,
+      "weightedAvgEntry": 0.4253
+    },
+    {
+      "title": "Will J.D. Vance win the 2028 Republican presidential nomination?",
+      "outcome": "Yes",
+      "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
+      "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-republican-presidential-nomination",
+      "curPrice": 0.416,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 2.88,
+      "kellyFull": 0.1151,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "geniusMC",
+        "beachboy4"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 1322955.64,
+      "weightedAvgEntry": 0.5
+    },
+    {
+      "title": "Will Deportivo Toluca FC win on 2026-03-08?",
+      "outcome": "No",
+      "slug": "mex-tol-jua-2026-03-08-tol",
+      "url": "https://polymarket.com/event/mex-tol-jua-2026-03-08-tol",
+      "curPrice": 0.4,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 2.8,
+      "kellyFull": 0.112,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "swisstony",
+        "HedgeMaster88"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 10625.4,
+      "weightedAvgEntry": 0.3217
+    },
+    {
+      "title": "Magic vs. Bucks",
+      "outcome": "Bucks",
+      "slug": "nba-orl-mil-2026-03-08",
+      "url": "https://polymarket.com/event/nba-orl-mil-2026-03-08",
+      "curPrice": 0.255,
+      "estimatedEdge": 0.0744,
+      "kellyBet": 2.5,
+      "kellyFull": 0.0999,
+      "nSmartTraders": 4,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "212121212121212121212",
+        "DrPufferfish",
+        "0p0jogggg",
+        "432614799197"
+      ],
+      "countSignal": 0.16,
+      "sizeSignal": 1.0,
+      "totalExposure": 120781.1,
+      "weightedAvgEntry": 0.3757
+    },
+    {
+      "title": "Rockets vs. Spurs",
+      "outcome": "Rockets",
+      "slug": "nba-hou-sas-2026-03-08",
+      "url": "https://polymarket.com/event/nba-hou-sas-2026-03-08",
+      "curPrice": 0.295,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 2.38,
+      "kellyFull": 0.0953,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "0x6a57D263cD7c8EbA88b857eDEB7103851F012AFa-1771530065496",
+        "huhaoli"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 39113.35,
+      "weightedAvgEntry": 0.3371
+    },
+    {
+      "title": "Wizards vs. Pelicans",
+      "outcome": "Wizards",
+      "slug": "nba-was-nop-2026-03-08",
+      "url": "https://polymarket.com/event/nba-was-nop-2026-03-08",
+      "curPrice": 0.175,
+      "estimatedEdge": 0.0708,
+      "kellyBet": 2.15,
+      "kellyFull": 0.0858,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "bcda",
+        "0p0jogggg",
+        "0x2a2C53bD278c04DA9962Fcf96490E17F3DfB9Bc1-1772479215461"
+      ],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 9508.56,
+      "weightedAvgEntry": 0.2118
+    },
+    {
+      "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "slug": "will-the-boston-celtics-win-the-2026-nba-finals",
+      "url": "https://polymarket.com/event/will-the-boston-celtics-win-the-2026-nba-finals",
+      "curPrice": 0.117,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 1.9,
+      "kellyFull": 0.0761,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "Countryside"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 61317.94,
+      "weightedAvgEntry": 0.0446
+    },
+    {
+      "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "slug": "will-the-detroit-pistons-win-the-2026-nba-finals",
+      "url": "https://polymarket.com/event/will-the-detroit-pistons-win-the-2026-nba-finals",
+      "curPrice": 0.0535,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 1.77,
+      "kellyFull": 0.071,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "Countryside"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 25660.61,
+      "weightedAvgEntry": 0.0515
+    },
+    {
+      "title": "Will the New York Knicks win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
+      "url": "https://polymarket.com/event/will-the-new-york-knicks-win-the-2026-nba-finals",
+      "curPrice": 0.0495,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 1.77,
+      "kellyFull": 0.0707,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "Countryside"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 22369.96,
+      "weightedAvgEntry": 0.0493
+    },
+    {
+      "title": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+      "url": "https://polymarket.com/event/will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+      "curPrice": 0.0315,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 1.73,
+      "kellyFull": 0.0694,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "212121212121212121212"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 3421.99,
+      "weightedAvgEntry": 0.0228
+    },
+    {
+      "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "slug": "will-the-houston-rockets-win-the-2026-nba-finals",
+      "url": "https://polymarket.com/event/will-the-houston-rockets-win-the-2026-nba-finals",
+      "curPrice": 0.0285,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 1.73,
+      "kellyFull": 0.0692,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": [
+        "DrPufferfish",
+        "Countryside"
+      ],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 26699.47,
+      "weightedAvgEntry": 0.0445
+    }
+  ]
+}

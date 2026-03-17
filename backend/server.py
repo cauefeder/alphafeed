@@ -12,6 +12,7 @@ Endpoints
   GET /api/overview        — high-level summary stats (5-min cache)
   GET /api/kelly-signals   — PolyTraders Kelly opportunities (from reports/polytraders.json)
   GET /api/smart-money     — HedgePoly smart-money signals (from reports/hedgepoly.json)
+  GET /api/macro-report    — Poly2 macro market categories (from reports/poly2.json)
 
 Run
 ---
@@ -237,3 +238,9 @@ def kelly_signals(request: Request):
 @limiter.limit("30/minute")
 def smart_money(request: Request):
     return _read_report("hedgepoly")
+
+
+@app.get("/api/macro-report")
+@limiter.limit("30/minute")
+def macro_report(request: Request):
+    return _read_report("poly2")

@@ -10,7 +10,11 @@ build/
 .pytest_cache/
 
 # Reports (generated — do not commit live data)
+# exceptions: committed so Render serves real data until the daily cron refreshes them
 reports/*.json
+!reports/polytraders.json
+!reports/hedgepoly.json
+!reports/poly2.json
 
 # Environment
 .env
