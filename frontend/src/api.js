@@ -3,7 +3,13 @@
  * All live fetchers return null on failure so callers can fall back to seed data.
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "";
+// VITE_API_BASE is set per-environment (Vercel env var or .env.local for local dev).
+// Falls back to the production Render URL so Vercel works without manual env config.
+const API_BASE =
+  import.meta.env.VITE_API_BASE ||
+  (typeof window !== "undefined" && window.location.hostname === "localhost"
+    ? "http://localhost:8000"
+    : "https://alphafeed-api.onrender.com");
 
 // ── Generic fetch with timeout ────────────────────────────────────────────────
 
@@ -126,15 +132,20 @@ export async function fetchPolymarketDirect() {
 }
 
 export async function fetchKellySignals() {
-  return tryFetch(`${API_BASE}/api/kelly-signals`, 8_000);
+  return tryFetch(`${API_BASE}/api/kelly-signals`, 35_000);
 }
 
 export async function fetchSmartMoney() {
-  return tryFetch(`${API_BASE}/api/smart-money`, 8_000);
+  return tryFetch(`${API_BASE}/api/smart-money`, 35_000);
 }
 
 export async function fetchMacroReport() {
-  return tryFetch(`${API_BASE}/api/macro-report`, 8_000);
+  return tryFetch(`${API_BASE}/api/macro-report`, 35_000);
+}
+
+/** Wake up Render before main data fetches (cold-start can take ~20s on free tier). */
+export async function pingBackend() {
+  return tryFetch(`${API_BASE}/api/health`, 35_000);
 }
 
 // ── Seed data (offline / demo) ────────────────────────────────────────────────

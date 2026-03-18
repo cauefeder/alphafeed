@@ -5,6 +5,7 @@ import { getSession, calcRealizedVol, calcWeekdayVol } from "./math.js";
 import {
   fetchBtcPrice, fetchKlines, fetchDvol, fetchHistVol, fetchOptionsBook,
   fetchBackendPolymarket, fetchPolymarketDirect, fetchKellySignals, fetchSmartMoney, fetchMacroReport,
+  pingBackend,
   seedDvol, seedHourlyVol, seedWeekdayVol, seedHistVol, seedVolSurface,
   seedPolymarket, seedKellySignals, seedSmartMoney, seedMacroReport, EMP_IV,
 } from "./api.js";
@@ -52,6 +53,9 @@ export default function AlphaFeed() {
   const load = useCallback(async () => {
     setLoading(true);
     const s = { ...src };
+
+    // Wake up Render backend (free tier sleeps after 15 min of inactivity)
+    await pingBackend();
 
     const [price, klines, dvol, hv, book, poly, ks, sm, mr] = await Promise.allSettled([
       fetchBtcPrice(), fetchKlines(), fetchDvol(), fetchHistVol(),
