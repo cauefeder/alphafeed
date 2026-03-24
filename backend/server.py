@@ -257,12 +257,16 @@ class HedgeRequest(BaseModel):
 
 @app.post("/api/hedge-session")
 @limiter.limit("30/minute")
-async def hedge_session(request: Request, body: HedgeRequest = Body(...)):
+async def hedge_session(request: Request):
+    try:
+        data = await request.json()
+    except Exception:
+        raise HTTPException(status_code=422, detail="Invalid JSON body")
+    if not data.get("exposure"):
+        raise HTTPException(status_code=422, detail="exposure field is required")
+    body = HedgeRequest(**{k: data.get(k, "") for k in ("exposure", "asset", "risk_type")})
     try:
         result = run_hedge_session(body.exposure, body.asset or None, body.risk_type or None)
     except LLMError as exc:
         raise HTTPException(status_code=504, detail=str(exc))
-    except Exception as exc:
-        import traceback
-        raise HTTPException(status_code=500, detail=traceback.format_exc())
     return result
