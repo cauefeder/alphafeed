@@ -70,13 +70,14 @@ export function HedgeTab() {
   const [riskType, setRiskType] = useState("");
   const [status, setStatus] = useState("idle"); // idle | loading | results | error
   const [result, setResult] = useState(null);
+  const [errorCode, setErrorCode] = useState(0);
 
   async function handleRun() {
     if (!exposure.trim()) return;
     setStatus("loading");
     setResult(null);
     const data = await postHedgeSession({ exposure, asset, riskType });
-    if (!data) { setStatus("error"); return; }
+    if (!data || data._error != null) { setErrorCode(data?._error ?? 0); setStatus("error"); return; }
     setResult(data);
     setStatus("results");
   }
@@ -142,7 +143,11 @@ export function HedgeTab() {
 
       {status === "error" && (
         <p style={{ color: "#f87171", fontSize: 13, textAlign: "center", padding: 40 }}>
-          Failed to fetch hedges — backend may be starting up (free tier). Wait 30s and try again.
+          {errorCode === 504
+            ? "AI rate limited — Gemini free tier quota hit. Wait 60s and try again."
+            : errorCode === 0
+            ? "Request timed out — backend may be cold starting. Wait 30s and try again."
+            : `Request failed (${errorCode}) — try again in a moment.`}
         </p>
       )}
     </div>

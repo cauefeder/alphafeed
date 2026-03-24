@@ -301,9 +301,9 @@ export async function postHedgeSession({ exposure, asset, riskType }) {
       signal: controller.signal,
     });
     clearTimeout(timer);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) return { _error: res.status };
     return await res.json();
   } catch {
-    return null;
+    return { _error: 0 };
   }
 }
