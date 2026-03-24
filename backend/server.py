@@ -262,4 +262,7 @@ async def hedge_session(request: Request, body: HedgeRequest = Body(...)):
         result = run_hedge_session(body.exposure, body.asset or None, body.risk_type or None)
     except LLMError as exc:
         raise HTTPException(status_code=504, detail=str(exc))
+    except Exception as exc:
+        import traceback
+        raise HTTPException(status_code=500, detail=traceback.format_exc())
     return result
