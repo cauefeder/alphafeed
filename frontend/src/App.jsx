@@ -15,6 +15,7 @@ import { VolCurveTab }      from "./tabs/VolCurve.jsx";
 import { TermStructureTab } from "./tabs/TermStructure.jsx";
 import { PolymarketTab }    from "./tabs/Polymarket.jsx";
 import { AlphaTab }         from "./tabs/Alpha.jsx";
+import { HedgeTab }         from "./tabs/Hedge.jsx";
 import { MacroReportTab }   from "./tabs/MacroReport.jsx";
 import { BankrollTab }      from "./tabs/Bankroll.jsx";
 import { ConfigTab }        from "./tabs/Config.jsx";
@@ -25,6 +26,7 @@ const TABS = [
   { id: "options",    label: "Term Struct", icon: "▣" },
   { id: "polymarket", label: "Polymarket",  icon: "◈" },
   { id: "alpha",      label: "Alpha",       icon: "★" },
+  { id: "hedge",      label: "Hedge",       icon: "🛡️" },
   { id: "macro",      label: "Macro",       icon: "🌐" },
   { id: "bankroll",   label: "Bankroll",    icon: "⚡" },
   { id: "apis",       label: "Config",      icon: "⚙" },
@@ -190,6 +192,7 @@ export default function AlphaFeed() {
         {tab === "options"    && <TermStructureTab volSurface={volSurface} srcBook={src.book} />}
         {tab === "polymarket" && <PolymarketTab    polyAnalysis={polyMarkets} srcPoly={src.poly} />}
         {tab === "alpha"      && <AlphaTab         kellySignals={kellySignals} srcAlpha={src.alpha} />}
+        {tab === "hedge"      && <HedgeTab />}
         {tab === "macro"      && <MacroReportTab   macroReport={macroReport} srcMacro={src.macro} />}
         {tab === "bankroll"   && <BankrollTab />}
         {tab === "apis"       && <ConfigTab        src={src} />}
