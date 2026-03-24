@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-03-23T00:00:00+00:00",
+  "totalMarkets": 3,
+  "categories": {
+    "crypto": {
+      "name": "Crypto & Digital Assets",
+      "emoji": "₿",
+      "count": 2,
+      "markets": [
+        {
+          "question": "Will Bitcoin reach $90,000 in March?",
+          "slug": "will-bitcoin-reach-90000-in-march",
+          "url": "https://polymarket.com/event/will-bitcoin-reach-90000-in-march",
+          "yes_price": 0.04,
+          "volume_24h": 578852.0,
+          "volume_total": 1000000.0,
+          "liquidity": 50000.0,
+          "days_left": 14.0
+        },
+        {
+          "question": "Will Bitcoin dip to $65,000 in March?",
+          "slug": "will-bitcoin-dip-to-65000-in-march",
+          "url": "https://polymarket.com/event/will-bitcoin-dip-to-65000-in-march",
+          "yes_price": 0.25,
+          "volume_24h": 512750.0,
+          "volume_total": 900000.0,
+          "liquidity": 40000.0,
+          "days_left": 14.0
+        }
+      ]
+    },
+    "macro": {
+      "name": "Macroeconomics",
+      "emoji": "📊",
+      "count": 1,
+      "markets": [
+        {
+          "question": "Will the Fed decrease interest rates in March?",
+          "slug": "will-the-fed-decrease-interest-rates-march",
+          "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-march",
+          "yes_price": 0.01,
+          "volume_24h": 12000000.0,
+          "volume_total": 77000000.0,
+          "liquidity": 800000.0,
+          "days_left": 0.0
+        }
+      ]
+    }
+  }
+}

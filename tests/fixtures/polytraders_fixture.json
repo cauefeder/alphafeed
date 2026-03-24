@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T00:00:00+00:00",
+  "timePeriod": "WEEK",
+  "bankroll": 100.0,
+  "tradersChecked": 25,
+  "positionsScanned": 10,
+  "opportunities": [
+    {
+      "title": "Will Bitcoin dip to $65,000 in March?",
+      "outcome": "Yes",
+      "slug": "will-bitcoin-dip-to-65000-in-march",
+      "url": "https://polymarket.com/event/will-bitcoin-dip-to-65000-in-march",
+      "curPrice": 0.25,
+      "estimatedEdge": 0.07,
+      "kellyBet": 3.5,
+      "kellyFull": 0.14,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 25,
+      "smartTraderNames": ["trader1", "trader2", "trader3"],
+      "countSignal": 0.12,
+      "sizeSignal": 1.0,
+      "totalExposure": 78465.0,
+      "weightedAvgEntry": 0.22
+    },
+    {
+      "title": "Stars vs. Wild",
+      "outcome": "Stars",
+      "slug": "nhl-dal-min-2026-03-21",
+      "url": "https://polymarket.com/event/nhl-dal-min-2026-03-21",
+      "curPrice": 0.55,
+      "estimatedEdge": 0.07,
+      "kellyBet": 3.7,
+      "kellyFull": 0.15,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 25,
+      "smartTraderNames": ["trader1", "trader2"],
+      "countSignal": 0.08,
+      "sizeSignal": 1.0,
+      "totalExposure": 88547.0,
+      "weightedAvgEntry": 0.55
+    }
+  ]
+}
