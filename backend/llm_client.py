@@ -33,10 +33,13 @@ def _call(prompt: str) -> str:
     model = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
     url = (
         f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{model}:generateContent?key={api_key}"
+        f"{model}:generateContent"
     )
     payload = json.dumps({"contents": [{"parts": [{"text": prompt}]}]}).encode()
-    req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+    req = urllib.request.Request(
+        url, data=payload,
+        headers={"Content-Type": "application/json", "x-goog-api-key": api_key},
+    )
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
             body = json.loads(resp.read())
