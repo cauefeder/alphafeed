@@ -29,7 +29,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
-from fastapi import FastAPI, HTTPException, Request, Response
+from fastapi import Body, FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
@@ -257,7 +257,7 @@ class HedgeRequest(BaseModel):
 
 @app.post("/api/hedge-session")
 @limiter.limit("30/minute")
-async def hedge_session(request: Request, body: HedgeRequest):
+async def hedge_session(request: Request, body: HedgeRequest = Body(...)):
     try:
         result = run_hedge_session(body.exposure, body.asset or None, body.risk_type or None)
     except LLMError as exc:
