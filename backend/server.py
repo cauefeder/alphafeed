@@ -34,6 +34,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
+from adapters.hedge_engine import run_hedge_session
+from llm_client import LLMError
+from pydantic import BaseModel
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
@@ -72,7 +75,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["Content-Type", "Accept"],
     max_age=600,
 )
@@ -244,3 +247,19 @@ def smart_money(request: Request):
 @limiter.limit("30/minute")
 def macro_report(request: Request):
     return _read_report("poly2")
+
+
+class HedgeRequest(BaseModel):
+    exposure: str
+    asset: str = ""
+    risk_type: str = ""
+
+
+@app.post("/api/hedge-session")
+@limiter.limit("30/minute")
+async def hedge_session(request: Request, body: HedgeRequest):
+    try:
+        result = run_hedge_session(body.exposure, body.asset or None, body.risk_type or None)
+    except LLMError as exc:
+        raise HTTPException(status_code=504, detail=str(exc))
+    return result
