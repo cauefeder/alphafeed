@@ -293,7 +293,7 @@ export { EMP_IV }; // used by App to merge DVOL implied vol into hourly buckets
 export async function postHedgeSession({ exposure, asset, riskType }) {
   try {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 60_000); // 60s — LLM pipeline
+    const timer = setTimeout(() => controller.abort(), 90_000); // 90s — cold start + LLM pipeline
     const res = await fetch(`${API_BASE}/api/hedge-session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

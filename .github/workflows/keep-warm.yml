@@ -1,0 +1,16 @@
+name: Keep Render Warm
+
+on:
+  schedule:
+    - cron: "*/14 * * * *"   # every 14 minutes — Render spins down after 15 min idle
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping backend health
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            https://alphafeed-api.onrender.com/api/health)
+          echo "Health status: $STATUS"
+          [ "$STATUS" = "200" ] || exit 1

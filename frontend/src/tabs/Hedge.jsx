@@ -71,12 +71,16 @@ export function HedgeTab() {
   const [status, setStatus] = useState("idle"); // idle | loading | results | error
   const [result, setResult] = useState(null);
   const [errorCode, setErrorCode] = useState(0);
+  const [loadSecs, setLoadSecs] = useState(0);
 
   async function handleRun() {
     if (!exposure.trim()) return;
     setStatus("loading");
     setResult(null);
+    setLoadSecs(0);
+    const ticker = setInterval(() => setLoadSecs(s => s + 1), 1000);
     const data = await postHedgeSession({ exposure, asset, riskType });
+    clearInterval(ticker);
     if (!data || data._error != null) { setErrorCode(data?._error ?? 0); setStatus("error"); return; }
     setResult(data);
     setStatus("results");
@@ -110,7 +114,11 @@ export function HedgeTab() {
         <button onClick={handleRun} disabled={status === "loading" || !exposure.trim()}
           style={{ background: T.green, color: "#000", border: "none", borderRadius: 8,
             padding: "9px 20px", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
-          {status === "loading" ? "Analysing your exposure…" : "Run Hedge"}
+          {status === "loading"
+            ? loadSecs < 15 ? "Analysing your exposure…"
+            : loadSecs < 50 ? `Waking up backend… ${loadSecs}s`
+            : `Running AI analysis… ${loadSecs}s`
+            : "Run Hedge"}
         </button>
       </div>
 
