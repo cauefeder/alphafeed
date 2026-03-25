@@ -156,8 +156,8 @@ def score_markets(exposure: dict, markets: list[dict], kelly_opps: list[dict]) -
     Enriches each result with Kelly data.
     """
     market_lines = "\n".join(
-        f'{m["slug"]} | {m["question"]} | yes_price={m["yes_price"]:.2f} | '
-        f'vol24h=${m["volume_24h"]:,.0f} | days_left={m["days_left"]:.0f}d'
+        f'{m["slug"]} | {m["question"]} | yes_price={m["yes_price"] or 0:.2f} | '
+        f'vol24h=${m["volume_24h"] or 0:,.0f} | days_left={m["days_left"] or 0:.0f}d'
         for m in markets
     )
 
