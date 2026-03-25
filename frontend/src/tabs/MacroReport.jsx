@@ -171,8 +171,10 @@ function CategoryCard({ cat }) {
                     ? <a href={m.url} target="_blank" rel="noreferrer" style={{ color: "inherit", textDecoration: "none", display: "block", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{m.question}</a>
                     : <span style={{ display: "block", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{m.question}</span>}
                 </td>
-                <td style={{ padding: "8px 12px", textAlign: "right" }}>
-                  <PriceBar price={m.yes_price} />
+                <td style={{ padding: "8px 12px" }}>
+                  <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                    <PriceBar price={m.yes_price} />
+                  </div>
                 </td>
                 <td style={{ padding: "8px 12px", textAlign: "right", fontFamily: T.mono, color: T.text }}>
                   {fmt(m.volume_24h)}
