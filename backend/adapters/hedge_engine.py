@@ -35,6 +35,39 @@ def _load_polytraders() -> dict:
     return json.loads((REPORTS_DIR / "polytraders.json").read_text(encoding="utf-8"))
 
 
+# ── Keyword map for pre-filtering ─────────────────────────────────────────────
+
+_RISK_KEYWORDS: dict[str, list[str]] = {
+    "risk-off":     ["crash", "fall", "drop", "recession", "bear", "sell", "decline", "tariff", "fear", "vix"],
+    "rate-hike":    ["fed", "rate", "interest", "hike", "inflation", "fomc", "bps", "basis"],
+    "recession":    ["recession", "gdp", "unemployment", "contraction", "fed", "rate", "slow"],
+    "geopolitical": ["war", "conflict", "sanction", "nuclear", "iran", "russia", "china", "taiwan", "israel", "attack", "strait", "hormuz", "ukraine"],
+    "crypto-crash": ["bitcoin", "btc", "crypto", "ethereum", "eth", "defi", "coinbase", "binance", "stable"],
+    "tech-selloff": ["tech", "nasdaq", "ai", "microsoft", "google", "apple", "nvidia", "semiconductor"],
+    "other":        [],
+}
+
+
+def _prefilter_markets(text: str, risk_type: str, markets: list[dict], max_markets: int = 28) -> list[dict]:
+    """
+    Keyword pre-filter — reduces markets sent to the LLM from ~85 to ≤28.
+    Scores each market by keyword overlap with user text + risk_type keywords.
+    Falls back to highest-volume markets when keyword matches are sparse.
+    """
+    text_words = set(text.lower().split())
+    risk_kws = set(_RISK_KEYWORDS.get(risk_type or "other", []))
+    all_kws = text_words | risk_kws
+
+    scored = []
+    for m in markets:
+        q = m["question"].lower()
+        hits = sum(1 for kw in all_kws if len(kw) > 3 and kw in q)
+        scored.append((hits, m.get("volume_24h") or 0, m))
+
+    scored.sort(key=lambda x: (-x[0], -x[1]))
+    return [m for _, _, m in scored[:max_markets]]
+
+
 # ── Stage helpers ──────────────────────────────────────────────────────────────
 
 def _flatten_markets() -> list[dict]:
@@ -91,9 +124,9 @@ def parse_exposure(text: str, asset: Optional[str], risk_type: Optional[str]) ->
     Extract { asset, direction, risk_type, scenario } from user text.
     Short-circuit: if both asset and risk_type are non-empty, skip LLM call.
     """
-    if asset and risk_type:
+    if risk_type:  # risk_type alone is enough — skip Stage 1 LLM call
         return {
-            "asset":     asset,
+            "asset":     asset or "unspecified",
             "direction": "long",
             "risk_type": risk_type,
             "scenario":  text,
@@ -186,9 +219,10 @@ Return ONLY the JSON array. No markdown, no explanation."""
 # ── Orchestrator ───────────────────────────────────────────────────────────────
 
 def run_hedge_session(text: str, asset: Optional[str], risk_type: Optional[str]) -> dict:
-    """Full pipeline: parse → flatten → score → return."""
+    """Full pipeline: parse → flatten → pre-filter → score → return."""
     exposure = parse_exposure(text, asset, risk_type)
-    markets = _flatten_markets()
+    all_markets = _flatten_markets()
+    markets = _prefilter_markets(text, exposure["risk_type"], all_markets)
     kelly_opps = _load_polytraders().get("opportunities", [])
     hedges = score_markets(exposure, markets, kelly_opps)
     return {"exposure_parsed": exposure, "hedges": hedges}
