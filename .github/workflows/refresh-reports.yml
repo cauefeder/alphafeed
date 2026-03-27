@@ -35,6 +35,13 @@ jobs:
           POLYTRADERS_BANKROLL: "100"
           POLYTRADERS_TIME_PERIOD: "WEEK"
 
+      - name: Run hedgepoly_export (smart money signals)
+        run: python backend/adapters/hedgepoly_export.py
+        continue-on-error: true   # depends on HedgePoly project being available
+        env:
+          HEDGEPOLY_TOP_N: "25"
+          HEDGEPOLY_MIN_POSITION_VALUE: "200"
+
       - name: Commit updated reports
         run: |
           git config user.name  "github-actions[bot]"
