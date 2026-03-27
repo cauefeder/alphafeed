@@ -86,10 +86,11 @@ class TestPolytradersExport:
         mock_kelly = ModuleType("kelly")
         mock_kelly.score_opportunities = MagicMock(return_value=fake_opps)
 
-        # Inject mocks before import
-        sys.modules.setdefault("leaderboard", mock_leaderboard)
-        sys.modules.setdefault("positions", mock_positions)
-        sys.modules.setdefault("kelly", mock_kelly)
+        # Inject mocks before import — monkeypatch.setitem overrides existing entries
+        # AND auto-restores after each test, preventing cross-test mock contamination
+        monkeypatch.setitem(sys.modules, "leaderboard", mock_leaderboard)
+        monkeypatch.setitem(sys.modules, "positions", mock_positions)
+        monkeypatch.setitem(sys.modules, "kelly", mock_kelly)
 
         # Patch the path-existence check
         with patch("pathlib.Path.exists", return_value=True):
@@ -152,7 +153,7 @@ class TestHedgepolyExport:
     def _import_adapter(self, monkeypatch, fake_signals):
         mock_sm = ModuleType("smart_money")
         mock_sm.build_smart_money_signals = MagicMock(return_value=fake_signals)
-        sys.modules.setdefault("smart_money", mock_sm)
+        monkeypatch.setitem(sys.modules, "smart_money", mock_sm)
 
         with patch("pathlib.Path.exists", return_value=True):
             import importlib
