@@ -25,6 +25,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import threading
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -53,12 +54,26 @@ ALLOWED_ORIGINS: list[str] = (
     else [o.strip() for o in _raw_origins.split(",") if o.strip()]
 )
 
+if ALLOWED_ORIGINS == ["*"]:
+    logger.warning(
+        "ALLOWED_ORIGINS is '*' — set ALLOWED_ORIGINS env var before exposing this API publicly"
+    )
+
 CACHE_TTL = {
     "polymarket": 300,   # 5 minutes
     "overview": 300,
 }
 
+# ── Scoring constants ─────────────────────────────────────────────────────────
+# Liquidity above this value caps the liquidity score at 1.0
+_LIQ_NORM: int = 200_000
+# 24h volume above this threshold gets full edge weight (below gets 0.5×)
+_VOL_BOOST_THRESHOLD: int = 50_000
+# edgeScore above this is considered "high edge" for the overview endpoint
+_EDGE_HIGH_THRESHOLD: float = 0.3
+
 _cache: dict[str, tuple[float, object]] = {}
+_cache_lock = threading.Lock()
 
 # ── App ───────────────────────────────────────────────────────────────────────
 
@@ -86,13 +101,16 @@ async def security_headers(request: Request, call_next) -> Response:
 
 
 def _cached(key: str, ttl: int, fetch_fn):
+    """Return cached value if fresh, otherwise call fetch_fn and cache result."""
     now = time.monotonic()
-    if key in _cache:
-        ts, data = _cache[key]
-        if now - ts < ttl:
-            return data
+    with _cache_lock:
+        if key in _cache:
+            ts, data = _cache[key]
+            if now - ts < ttl:
+                return data
     data = fetch_fn()
-    _cache[key] = (now, data)
+    with _cache_lock:
+        _cache[key] = (now, data)
     return data
 
 
@@ -142,8 +160,8 @@ def _fetch_polymarket() -> list[dict]:
             liquidity = float(m.get("liquidity") or 0)
             vol24 = float(m.get("volume24hr") or 0)
             uncertainty = round(1 - abs(yes - 0.5) * 2, 2)
-            liq_score = min(1.0, liquidity / 200_000)
-            edge_score = round(uncertainty * liq_score * (1.0 if vol24 > 50_000 else 0.5), 3)
+            liq_score = min(1.0, liquidity / _LIQ_NORM)
+            edge_score = round(uncertainty * liq_score * (1.0 if vol24 > _VOL_BOOST_THRESHOLD else 0.5), 3)
             out.append({
                 "question": m.get("question", ""),
                 "slug": m.get("slug", ""),
@@ -185,7 +203,7 @@ def _read_report(name: str) -> dict:
 
 
 @app.get("/api/health")
-def health():
+def health() -> dict:
     return {
         "status": "ok",
         "ts": datetime.now(timezone.utc).isoformat(),
@@ -194,7 +212,7 @@ def health():
 
 
 @app.get("/api/polymarket")
-def polymarket():
+def polymarket() -> dict:
     markets = _cached("polymarket", CACHE_TTL["polymarket"], _fetch_polymarket)
     return {
         "markets": markets,
@@ -204,10 +222,10 @@ def polymarket():
 
 
 @app.get("/api/overview")
-def overview():
+def overview() -> dict:
     def _build():
         markets = _fetch_polymarket()
-        high_edge = [m for m in markets if m["edgeScore"] > 0.3]
+        high_edge = [m for m in markets if m["edgeScore"] > _EDGE_HIGH_THRESHOLD]
         return {
             "polymarket": {
                 "total": len(markets),
@@ -221,17 +239,17 @@ def overview():
 
 
 @app.get("/api/kelly-signals")
-def kelly_signals():
+def kelly_signals() -> dict:
     return _read_report("polytraders")
 
 
 @app.get("/api/smart-money")
-def smart_money():
+def smart_money() -> dict:
     return _read_report("hedgepoly")
 
 
 @app.get("/api/macro-report")
-def macro_report():
+def macro_report() -> dict:
     return _read_report("poly2")
 
 
