@@ -19,6 +19,7 @@ Run
   pip install -r requirements.txt
   uvicorn server:app --reload --port 8000
 """
+
 from __future__ import annotations
 
 import json
@@ -29,14 +30,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
-from fastapi import Body, FastAPI, HTTPException, Request, Response
+from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from slowapi import Limiter, _rate_limit_exceeded_handler
-from slowapi.errors import RateLimitExceeded
-from slowapi.util import get_remote_address
-from adapters.hedge_engine import run_hedge_session
-from llm_client import LLMError
-from pydantic import BaseModel
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
@@ -67,15 +62,12 @@ _cache: dict[str, tuple[float, object]] = {}
 
 # ── App ───────────────────────────────────────────────────────────────────────
 
-limiter = Limiter(key_func=get_remote_address, default_limits=["30/minute"])
 app = FastAPI(title="Alpha Feed API", version="1.0.0", docs_url="/docs", redoc_url=None)
-app.state.limiter = limiter
-app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET"],
     allow_headers=["Content-Type", "Accept"],
     max_age=600,
 )
@@ -193,8 +185,7 @@ def _read_report(name: str) -> dict:
 
 
 @app.get("/api/health")
-@limiter.limit("60/minute")
-def health(request: Request):
+def health():
     return {
         "status": "ok",
         "ts": datetime.now(timezone.utc).isoformat(),
@@ -203,8 +194,7 @@ def health(request: Request):
 
 
 @app.get("/api/polymarket")
-@limiter.limit("30/minute")
-def polymarket(request: Request):
+def polymarket():
     markets = _cached("polymarket", CACHE_TTL["polymarket"], _fetch_polymarket)
     return {
         "markets": markets,
@@ -214,8 +204,7 @@ def polymarket(request: Request):
 
 
 @app.get("/api/overview")
-@limiter.limit("30/minute")
-def overview(request: Request):
+def overview():
     def _build():
         markets = _fetch_polymarket()
         high_edge = [m for m in markets if m["edgeScore"] > 0.3]
@@ -232,41 +221,17 @@ def overview(request: Request):
 
 
 @app.get("/api/kelly-signals")
-@limiter.limit("30/minute")
-def kelly_signals(request: Request):
+def kelly_signals():
     return _read_report("polytraders")
 
 
 @app.get("/api/smart-money")
-@limiter.limit("30/minute")
-def smart_money(request: Request):
+def smart_money():
     return _read_report("hedgepoly")
 
 
 @app.get("/api/macro-report")
-@limiter.limit("30/minute")
-def macro_report(request: Request):
+def macro_report():
     return _read_report("poly2")
 
 
-class HedgeRequest(BaseModel):
-    exposure: str
-    asset: str = ""
-    risk_type: str = ""
-
-
-@app.post("/api/hedge-session")
-@limiter.limit("30/minute")
-async def hedge_session(request: Request):
-    try:
-        data = await request.json()
-    except Exception:
-        raise HTTPException(status_code=422, detail="Invalid JSON body")
-    if not data.get("exposure"):
-        raise HTTPException(status_code=422, detail="exposure field is required")
-    body = HedgeRequest(**{k: data.get(k, "") for k in ("exposure", "asset", "risk_type")})
-    try:
-        result = run_hedge_session(body.exposure, body.asset or None, body.risk_type or None)
-    except LLMError as exc:
-        raise HTTPException(status_code=504, detail=str(exc))
-    return result
