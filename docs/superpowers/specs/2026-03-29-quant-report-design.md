@@ -8,6 +8,8 @@
 
 **Tech Stack:** Python 3.12, XGBoost, scikit-learn, numpy, FastAPI, React/Vite, GitHub Actions, Telegram Bot API.
 
+**Branch:** The AlphaFeed repo's default branch is `master`. All `git push` commands in this spec target `master`.
+
 ---
 
 ## Scope boundaries
@@ -30,7 +32,7 @@
 | `backend/adapters/quant_telegram.py` | Format and send weekly Telegram summary |
 | `models/xgboost_model.pkl` | Committed trained model (binary, ~500KB) |
 | `models/calibration_params.json` | Platt scaling a/b params + feature order list |
-| `models/training_metrics.json` | AUC, precision, recall, confusion matrix, modelVersion (date string) from last train run |
+| `models/training_metrics.json` | AUC, precision, recall, confusion matrix, modelVersion (date string) |
 | `reports/quant_report.json` | Weekly scored opportunities (served by API) |
 | `frontend/src/tabs/QuantReport.jsx` | Quant tab: summary strip, category chart, scored table |
 | `tests/test_quant_report.py` | Unit tests for scoring engine |
@@ -115,20 +117,23 @@ FEATURE_NAMES = [
     "info_ratio",         # volume_24h / sqrt(days_left + 1) / 10_000
     "log_volume_total",   # log1p(volume_total)
     "log_liquidity",      # log1p(liquidity)
-    "days_left",          # time to resolution
+    "days_left",          # time to resolution (clamped to >= 0.5 at inference)
     "is_longshot",        # int(yes_price < 0.20)
     "is_favorite",        # int(yes_price > 0.80)
     "price_extremity",    # abs(yes_price - 0.5) * 2  (0=uncertain, 1=decided)
 ]
 
-# info_ratio formula — used identically in training AND inference:
+# info_ratio formula — identical in training AND inference:
 # info_ratio = volume_24h / sqrt(days_left + 1) / 10_000
-# The +1 inside sqrt prevents division by zero when days_left == 0.
+# The +1 is applied to the RAW days_left before clamping,
+# so training (days_left=0 → sqrt(1)) and inference agree.
 ```
 
 `FEATURE_NAMES` is the single source of truth for column order. All data frames and inference arrays must be constructed from this list explicitly — never from dict insertion order.
 
 > **Note on `calibrated_prob`:** Platt scaling (a/b) is fit on the model's *output* probabilities against the validation set labels *after* training. It is **not** a training input feature. The `calibratedProb` field in the inference output is computed post-prediction using these params as an output annotation, not as a model input.
+
+**What the model predicts:** `quantScore` is the model's confidence that the crowd is wrong (mispricing confidence), not the probability that YES resolves. `calibratedProb` is Platt-scaled `quantScore` — also a mispricing confidence, not an outcome probability. The UI and Telegram message should label it "mispricing confidence" or "signal strength", not "win probability."
 
 **Label definition:**
 ```python
@@ -178,7 +183,7 @@ python backend/adapters/train_model.py --data data/historical_markets.csv
 [train_model] Platt scaling fit on validation set: a=-0.12, b=0.94
 [train_model] Model saved → models/xgboost_model.pkl
 [train_model] Calibration saved → models/calibration_params.json
-[train_model] Metrics saved → models/training_metrics.json  (includes modelVersion: "2026-03-30")
+[train_model] Metrics saved → models/training_metrics.json
 ```
 
 **`calibration_params.json` schema:**
@@ -196,16 +201,44 @@ python backend/adapters/train_model.py --data data/historical_markets.csv
 - `platt_a` / `platt_b`: Platt scaling intercept and coefficient, fit on validation set outputs.
 - `feature_names`: Canonical ordered list used during training. Inference must construct numpy arrays using this exact order.
 
+**`training_metrics.json` schema:**
+```json
+{
+  "modelVersion": "2026-03-30",
+  "trainedAt": "2026-03-30T14:22:00Z",
+  "nSamples": 11420,
+  "cvAuc": 0.634,
+  "cvAucStd": 0.018,
+  "valAuc": 0.641,
+  "testAuc": 0.628,
+  "aucGatePassed": true,
+  "featureImportance": {
+    "info_ratio": 0.31,
+    "yes_price": 0.24,
+    "log_liquidity": 0.12,
+    "days_left": 0.09,
+    "is_longshot": 0.04,
+    "log_volume_total": 0.04,
+    "is_favorite": 0.03,
+    "price_extremity": 0.13
+  }
+}
+```
+
+- `modelVersion`: Date string (YYYY-MM-DD) of the training run. Read by `quant_report.py` and written into the output JSON.
+- `testAuc` and `modelVersion` are the two fields consumed by inference.
+
 ---
 
 ## Sub-system 2c: Weekly inference (`quant_report.py`)
 
-Runs in GitHub Actions every Sunday. Loads committed model and `reports/polytraders.json` (kept fresh by the existing `refresh-reports.yml` daily cron — the quant report reads the most recently committed version).
+Runs in GitHub Actions every Sunday. Loads committed model and `reports/polytraders.json` (kept fresh by the existing `refresh-reports.yml` daily cron — the quant report reads the most recently committed version). Also reads `modelVersion` and `testAuc` from `models/training_metrics.json`.
 
 **Field policy for `polytraders.json` opportunities:**
 - `curPrice` and `volume_24h` are **required** — opportunities missing either are skipped with a warning log.
 - `volumeTotal`, `liquidity`: optional, default to `0` if absent.
 - `days_left`: optional, defaults to `14` if absent or null.
+- `kellyBet`: pass-through from `polytraders.json`. If absent, set to `null` in output. Frontend column shows "—" for null values.
 
 **Scoring per opportunity:**
 ```python
@@ -215,14 +248,16 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
 
     p = opp["curPrice"]
     vol = opp["volume_24h"]
-    days = max(opp.get("days_left") or 14, 0.5)
+    days_raw = opp.get("days_left") or 0  # raw for info_ratio formula
+    days_feat = max(days_raw, 0.5)         # clamped for days_left feature only
 
+    # info_ratio uses days_raw + 1 to match the training formula exactly
     feature_values = {
         "yes_price": p,
-        "info_ratio": vol / ((days + 1) ** 0.5) / 10_000,   # +1 matches training formula
+        "info_ratio": vol / ((days_raw + 1) ** 0.5) / 10_000,
         "log_volume_total": log1p(opp.get("volumeTotal") or 0),
         "log_liquidity": log1p(opp.get("liquidity") or 0),
-        "days_left": days,
+        "days_left": days_feat,
         "is_longshot": int(p < 0.20),
         "is_favorite": int(p > 0.80),
         "price_extremity": abs(p - 0.5) * 2,
@@ -256,7 +291,7 @@ def calibrate(p: float, calibration: dict) -> float:
 {
   "generatedAt": "2026-03-30T20:00:00Z",
   "weekOf": "2026-03-30",
-  "modelVersion": "2026-03-30",   // date-stamped, read from training_metrics.json
+  "modelVersion": "2026-03-30",
   "modelAuc": 0.628,
   "summary": {
     "totalScored": 32,
@@ -294,15 +329,15 @@ def calibrate(p: float, calibration: dict) -> float:
 
 ## Sub-system 3: Telegram push (`quant_telegram.py`)
 
-Sends after `quant_report.json` is generated. Uses same `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` env vars as the existing Kelly bot. Single message, ~30 lines of HTML.
+Sends after `quant_report.json` is committed to the repo. Uses same `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` env vars as the existing Kelly bot. Single message, ~30 lines of HTML.
 
 **Message format:**
 ```
 📊 <b>Weekly Quant Report</b> — Week of Mar 30
 
 🟢 <b>Tier A signals (4)</b>
-• <a href="...">BTC hits $90K?</a> — score 0.84 | crowd→cal: 62%→68% | info: 0.51
-• <a href="...">Fed rate cut?</a> — score 0.79 | crowd→cal: 38%→44% | info: 0.38
+• <a href="...">BTC hits $90K?</a> — signal 0.84 | crowd→adj: 62%→68% | info: 0.51
+• <a href="...">Fed rate cut?</a> — signal 0.79 | crowd→adj: 38%→44% | info: 0.38
 • ...
 
 📈 Strongest category: <b>Crypto</b> (avg 0.74)
@@ -334,9 +369,11 @@ Three sections, no shared components with Alpha tab:
 
 1. **Summary strip** — generatedAt, weekOf, modelAUC badge, tierA count
 2. **Category bar chart** — horizontal bars using existing Recharts (already a dep), one bar per category coloured by avgQuantScore
-3. **Opportunities table** — columns: Tier badge, Market (linked), Quant Score, Calibrated Prob, Info Ratio, Kelly Bet. Sortable by any column. Top 15 rows shown.
+3. **Opportunities table** — columns: Tier badge, Market (linked), Signal Score, Adj. Prob, Info Ratio, Kelly Bet. Sortable by any column. Top 15 rows shown. `kellyBet` shows "—" if null.
 
 Signal tier badge colours: A = `T.green`, B = `T.amber`, C = `T.dim`. Matches existing design tokens.
+
+Column label clarification: `calibratedProb` is displayed as "Adj. Prob" (adjusted probability / mispricing confidence), not "Win Probability", to avoid misleading the user.
 
 ---
 
@@ -375,13 +412,6 @@ jobs:
         env:
           POLYTRADERS_BANKROLL: "100"
 
-      - name: Send Telegram summary
-        run: python backend/adapters/quant_telegram.py
-        continue-on-error: true    # Telegram down shouldn't block commit
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
       - name: Commit and push quant report
         run: |
           git config user.name  "github-actions[bot]"
@@ -389,8 +419,18 @@ jobs:
           git add -f reports/quant_report.json
           git diff --cached --quiet && echo "No changes" || \
             git commit -m "chore: weekly quant report $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin master
           git push origin master
+
+      - name: Send Telegram summary
+        run: python backend/adapters/quant_telegram.py
+        continue-on-error: true    # Telegram down is non-critical after report is committed
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 ```
+
+Note: commit-and-push runs before Telegram so the notification is only sent after the report is durably stored.
 
 ---
 
@@ -409,6 +449,8 @@ jobs:
 - `test_generate_report_empty_input` — empty opportunities list → valid JSON with zeroed summary
 - `test_category_report_aggregation` — verify avgQuantScore math per category
 - `test_feature_order_matches_calibration` — `score_opportunity` uses `calibration["feature_names"]` order, not dict insertion order
+- `test_info_ratio_days_zero` — days_left=0 → info_ratio uses sqrt(0+1)=1 denominator (no divide-by-zero)
+- `test_kelly_bet_passthrough_nullable` — opportunity with no `kellyBet` → output has `"kellyBet": null`
 
 ### `test_train_model.py` (light)
 - `test_feature_matrix_shape` — N rows × 8 columns (matching `FEATURE_NAMES`)
