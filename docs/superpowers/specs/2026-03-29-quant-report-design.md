@@ -333,6 +333,104 @@ def build_category_trends(poly2: dict) -> dict:
 
 This runs regardless of whether any polytraders opportunities matched — it gives the full macro/politics pulse even if smart-money coverage is thin in a category.
 
+**Category edge ranking (`edgeRanking`) computation:**
+
+Each category in `categoryReport` (scored opportunities only) gets an `edgeScore`:
+
+```python
+def compute_edge_score(cat: dict, trend: dict) -> float:
+    """
+    Edge score = weighted combination of three signals:
+      1. avg model signal (0.5 weight)  — how much mispricing the model detects
+      2. crowd uncertainty (0.3 weight) — how far avg crowd prob is from 0.5 (inverted)
+                                          closer to 0.5 = more uncertain = more edge potential
+      3. Tier A density (0.2 weight)    — tierACount / count (fraction of top signals)
+    """
+    model_signal   = cat["avgQuantScore"]                       # 0–1
+    crowd_prob     = trend.get("avgCrowdProb", 0.5) if trend else 0.5
+    uncertainty    = 1.0 - abs(crowd_prob - 0.5) * 2           # 0=decided, 1=max uncertain
+    tier_a_density = cat["tierACount"] / max(cat["count"], 1)  # 0–1
+
+    return round(0.5 * model_signal + 0.3 * uncertainty + 0.2 * tier_a_density, 3)
+```
+
+`edgeRanking` is an ordered list of categories sorted by `edgeScore` descending:
+```json
+"edgeRanking": [
+  {"category": "crypto",      "edgeScore": 0.71, "label": "Strong edge",   "avgQuantScore": 0.74, "avgCrowdProb": 0.61, "tierACount": 2},
+  {"category": "macro",       "edgeScore": 0.62, "label": "Good edge",     "avgQuantScore": 0.61, "avgCrowdProb": 0.38, "tierACount": 1},
+  {"category": "politics",    "edgeScore": 0.55, "label": "Moderate edge", "avgQuantScore": 0.51, "avgCrowdProb": 0.52, "tierACount": 1},
+  {"category": "geopolitics", "edgeScore": 0.41, "label": "Weak edge",     "avgQuantScore": 0.44, "avgCrowdProb": 0.41, "tierACount": 0},
+  {"category": "sports",      "edgeScore": 0.34, "label": "Skip",          "avgQuantScore": 0.38, "avgCrowdProb": 0.55, "tierACount": 0}
+]
+```
+
+Label thresholds: `edgeScore >= 0.65` → "Strong edge", `>= 0.50` → "Good edge", `>= 0.40` → "Moderate edge", `>= 0.30` → "Weak edge", `< 0.30` → "Skip".
+
+**Insights generation (rule-based, no LLM):**
+
+`insights` is a list of up to 5 plain-English strings derived deterministically from the data:
+
+```python
+def generate_insights(edge_ranking, category_report, category_trends, opportunities) -> list[str]:
+    insights = []
+
+    # 1. Top edge category
+    top = edge_ranking[0]
+    insights.append(
+        f"{top['category'].title()} offers the strongest edge this week "
+        f"(model signal {top['avgQuantScore']:.0%}, crowd at {top['avgCrowdProb']:.0%})."
+    )
+
+    # 2. Tier A spotlight (best single opportunity)
+    tier_a = [o for o in opportunities if o["signalTier"] == "A"]
+    if tier_a:
+        best = tier_a[0]  # already sorted by quantScore desc
+        insights.append(
+            f"Top opportunity: '{best['title']}' — model signal {best['quantScore']:.2f}, "
+            f"crowd at {best['curPrice']:.0%}, adj. prob {best['calibratedProb']:.0%}."
+        )
+
+    # 3. Largest crowd-model divergence
+    divergent = max(
+        edge_ranking,
+        key=lambda r: abs(r["avgQuantScore"] - r["avgCrowdProb"])
+    )
+    delta = divergent["avgQuantScore"] - divergent["avgCrowdProb"]
+    direction = "underpriced" if delta > 0 else "overpriced"
+    insights.append(
+        f"{divergent['category'].title()} shows the largest crowd-model gap "
+        f"({abs(delta):.0%} {direction} by crowd)."
+    )
+
+    # 4. Skip recommendation
+    skip = [r for r in edge_ranking if r["label"] == "Skip"]
+    if skip:
+        names = ", ".join(r["category"] for r in skip)
+        insights.append(f"Low signal this week: {names} — skip unless you have domain edge.")
+
+    # 5. Market uncertainty note
+    most_uncertain = min(category_trends.items(), key=lambda kv: abs(kv[1]["avgCrowdProb"] - 0.5))
+    cat, data = most_uncertain
+    insights.append(
+        f"{cat.title()} is the most uncertain category (crowd avg {data['avgCrowdProb']:.0%}) "
+        f"— high uncertainty can mean opportunity or noise."
+    )
+
+    return insights
+```
+
+Sample output:
+```json
+"insights": [
+  "Crypto offers the strongest edge this week (model signal 74%, crowd at 61%).",
+  "Top opportunity: 'Will BTC hit $90K by April?' — model signal 0.84, crowd at 62%, adj. prob 68%.",
+  "Macro shows the largest crowd-model gap (23% underpriced by crowd).",
+  "Low signal this week: sports — skip unless you have domain edge.",
+  "Macro is the most uncertain category (crowd avg 38%) — high uncertainty can mean opportunity or noise."
+]
+```
+
 The `calibrate(p, calibration)` function applies Platt scaling to the model's output probability.
 `platt_b` is the coefficient of the raw model score, `platt_a` is the intercept (matching sklearn's `LogisticRegression` convention from training):
 ```python
@@ -383,6 +481,19 @@ def calibrate(p: float, calibration: dict) -> float:
     "macro":       {"count": 6,  "avgQuantScore": 0.61, "tierACount": 1},
     "geopolitics": {"count": 4,  "avgQuantScore": 0.44, "tierACount": 0}
   },
+  "edgeRanking": [
+    {"category": "crypto",   "edgeScore": 0.71, "label": "Strong edge",   "avgQuantScore": 0.74, "avgCrowdProb": 0.61, "tierACount": 2},
+    {"category": "macro",    "edgeScore": 0.62, "label": "Good edge",     "avgQuantScore": 0.61, "avgCrowdProb": 0.38, "tierACount": 1},
+    {"category": "politics", "edgeScore": 0.55, "label": "Moderate edge", "avgQuantScore": 0.51, "avgCrowdProb": 0.52, "tierACount": 1},
+    {"category": "sports",   "edgeScore": 0.34, "label": "Skip",          "avgQuantScore": 0.38, "avgCrowdProb": 0.55, "tierACount": 0}
+  ],
+  "insights": [
+    "Crypto offers the strongest edge this week (model signal 74%, crowd at 61%).",
+    "Top opportunity: 'Will BTC hit $90K by April?' — model signal 0.84, crowd at 62%, adj. prob 68%.",
+    "Macro shows the largest crowd-model gap (23% underpriced by crowd).",
+    "Low signal this week: sports — skip unless you have domain edge.",
+    "Macro is the most uncertain category (crowd avg 38%) — high uncertainty can mean opportunity or noise."
+  ],
   "categoryTrends": {
     "macro": {
       "totalMarkets": 42,
@@ -427,20 +538,28 @@ Sends after `quant_report.json` is committed to the repo. Uses same `TELEGRAM_BO
 • Geopolitics: avg crowd 41% · 28 markets
 • Crypto: avg crowd 61% · 31 markets
 
+🏆 <b>Edge Ranking this week</b>
+1. 🟢 Crypto — edge 0.71 (signal 74% vs crowd 61%) · 2 Tier A
+2. 🟢 Macro — edge 0.62 (signal 61% vs crowd 38%) · 1 Tier A
+3. 🟡 Politics — edge 0.55 · 1 Tier A
+4. 🔴 Sports — Skip (signal 0.38)
+
 🟢 <b>Tier A signals (4)</b>
 • <a href="...">BTC hits $90K?</a> — signal 0.84 | crowd→adj: 62%→68% | info: 0.51
 • <a href="...">Fed rate cut?</a> — signal 0.79 | crowd→adj: 38%→44% | info: 0.38
 
-🟡 <b>Tier B signals (11)</b>
+🟡 <b>Tier B highlights</b>
 • <a href="...">ETH flippening?</a> — signal 0.55 | crowd: 22%
 
-📈 Most mispriced category: <b>Crypto</b> (avg signal 0.74)
-📉 Weakest signal: <b>Sports</b> (0.38) — skip unless you have domain edge
+💡 <b>Conclusions</b>
+• Crypto offers the strongest edge (model 74%, crowd 61%).
+• Macro shows the largest crowd-model gap (23% underpriced by crowd).
+• Skip sports unless you have domain edge.
 
 32 markets scored · Model AUC 0.63 · Not financial advice
 ```
 
-Uses stdlib `urllib.request` — no extra dependencies. Tier B entries capped at top 3 to keep message under Telegram's 4096-char limit.
+Uses stdlib `urllib.request` — no extra dependencies. Tier B entries capped at top 3. Insights capped at top 3. Total message stays under Telegram's 4096-char limit.
 
 ---
 
@@ -483,7 +602,17 @@ Side-by-side grouped bars per category: one bar for `avgCrowdProb` (crowd), one 
 
 Only shown for categories that have at least one scored opportunity (i.e., categories in `categoryReport`, not all of `categoryTrends`).
 
-### Section 5: Opportunities table
+### Section 5: Edge Ranking + Insights
+Two sub-sections side by side (on desktop, stacked on mobile):
+
+**Left — Edge Ranking table:**
+| Rank | Category | Edge Score | Label badge | Model Signal | Crowd Prob | Tier A |
+Sorted by `edgeScore` descending. Label badge colours: "Strong edge"=green, "Good edge"=teal, "Moderate edge"=amber, "Weak edge"=dim, "Skip"=red. This is the direct answer to "where should I focus my capital this week?"
+
+**Right — Insights panel:**
+Numbered list of the 5 auto-generated insight strings from `insights[]`. Plain text, no formatting. Small header: "Weekly Conclusions".
+
+### Section 6: Opportunities table
 Columns: Tier badge, Market title (linked), Signal Score, Adj. Prob, Crowd Prob, Info Ratio, Kelly Bet. Default sort: Signal Score descending. Top 20 rows shown. `kellyBet` shows "—" if null.
 
 Signal tier badge colours: A = `T.green`, B = `T.amber`, C = `T.dim`. Matches existing design tokens.
@@ -571,6 +700,12 @@ Note: commit-and-push runs before Telegram so the notification is only sent afte
 - `test_build_category_trends_structure` — verify `avgCrowdProb` is correctly averaged and `topMarket` is the highest-volume market
 - `test_build_category_trends_empty_category` — category with no markets → omitted from output (not keyed with nulls)
 - `test_category_trends_independent_of_scored_opps` — `categoryTrends` includes all poly2 categories even when no polytraders opportunities exist
+- `test_compute_edge_score_formula` — known inputs produce expected weighted score (0.5×signal + 0.3×uncertainty + 0.2×tier_a_density)
+- `test_edge_ranking_sorted_descending` — `edgeRanking` list is sorted by `edgeScore` high→low
+- `test_edge_label_thresholds` — scores at 0.65, 0.50, 0.40, 0.30, 0.20 map to correct labels
+- `test_generate_insights_count` — always returns between 1 and 5 strings, even with minimal input
+- `test_insights_top_category_mentioned` — first insight always names the top-ranked edge category
+- `test_telegram_message_length` — Telegram message is always < 4096 chars even with maximum data
 
 ### `test_train_model.py` (light)
 - `test_feature_matrix_shape` — N rows × 8 columns (matching `FEATURE_NAMES`)
