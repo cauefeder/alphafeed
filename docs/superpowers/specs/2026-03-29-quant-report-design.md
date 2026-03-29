@@ -447,10 +447,10 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin master
           git add -f reports/quant_report.json
           git diff --cached --quiet && echo "No changes" || \
             git commit -m "chore: weekly quant report $(date -u +'%Y-%m-%d')"
-          git pull --rebase origin master
           git push origin master
 
       - name: Send Telegram summary
