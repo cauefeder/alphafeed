@@ -44,7 +44,7 @@
 | Path | Change |
 |---|---|
 | `backend/adapters/polytraders_export.py` | Expand to OVERALL(50) + CRYPTO(25) + POLITICS(25), deduplicate |
-| `backend/requirements.txt` | Add xgboost, scikit-learn, numpy |
+| `backend/requirements.txt` | Add xgboost==2.1.*, scikit-learn, numpy (XGBoost pkl files are version-sensitive — pin the version to match the training environment) |
 | `backend/server.py` | Add GET /api/quant-report endpoint |
 | `frontend/src/App.jsx` | Add QuantReport tab (between Alpha and Macro) |
 | `frontend/src/api.js` | Add fetchQuantReport() |
@@ -232,22 +232,53 @@ python backend/adapters/train_model.py --data data/historical_markets.csv
 
 ## Sub-system 2c: Weekly inference (`quant_report.py`)
 
-Runs in GitHub Actions every Sunday. Loads committed model and `reports/polytraders.json` (kept fresh by the existing `refresh-reports.yml` daily cron — the quant report reads the most recently committed version). Also reads `modelVersion` and `testAuc` from `models/training_metrics.json`.
+Runs in GitHub Actions every Sunday. Invoked as:
+```
+python backend/adapters/quant_report.py
+```
+All paths are relative to repo root. Hardcoded constants (no CLI flags needed for weekly cron):
+```python
+POLYTRADERS_PATH = "reports/polytraders.json"
+POLY2_PATH       = "reports/poly2.json"
+MODEL_PATH       = "models/xgboost_model.pkl"
+CALIBRATION_PATH = "models/calibration_params.json"
+METRICS_PATH     = "models/training_metrics.json"
+OUTPUT_PATH      = "reports/quant_report.json"
+```
 
-**Field policy for `polytraders.json` opportunities:**
-- `curPrice` and `volume_24h` are **required** — opportunities missing either are skipped with a warning log.
-- `volumeTotal`, `liquidity`: optional, default to `0` if absent.
-- `days_left`: optional, defaults to `14` if absent or null.
-- `kellyBet`: pass-through from `polytraders.json`. If absent, set to `null` in output. Frontend column shows "—" for null values.
+Both `reports/polytraders.json` and `reports/poly2.json` are kept fresh by the existing `refresh-reports.yml` daily cron. The quant report reads the most recently committed versions.
+
+**Actual field schemas (confirmed from live files):**
+
+`polytraders.json` opportunity fields: `slug`, `title`, `curPrice`, `kellyBet`, `nSmartTraders`, `totalExposure`, `url`, etc.
+`poly2.json` markets (nested under `categories.<name>.markets`): `slug`, `yes_price`, `volume_24h`, `volume_total`, `liquidity`, `days_left`.
+
+**Merge strategy:** `quant_report.py` builds a lookup `poly2_by_slug: dict[str, dict]` from all poly2 markets across all categories. For each polytraders opportunity, look up its `slug` in `poly2_by_slug` to get volume and liquidity data. If a slug has no poly2 match, the opportunity is still scored but with `volume_24h=0`, `volume_total=0`, `liquidity=0`, `days_left=14` (all optional fields).
+
+**Field mapping:**
+- `curPrice` → from `polytraders.json` opportunity (required, skip with warning if absent)
+- `volume_24h` → from poly2 match (optional, default `0`)
+- `volumeTotal` → `volume_total` from poly2 (note: poly2 uses `volume_total`, not `volumeTotal`)
+- `liquidity` → from poly2 match (optional, default `0`)
+- `days_left` → from poly2 match (optional, default `14`)
+- `kellyBet` → from `polytraders.json` opportunity (pass-through, `null` if absent)
+
+**Missing required fields:** If `curPrice` is absent from a polytraders opportunity, skip it and log a warning. The iterator (not `score_opportunity`) handles the skip:
+```python
+for opp in polytraders["opportunities"]:
+    if "curPrice" not in opp:
+        logging.warning("Skipping opportunity missing curPrice: %s", opp.get("slug"))
+        continue
+    poly2_data = poly2_by_slug.get(opp["slug"], {})
+    enriched = {**opp, **poly2_data, "volumeTotal": poly2_data.get("volume_total", 0)}
+    scored.append(score_opportunity(enriched, model, calibration))
+```
 
 **Scoring per opportunity:**
 ```python
 def score_opportunity(opp: dict, model, calibration: dict) -> dict:
-    if "curPrice" not in opp or "volume_24h" not in opp:
-        raise ValueError(f"Missing required fields in opportunity: {opp.get('slug')}")
-
     p = opp["curPrice"]
-    vol = opp["volume_24h"]
+    vol = opp.get("volume_24h") or 0
     days_raw = opp.get("days_left") or 0  # raw for info_ratio formula
     days_feat = max(days_raw, 0.5)         # clamped for days_left feature only
 
@@ -451,6 +482,8 @@ Note: commit-and-push runs before Telegram so the notification is only sent afte
 - `test_feature_order_matches_calibration` — `score_opportunity` uses `calibration["feature_names"]` order, not dict insertion order
 - `test_info_ratio_days_zero` — days_left=0 → info_ratio uses sqrt(0+1)=1 denominator (no divide-by-zero)
 - `test_kelly_bet_passthrough_nullable` — opportunity with no `kellyBet` → output has `"kellyBet": null`
+- `test_skip_opportunity_missing_cur_price` — opportunity without `curPrice` is skipped with a warning, not raised; remaining opportunities are still scored
+- `test_poly2_slug_merge` — poly2 enrichment lookup by slug; unmatched slug → volume/liquidity defaults to 0
 
 ### `test_train_model.py` (light)
 - `test_feature_matrix_shape` — N rows × 8 columns (matching `FEATURE_NAMES`)
