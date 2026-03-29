@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a weekly quantitative intelligence report to AlphaFeed — a separate tab that scores live Polymarket opportunities using an XGBoost classifier trained on historical resolved markets, expanding trader coverage from 25 to ~100, with results pushed to Telegram every Sunday.
+**Goal:** Add a weekly quantitative intelligence report to AlphaFeed — a separate tab that scores live Polymarket opportunities using an XGBoost classifier trained on historical resolved markets, expanding trader coverage from 25 to ~100, with macro/politics trend charts, a model vs crowd scatter plot, and auto-generated insights pushed to Telegram every Sunday.
 
-**Architecture:** Three independent sub-systems built in sequence. Sub-system 1 expands the existing trader pipeline. Sub-system 2 adds a local training script and a weekly inference cron. Sub-system 3 pushes a summary to Telegram. All computation runs in GitHub Actions (free). Render serves static JSON. No LLM, no paid APIs.
+**Architecture:** Three independent sub-systems built in sequence. Sub-system 1 expands the existing trader pipeline. Sub-system 2 adds a local training script and a weekly inference cron (reads both `polytraders.json` and `poly2.json`). Sub-system 3 pushes a rich summary to Telegram. All computation runs in GitHub Actions (free). Render serves static JSON. No LLM, no paid APIs.
 
 **Tech Stack:** Python 3.12, XGBoost, scikit-learn, numpy, FastAPI, React/Vite, GitHub Actions, Telegram Bot API.
 
@@ -246,7 +246,7 @@ METRICS_PATH     = "models/training_metrics.json"
 OUTPUT_PATH      = "reports/quant_report.json"
 ```
 
-Both `reports/polytraders.json` and `reports/poly2.json` are kept fresh by the existing `refresh-reports.yml` daily cron. The quant report reads the most recently committed versions.
+Both `reports/polytraders.json` and `reports/poly2.json` are kept fresh by the existing `refresh-reports.yml` daily cron. The quant report reads the most recently committed versions. Also reads `modelVersion` and `testAuc` from `models/training_metrics.json`, and computes `categoryTrends` from all poly2 categories (independent of which opportunities are scored).
 
 **Actual field schemas (confirmed from live files):**
 
@@ -307,6 +307,32 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
             "infoRatio": round(feature_values["info_ratio"], 3)}
 ```
 
+**`categoryTrends` computation (from poly2.json, all categories):**
+```python
+def build_category_trends(poly2: dict) -> dict:
+    """Summarise poly2 categories — crowd probability pulse, independent of scored opps."""
+    trends = {}
+    for cat_name, cat_data in poly2.get("categories", {}).items():
+        markets = cat_data.get("markets", [])
+        if not markets:
+            continue
+        avg_prob = sum(m["yes_price"] for m in markets) / len(markets)
+        top = max(markets, key=lambda m: m.get("volume_24h", 0))
+        trends[cat_name] = {
+            "totalMarkets": len(markets),
+            "avgCrowdProb": round(avg_prob, 3),
+            "topMarket": {
+                "question": top["question"],
+                "yes_price": top["yes_price"],
+                "volume_24h": top.get("volume_24h", 0),
+                "url": top["url"],
+            },
+        }
+    return trends
+```
+
+This runs regardless of whether any polytraders opportunities matched — it gives the full macro/politics pulse even if smart-money coverage is thin in a category.
+
 The `calibrate(p, calibration)` function applies Platt scaling to the model's output probability.
 `platt_b` is the coefficient of the raw model score, `platt_a` is the intercept (matching sklearn's `LogisticRegression` convention from training):
 ```python
@@ -329,8 +355,10 @@ def calibrate(p: float, calibration: dict) -> float:
     "tierA": 4,
     "tierB": 11,
     "tierC": 17,
-    "topCategory": "crypto",
-    "topCategoryAvgScore": 0.74
+    "topSignalCategory": "crypto",
+    "topCategoryAvgScore": 0.74,
+    "mostUncertainCategory": "macro",
+    "mostUncertainAvgPrice": 0.38
   },
   "opportunities": [
     {
@@ -344,14 +372,41 @@ def calibrate(p: float, calibration: dict) -> float:
       "kellyBet": 4.20,
       "nSmartTraders": 8,
       "totalExposure": 42000,
-      "url": "https://polymarket.com/event/btc-90k"
+      "url": "https://polymarket.com/event/btc-90k",
+      "category": "crypto"
     }
   ],
   "categoryReport": {
-    "crypto":   {"count": 8,  "avgQuantScore": 0.74, "tierACount": 2},
-    "politics": {"count": 12, "avgQuantScore": 0.51, "tierACount": 1},
-    "sports":   {"count": 6,  "avgQuantScore": 0.38, "tierACount": 0},
-    "macro":    {"count": 6,  "avgQuantScore": 0.61, "tierACount": 1}
+    "crypto":      {"count": 8,  "avgQuantScore": 0.74, "tierACount": 2},
+    "politics":    {"count": 12, "avgQuantScore": 0.51, "tierACount": 1},
+    "sports":      {"count": 6,  "avgQuantScore": 0.38, "tierACount": 0},
+    "macro":       {"count": 6,  "avgQuantScore": 0.61, "tierACount": 1},
+    "geopolitics": {"count": 4,  "avgQuantScore": 0.44, "tierACount": 0}
+  },
+  "categoryTrends": {
+    "macro": {
+      "totalMarkets": 42,
+      "avgCrowdProb": 0.38,
+      "topMarket": {
+        "question": "Will the Fed cut rates by 50bps in April?",
+        "yes_price": 0.005,
+        "volume_24h": 835103,
+        "url": "https://polymarket.com/event/..."
+      }
+    },
+    "politics": {
+      "totalMarkets": 55,
+      "avgCrowdProb": 0.52,
+      "topMarket": { "question": "...", "yes_price": 0.71, "volume_24h": 240000, "url": "..." }
+    },
+    "geopolitics": {
+      "totalMarkets": 28,
+      "avgCrowdProb": 0.41,
+      "topMarket": { "question": "...", "yes_price": 0.44, "volume_24h": 180000, "url": "..." }
+    },
+    "crypto":  { "totalMarkets": 31, "avgCrowdProb": 0.61, "topMarket": { "..." : "..." } },
+    "stocks":  { "totalMarkets": 18, "avgCrowdProb": 0.55, "topMarket": { "..." : "..." } },
+    "ai_tech": { "totalMarkets": 12, "avgCrowdProb": 0.48, "topMarket": { "..." : "..." } }
   }
 }
 ```
@@ -366,18 +421,26 @@ Sends after `quant_report.json` is committed to the repo. Uses same `TELEGRAM_BO
 ```
 📊 <b>Weekly Quant Report</b> — Week of Mar 30
 
+🌍 <b>Macro Pulse</b>
+• Macro: avg crowd 38% · 42 markets · top: <a href="...">Fed cut 50bps?</a> (0.5%)
+• Politics: avg crowd 52% · 55 markets · top: <a href="...">Trump approval?</a> (71%)
+• Geopolitics: avg crowd 41% · 28 markets
+• Crypto: avg crowd 61% · 31 markets
+
 🟢 <b>Tier A signals (4)</b>
 • <a href="...">BTC hits $90K?</a> — signal 0.84 | crowd→adj: 62%→68% | info: 0.51
 • <a href="...">Fed rate cut?</a> — signal 0.79 | crowd→adj: 38%→44% | info: 0.38
-• ...
 
-📈 Strongest category: <b>Crypto</b> (avg 0.74)
-⚠️ Sports: low signal (0.38) — skip unless you have domain edge
+🟡 <b>Tier B signals (11)</b>
+• <a href="...">ETH flippening?</a> — signal 0.55 | crowd: 22%
+
+📈 Most mispriced category: <b>Crypto</b> (avg signal 0.74)
+📉 Weakest signal: <b>Sports</b> (0.38) — skip unless you have domain edge
 
 32 markets scored · Model AUC 0.63 · Not financial advice
 ```
 
-Uses stdlib `urllib.request` — no extra dependencies.
+Uses stdlib `urllib.request` — no extra dependencies. Tier B entries capped at top 3 to keep message under Telegram's 4096-char limit.
 
 ---
 
@@ -396,15 +459,36 @@ One line. Reuses the existing `_read_report()` helper (404 if missing, 500 if co
 
 ## Sub-system 5: Frontend tab (`QuantReport.jsx`)
 
-Three sections, no shared components with Alpha tab:
+Five sections, no shared components with Alpha tab. All charts use existing Recharts dependency.
 
-1. **Summary strip** — generatedAt, weekOf, modelAUC badge, tierA count
-2. **Category bar chart** — horizontal bars using existing Recharts (already a dep), one bar per category coloured by avgQuantScore
-3. **Opportunities table** — columns: Tier badge, Market (linked), Signal Score, Adj. Prob, Info Ratio, Kelly Bet. Sortable by any column. Top 15 rows shown. `kellyBet` shows "—" if null.
+### Section 1: Summary strip
+Four stat pills in a row: `Week of`, `Markets scored`, `Tier A signals`, `Model AUC`. Tiny and non-intrusive.
+
+### Section 2: Macro & Politics Pulse (category crowd probability chart — option B)
+Horizontal bar chart, one bar per poly2 category (`macro`, `politics`, `geopolitics`, `crypto`, `stocks`, `ai_tech`). Bar length = `avgCrowdProb` (0–100%). Each bar shows the category name, market count, and the top market question as a tooltip. Colour scale: blue=cold/uncertain (near 50%), amber=leaning, green=strong consensus.
+
+This answers: "What does the crowd collectively believe across themes this week?"
+
+### Section 3: Model Signal vs Crowd Scatter (option C)
+Scatter plot. Each dot is one scored opportunity:
+- X axis: `curPrice` (crowd probability, 0–1)
+- Y axis: `quantScore` (model mispricing signal, 0–1)
+- Dot colour: tier A=green, B=amber, C=dim
+- Hover tooltip: market title + signal tier + adj. prob
+
+Reference diagonal line (y = x) drawn in dim colour — dots above the line are where the model sees more signal than the crowd price suggests. This is the key insight view.
+
+### Section 4: Category signal comparison (dual-bar)
+Side-by-side grouped bars per category: one bar for `avgCrowdProb` (crowd), one for `avgQuantScore` (model signal). Shows where the model diverges from consensus.
+
+Only shown for categories that have at least one scored opportunity (i.e., categories in `categoryReport`, not all of `categoryTrends`).
+
+### Section 5: Opportunities table
+Columns: Tier badge, Market title (linked), Signal Score, Adj. Prob, Crowd Prob, Info Ratio, Kelly Bet. Default sort: Signal Score descending. Top 20 rows shown. `kellyBet` shows "—" if null.
 
 Signal tier badge colours: A = `T.green`, B = `T.amber`, C = `T.dim`. Matches existing design tokens.
 
-Column label clarification: `calibratedProb` is displayed as "Adj. Prob" (adjusted probability / mispricing confidence), not "Win Probability", to avoid misleading the user.
+Column label clarification: `calibratedProb` is displayed as "Adj. Prob" (mispricing confidence), `curPrice` as "Crowd Prob". The scatter plot tooltip clarifies these meanings on hover.
 
 ---
 
@@ -484,6 +568,9 @@ Note: commit-and-push runs before Telegram so the notification is only sent afte
 - `test_kelly_bet_passthrough_nullable` — opportunity with no `kellyBet` → output has `"kellyBet": null`
 - `test_skip_opportunity_missing_cur_price` — opportunity without `curPrice` is skipped with a warning, not raised; remaining opportunities are still scored
 - `test_poly2_slug_merge` — poly2 enrichment lookup by slug; unmatched slug → volume/liquidity defaults to 0
+- `test_build_category_trends_structure` — verify `avgCrowdProb` is correctly averaged and `topMarket` is the highest-volume market
+- `test_build_category_trends_empty_category` — category with no markets → omitted from output (not keyed with nulls)
+- `test_category_trends_independent_of_scored_opps` — `categoryTrends` includes all poly2 categories even when no polytraders opportunities exist
 
 ### `test_train_model.py` (light)
 - `test_feature_matrix_shape` — N rows × 8 columns (matching `FEATURE_NAMES`)
