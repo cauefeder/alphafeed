@@ -14,7 +14,7 @@
 
 - The **Quant tab is completely separate** from the existing Alpha (Kelly signals) tab. No mixing of data, components, or endpoints.
 - The XGBoost model is trained **locally once**, validated rigorously, and committed as `models/xgboost_model.pkl`. The weekly cron only runs inference.
-- Overfitting is prevented through: temporal train/val/test split, cross-validation, feature importance review, and held-out test AUC gate (must exceed 0.60 to pass).
+- Overfitting is prevented through: temporal train/val/test split, cross-validation, feature importance review, and held-out test AUC gate (must exceed 0.58 to pass).
 - The Polymarket public API provides ~50,000+ resolved markets going back to 2021 — this is the primary training corpus.
 
 ---
@@ -29,12 +29,13 @@
 | `backend/adapters/quant_report.py` | Weekly inference: load model, score live opps, write JSON |
 | `backend/adapters/quant_telegram.py` | Format and send weekly Telegram summary |
 | `models/xgboost_model.pkl` | Committed trained model (binary, ~500KB) |
-| `models/calibration_params.json` | Platt scaling a/b params + feature stats |
-| `models/training_metrics.json` | AUC, precision, recall, confusion matrix from last train run |
+| `models/calibration_params.json` | Platt scaling a/b params + feature order list |
+| `models/training_metrics.json` | AUC, precision, recall, confusion matrix, modelVersion (date string) from last train run |
 | `reports/quant_report.json` | Weekly scored opportunities (served by API) |
 | `frontend/src/tabs/QuantReport.jsx` | Quant tab: summary strip, category chart, scored table |
 | `tests/test_quant_report.py` | Unit tests for scoring engine |
 | `tests/test_fetch_historical.py` | Unit tests for historical data fetcher |
+| `tests/test_train_model.py` | Light tests for training pipeline (split, AUC gate) |
 | `.github/workflows/weekly-quant-report.yml` | Sunday 20:00 UTC cron |
 
 ### Modified files
@@ -107,20 +108,27 @@ python backend/adapters/fetch_historical.py --pages 150 --output data/historical
 
 ### 2b. Model training (`train_model.py`)
 
-**Feature engineering:**
+**Feature engineering — 8 training features (canonical order):**
 ```python
-features = [
-    "yes_price",                          # raw crowd probability
-    "calibrated_prob",                    # logit(yes_price) * b + a (fit on data)
-    "info_ratio",                         # volume_24h / sqrt(days_left + 1)
-    "log_volume_total",                   # log1p(volume_total)
-    "log_liquidity",                      # log1p(liquidity)
-    "days_left",                          # time to resolution
-    "is_longshot",                        # yes_price < 0.20 (binary)
-    "is_favorite",                        # yes_price > 0.80 (binary)
-    "price_extremity",                    # |yes_price - 0.5| * 2 (0=uncertain, 1=decided)
+FEATURE_NAMES = [
+    "yes_price",          # raw crowd probability
+    "info_ratio",         # volume_24h / sqrt(days_left + 1) / 10_000
+    "log_volume_total",   # log1p(volume_total)
+    "log_liquidity",      # log1p(liquidity)
+    "days_left",          # time to resolution
+    "is_longshot",        # int(yes_price < 0.20)
+    "is_favorite",        # int(yes_price > 0.80)
+    "price_extremity",    # abs(yes_price - 0.5) * 2  (0=uncertain, 1=decided)
 ]
+
+# info_ratio formula — used identically in training AND inference:
+# info_ratio = volume_24h / sqrt(days_left + 1) / 10_000
+# The +1 inside sqrt prevents division by zero when days_left == 0.
 ```
+
+`FEATURE_NAMES` is the single source of truth for column order. All data frames and inference arrays must be constructed from this list explicitly — never from dict insertion order.
+
+> **Note on `calibrated_prob`:** Platt scaling (a/b) is fit on the model's *output* probabilities against the validation set labels *after* training. It is **not** a training input feature. The `calibratedProb` field in the inference output is computed post-prediction using these params as an output annotation, not as a model input.
 
 **Label definition:**
 ```python
@@ -140,6 +148,17 @@ label = int((resolved_yes == 1) != (yes_price >= 0.5))
 
 5. **Held-out test gate**: If test AUC < 0.58, training script exits with an error and refuses to save the model. The gate is intentionally low — prediction markets are hard to beat. A 0.58 AUC means the model is adding real signal.
 
+**Platt scaling fit (after training):**
+After the model passes the AUC gate, fit logistic regression on the validation set:
+```python
+from sklearn.linear_model import LogisticRegression
+platt = LogisticRegression()
+platt.fit(model.predict_proba(X_val)[:, 1].reshape(-1, 1), y_val)
+platt_a = float(platt.intercept_[0])
+platt_b = float(platt.coef_[0][0])
+```
+`platt_a` and `platt_b` are saved in `calibration_params.json`.
+
 **Training output:**
 ```
 python backend/adapters/train_model.py --data data/historical_markets.csv
@@ -152,47 +171,84 @@ python backend/adapters/train_model.py --data data/historical_markets.csv
 [train_model] Feature importance:
                info_ratio        0.31
                yes_price         0.24
-               calibrated_prob   0.18
                log_liquidity     0.12
                days_left         0.09
                is_longshot       0.04
                ...
+[train_model] Platt scaling fit on validation set: a=-0.12, b=0.94
 [train_model] Model saved → models/xgboost_model.pkl
 [train_model] Calibration saved → models/calibration_params.json
-[train_model] Metrics saved → models/training_metrics.json
+[train_model] Metrics saved → models/training_metrics.json  (includes modelVersion: "2026-03-30")
 ```
+
+**`calibration_params.json` schema:**
+```json
+{
+  "platt_a": -0.12,
+  "platt_b": 0.94,
+  "feature_names": [
+    "yes_price", "info_ratio", "log_volume_total", "log_liquidity",
+    "days_left", "is_longshot", "is_favorite", "price_extremity"
+  ]
+}
+```
+
+- `platt_a` / `platt_b`: Platt scaling intercept and coefficient, fit on validation set outputs.
+- `feature_names`: Canonical ordered list used during training. Inference must construct numpy arrays using this exact order.
 
 ---
 
 ## Sub-system 2c: Weekly inference (`quant_report.py`)
 
-Runs in GitHub Actions every Sunday. Loads committed model, scores all current opportunities from `polytraders.json`.
+Runs in GitHub Actions every Sunday. Loads committed model and `reports/polytraders.json` (kept fresh by the existing `refresh-reports.yml` daily cron — the quant report reads the most recently committed version).
+
+**Field policy for `polytraders.json` opportunities:**
+- `curPrice` and `volume_24h` are **required** — opportunities missing either are skipped with a warning log.
+- `volumeTotal`, `liquidity`: optional, default to `0` if absent.
+- `days_left`: optional, defaults to `14` if absent or null.
 
 **Scoring per opportunity:**
 ```python
 def score_opportunity(opp: dict, model, calibration: dict) -> dict:
+    if "curPrice" not in opp or "volume_24h" not in opp:
+        raise ValueError(f"Missing required fields in opportunity: {opp.get('slug')}")
+
     p = opp["curPrice"]
-    vol = opp["volume_24h"]           # from poly2 enrichment
+    vol = opp["volume_24h"]
     days = max(opp.get("days_left") or 14, 0.5)
 
-    features = {
+    feature_values = {
         "yes_price": p,
-        "calibrated_prob": calibrate(p, calibration),
-        "info_ratio": vol / (days ** 0.5) / 10_000,
-        "log_volume_total": log1p(opp.get("volumeTotal", 0)),
-        "log_liquidity": log1p(opp.get("liquidity", 0)),
+        "info_ratio": vol / ((days + 1) ** 0.5) / 10_000,   # +1 matches training formula
+        "log_volume_total": log1p(opp.get("volumeTotal") or 0),
+        "log_liquidity": log1p(opp.get("liquidity") or 0),
         "days_left": days,
         "is_longshot": int(p < 0.20),
         "is_favorite": int(p > 0.80),
         "price_extremity": abs(p - 0.5) * 2,
     }
 
-    quant_score = float(model.predict_proba([list(features.values())])[0][1])
-    tier = "A" if quant_score >= 0.65 else "B" if quant_score >= 0.40 else "C"
+    # Build array using calibration's canonical feature order — never dict insertion order
+    feature_names = calibration["feature_names"]
+    X = np.array([[feature_values[f] for f in feature_names]])
 
-    return {**opp, "quantScore": quant_score, "signalTier": tier,
-            "calibratedProb": features["calibrated_prob"],
-            "infoRatio": round(features["info_ratio"], 3)}
+    raw_score = float(model.predict_proba(X)[0][1])
+    calibrated = calibrate(raw_score, calibration)  # Platt scaling on model output
+    tier = "A" if raw_score >= 0.65 else "B" if raw_score >= 0.40 else "C"
+
+    return {**opp, "quantScore": raw_score, "signalTier": tier,
+            "calibratedProb": round(calibrated, 3),
+            "infoRatio": round(feature_values["info_ratio"], 3)}
+```
+
+The `calibrate(p, calibration)` function applies Platt scaling to the model's output probability.
+`platt_b` is the coefficient of the raw model score, `platt_a` is the intercept (matching sklearn's `LogisticRegression` convention from training):
+```python
+def calibrate(p: float, calibration: dict) -> float:
+    """Apply Platt scaling: sigmoid(platt_b * p + platt_a)."""
+    from math import exp
+    raw = calibration["platt_b"] * p + calibration["platt_a"]
+    return 1 / (1 + exp(-raw))
 ```
 
 **Output** (`reports/quant_report.json`):
@@ -200,7 +256,7 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
 {
   "generatedAt": "2026-03-30T20:00:00Z",
   "weekOf": "2026-03-30",
-  "modelVersion": "1.0",
+  "modelVersion": "2026-03-30",   // date-stamped, read from training_metrics.json
   "modelAuc": 0.628,
   "summary": {
     "totalScored": 32,
@@ -226,7 +282,7 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     }
   ],
   "categoryReport": {
-    "crypto":   {"count": 8,  "avgQuantScore": 0.74, "tierACcount": 2},
+    "crypto":   {"count": 8,  "avgQuantScore": 0.74, "tierACount": 2},
     "politics": {"count": 12, "avgQuantScore": 0.51, "tierACount": 1},
     "sports":   {"count": 6,  "avgQuantScore": 0.38, "tierACount": 0},
     "macro":    {"count": 6,  "avgQuantScore": 0.61, "tierACount": 1}
@@ -288,21 +344,52 @@ Signal tier badge colours: A = `T.green`, B = `T.amber`, C = `T.dim`. Matches ex
 
 New file `.github/workflows/weekly-quant-report.yml`:
 ```yaml
-permissions:
-  contents: write
+name: Weekly Quant Report
 
 on:
   schedule:
     - cron: "0 20 * * 0"   # Sunday 20:00 UTC
   workflow_dispatch:
 
-steps:
-  - checkout
-  - python setup
-  - pip install -r backend/requirements.txt
-  - run quant_report.py        # inference only, model.pkl already committed
-  - run quant_telegram.py      # push Telegram message
-  - git commit reports/quant_report.json + push
+permissions:
+  contents: write
+
+jobs:
+  quant-report:
+    name: Generate and push quant report
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Run quant_report (inference)
+        run: python backend/adapters/quant_report.py
+        continue-on-error: false   # hard fail — no partial reports
+        env:
+          POLYTRADERS_BANKROLL: "100"
+
+      - name: Send Telegram summary
+        run: python backend/adapters/quant_telegram.py
+        continue-on-error: true    # Telegram down shouldn't block commit
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Commit and push quant report
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f reports/quant_report.json
+          git diff --cached --quiet && echo "No changes" || \
+            git commit -m "chore: weekly quant report $(date -u +'%Y-%m-%d')"
+          git push origin master
 ```
 
 ---
@@ -318,12 +405,13 @@ steps:
 - `test_score_opportunity_features_correct` — verify feature values for known input
 - `test_tier_boundaries` — score 0.70 → A, 0.50 → B, 0.30 → C
 - `test_model_not_needed_for_feature_engineering` — feature computation is pure functions, no model required
-- `test_calibrate_midpoint` — calibrate(0.5) ≈ 0.5 (calibration shouldn't move midpoint)
+- `test_calibrate_midpoint` — calibrate(0.5) ≈ 0.5 (calibration shouldn't move midpoint when a≈0, b≈1)
 - `test_generate_report_empty_input` — empty opportunities list → valid JSON with zeroed summary
 - `test_category_report_aggregation` — verify avgQuantScore math per category
+- `test_feature_order_matches_calibration` — `score_opportunity` uses `calibration["feature_names"]` order, not dict insertion order
 
 ### `test_train_model.py` (light)
-- `test_feature_matrix_shape` — N rows × 9 columns
+- `test_feature_matrix_shape` — N rows × 8 columns (matching `FEATURE_NAMES`)
 - `test_temporal_split_no_leakage` — test indices are always newer than val, val newer than train
 - `test_auc_gate_rejects_bad_model` — mock model returning random predictions → AUC ≈ 0.50 → exits
 
