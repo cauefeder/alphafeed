@@ -5,6 +5,7 @@ import { getSession, calcRealizedVol, calcWeekdayVol } from "./math.js";
 import {
   fetchBtcPrice, fetchKlines, fetchDvol, fetchHistVol, fetchOptionsBook,
   fetchBackendPolymarket, fetchPolymarketDirect, fetchKellySignals, fetchSmartMoney, fetchMacroReport,
+  fetchQuantReport, seedQuantReport,
   pingBackend,
   seedDvol, seedHourlyVol, seedWeekdayVol, seedHistVol, seedVolSurface,
   seedPolymarket, seedKellySignals, seedSmartMoney, seedMacroReport, EMP_IV,
@@ -16,6 +17,7 @@ import { TermStructureTab } from "./tabs/TermStructure.jsx";
 import { PolymarketTab }    from "./tabs/Polymarket.jsx";
 import { AlphaTab }         from "./tabs/Alpha.jsx";
 import { MacroReportTab }   from "./tabs/MacroReport.jsx";
+import { QuantReportTab }   from "./tabs/QuantReport.jsx";
 import { BankrollTab }      from "./tabs/Bankroll.jsx";
 import { ConfigTab }        from "./tabs/Config.jsx";
 
@@ -25,6 +27,7 @@ const TABS = [
   { id: "options",    label: "Term Struct", icon: "▣" },
   { id: "polymarket", label: "Polymarket",  icon: "◈" },
   { id: "alpha",      label: "Alpha",       icon: "★" },
+  { id: "quant",      label: "Quant",       icon: "📊" },
   { id: "macro",      label: "Macro",       icon: "🌐" },
   { id: "bankroll",   label: "Bankroll",    icon: "⚡" },
   { id: "apis",       label: "Config",      icon: "⚙" },
@@ -36,7 +39,7 @@ export default function AlphaFeed() {
   const [lastUpdate, setLastUpdate] = useState(null);
   const [src, setSrc] = useState({
     price: "seed", dvol: "seed", histVol: "seed",
-    klines: "seed", book: "seed", poly: "seed", alpha: "seed", macro: "seed",
+    klines: "seed", book: "seed", poly: "seed", alpha: "seed", macro: "seed", quant: "seed",
   });
 
   const [btcPrice,    setBtcPrice]    = useState(67340);
@@ -49,6 +52,7 @@ export default function AlphaFeed() {
   const [kellySignals,setKellySignals]= useState(seedKellySignals());
   const [smartMoney,  setSmartMoney]  = useState(seedSmartMoney());
   const [macroReport, setMacroReport] = useState(seedMacroReport());
+  const [quantReport, setQuantReport] = useState(seedQuantReport());
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -57,10 +61,10 @@ export default function AlphaFeed() {
     // Wake up Render backend (free tier sleeps after 15 min of inactivity)
     await pingBackend();
 
-    const [price, klines, dvol, hv, book, poly, ks, sm, mr] = await Promise.allSettled([
+    const [price, klines, dvol, hv, book, poly, ks, sm, mr, qr] = await Promise.allSettled([
       fetchBtcPrice(), fetchKlines(), fetchDvol(), fetchHistVol(),
       fetchOptionsBook(), fetchBackendPolymarket(), fetchKellySignals(), fetchSmartMoney(),
-      fetchMacroReport(),
+      fetchMacroReport(), fetchQuantReport(),
     ]);
 
     const lPrice = price.status === "fulfilled" ? price.value : null;
@@ -108,6 +112,10 @@ export default function AlphaFeed() {
 
     const lMr = mr.status === "fulfilled" ? mr.value : null;
     if (lMr?.categories) { setMacroReport(lMr); s.macro = "live"; }
+
+    const lQr = qr.status === "fulfilled" ? qr.value : null;
+    if (lQr?.generatedAt) { setQuantReport(lQr); s.quant = "live"; }
+    else                   { s.quant = "seed"; }
 
     // Merge DVOL implied vol into hourly buckets
     setHourlyVol(prev => prev.map(h => {
@@ -190,6 +198,7 @@ export default function AlphaFeed() {
         {tab === "options"    && <TermStructureTab volSurface={volSurface} srcBook={src.book} />}
         {tab === "polymarket" && <PolymarketTab    polyAnalysis={polyMarkets} srcPoly={src.poly} />}
         {tab === "alpha"      && <AlphaTab         kellySignals={kellySignals} srcAlpha={src.alpha} />}
+        {tab === "quant"      && <QuantReportTab   quantReport={quantReport} srcQuant={src.quant} />}
         {tab === "macro"      && <MacroReportTab   macroReport={macroReport} srcMacro={src.macro} />}
         {tab === "bankroll"   && <BankrollTab />}
         {tab === "apis"       && <ConfigTab        src={src} />}
