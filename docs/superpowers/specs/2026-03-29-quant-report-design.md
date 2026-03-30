@@ -110,17 +110,20 @@ python backend/adapters/fetch_historical.py --pages 150 --output data/historical
 
 ### 2b. Model training (`train_model.py`)
 
-**Feature engineering — 8 training features (canonical order):**
+**Feature engineering — 6 training features (canonical order):**
+
+The training data comes from the Gamma API (historical resolved markets) and does NOT include smart money signals. Smart money signals (`nSmartTraders`, `countSignal`, `sizeSignal`) are available in `polytraders.json` only for the current week's opportunities, not for the historical corpus. Therefore the model is trained on market microstructure features only. The smart money pre-filter acts as the primary gate — XGBoost adds a secondary layer of market microstructure signal on top.
+
+The 4 yes_price-derived features originally proposed (`yes_price`, `is_longshot`, `is_favorite`, `price_extremity`) are redundant encodings of the same scalar. Removing 2 (is_longshot, is_favorite — subsumed by yes_price and price_extremity) reduces collinearity:
+
 ```python
 FEATURE_NAMES = [
     "yes_price",          # raw crowd probability
-    "info_ratio",         # volume_24h / sqrt(days_left + 1) / 10_000
-    "log_volume_total",   # log1p(volume_total)
-    "log_liquidity",      # log1p(liquidity)
+    "info_ratio",         # volume_24h / sqrt(days_left + 1) / 10_000 — informed trading signal
+    "log_volume_total",   # log1p(volume_total) — market quality proxy
+    "log_liquidity",      # log1p(liquidity) — AMM depth proxy
     "days_left",          # time to resolution (clamped to >= 0.5 at inference)
-    "is_longshot",        # int(yes_price < 0.20)
-    "is_favorite",        # int(yes_price > 0.80)
-    "price_extremity",    # abs(yes_price - 0.5) * 2  (0=uncertain, 1=decided)
+    "price_extremity",    # abs(yes_price - 0.5) * 2 (0=uncertain, 1=decided)
 ]
 
 # info_ratio formula — identical in training AND inference:
@@ -131,9 +134,17 @@ FEATURE_NAMES = [
 
 `FEATURE_NAMES` is the single source of truth for column order. All data frames and inference arrays must be constructed from this list explicitly — never from dict insertion order.
 
-> **Note on `calibrated_prob`:** Platt scaling (a/b) is fit on the model's *output* probabilities against the validation set labels *after* training. It is **not** a training input feature. The `calibratedProb` field in the inference output is computed post-prediction using these params as an output annotation, not as a model input.
+> **Note on `calibrated_prob`:** Platt scaling (a/b) is fit on the model's *output* probabilities against the validation set labels *after* training. It is **not** a training input feature. The `quantScore` field is the primary output and is the only score shown in the UI and ranked table.
 
-**What the model predicts:** `quantScore` is the model's confidence that the crowd is wrong (mispricing confidence), not the probability that YES resolves. `calibratedProb` is Platt-scaled `quantScore` — also a mispricing confidence, not an outcome probability. The UI and Telegram message should label it "mispricing confidence" or "signal strength", not "win probability."
+**Class imbalance handling:** Prediction markets resolve in line with the crowd majority ~70-75% of the time, creating class imbalance (label=1, crowd was wrong, is the minority class). Set `scale_pos_weight` in XGBoost to `(n_negative / n_positive)` computed from the training set. This prevents the model from trivially predicting "crowd was right" and still clearing the AUC gate.
+
+```python
+n_pos = y_train.sum()
+n_neg = len(y_train) - n_pos
+xgb_params["scale_pos_weight"] = n_neg / n_pos  # typically ~2.5–4x
+```
+
+**What the model predicts:** `quantScore` is the model's confidence that the crowd is mispriced — that the market will resolve against the crowd's direction. It is NOT the probability that YES resolves. Scores above 0.65 (Tier A) represent opportunities where historical market microstructure patterns most strongly predicted crowd error.
 
 **Label definition:**
 ```python
@@ -318,15 +329,18 @@ def build_category_trends(poly2: dict) -> dict:
             continue
         avg_prob = sum(m["yes_price"] for m in markets) / len(markets)
         top = max(markets, key=lambda m: m.get("volume_24h", 0))
+        top3 = sorted(markets, key=lambda m: m.get("volume_24h", 0), reverse=True)[:3]
         trends[cat_name] = {
             "totalMarkets": len(markets),
-            "avgCrowdProb": round(avg_prob, 3),
-            "topMarket": {
-                "question": top["question"],
-                "yes_price": top["yes_price"],
-                "volume_24h": top.get("volume_24h", 0),
-                "url": top["url"],
-            },
+            "top3Markets": [
+                {
+                    "question": m["question"],
+                    "yes_price": m["yes_price"],
+                    "volume_24h": m.get("volume_24h", 0),
+                    "url": m["url"],
+                }
+                for m in top3
+            ],
         }
     return trends
 ```
@@ -335,33 +349,28 @@ This runs regardless of whether any polytraders opportunities matched — it giv
 
 **Category edge ranking (`edgeRanking`) computation:**
 
-Each category in `categoryReport` (scored opportunities only) gets an `edgeScore`:
+Each category in `categoryReport` (scored opportunities only) gets an `edgeScore`. The formula uses only data from the scored opportunities themselves — not the poly2 category averages (which mix in unrelated markets that distort the signal):
 
 ```python
-def compute_edge_score(cat: dict, trend: dict) -> float:
+def compute_edge_score(cat: dict) -> float:
     """
-    Edge score = weighted combination of three signals:
-      1. avg model signal (0.5 weight)  — how much mispricing the model detects
-      2. crowd uncertainty (0.3 weight) — how far avg crowd prob is from 0.5 (inverted)
-                                          closer to 0.5 = more uncertain = more edge potential
-      3. Tier A density (0.2 weight)    — tierACount / count (fraction of top signals)
+    Edge score = avg model signal (primary) + Tier A count bonus.
+    Tier A count is shown as a separate column, not blended into the score,
+    to avoid penalising large categories that have many Tier A but also many Tier C.
     """
-    model_signal   = cat["avgQuantScore"]                       # 0–1
-    crowd_prob     = trend.get("avgCrowdProb", 0.5) if trend else 0.5
-    uncertainty    = 1.0 - abs(crowd_prob - 0.5) * 2           # 0=decided, 1=max uncertain
-    tier_a_density = cat["tierACount"] / max(cat["count"], 1)  # 0–1
-
-    return round(0.5 * model_signal + 0.3 * uncertainty + 0.2 * tier_a_density, 3)
+    return round(cat["avgQuantScore"], 3)  # primary ranking signal
 ```
 
-`edgeRanking` is an ordered list of categories sorted by `edgeScore` descending:
+`avgQuantScore` is the dominant and most reliable signal at this sample size (~2–12 opps per category). Tier A count is displayed separately in the ranking table.
+
+`edgeRanking` is an ordered list of categories sorted by `avgQuantScore` descending:
 ```json
 "edgeRanking": [
-  {"category": "crypto",      "edgeScore": 0.71, "label": "Strong edge",   "avgQuantScore": 0.74, "avgCrowdProb": 0.61, "tierACount": 2},
-  {"category": "macro",       "edgeScore": 0.62, "label": "Good edge",     "avgQuantScore": 0.61, "avgCrowdProb": 0.38, "tierACount": 1},
-  {"category": "politics",    "edgeScore": 0.55, "label": "Moderate edge", "avgQuantScore": 0.51, "avgCrowdProb": 0.52, "tierACount": 1},
-  {"category": "geopolitics", "edgeScore": 0.41, "label": "Weak edge",     "avgQuantScore": 0.44, "avgCrowdProb": 0.41, "tierACount": 0},
-  {"category": "sports",      "edgeScore": 0.34, "label": "Skip",          "avgQuantScore": 0.38, "avgCrowdProb": 0.55, "tierACount": 0}
+  {"category": "crypto",      "edgeScore": 0.74, "label": "Strong edge",   "avgQuantScore": 0.74, "tierACount": 2, "count": 8},
+  {"category": "macro",       "edgeScore": 0.61, "label": "Good edge",     "avgQuantScore": 0.61, "tierACount": 1, "count": 6},
+  {"category": "politics",    "edgeScore": 0.51, "label": "Moderate edge", "avgQuantScore": 0.51, "tierACount": 1, "count": 12},
+  {"category": "geopolitics", "edgeScore": 0.44, "label": "Weak edge",     "avgQuantScore": 0.44, "tierACount": 0, "count": 4},
+  {"category": "sports",      "edgeScore": 0.38, "label": "Skip",          "avgQuantScore": 0.38, "tierACount": 0, "count": 6}
 ]
 ```
 
@@ -391,31 +400,30 @@ def generate_insights(edge_ranking, category_report, category_trends, opportunit
             f"crowd at {best['curPrice']:.0%}, adj. prob {best['calibratedProb']:.0%}."
         )
 
-    # 3. Largest crowd-model divergence
-    divergent = max(
-        edge_ranking,
-        key=lambda r: abs(r["avgQuantScore"] - r["avgCrowdProb"])
-    )
-    delta = divergent["avgQuantScore"] - divergent["avgCrowdProb"]
-    direction = "underpriced" if delta > 0 else "overpriced"
-    insights.append(
-        f"{divergent['category'].title()} shows the largest crowd-model gap "
-        f"({abs(delta):.0%} {direction} by crowd)."
-    )
+    # 3. Best single opportunity: largest gap between quantScore and the tier A threshold
+    if tier_a:
+        best = tier_a[0]
+        margin = best["quantScore"] - 0.65  # how far above Tier A gate
+        insights.append(
+            f"'{best['title']}' has the highest signal margin ({best['quantScore']:.2f}), "
+            f"{margin:.2f} above the Tier A threshold. Crowd is at {best['curPrice']:.0%}."
+        )
 
-    # 4. Skip recommendation
+    # 4. Skip recommendation (conditional — only fires if there are actual Skip categories)
     skip = [r for r in edge_ranking if r["label"] == "Skip"]
     if skip:
         names = ", ".join(r["category"] for r in skip)
         insights.append(f"Low signal this week: {names} — skip unless you have domain edge.")
 
-    # 5. Market uncertainty note
-    most_uncertain = min(category_trends.items(), key=lambda kv: abs(kv[1]["avgCrowdProb"] - 0.5))
-    cat, data = most_uncertain
-    insights.append(
-        f"{cat.title()} is the most uncertain category (crowd avg {data['avgCrowdProb']:.0%}) "
-        f"— high uncertainty can mean opportunity or noise."
-    )
+    # 5. Model staleness alert (conditional — fires only if modelVersion is > 60 days old)
+    from datetime import datetime, timezone
+    model_date = datetime.strptime(model_version, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    days_since_train = (datetime.now(timezone.utc) - model_date).days
+    if days_since_train > 60:
+        insights.append(
+            f"Model is {days_since_train} days old (trained {model_version}). "
+            f"Consider retraining with fresh historical data."
+        )
 
     return insights
 ```
@@ -423,11 +431,10 @@ def generate_insights(edge_ranking, category_report, category_trends, opportunit
 Sample output:
 ```json
 "insights": [
-  "Crypto offers the strongest edge this week (model signal 74%, crowd at 61%).",
-  "Top opportunity: 'Will BTC hit $90K by April?' — model signal 0.84, crowd at 62%, adj. prob 68%.",
-  "Macro shows the largest crowd-model gap (23% underpriced by crowd).",
-  "Low signal this week: sports — skip unless you have domain edge.",
-  "Macro is the most uncertain category (crowd avg 38%) — high uncertainty can mean opportunity or noise."
+  "Crypto offers the strongest edge this week (model signal 74%).",
+  "Top opportunity: 'Will BTC hit $90K by April?' — model signal 0.84, crowd at 62%.",
+  "'Will BTC hit $90K by April?' has the highest signal margin (0.84), 0.19 above the Tier A threshold. Crowd is at 62%.",
+  "Low signal this week: sports — skip unless you have domain edge."
 ]
 ```
 
@@ -497,27 +504,24 @@ def calibrate(p: float, calibration: dict) -> float:
   "categoryTrends": {
     "macro": {
       "totalMarkets": 42,
-      "avgCrowdProb": 0.38,
-      "topMarket": {
-        "question": "Will the Fed cut rates by 50bps in April?",
-        "yes_price": 0.005,
-        "volume_24h": 835103,
-        "url": "https://polymarket.com/event/..."
-      }
+      "top3Markets": [
+        {"question": "Will the Fed cut rates by 50bps in April?", "yes_price": 0.005, "volume_24h": 835103, "url": "..."},
+        {"question": "Will CPI fall below 3% in March?",          "yes_price": 0.62,  "volume_24h": 412000, "url": "..."},
+        {"question": "US recession by end of 2026?",              "yes_price": 0.38,  "volume_24h": 180000, "url": "..."}
+      ]
     },
     "politics": {
       "totalMarkets": 55,
-      "avgCrowdProb": 0.52,
-      "topMarket": { "question": "...", "yes_price": 0.71, "volume_24h": 240000, "url": "..." }
+      "top3Markets": [
+        {"question": "...", "yes_price": 0.71, "volume_24h": 240000, "url": "..."},
+        {"question": "...", "yes_price": 0.44, "volume_24h": 195000, "url": "..."},
+        {"question": "...", "yes_price": 0.28, "volume_24h": 140000, "url": "..."}
+      ]
     },
-    "geopolitics": {
-      "totalMarkets": 28,
-      "avgCrowdProb": 0.41,
-      "topMarket": { "question": "...", "yes_price": 0.44, "volume_24h": 180000, "url": "..." }
-    },
-    "crypto":  { "totalMarkets": 31, "avgCrowdProb": 0.61, "topMarket": { "..." : "..." } },
-    "stocks":  { "totalMarkets": 18, "avgCrowdProb": 0.55, "topMarket": { "..." : "..." } },
-    "ai_tech": { "totalMarkets": 12, "avgCrowdProb": 0.48, "topMarket": { "..." : "..." } }
+    "geopolitics": { "totalMarkets": 28, "top3Markets": ["..."] },
+    "crypto":      { "totalMarkets": 31, "top3Markets": ["..."] },
+    "stocks":      { "totalMarkets": 18, "top3Markets": ["..."] },
+    "ai_tech":     { "totalMarkets": 12, "top3Markets": ["..."] }
   }
 }
 ```
@@ -583,19 +587,27 @@ Five sections, no shared components with Alpha tab. All charts use existing Rech
 ### Section 1: Summary strip
 Four stat pills in a row: `Week of`, `Markets scored`, `Tier A signals`, `Model AUC`. Tiny and non-intrusive.
 
-### Section 2: Macro & Politics Pulse (category crowd probability chart — option B)
-Horizontal bar chart, one bar per poly2 category (`macro`, `politics`, `geopolitics`, `crypto`, `stocks`, `ai_tech`). Bar length = `avgCrowdProb` (0–100%). Each bar shows the category name, market count, and the top market question as a tooltip. Colour scale: blue=cold/uncertain (near 50%), amber=leaning, green=strong consensus.
+### Section 2: Macro & Politics Pulse (top markets by volume — option B)
+Averaging `yes_price` across all markets in a category is dominated by how Polymarket frames questions (a 0.4% longshot drags the average far from 0.5 regardless of consensus). Instead, this section shows the **top 3 markets by `volume_24h`** within each poly2 category — the markets people are actually trading most this week.
 
-This answers: "What does the crowd collectively believe across themes this week?"
+Layout: one card per category (macro, politics, geopolitics, crypto, stocks, ai_tech). Each card shows:
+- Category name + total market count
+- Top 3 markets: question text (truncated to 60 chars), crowd probability as a coloured pill (red <30%, amber 30–70%, green >70%), and 24h volume
+
+This answers: "What are the highest-activity markets in each theme this week?"
+
+`categoryTrends.topMarket` already stores the #1 market. The inference script is updated to store `top3Markets` (top 3 by volume_24h) instead of just `topMarket`.
 
 ### Section 3: Model Signal vs Crowd Scatter (option C)
-Scatter plot. Each dot is one scored opportunity:
+Scatter plot for model diagnostics and pattern recognition. Each dot is one scored opportunity:
 - X axis: `curPrice` (crowd probability, 0–1)
-- Y axis: `quantScore` (model mispricing signal, 0–1)
+- Y axis: `quantScore` (mispricing signal, 0–1)
 - Dot colour: tier A=green, B=amber, C=dim
-- Hover tooltip: market title + signal tier + adj. prob
+- Hover tooltip: market title + signal tier + signal score
 
-Reference diagonal line (y = x) drawn in dim colour — dots above the line are where the model sees more signal than the crowd price suggests. This is the key insight view.
+**Reference line:** A horizontal line at `quantScore = 0.65` (the Tier A threshold), not a diagonal. `quantScore` is mispricing confidence, not an outcome probability — comparing it to `curPrice` on a diagonal would be a unit mismatch. The horizontal threshold line correctly shows "above this line = Tier A signal" regardless of where the crowd is.
+
+The scatter reveals whether high-signal opportunities cluster at extreme crowd prices (longshotss / heavy favorites) or at mid-range uncertain prices — useful for understanding where the model is finding edge.
 
 ### Section 4: Category signal comparison (dual-bar)
 Side-by-side grouped bars per category: one bar for `avgCrowdProb` (crowd), one for `avgQuantScore` (model signal). Shows where the model diverges from consensus.
@@ -613,11 +625,11 @@ Sorted by `edgeScore` descending. Label badge colours: "Strong edge"=green, "Goo
 Numbered list of the 5 auto-generated insight strings from `insights[]`. Plain text, no formatting. Small header: "Weekly Conclusions".
 
 ### Section 6: Opportunities table
-Columns: Tier badge, Market title (linked), Signal Score, Adj. Prob, Crowd Prob, Info Ratio, Kelly Bet. Default sort: Signal Score descending. Top 20 rows shown. `kellyBet` shows "—" if null.
+Columns: Tier badge, Market title (linked), Signal Score (`quantScore`), Crowd Prob (`curPrice`), Info Ratio, Kelly Bet. Default sort: Signal Score descending. Top 20 rows shown. `kellyBet` shows "—" if null.
+
+`calibratedProb` is **not shown in the table**. It is Platt-scaled mispricing confidence — the same underlying signal as `quantScore`, just rescaled. Displaying it alongside `curPrice` would mislead users into reading it as a predicted outcome probability (e.g., "crowd says 35%, model says 68%" sounds like a 33-point edge but actually means "model is 68% confident the crowd is wrong about the direction"). Keeping only `quantScore` avoids this confusion.
 
 Signal tier badge colours: A = `T.green`, B = `T.amber`, C = `T.dim`. Matches existing design tokens.
-
-Column label clarification: `calibratedProb` is displayed as "Adj. Prob" (mispricing confidence), `curPrice` as "Crowd Prob". The scatter plot tooltip clarifies these meanings on hover.
 
 ---
 
