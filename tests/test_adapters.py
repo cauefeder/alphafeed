@@ -197,3 +197,57 @@ class TestHedgepolyExport:
         data = json.loads(out_file.read_text())
         assert data["signalCount"] == 1
         assert data["signals"][0]["question"] == "Will BTC hit $100K?"
+
+
+# ── Expanded traders (multi-category) ─────────────────────────────────────────
+
+class TestExpandedTraders:
+    def test_fetch_expanded_traders_deduplicates(self, monkeypatch):
+        """Wallets appearing in multiple categories are only kept once."""
+        import importlib.util
+        mock_lb = ModuleType("leaderboard")
+
+        def _fetch(time_period, limit, category=None):
+            # All categories return the same wallet for trader 0
+            return [MagicMock(proxy_wallet="shared_wallet" if i == 0 else f"{category}_{i}")
+                    for i in range(3)]
+
+        mock_lb.fetch_top_traders = _fetch
+        monkeypatch.setitem(sys.modules, "leaderboard", mock_lb)
+        monkeypatch.setitem(sys.modules, "positions", ModuleType("positions"))
+        monkeypatch.setitem(sys.modules, "kelly", ModuleType("kelly"))
+
+        spec = importlib.util.spec_from_file_location(
+            "polytraders_export_dedup",
+            Path(__file__).parent.parent / "backend/adapters/polytraders_export.py",
+        )
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        traders, breakdown = mod.fetch_expanded_traders("WEEK")
+        wallets = [t.proxy_wallet for t in traders]
+        assert wallets.count("shared_wallet") == 1, "shared_wallet should appear exactly once"
+
+    def test_category_breakdown_in_output(self, tmp_path, monkeypatch):
+        """run_export output includes categoryBreakdown field."""
+        import importlib.util
+        mock_lb = ModuleType("leaderboard")
+        mock_pos = ModuleType("positions")
+        mock_kelly = ModuleType("kelly")
+
+        mock_lb.fetch_top_traders = lambda time_period, limit, category=None: [MagicMock(proxy_wallet=f"w_{i}") for i in range(2)]
+        mock_pos.fetch_all_positions = lambda traders, max_traders: []
+        mock_kelly.score_opportunities = lambda positions, **kw: []
+        monkeypatch.setitem(sys.modules, "leaderboard", mock_lb)
+        monkeypatch.setitem(sys.modules, "positions", mock_pos)
+        monkeypatch.setitem(sys.modules, "kelly", mock_kelly)
+
+        spec = importlib.util.spec_from_file_location(
+            "polytraders_export_breakdown",
+            Path(__file__).parent.parent / "backend/adapters/polytraders_export.py",
+        )
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        result = mod.run_export(bankroll=100, time_period="WEEK")
+        assert "categoryBreakdown" in result
