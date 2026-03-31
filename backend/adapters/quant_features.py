@@ -176,7 +176,21 @@ def generate_insights(
         names = ", ".join(r["category"] for r in skip)
         insights.append(f"Low signal this week: {names} — skip unless you have domain edge.")
 
-    # 5. Model staleness alert (fires only if model is > 60 days old)
+    # 5a. Contrary plays — crowd certain but many traders disagree
+    contrary = sorted(
+        [o for o in opportunities if o.get("contraryFlag")],
+        key=lambda o: o.get("countSignal", 0),
+        reverse=True,
+    )
+    if contrary:
+        best = contrary[0]
+        count_pct = round(best.get("countSignal", 0) * 100)
+        insights.append(
+            f"Contrarian alert: '{best['title'][:50]}' — crowd priced at "
+            f"{best['curPrice']:.0%} but {count_pct}% of smart traders are positioned against it."
+        )
+
+    # 6. Model staleness alert (fires only if model is > 60 days old)
     try:
         model_date = datetime.strptime(model_version, "%Y-%m-%d").replace(tzinfo=timezone.utc)
         days_since = (datetime.now(timezone.utc) - model_date).days
