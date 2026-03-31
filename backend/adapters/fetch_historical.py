@@ -36,8 +36,28 @@ def _infer_category(tags: list) -> str:
 def parse_market(m: dict) -> dict | None:
     """
     Parse a single Gamma API market dict into a training row.
-    Returns None if the market lacks required price data.
+
+    For closed/resolved markets the Gamma API does NOT return resolvedYes.
+    Instead:
+    - yes_price: use lastTradePrice (crowd's final belief before resolution)
+    - resolved_yes: infer from outcomePrices settling to 1.0 (Yes won) or 0.0 (No won)
+    - days_left: use market duration (endDate - startDate) since endDate is always in the past
+    - volume_24h: not available for closed markets; defaults to 0
+    - liquidity: not available for closed markets; defaults to 0
     """
+    # Crowd's pre-resolution belief — lastTradePrice is the Yes token's last price
+    last_price = m.get("lastTradePrice")
+    if last_price is None:
+        return None
+    try:
+        yes_price = float(last_price)
+    except (ValueError, TypeError):
+        return None
+    # Exclude prices already at resolution boundary (0 or 1 == never traded meaningfully)
+    if not (0.001 < yes_price < 0.999):
+        return None
+
+    # Infer resolution: final outcomePrices settles to ["1","0"] (Yes) or ["0","1"] (No)
     raw_prices = m.get("outcomePrices")
     if not raw_prices:
         return None
@@ -45,23 +65,25 @@ def parse_market(m: dict) -> dict | None:
         prices = json.loads(raw_prices) if isinstance(raw_prices, str) else raw_prices
         if not prices:
             return None
-        yes_price = float(prices[0])
+        final_yes = float(prices[0])
+        if final_yes not in (0.0, 1.0):
+            return None  # not fully settled yet
+        resolved_yes = int(final_yes >= 0.5)
     except (ValueError, TypeError, IndexError):
         return None
 
-    end_date = m.get("endDate")
+    # Market duration as proxy for days_left (endDate is always in the past for resolved)
+    start_date = m.get("startDate") or m.get("startDateIso")
+    end_date = m.get("endDate") or m.get("endDateIso")
     days_left = 14.0  # default fallback
-    if end_date:
+    if start_date and end_date:
         try:
-            dt = datetime.fromisoformat(end_date.replace("Z", "+00:00"))
-            delta = (dt - datetime.now(timezone.utc)).total_seconds()
-            days_left = max(round(delta / 86400, 1), 0.0)
+            dt_start = datetime.fromisoformat(str(start_date).replace("Z", "+00:00"))
+            dt_end = datetime.fromisoformat(str(end_date).replace("Z", "+00:00"))
+            duration = (dt_end - dt_start).total_seconds() / 86400
+            days_left = max(round(duration, 1), 0.5)
         except Exception:
             pass
-
-    resolved_yes = m.get("resolvedYes")
-    if resolved_yes is None:
-        return None  # skip unresolved
 
     return {
         "slug":         m.get("slug", ""),
@@ -69,10 +91,10 @@ def parse_market(m: dict) -> dict | None:
         "category":     _infer_category(m.get("tags") or []),
         "yes_price":    round(yes_price, 4),
         "volume_24h":   float(m.get("volume24hr") or 0),
-        "volume_total": float(m.get("volumeTotal") or 0),
+        "volume_total": float(m.get("volumeNum") or m.get("volume") or 0),
         "liquidity":    float(m.get("liquidity") or 0),
         "days_left":    days_left,
-        "resolved_yes": int(bool(resolved_yes)),
+        "resolved_yes": resolved_yes,
     }
 
 
@@ -133,7 +155,7 @@ def main() -> None:
         time.sleep(0.1)  # gentle rate limiting
 
     write_csv(rows, out_path)
-    print(f"[fetch_historical] {len(rows)} resolved markets → {out_path}")
+    print(f"[fetch_historical] {len(rows)} resolved markets -> {out_path}")
 
 
 if __name__ == "__main__":

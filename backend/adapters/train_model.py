@@ -62,7 +62,7 @@ def build_feature_matrix(df) -> tuple:
 
 def temporal_split(df):
     """
-    Split df chronologically: oldest 70% → train, next 15% → val, newest 15% → test.
+    Split df chronologically: oldest 70% -> train, next 15% -> val, newest 15% -> test.
     df must already be sorted by time (older rows first).
     """
     n = len(df)
@@ -109,7 +109,7 @@ def main() -> None:
     n_pos = int(y_train.sum())
     n_neg = len(y_train) - n_pos
     scale_pos_weight = n_neg / max(n_pos, 1)
-    print(f"[train_model] Class balance: {n_neg} majority / {n_pos} minority → scale_pos_weight={scale_pos_weight:.2f}")
+    print(f"[train_model] Class balance: {n_neg} majority / {n_pos} minority -> scale_pos_weight={scale_pos_weight:.2f}")
 
     xgb_params = {
         "max_depth":          4,
@@ -137,7 +137,7 @@ def main() -> None:
 
     cv_mean = float(np.mean(cv_aucs))
     cv_std  = float(np.std(cv_aucs))
-    print(f"[train_model] CV AUC (5-fold): {cv_mean:.3f} ± {cv_std:.3f}")
+    print(f"[train_model] CV AUC (5-fold): {cv_mean:.3f} +/- {cv_std:.3f}")
 
     # Train final model on full training set
     model = xgb.XGBClassifier(**xgb_params, n_estimators=300)
@@ -148,7 +148,7 @@ def main() -> None:
 
     passed, test_auc = check_auc_gate(model, X_test, y_test)
     status = "PASS" if passed else "FAIL"
-    print(f"[train_model] Test AUC: {test_auc:.3f}  ← {status} (threshold: {AUC_THRESHOLD})")
+    print(f"[train_model] Test AUC: {test_auc:.3f}  [{status}] (threshold: {AUC_THRESHOLD})")
 
     if not passed:
         print(f"[train_model] ERROR: Test AUC {test_auc:.3f} < {AUC_THRESHOLD}. Model NOT saved.")
@@ -159,7 +159,7 @@ def main() -> None:
     max_feat, max_imp = max(importance.items(), key=lambda kv: kv[1])
     print("[train_model] Feature importance:")
     for feat, imp in sorted(importance.items(), key=lambda kv: kv[1], reverse=True):
-        flag = " ← HIGH" if imp > 0.60 else ""
+        flag = " [HIGH]" if imp > 0.60 else ""
         print(f"               {feat:<22} {imp:.2f}{flag}")
     if max_imp > 0.60:
         print(f"[train_model] WARNING: {max_feat} explains {max_imp:.0%} of variance — possible overfit")
@@ -178,7 +178,7 @@ def main() -> None:
 
     with open(MODEL_PATH, "wb") as f:
         pickle.dump(model, f)
-    print(f"[train_model] Model saved → {MODEL_PATH}")
+    print(f"[train_model] Model saved -> {MODEL_PATH}")
 
     calibration = {
         "platt_a":       platt_a,
@@ -186,7 +186,7 @@ def main() -> None:
         "feature_names": FEATURE_NAMES,
     }
     CALIBRATION_PATH.write_text(json.dumps(calibration, indent=2))
-    print(f"[train_model] Calibration saved → {CALIBRATION_PATH}")
+    print(f"[train_model] Calibration saved -> {CALIBRATION_PATH}")
 
     metrics = {
         "modelVersion":       model_version,
@@ -197,10 +197,10 @@ def main() -> None:
         "valAuc":             round(val_auc, 4),
         "testAuc":            round(test_auc, 4),
         "aucGatePassed":      True,
-        "featureImportance":  {k: round(v, 4) for k, v in importance.items()},
+        "featureImportance":  {k: round(float(v), 4) for k, v in importance.items()},
     }
     METRICS_PATH.write_text(json.dumps(metrics, indent=2))
-    print(f"[train_model] Metrics saved → {METRICS_PATH}")
+    print(f"[train_model] Metrics saved -> {METRICS_PATH}")
 
 
 if __name__ == "__main__":
