@@ -65,9 +65,9 @@ export function AlphaTab({ kellySignals, srcAlpha }) {
       <div className="fade-up d2" style={{ borderRadius: 14, padding: 16, background: "rgba(52,211,153,.02)", border: `1px solid rgba(52,211,153,.08)` }}>
         <p style={{ fontSize: 11, lineHeight: 1.6, color: T.sub, margin: 0 }}>
           <span style={{ color: T.green, fontWeight: 700 }}>How this works: </span>
-          Tracks the top 25 Polymarket traders by weekly PnL and finds markets where ≥2 agree on the same side.
+          Tracks ~90 top Polymarket traders (Overall top 50 + Crypto top 25 + Politics top 25) by weekly PnL and surfaces markets where ≥2 agree on the same side.
           Edge is estimated using rank-weighted signal strength, mean USD exposure, and entry-price discount.
-          Kelly Criterion with quarter-Kelly sizing caps each bet. Refresh via the adapter script or schedule as a cron job.
+          Kelly Criterion with quarter-Kelly sizing caps each bet. Data refreshes automatically twice daily via GitHub Actions.
         </p>
       </div>
     </div>
