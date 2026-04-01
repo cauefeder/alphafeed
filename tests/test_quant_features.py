@@ -192,34 +192,80 @@ SAMPLE_RANKING = [
 ]
 
 SAMPLE_OPPS = [
-    {"title": "BTC 90k?", "quantScore": 0.84, "signalTier": "A", "curPrice": 0.62},
-    {"title": "ETH flip?", "quantScore": 0.45, "signalTier": "B", "curPrice": 0.30},
+    {"title": "BTC 90k?", "quantScore": 0.84, "signalTier": "A",
+     "curPrice": 0.62, "countSignal": 0.08, "contraryFlag": False},
+    {"title": "ETH flip?", "quantScore": 0.45, "signalTier": "B",
+     "curPrice": 0.30, "countSignal": 0.03, "contraryFlag": False},
 ]
 
-def test_generate_insights_count_between_1_and_5():
+
+def test_generate_insights_count_between_1_and_6():
+    """Max insights = 6 (top-cat, best-A, margin, skip, contrary, staleness)."""
     insights = generate_insights(SAMPLE_RANKING, SAMPLE_OPPS, "2026-03-30")
-    assert 1 <= len(insights) <= 5
+    assert 1 <= len(insights) <= 6
+
 
 def test_generate_insights_first_names_top_category():
     insights = generate_insights(SAMPLE_RANKING, SAMPLE_OPPS, "2026-03-30")
     assert "crypto" in insights[0].lower() or "Crypto" in insights[0]
+
 
 def test_generate_insights_skip_category_mentioned():
     insights = generate_insights(SAMPLE_RANKING, SAMPLE_OPPS, "2026-03-30")
     skip_insight = next((s for s in insights if "skip" in s.lower() or "sports" in s.lower()), None)
     assert skip_insight is not None
 
+
 def test_generate_insights_stale_model_fires_after_60_days():
     insights = generate_insights(SAMPLE_RANKING, SAMPLE_OPPS, "2024-01-01")
     stale = next((s for s in insights if "days old" in s), None)
     assert stale is not None
+
 
 def test_generate_insights_fresh_model_no_stale_alert():
     insights = generate_insights(SAMPLE_RANKING, SAMPLE_OPPS, "2026-03-30")
     stale = next((s for s in insights if "days old" in s), None)
     assert stale is None
 
+
 def test_generate_insights_no_tier_a_still_returns_insights():
-    opps_no_a = [{"title": "X", "quantScore": 0.45, "signalTier": "B", "curPrice": 0.5}]
+    opps_no_a = [{"title": "X", "quantScore": 0.45, "signalTier": "B",
+                  "curPrice": 0.5, "countSignal": 0.02, "contraryFlag": False}]
     insights = generate_insights(SAMPLE_RANKING, opps_no_a, "2026-03-30")
     assert len(insights) >= 1
+
+
+def test_generate_insights_contrarian_alert_fires():
+    """contraryFlag = True on any opportunity triggers the contrarian insight."""
+    contrary_opps = [
+        {"title": "JD Vance 2028", "quantScore": 0.017, "signalTier": "C",
+         "curPrice": 0.36, "countSignal": 0.20, "contraryFlag": True},
+    ]
+    insights = generate_insights(SAMPLE_RANKING, contrary_opps, "2026-03-30")
+    contrary_insight = next((s for s in insights if "contrarian" in s.lower()), None)
+    assert contrary_insight is not None
+
+
+def test_generate_insights_contrarian_names_best_market():
+    """The contrarian insight should name the market with highest countSignal."""
+    opps = [
+        {"title": "Market A", "quantScore": 0.01, "signalTier": "C",
+         "curPrice": 0.05, "countSignal": 0.15, "contraryFlag": True},
+        {"title": "Market B", "quantScore": 0.01, "signalTier": "C",
+         "curPrice": 0.05, "countSignal": 0.25, "contraryFlag": True},
+    ]
+    insights = generate_insights(SAMPLE_RANKING, opps, "2026-03-30")
+    contrary_insight = next((s for s in insights if "contrarian" in s.lower()), None)
+    assert contrary_insight is not None
+    # Market B has higher countSignal — should appear in the insight
+    assert "Market B" in contrary_insight
+
+
+def test_generate_insights_no_contrarian_when_none():
+    """If no contraryFlag markets, no contrarian insight is produced."""
+    no_contrary = [
+        {"title": "M", "quantScore": 0.80, "signalTier": "A",
+         "curPrice": 0.55, "countSignal": 0.08, "contraryFlag": False},
+    ]
+    insights = generate_insights(SAMPLE_RANKING, no_contrary, "2026-03-30")
+    assert not any("contrarian" in s.lower() for s in insights)
