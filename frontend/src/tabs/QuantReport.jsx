@@ -279,6 +279,7 @@ const COLS = [
   { label: "Signal",     key: "quantScore" },
   { label: "Convergent", key: "convergentScore" },
   { label: "Crowd",      key: "curPrice" },
+  { label: "Resolves",   key: "days_left" },
   { label: "Info Ratio", key: "infoRatio" },
   { label: "Kelly Bet",  key: "kellyBet" },
 ];
@@ -300,7 +301,7 @@ function OpportunitiesTable({ opportunities }) {
 
   return (
     <Panel title="Scored Opportunities"
-           sub={`${Math.min(sorted.length, 20)} shown · sorted by convergent score by default · click column to sort`}
+           sub={`${Math.min(sorted.length, 20)} shown · sorted by convergent score · click column to sort`}
            delay="d5">
       {sorted.length ? (
         <div style={{ overflowX: "auto" }}>
@@ -356,6 +357,10 @@ function OpportunitiesTable({ opportunities }) {
                   </td>
                   <td style={{ padding: "9px 10px", textAlign: "right", fontFamily: T.mono, color: T.sub }}>
                     {opp.curPrice != null ? `${(opp.curPrice * 100).toFixed(0)}%` : "—"}
+                  </td>
+                  <td style={{ padding: "9px 10px", textAlign: "right", fontFamily: T.mono,
+                    color: opp.days_left > 180 ? T.dim : opp.days_left > 30 ? T.sub : T.amber }}>
+                    {opp.days_left != null ? `${Math.round(opp.days_left)}d` : "—"}
                   </td>
                   <td style={{ padding: "9px 10px", textAlign: "right", fontFamily: T.mono, color: T.dim }}>
                     {opp.infoRatio?.toFixed(3) ?? "—"}
