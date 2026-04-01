@@ -8,26 +8,9 @@ const API_SOURCES = [
   { name: "Deribit HV",      ep: "deribit.com/api/v2/public/get_historical_volatility",    desc: "15d annualized realized vol",            key: "histVol" },
   { name: "Deribit Options", ep: "deribit.com/api/v2/public/get_book_summary_by_currency", desc: "Full BTC options chain",                 key: "book"    },
   { name: "Polymarket",      ep: "gamma-api.polymarket.com/markets (via /api/polymarket)", desc: "Markets + resolvesIn enrichment",        key: "poly"    },
-  { name: "Alpha Signals",   ep: "localhost:8000/api/kelly-signals + /api/smart-money",    desc: "PolyTraders + HedgePoly signals",        key: "alpha"   },
+  { name: "Alpha Signals",   ep: "alphafeed.onrender.com/api/kelly-signals",               desc: "~90 smart money traders — Kelly signals refreshed twice daily", key: "alpha"   },
 ];
 
-const QUICK_START_STEPS = [
-  {
-    n: "1", label: "Backend",
-    cmds:     ["cd backend && pip install -r requirements.txt", "uvicorn server:app --reload --port 8000"],
-    comments: ["# Install deps", "# Start API server"],
-  },
-  {
-    n: "2", label: "Alpha Signals (optional)",
-    cmds:     ["python backend/adapters/polytraders_export.py", "python backend/adapters/hedgepoly_export.py"],
-    comments: ["# Run once to populate reports/*.json", ""],
-  },
-  {
-    n: "3", label: "Frontend",
-    cmds:     ["cd frontend && npm install && npm run dev"],
-    comments: ["# Visit http://localhost:3000"],
-  },
-];
 
 export function ConfigTab({ src }) {
   return (
@@ -57,26 +40,6 @@ export function ConfigTab({ src }) {
         </div>
       </Panel>
 
-      <Panel title="Quick Start" sub="Get Alpha Feed running locally in 3 steps" delay="d2">
-        <div style={{ display: "flex", flexDirection: "column", gap: 16, fontSize: 11, color: T.sub }}>
-          {QUICK_START_STEPS.map(step => (
-            <div key={step.n}>
-              <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".09em", color: T.dim, marginBottom: 8 }}>
-                {step.n}. {step.label}
-              </div>
-              <div style={{ borderRadius: 12, padding: 14, overflowX: "auto", background: "rgba(0,0,0,.5)", border: `1px solid ${T.ln}`, fontFamily: T.mono, fontSize: 10 }}>
-                {step.cmds.map((cmd, i) => (
-                  <div key={i}>
-                    {step.comments[i] && <div style={{ color: T.dim }}>{step.comments[i]}</div>}
-                    <div style={{ color: T.green }}>{cmd}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-          <p>All APIs are <strong style={{ color: T.green }}>free, no auth required</strong>. Deribit APIs may require a VPN in some regions.</p>
-        </div>
-      </Panel>
     </div>
   );
 }

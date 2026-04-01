@@ -72,7 +72,7 @@ export function PolyTable({ markets, limit = 8, compact = false }) {
             <TH right>Yes</TH>
             {!compact && <TH right>No</TH>}
             {!compact && <TH right>Spread</TH>}
-            {!compact && <TH right>Unc.</TH>}
+            {!compact && <TH right title="Uncertainty — how far the crowd is from a consensus. 5 dots = maximum uncertainty (price near 50%). More dots = more edge potential.">Unc. (?)</TH>}
             <TH right>24h Vol</TH>
             <TH right>Liq.</TH>
             <TH right>Resolves</TH>

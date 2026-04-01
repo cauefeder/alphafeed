@@ -399,14 +399,12 @@ export function QuantReportTab({ quantReport, srcQuant }) {
       <div className="fade-up d5" style={{ borderRadius: 14, padding: 16, background: "rgba(52,211,153,.02)", border: "1px solid rgba(52,211,153,.08)" }}>
         <p style={{ fontSize: 11, lineHeight: 1.6, color: T.sub, margin: 0 }}>
           <span style={{ color: T.green, fontWeight: 700 }}>How this works: </span>
-          XGBoost classifier trained on 5,000+ resolved Polymarket markets predicts crowd mispricing
-          probability from price, volume, and liquidity features.{" "}
-          <strong style={{ color: T.text }}>Convergent score</strong> = model signal &times; fraction of
-          smart traders positioned there — the best combined signal.{" "}
-          <strong style={{ color: T.red ?? T.dim }}>Contrarian plays</strong> mark markets where the
-          crowd is confident but smart money disagrees.
-          {quantReport?.modelAuc && ` Model AUC ${quantReport.modelAuc.toFixed(3)}`}
-          {quantReport?.modelVersion && ` · trained ${quantReport.modelVersion}`}.
+          XGBoost classifier trained on 5,000+ resolved Polymarket markets scores each market for crowd mispricing using price, volume, and liquidity signals.{" "}
+          <strong style={{ color: T.text }}>Signal (AUC)</strong> = raw model score — AUC (Area Under the ROC Curve) measures overall model accuracy: 1.0 is perfect, 0.5 is a coin flip
+          {quantReport?.modelAuc && `, currently ${quantReport.modelAuc.toFixed(3)}`}.{" "}
+          <strong style={{ color: T.text }}>Convergent score</strong> = model signal &times; fraction of smart traders positioned there — the strongest combined signal: model sees edge AND smart money agrees.{" "}
+          <strong style={{ color: T.red ?? T.dim }}>Contrarian plays ⚡</strong> = crowd is very confident (low model score) but multiple smart traders are positioned against it — potential contrarian opportunity.
+          {quantReport?.modelVersion && ` Model trained ${quantReport.modelVersion}.`}
         </p>
       </div>
     </div>
