@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T02:16:17.409029+00:00",
+  "generatedAt": "2026-04-01T02:20:47.568965+00:00",
   "timePeriod": "WEEK",
   "bankroll": 100.0,
   "tradersChecked": 89,
@@ -8,7 +8,7 @@
     "CRYPTO": 17,
     "POLITICS": 22
   },
-  "positionsScanned": 839,
+  "positionsScanned": 818,
   "opportunities": [
     {
       "title": "Will María Corina Machado be the leader of Venezuela end of 2026?",
@@ -50,8 +50,8 @@
       ],
       "countSignal": 0.0644,
       "sizeSignal": 1.0,
-      "totalExposure": 423349.17,
-      "weightedAvgEntry": 0.9594
+      "totalExposure": 423388.19,
+      "weightedAvgEntry": 0.9595
     },
     {
       "title": "Will Reza Pahlavi enter Iran by April 30?",
@@ -179,10 +179,10 @@
       "outcome": "Yes",
       "slug": "will-kevin-warsh-be-confirmed-as-fed-chair",
       "url": "https://polymarket.com/event/will-kevin-warsh-be-confirmed-as-fed-chair",
-      "curPrice": 0.9565,
-      "estimatedEdge": 0.058,
+      "curPrice": 0.9555,
+      "estimatedEdge": 0.0588,
       "kellyBet": 10.0,
-      "kellyFull": 0.7701,
+      "kellyFull": 0.7753,
       "nSmartTraders": 6,
       "totalTradersChecked": 89,
       "smartTraderNames": [
@@ -194,7 +194,7 @@
       ],
       "countSignal": 0.1696,
       "sizeSignal": 1.0,
-      "totalExposure": 213907.81,
+      "totalExposure": 213684.17,
       "weightedAvgEntry": 0.9336
     },
     {
@@ -366,37 +366,35 @@
       "weightedAvgEntry": 0.8611
     },
     {
-      "title": "Bitcoin Up or Down - March 31, 10:10PM-10:15PM ET",
-      "outcome": "Down",
-      "slug": "btc-updown-5m-1775009400",
-      "url": "https://polymarket.com/event/btc-updown-5m-1775009400",
-      "curPrice": 0.795,
-      "estimatedEdge": 0.0654,
-      "kellyBet": 7.97,
-      "kellyFull": 0.3189,
-      "nSmartTraders": 7,
+      "title": "Ethereum Up or Down - March 31, 10:15PM-10:30PM ET",
+      "outcome": "Up",
+      "slug": "eth-updown-15m-1775009700",
+      "url": "https://polymarket.com/event/eth-updown-15m-1775009700",
+      "curPrice": 0.825,
+      "estimatedEdge": 0.0473,
+      "kellyBet": 6.76,
+      "kellyFull": 0.2704,
+      "nSmartTraders": 3,
       "totalTradersChecked": 89,
       "smartTraderNames": [
-        "BoneReader",
-        "Sharky6999",
+        "0xe1D6b51521Bd4365769199f392F9818661BD907",
         "Bonereaper",
-        "stingo43",
-        "purple-lamp-tree"
+        "0xB27BC932bf8110D8F78e55da7d5f0497A18B5b82-1772569391020"
       ],
-      "countSignal": 0.0597,
-      "sizeSignal": 1.0,
-      "totalExposure": 14234.44,
-      "weightedAvgEntry": 0.8003
+      "countSignal": 0.0432,
+      "sizeSignal": 0.8472,
+      "totalExposure": 1270.79,
+      "weightedAvgEntry": 0.8115
     },
     {
       "title": "Will the price of Bitcoin be above $70,000 on April 3?",
       "outcome": "No",
       "slug": "bitcoin-above-70k-on-april-3",
       "url": "https://polymarket.com/event/bitcoin-above-70k-on-april-3",
-      "curPrice": 0.78,
+      "curPrice": 0.77,
       "estimatedEdge": 0.0619,
-      "kellyBet": 7.03,
-      "kellyFull": 0.2812,
+      "kellyBet": 6.73,
+      "kellyFull": 0.269,
       "nSmartTraders": 2,
       "totalTradersChecked": 89,
       "smartTraderNames": [
@@ -405,7 +403,7 @@
       ],
       "countSignal": 0.0208,
       "sizeSignal": 1.0,
-      "totalExposure": 2608.89,
+      "totalExposure": 2575.45,
       "weightedAvgEntry": 0.7885
     },
     {
@@ -603,10 +601,10 @@
       "outcome": "No",
       "slug": "fif-mex-bel-2026-03-31-bel",
       "url": "https://polymarket.com/event/fif-mex-bel-2026-03-31-bel",
-      "curPrice": 0.615,
+      "curPrice": 0.61,
       "estimatedEdge": 0.0638,
-      "kellyBet": 4.14,
-      "kellyFull": 0.1657,
+      "kellyBet": 4.09,
+      "kellyFull": 0.1636,
       "nSmartTraders": 2,
       "totalTradersChecked": 89,
       "smartTraderNames": [
@@ -615,28 +613,8 @@
       ],
       "countSignal": 0.0421,
       "sizeSignal": 1.0,
-      "totalExposure": 23255.18,
-      "weightedAvgEntry": 0.6284
-    },
-    {
-      "title": "Cleveland Guardians vs. Los Angeles Dodgers",
-      "outcome": "Los Angeles Dodgers",
-      "slug": "mlb-cle-lad-2026-03-31",
-      "url": "https://polymarket.com/event/mlb-cle-lad-2026-03-31",
-      "curPrice": 0.73,
-      "estimatedEdge": 0.0433,
-      "kellyBet": 4.01,
-      "kellyFull": 0.1605,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "CemeterySun",
-        "elkmonkey"
-      ],
-      "countSignal": 0.0096,
-      "sizeSignal": 1.0,
-      "totalExposure": 25102.96,
-      "weightedAvgEntry": 0.7012
+      "totalExposure": 23577.49,
+      "weightedAvgEntry": 0.6279
     },
     {
       "title": "Cavaliers vs. Lakers: O/U 237.5",
@@ -678,29 +656,8 @@
       ],
       "countSignal": 0.2838,
       "sizeSignal": 1.0,
-      "totalExposure": 826495.72,
-      "weightedAvgEntry": 0.4459
-    },
-    {
-      "title": "US forces enter Iran by April 30?",
-      "outcome": "Yes",
-      "slug": "us-forces-enter-iran-by-april-30-899",
-      "url": "https://polymarket.com/event/us-forces-enter-iran-by-april-30-899",
-      "curPrice": 0.575,
-      "estimatedEdge": 0.0641,
-      "kellyBet": 3.77,
-      "kellyFull": 0.1509,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "SecondWindCapital",
-        "ScottyNooo",
-        "jocpolitic"
-      ],
-      "countSignal": 0.046,
-      "sizeSignal": 1.0,
-      "totalExposure": 377909.67,
-      "weightedAvgEntry": 0.6181
+      "totalExposure": 868316.33,
+      "weightedAvgEntry": 0.4461
     },
     {
       "title": "Trump announces end of military operations against Iran by April 30th?",
@@ -725,27 +682,6 @@
       "weightedAvgEntry": 0.5684
     },
     {
-      "title": "Iran x Israel/US conflict ends by April 30?",
-      "outcome": "No",
-      "slug": "iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
-      "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
-      "curPrice": 0.59,
-      "estimatedEdge": 0.0612,
-      "kellyBet": 3.73,
-      "kellyFull": 0.1493,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "AML",
-        "e88888",
-        "SwissMiss"
-      ],
-      "countSignal": 0.0898,
-      "sizeSignal": 1.0,
-      "totalExposure": 35470.6,
-      "weightedAvgEntry": 0.5799
-    },
-    {
       "title": "Cavaliers vs. Lakers",
       "outcome": "Lakers",
       "slug": "nba-cle-lal-2026-03-31",
@@ -764,18 +700,59 @@
       ],
       "countSignal": 0.0681,
       "sizeSignal": 1.0,
-      "totalExposure": 373973.68,
+      "totalExposure": 374799.61,
       "weightedAvgEntry": 0.558
+    },
+    {
+      "title": "US forces enter Iran by April 30?",
+      "outcome": "Yes",
+      "slug": "us-forces-enter-iran-by-april-30-899",
+      "url": "https://polymarket.com/event/us-forces-enter-iran-by-april-30-899",
+      "curPrice": 0.565,
+      "estimatedEdge": 0.0641,
+      "kellyBet": 3.69,
+      "kellyFull": 0.1475,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "SecondWindCapital",
+        "ScottyNooo",
+        "jocpolitic"
+      ],
+      "countSignal": 0.046,
+      "sizeSignal": 1.0,
+      "totalExposure": 371652.89,
+      "weightedAvgEntry": 0.6181
+    },
+    {
+      "title": "Iran x Israel/US conflict ends by April 30?",
+      "outcome": "No",
+      "slug": "iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
+      "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
+      "curPrice": 0.575,
+      "estimatedEdge": 0.0615,
+      "kellyBet": 3.62,
+      "kellyFull": 0.1448,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "AML",
+        "e88888"
+      ],
+      "countSignal": 0.0169,
+      "sizeSignal": 1.0,
+      "totalExposure": 31535.13,
+      "weightedAvgEntry": 0.5917
     },
     {
       "title": "Cavaliers vs. Lakers: O/U 236.5",
       "outcome": "Under",
       "slug": "nba-cle-lal-2026-03-31-total-236pt5",
       "url": "https://polymarket.com/event/nba-cle-lal-2026-03-31-total-236pt5",
-      "curPrice": 0.525,
-      "estimatedEdge": 0.0686,
-      "kellyBet": 3.61,
-      "kellyFull": 0.1445,
+      "curPrice": 0.51,
+      "estimatedEdge": 0.0704,
+      "kellyBet": 3.59,
+      "kellyFull": 0.1436,
       "nSmartTraders": 3,
       "totalTradersChecked": 89,
       "smartTraderNames": [
@@ -785,7 +762,7 @@
       ],
       "countSignal": 0.1153,
       "sizeSignal": 1.0,
-      "totalExposure": 103488.0,
+      "totalExposure": 100531.2,
       "weightedAvgEntry": 0.5225
     },
     {
@@ -849,6 +826,26 @@
       "weightedAvgEntry": 0.7255
     },
     {
+      "title": "Cleveland Guardians vs. Los Angeles Dodgers",
+      "outcome": "Los Angeles Dodgers",
+      "slug": "mlb-cle-lad-2026-03-31",
+      "url": "https://polymarket.com/event/mlb-cle-lad-2026-03-31",
+      "curPrice": 0.745,
+      "estimatedEdge": 0.0342,
+      "kellyBet": 3.35,
+      "kellyFull": 0.1342,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "CemeterySun",
+        "elkmonkey"
+      ],
+      "countSignal": 0.0096,
+      "sizeSignal": 1.0,
+      "totalExposure": 25618.78,
+      "weightedAvgEntry": 0.7012
+    },
+    {
       "title": "Spread: Lakers (-1.5)",
       "outcome": "Cavaliers",
       "slug": "nba-cle-lal-2026-03-31-spread-home-1pt5",
@@ -891,6 +888,27 @@
       "weightedAvgEntry": 0.4689
     },
     {
+      "title": "Spread: Lakers (-2.5)",
+      "outcome": "Cavaliers",
+      "slug": "nba-cle-lal-2026-03-31-spread-home-2pt5",
+      "url": "https://polymarket.com/event/nba-cle-lal-2026-03-31-spread-home-2pt5",
+      "curPrice": 0.505,
+      "estimatedEdge": 0.0623,
+      "kellyBet": 3.15,
+      "kellyFull": 0.1258,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "CemeterySun",
+        "RN1",
+        "gatorr"
+      ],
+      "countSignal": 0.0751,
+      "sizeSignal": 1.0,
+      "totalExposure": 38541.3,
+      "weightedAvgEntry": 0.4983
+    },
+    {
       "title": "Will J.D. Vance win the 2028 Republican presidential nomination?",
       "outcome": "Yes",
       "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
@@ -912,47 +930,6 @@
       "sizeSignal": 1.0,
       "totalExposure": 54747.36,
       "weightedAvgEntry": 0.4138
-    },
-    {
-      "title": "Iran x Israel/US conflict ends by May 15?",
-      "outcome": "Yes",
-      "slug": "iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
-      "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
-      "curPrice": 0.475,
-      "estimatedEdge": 0.0642,
-      "kellyBet": 3.06,
-      "kellyFull": 0.1224,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "anoin123",
-        "Car",
-        "ScottyNooo"
-      ],
-      "countSignal": 0.0718,
-      "sizeSignal": 1.0,
-      "totalExposure": 60050.13,
-      "weightedAvgEntry": 0.4717
-    },
-    {
-      "title": "Spread: Lakers (-2.5)",
-      "outcome": "Cavaliers",
-      "slug": "nba-cle-lal-2026-03-31-spread-home-2pt5",
-      "url": "https://polymarket.com/event/nba-cle-lal-2026-03-31-spread-home-2pt5",
-      "curPrice": 0.505,
-      "estimatedEdge": 0.0593,
-      "kellyBet": 3.0,
-      "kellyFull": 0.1199,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "CemeterySun",
-        "RN1"
-      ],
-      "countSignal": 0.0402,
-      "sizeSignal": 1.0,
-      "totalExposure": 38096.84,
-      "weightedAvgEntry": 0.4983
     },
     {
       "title": "US x Iran ceasefire by May 31?",
@@ -997,26 +974,6 @@
       "weightedAvgEntry": 0.5029
     },
     {
-      "title": "Detroit Tigers vs. Arizona Diamondbacks",
-      "outcome": "Detroit Tigers",
-      "slug": "mlb-det-ari-2026-03-31",
-      "url": "https://polymarket.com/event/mlb-det-ari-2026-03-31",
-      "curPrice": 0.48,
-      "estimatedEdge": 0.0609,
-      "kellyBet": 2.93,
-      "kellyFull": 0.1171,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "elkmonkey",
-        "CemeterySun"
-      ],
-      "countSignal": 0.0096,
-      "sizeSignal": 1.0,
-      "totalExposure": 9157.64,
-      "weightedAvgEntry": 0.4991
-    },
-    {
       "title": "US x Iran ceasefire by May 31?",
       "outcome": "No",
       "slug": "us-x-iran-ceasefire-by-may-31-313-373-916",
@@ -1039,6 +996,27 @@
       "weightedAvgEntry": 0.4604
     },
     {
+      "title": "Iran x Israel/US conflict ends by May 15?",
+      "outcome": "Yes",
+      "slug": "iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
+      "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
+      "curPrice": 0.485,
+      "estimatedEdge": 0.0576,
+      "kellyBet": 2.8,
+      "kellyFull": 0.1118,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "anoin123",
+        "Car",
+        "ScottyNooo"
+      ],
+      "countSignal": 0.0718,
+      "sizeSignal": 1.0,
+      "totalExposure": 61314.35,
+      "weightedAvgEntry": 0.4717
+    },
+    {
       "title": "Trail Blazers vs. Clippers",
       "outcome": "Trail Blazers",
       "slug": "nba-por-lac-2026-03-31",
@@ -1058,7 +1036,7 @@
       ],
       "countSignal": 0.1572,
       "sizeSignal": 1.0,
-      "totalExposure": 308300.54,
+      "totalExposure": 308646.93,
       "weightedAvgEntry": 0.368
     },
     {
@@ -1104,47 +1082,6 @@
       "sizeSignal": 1.0,
       "totalExposure": 25314.8,
       "weightedAvgEntry": 0.7071
-    },
-    {
-      "title": "US forces enter Iran by April 30?",
-      "outcome": "No",
-      "slug": "us-forces-enter-iran-by-april-30-899",
-      "url": "https://polymarket.com/event/us-forces-enter-iran-by-april-30-899",
-      "curPrice": 0.425,
-      "estimatedEdge": 0.0612,
-      "kellyBet": 2.66,
-      "kellyFull": 0.1064,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "anoin123",
-        "jocpolitic",
-        "Eatpraylove"
-      ],
-      "countSignal": 0.0393,
-      "sizeSignal": 1.0,
-      "totalExposure": 102600.22,
-      "weightedAvgEntry": 0.4213
-    },
-    {
-      "title": "Ethereum Up or Down - March 31, 10:15PM-10:30PM ET",
-      "outcome": "Down",
-      "slug": "eth-updown-15m-1775009700",
-      "url": "https://polymarket.com/event/eth-updown-15m-1775009700",
-      "curPrice": 0.395,
-      "estimatedEdge": 0.0622,
-      "kellyBet": 2.57,
-      "kellyFull": 0.1028,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "0xe1D6b51521Bd4365769199f392F9818661BD907",
-        "0xB27BC932bf8110D8F78e55da7d5f0497A18B5b82-1772569391020"
-      ],
-      "countSignal": 0.0247,
-      "sizeSignal": 1.0,
-      "totalExposure": 1099.59,
-      "weightedAvgEntry": 0.4744
     },
     {
       "title": "US x Iran ceasefire by April 30?",
@@ -1233,6 +1170,27 @@
       "sizeSignal": 1.0,
       "totalExposure": 112642.1,
       "weightedAvgEntry": 0.3965
+    },
+    {
+      "title": "US forces enter Iran by April 30?",
+      "outcome": "No",
+      "slug": "us-forces-enter-iran-by-april-30-899",
+      "url": "https://polymarket.com/event/us-forces-enter-iran-by-april-30-899",
+      "curPrice": 0.435,
+      "estimatedEdge": 0.0549,
+      "kellyBet": 2.43,
+      "kellyFull": 0.0971,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "anoin123",
+        "jocpolitic",
+        "Eatpraylove"
+      ],
+      "countSignal": 0.0393,
+      "sizeSignal": 1.0,
+      "totalExposure": 105014.34,
+      "weightedAvgEntry": 0.4213
     },
     {
       "title": "Trump announces end of military operations against Iran by April 15th?",
@@ -1401,6 +1359,26 @@
       "weightedAvgEntry": 0.4204
     },
     {
+      "title": "San Francisco Giants vs. San Diego Padres",
+      "outcome": "San Diego Padres",
+      "slug": "mlb-sf-sd-2026-03-31",
+      "url": "https://polymarket.com/event/mlb-sf-sd-2026-03-31",
+      "curPrice": 0.195,
+      "estimatedEdge": 0.0642,
+      "kellyBet": 1.99,
+      "kellyFull": 0.0797,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "RN1",
+        "bcda"
+      ],
+      "countSignal": 0.0904,
+      "sizeSignal": 1.0,
+      "totalExposure": 3450.2,
+      "weightedAvgEntry": 0.1892
+    },
+    {
       "title": "Zelenskyy out as Ukraine president by end of 2026?",
       "outcome": "Yes",
       "slug": "zelenskyy-out-as-ukraine-president-before-2027",
@@ -1419,6 +1397,26 @@
       "sizeSignal": 1.0,
       "totalExposure": 25939.87,
       "weightedAvgEntry": 0.348
+    },
+    {
+      "title": "Spread: Clippers (-4.5)",
+      "outcome": "Trail Blazers",
+      "slug": "nba-por-lac-2026-03-31-spread-home-4pt5",
+      "url": "https://polymarket.com/event/nba-por-lac-2026-03-31-spread-home-4pt5",
+      "curPrice": 0.505,
+      "estimatedEdge": 0.0391,
+      "kellyBet": 1.98,
+      "kellyFull": 0.079,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "CemeterySun",
+        "ShucksIt69"
+      ],
+      "countSignal": 0.0098,
+      "sizeSignal": 1.0,
+      "totalExposure": 2002.15,
+      "weightedAvgEntry": 0.4692
     },
     {
       "title": "Will Real Madrid win the 2025–26 La Liga?",
@@ -1462,28 +1460,6 @@
       "weightedAvgEntry": 0.4866
     },
     {
-      "title": "Bitcoin Up or Down - March 31, 10:15PM-10:30PM ET",
-      "outcome": "Down",
-      "slug": "btc-updown-15m-1775009700",
-      "url": "https://polymarket.com/event/btc-updown-15m-1775009700",
-      "curPrice": 0.495,
-      "estimatedEdge": 0.0386,
-      "kellyBet": 1.91,
-      "kellyFull": 0.0765,
-      "nSmartTraders": 4,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "0xe1D6b51521Bd4365769199f392F9818661BD907",
-        "0xB27BC932bf8110D8F78e55da7d5f0497A18B5b82-1772569391020",
-        "BoneReader",
-        "purple-lamp-tree"
-      ],
-      "countSignal": 0.0394,
-      "sizeSignal": 0.5845,
-      "totalExposure": 1168.95,
-      "weightedAvgEntry": 0.5819
-    },
-    {
       "title": "Russia x Ukraine ceasefire by June 30, 2026?",
       "outcome": "Yes",
       "slug": "russia-x-ukraine-ceasefire-by-june-30-2026",
@@ -1504,47 +1480,6 @@
       "sizeSignal": 1.0,
       "totalExposure": 44243.65,
       "weightedAvgEntry": 0.1932
-    },
-    {
-      "title": "Bitcoin Up or Down - March 31, 10:15PM-10:20PM ET",
-      "outcome": "Down",
-      "slug": "btc-updown-5m-1775009700",
-      "url": "https://polymarket.com/event/btc-updown-5m-1775009700",
-      "curPrice": 0.385,
-      "estimatedEdge": 0.0457,
-      "kellyBet": 1.86,
-      "kellyFull": 0.0743,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "0xB27BC932bf8110D8F78e55da7d5f0497A18B5b82-1772569391020",
-        "vidarx",
-        "purple-lamp-tree"
-      ],
-      "countSignal": 0.0122,
-      "sizeSignal": 0.7435,
-      "totalExposure": 1115.32,
-      "weightedAvgEntry": 0.5532
-    },
-    {
-      "title": "San Francisco Giants vs. San Diego Padres",
-      "outcome": "San Diego Padres",
-      "slug": "mlb-sf-sd-2026-03-31",
-      "url": "https://polymarket.com/event/mlb-sf-sd-2026-03-31",
-      "curPrice": 0.205,
-      "estimatedEdge": 0.0573,
-      "kellyBet": 1.8,
-      "kellyFull": 0.0721,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "RN1",
-        "bcda"
-      ],
-      "countSignal": 0.0904,
-      "sizeSignal": 1.0,
-      "totalExposure": 3627.13,
-      "weightedAvgEntry": 0.1892
     },
     {
       "title": "Will the Republicans win the Texas Senate race in 2026?",
@@ -1648,27 +1583,6 @@
       "weightedAvgEntry": 0.0369
     },
     {
-      "title": "Spread: Pistons (-3.5)",
-      "outcome": "Raptors",
-      "slug": "nba-tor-det-2026-03-31-spread-home-3pt5",
-      "url": "https://polymarket.com/event/nba-tor-det-2026-03-31-spread-home-3pt5",
-      "curPrice": 0.025,
-      "estimatedEdge": 0.064,
-      "kellyBet": 1.64,
-      "kellyFull": 0.0657,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "gatorr",
-        "ShucksIt69",
-        "CemeterySun"
-      ],
-      "countSignal": 0.0447,
-      "sizeSignal": 1.0,
-      "totalExposure": 7708.11,
-      "weightedAvgEntry": 0.5058
-    },
-    {
       "title": "Will Ronaldo Caiado win the 2026 Brazilian presidential election?",
       "outcome": "Yes",
       "slug": "will-ronaldo-caiado-win-the-2026-brazilian-presidential-election",
@@ -1687,28 +1601,6 @@
       "sizeSignal": 1.0,
       "totalExposure": 4260.31,
       "weightedAvgEntry": 0.0131
-    },
-    {
-      "title": "Iran x Israel/US conflict ends by April 30?",
-      "outcome": "Yes",
-      "slug": "iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
-      "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
-      "curPrice": 0.41,
-      "estimatedEdge": 0.0349,
-      "kellyBet": 1.48,
-      "kellyFull": 0.0591,
-      "nSmartTraders": 4,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "anoin123",
-        "Car",
-        "ScottyNooo",
-        "Eatpraylove"
-      ],
-      "countSignal": 0.0839,
-      "sizeSignal": 1.0,
-      "totalExposure": 46211.74,
-      "weightedAvgEntry": 0.3616
     },
     {
       "title": "2026 Balance of Power: R Senate, D House",
@@ -1749,31 +1641,8 @@
       ],
       "countSignal": 0.0208,
       "sizeSignal": 1.0,
-      "totalExposure": 1314.48,
+      "totalExposure": 1312.93,
       "weightedAvgEntry": 0.017
-    },
-    {
-      "title": "Bitcoin Up or Down - March 31, 10:10PM-10:15PM ET",
-      "outcome": "Up",
-      "slug": "btc-updown-5m-1775009400",
-      "url": "https://polymarket.com/event/btc-updown-5m-1775009400",
-      "curPrice": 0.205,
-      "estimatedEdge": 0.0421,
-      "kellyBet": 1.32,
-      "kellyFull": 0.053,
-      "nSmartTraders": 6,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "0xB27BC932bf8110D8F78e55da7d5f0497A18B5b82-1772569391020",
-        "rwo",
-        "Bonereaper",
-        "purple-lamp-tree",
-        "0xbbc5zcZ96bne91qq99724dbdc6"
-      ],
-      "countSignal": 0.0567,
-      "sizeSignal": 0.6166,
-      "totalExposure": 1849.93,
-      "weightedAvgEntry": 0.3616
     },
     {
       "title": "Will Ron DeSantis win the 2028 Republican presidential nomination?",
@@ -1839,6 +1708,47 @@
       "weightedAvgEntry": 0.0083
     },
     {
+      "title": "Solana Up or Down - March 31, 10PM ET",
+      "outcome": "Up",
+      "slug": "solana-up-or-down-march-31-2026-10pm-et",
+      "url": "https://polymarket.com/event/solana-up-or-down-march-31-2026-10pm-et",
+      "curPrice": 0.39,
+      "estimatedEdge": 0.0303,
+      "kellyBet": 1.24,
+      "kellyFull": 0.0497,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "0xe1D6b51521Bd4365769199f392F9818661BD907",
+        "purple-lamp-tree"
+      ],
+      "countSignal": 0.0317,
+      "sizeSignal": 0.4575,
+      "totalExposure": 457.49,
+      "weightedAvgEntry": 0.5051
+    },
+    {
+      "title": "Bitcoin Up or Down - March 31, 10:15PM-10:30PM ET",
+      "outcome": "Down",
+      "slug": "btc-updown-15m-1775009700",
+      "url": "https://polymarket.com/event/btc-updown-15m-1775009700",
+      "curPrice": 0.315,
+      "estimatedEdge": 0.0294,
+      "kellyBet": 1.07,
+      "kellyFull": 0.0429,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 89,
+      "smartTraderNames": [
+        "0xe1D6b51521Bd4365769199f392F9818661BD907",
+        "BoneReader",
+        "purple-lamp-tree"
+      ],
+      "countSignal": 0.0376,
+      "sizeSignal": 0.4329,
+      "totalExposure": 649.37,
+      "weightedAvgEntry": 0.5864
+    },
+    {
       "title": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
       "outcome": "Yes",
       "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
@@ -1897,26 +1807,6 @@
       "sizeSignal": 1.0,
       "totalExposure": 1807.48,
       "weightedAvgEntry": 0.0077
-    },
-    {
-      "title": "Bitcoin Up or Down - March 31, 10:00PM-10:15PM ET",
-      "outcome": "Down",
-      "slug": "btc-updown-15m-1775008800",
-      "url": "https://polymarket.com/event/btc-updown-15m-1775008800",
-      "curPrice": 0.045,
-      "estimatedEdge": 0.0253,
-      "kellyBet": 0.66,
-      "kellyFull": 0.0265,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 89,
-      "smartTraderNames": [
-        "0xe1D6b51521Bd4365769199f392F9818661BD907",
-        "Bonereaper"
-      ],
-      "countSignal": 0.0414,
-      "sizeSignal": 0.3598,
-      "totalExposure": 359.76,
-      "weightedAvgEntry": 0.3525
     }
   ]
 }
