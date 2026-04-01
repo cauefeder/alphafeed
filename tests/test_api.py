@@ -149,3 +149,24 @@ def test_overview_structure(client, monkeypatch):
     assert body["polymarket"]["total"] == 2
     assert body["polymarket"]["highEdge"] == 1  # only edgeScore > 0.3
 
+
+# ── Quant report ──────────────────────────────────────────────────────────────
+
+def test_quant_report_returns_404_when_missing(client):
+    """quant_report.json not present → 404."""
+    resp = client.get("/api/quant-report")
+    assert resp.status_code == 404
+
+
+def test_quant_report_returns_report(client):
+    """quant_report.json present → 200 with the JSON contents."""
+    import json
+    from backend import server as srv
+    report = {"generatedAt": "2026-03-30T20:00:00Z", "opportunities": []}
+    (srv.REPORTS_DIR / "quant_report.json").write_text(
+        json.dumps(report), encoding="utf-8"
+    )
+    resp = client.get("/api/quant-report")
+    assert resp.status_code == 200
+    assert resp.json()["generatedAt"] == "2026-03-30T20:00:00Z"
+

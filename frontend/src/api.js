@@ -143,6 +143,26 @@ export async function fetchMacroReport() {
   return tryFetch(`${API_BASE}/api/macro-report`, 35_000);
 }
 
+export async function fetchQuantReport() {
+  const data = await tryFetch(`${API_BASE}/api/quant-report`, 35_000);
+  return data ?? seedQuantReport();
+}
+
+export function seedQuantReport() {
+  return {
+    generatedAt: null,
+    weekOf: null,
+    modelVersion: null,
+    modelAuc: null,
+    summary: { totalScored: 0, tierA: 0, tierB: 0, tierC: 0 },
+    opportunities: [],
+    categoryReport: {},
+    edgeRanking: [],
+    insights: [],
+    categoryTrends: {},
+  };
+}
+
 /** Wake up Render before main data fetches (cold-start can take ~20s on free tier). */
 export async function pingBackend() {
   return tryFetch(`${API_BASE}/api/health`, 35_000);

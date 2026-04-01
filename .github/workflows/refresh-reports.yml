@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f reports/poly2.json reports/polytraders.json reports/hedgepoly.json 2>/dev/null || true
+          git add -f reports/poly2.json reports/polytraders.json reports/hedgepoly.json reports/quant_report.json 2>/dev/null || true
           git diff --cached --quiet && echo "No changes to commit" || \
             git commit -m "chore: refresh reports $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push origin master

@@ -13,6 +13,7 @@ Endpoints
   GET /api/kelly-signals   — PolyTraders Kelly opportunities (from reports/polytraders.json)
   GET /api/smart-money     — HedgePoly smart-money signals (from reports/hedgepoly.json)
   GET /api/macro-report    — Poly2 macro market categories (from reports/poly2.json)
+  GET /api/quant-report    — XGBoost weekly report (from reports/quant_report.json)
 
 Run
 ---
@@ -251,5 +252,10 @@ def smart_money() -> dict:
 @app.get("/api/macro-report")
 def macro_report() -> dict:
     return _read_report("poly2")
+
+
+@app.get("/api/quant-report")
+def quant_report() -> dict:
+    return _read_report("quant_report")
 
 
