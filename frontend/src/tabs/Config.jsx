@@ -8,7 +8,7 @@ const API_SOURCES = [
   { name: "Deribit HV",      ep: "deribit.com/api/v2/public/get_historical_volatility",    desc: "15d annualized realized vol",            key: "histVol" },
   { name: "Deribit Options", ep: "deribit.com/api/v2/public/get_book_summary_by_currency", desc: "Full BTC options chain",                 key: "book"    },
   { name: "Polymarket",      ep: "gamma-api.polymarket.com/markets (via /api/polymarket)", desc: "Markets + resolvesIn enrichment",        key: "poly"    },
-  { name: "Alpha Signals",   ep: "alphafeed.onrender.com/api/kelly-signals",               desc: "~90 smart money traders — Kelly signals refreshed twice daily", key: "alpha"   },
+  { name: "Alpha Signals",   ep: "alphafeed.onrender.com/api/kelly-signals",               desc: "Smart money traders across Overall/Crypto/Politics leaderboards — refreshes 08:00 & 20:00 UTC", key: "alpha"   },
 ];
 
 

@@ -9,8 +9,8 @@ export function AlphaTab({ kellySignals, srcAlpha }) {
       <Panel
         title="Kelly Opportunities — Smart Money Consensus"
         sub={kellySignals.generatedAt
-          ? `Last run: ${new Date(kellySignals.generatedAt).toLocaleString()} · ${kellySignals.tradersChecked ?? "?"} traders · ${kellySignals.positionsScanned ?? "?"} positions`
-          : "Run backend/adapters/polytraders_export.py to populate"}
+          ? `Last run: ${new Date(kellySignals.generatedAt).toLocaleString()} · ${kellySignals.tradersChecked ?? "?"} traders · ${kellySignals.positionsScanned ?? "?"} positions · ${kellySignals.opportunities?.length ?? 0} opportunities`
+          : "Refreshes at 08:00 and 20:00 UTC via GitHub Actions"}
         live={kellyLive}
         delay="d1"
       >
@@ -65,9 +65,10 @@ export function AlphaTab({ kellySignals, srcAlpha }) {
       <div className="fade-up d2" style={{ borderRadius: 14, padding: 16, background: "rgba(52,211,153,.02)", border: `1px solid rgba(52,211,153,.08)` }}>
         <p style={{ fontSize: 11, lineHeight: 1.6, color: T.sub, margin: 0 }}>
           <span style={{ color: T.green, fontWeight: 700 }}>How this works: </span>
-          Tracks ~90 top Polymarket traders (Overall top 50 + Crypto top 25 + Politics top 25) by weekly PnL and surfaces markets where ≥2 agree on the same side.
+          Tracks the top Polymarket traders across Overall, Crypto, and Politics leaderboards by weekly PnL and surfaces markets where ≥2 agree on the same side.
           Edge is estimated using rank-weighted signal strength, mean USD exposure, and entry-price discount.
-          Kelly Criterion with quarter-Kelly sizing caps each bet. Data refreshes automatically twice daily via GitHub Actions.
+          <strong style={{ color: T.text }}> Kelly Criterion</strong> with quarter-Kelly sizing caps each bet.
+          Data refreshes automatically at 08:00 and 20:00 UTC via GitHub Actions.
         </p>
       </div>
     </div>

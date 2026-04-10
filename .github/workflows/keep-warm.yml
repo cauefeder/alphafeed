@@ -2,7 +2,7 @@ name: Keep Render Warm
 
 on:
   schedule:
-    - cron: "*/14 * * * *"   # every 14 minutes — Render spins down after 15 min idle
+    - cron: "*/10 * * * *"   # every 10 minutes — Render spins down after 15 min idle (5 min buffer)
 
 jobs:
   ping:

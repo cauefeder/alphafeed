@@ -42,7 +42,7 @@ export default function AlphaFeed() {
     klines: "seed", book: "seed", poly: "seed", alpha: "seed", macro: "seed", quant: "seed",
   });
 
-  const [btcPrice,    setBtcPrice]    = useState(67340);
+  const [btcPrice,    setBtcPrice]    = useState(77500);
   const [dvolData,    setDvolData]    = useState([]);
   const [hourlyVol,   setHourlyVol]   = useState([]);
   const [weekdayVol,  setWeekdayVol]  = useState([]);
@@ -69,7 +69,7 @@ export default function AlphaFeed() {
 
     const lPrice = price.status === "fulfilled" ? price.value : null;
     if (lPrice) { setBtcPrice(lPrice); s.price = "live"; }
-    else         { setBtcPrice(67340 + Math.floor((Math.random() - .5) * 800)); s.price = "seed"; }
+    else         { setBtcPrice(77500 + Math.floor((Math.random() - .5) * 800)); s.price = "seed"; }
 
     const lKlines = klines.status === "fulfilled" ? klines.value : null;
     if (lKlines) {

@@ -219,7 +219,7 @@ export function seedHistVol() {
 }
 
 export function seedVolSurface() {
-  const expiries = ["8MAR26","9MAR26","14MAR26","21MAR26","28MAR26","4APR26","25APR26","27JUN26","26SEP26","26DEC26"];
+  const expiries = ["17APR26","24APR26","2MAY26","16MAY26","30MAY26","27JUN26","25JUL26","26SEP26","26DEC26","27MAR27"];
   return expiries.map((expiry, i) => {
     const base = 38 + i * 1.4 + (Math.random() - 0.5) * 2;
     return {
@@ -236,18 +236,18 @@ export function seedVolSurface() {
 
 export function seedPolymarket() {
   const markets = [
-    { q: "Will Bitcoin exceed $80K by March 31?",          v: 285e3, l: 180e3 },
-    { q: "Fed rate cut at March FOMC meeting?",            v: 420e3, l: 310e3 },
-    { q: "Will BTC drop below $60K in March?",             v: 195e3, l: 120e3 },
-    { q: "US GDP growth above 3% in Q1 2026?",             v: 175e3, l: 140e3 },
+    { q: "Will Bitcoin exceed $90K by June 30?",           v: 285e3, l: 180e3 },
+    { q: "Fed rate cut at May FOMC meeting?",              v: 420e3, l: 310e3 },
+    { q: "Will BTC drop below $60K in Q2 2026?",           v: 195e3, l: 120e3 },
     { q: "Will Iran conflict escalate to US involvement?", v: 350e3, l: 220e3 },
-    { q: "BTC dominance above 60% end of March?",          v: 68e3,  l: 45e3  },
-    { q: "CPI below 2.5% for February?",                   v: 210e3, l: 155e3 },
-    { q: "Morgan Stanley BTC custody live by April?",      v: 42e3,  l: 28e3  },
-    { q: "Kraken Fed access boosts BTC above $75K?",       v: 31e3,  l: 19e3  },
-    { q: "S&P 500 recovers above 5500 before April 1?",    v: 390e3, l: 275e3 },
-    { q: "Oil exceeds $85/barrel in March?",               v: 82e3,  l: 55e3  },
-    { q: "Ethereum Pectra upgrade live by March 31?",      v: 120e3, l: 78e3  },
+    { q: "US-Iran ceasefire by June 30?",                  v: 310e3, l: 190e3 },
+    { q: "Will JD Vance win the 2028 Republican primary?", v: 175e3, l: 140e3 },
+    { q: "BTC dominance above 60% by end of April?",       v: 68e3,  l: 45e3  },
+    { q: "Will Kevin Warsh be confirmed as Fed Chair?",    v: 210e3, l: 155e3 },
+    { q: "Will Solana ETF be approved by July 2026?",      v: 42e3,  l: 28e3  },
+    { q: "Russia-Ukraine ceasefire before 2027?",          v: 390e3, l: 275e3 },
+    { q: "Oil below $60/barrel by June 30?",               v: 82e3,  l: 55e3  },
+    { q: "Will ETH exceed $3K by end of Q2 2026?",         v: 120e3, l: 78e3  },
   ];
   return markets.map(({ q, v, l }) => {
     const yes = +(.15 + Math.random() * .7).toFixed(2);
@@ -271,18 +271,18 @@ export function seedKellySignals() {
     generatedAt: null,
     opportunities: [
       {
-        title: "Will BTC exceed $80K by March 31?", outcome: "Yes",
-        curPrice: 0.62, estimatedEdge: 0.048, kellyBet: 2.10,
-        nSmartTraders: 4, totalTradersChecked: 25,
+        title: "Will Kevin Warsh be confirmed as Fed Chair?", outcome: "Yes",
+        curPrice: 0.55, estimatedEdge: 0.061, kellyBet: 2.40,
+        nSmartTraders: 5, totalTradersChecked: 89,
         smartTraderNames: ["alpha_whale","quant_99","poly_god"],
-        totalExposure: 18400, weightedAvgEntry: 0.58, url: "https://polymarket.com",
+        totalExposure: 21400, weightedAvgEntry: 0.51, url: "https://polymarket.com",
       },
       {
-        title: "Fed rate cut at March FOMC?", outcome: "Yes",
-        curPrice: 0.38, estimatedEdge: 0.033, kellyBet: 1.25,
-        nSmartTraders: 3, totalTradersChecked: 25,
+        title: "US-Iran ceasefire by June 30?", outcome: "No",
+        curPrice: 0.18, estimatedEdge: 0.052, kellyBet: 1.80,
+        nSmartTraders: 4, totalTradersChecked: 89,
         smartTraderNames: ["macro_edge","poly_god"],
-        totalExposure: 9200, weightedAvgEntry: 0.35, url: "https://polymarket.com",
+        totalExposure: 14200, weightedAvgEntry: 0.15, url: "https://polymarket.com",
       },
     ],
   };
@@ -292,9 +292,9 @@ export function seedSmartMoney() {
   return {
     generatedAt: null,
     signals: [
-      { question: "Will Bitcoin exceed $80K by March 31?", side: "YES", traderCount: 5, confidence: 0.82, yesValue: 22000, noValue: 4800, totalValue: 26800, url: "https://polymarket.com" },
-      { question: "Fed rate cut at March FOMC meeting?",   side: "YES", traderCount: 3, confidence: 0.71, yesValue: 14200, noValue: 5800, totalValue: 20000, url: "https://polymarket.com" },
-      { question: "Ethereum Pectra upgrade by March 31?",  side: "NO",  traderCount: 2, confidence: 0.67, yesValue: 3100,  noValue: 6400, totalValue: 9500,  url: "https://polymarket.com" },
+      { question: "Will Kevin Warsh be confirmed as Fed Chair?", side: "YES", traderCount: 5, confidence: 0.82, yesValue: 22000, noValue: 4800, totalValue: 26800, url: "https://polymarket.com" },
+      { question: "US-Iran ceasefire by June 30?",               side: "NO",  traderCount: 4, confidence: 0.71, yesValue: 5800,  noValue: 14200, totalValue: 20000, url: "https://polymarket.com" },
+      { question: "Will JD Vance win the 2028 Republican nom?",  side: "NO",  traderCount: 3, confidence: 0.67, yesValue: 3100,  noValue: 6400,  totalValue: 9500,  url: "https://polymarket.com" },
     ],
   };
 }

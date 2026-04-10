@@ -261,9 +261,10 @@ export function MacroReportTab({ macroReport, srcMacro }) {
       <div className="fade-up d3" style={{ borderRadius: 14, padding: 16, background: "rgba(52,211,153,.02)", border: `1px solid rgba(52,211,153,.08)` }}>
         <p style={{ fontSize: 11, lineHeight: 1.6, color: T.sub, margin: 0 }}>
           <span style={{ color: T.green, fontWeight: 700 }}>How this works: </span>
-          Markets are fetched from Polymarket and classified by keyword into 6 macro categories.
-          YES probability reflects the crowd's real-money estimate. High-volume, near-resolution markets
-          carry the strongest signal. Refresh via the adapter script or schedule as a daily cron job.
+          Fetches ~800 Polymarket markets and classifies them into 6 macro categories: Macroeconomics, Geopolitics, Crypto, Stocks, AI/Tech, and Politics.
+          YES probability reflects the crowd's real-money estimate.{" "}
+          <strong style={{ color: T.text }}>Resolves</strong> = days until market settles — high-volume markets close to resolution carry the strongest signal.
+          Data refreshes at 08:00 and 20:00 UTC via GitHub Actions.
         </p>
       </div>
     </div>
