@@ -34,6 +34,9 @@ from pathlib import Path
 import httpx
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
@@ -78,7 +81,11 @@ _cache_lock = threading.Lock()
 
 # ── App ───────────────────────────────────────────────────────────────────────
 
+limiter = Limiter(key_func=get_remote_address, default_limits=["120/minute"])
+
 app = FastAPI(title="Alpha Feed API", version="1.0.0", docs_url="/docs", redoc_url=None)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
@@ -203,17 +210,45 @@ def _read_report(name: str) -> dict:
 # ── Routes ────────────────────────────────────────────────────────────────────
 
 
+_REPORT_STALE_HOURS = 26  # flag as stale if older than this (covers 24h cron + 2h buffer)
+
 @app.get("/api/health")
 def health() -> dict:
+    now = datetime.now(timezone.utc)
+    reports: dict[str, dict] = {}
+    if REPORTS_DIR.exists():
+        for name in ["polytraders", "poly2", "quant_report", "hedgepoly"]:
+            path = REPORTS_DIR / f"{name}.json"
+            if not path.exists():
+                reports[name] = {"status": "missing"}
+                continue
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+                gen = data.get("generatedAt")
+                if gen:
+                    dt = datetime.fromisoformat(gen.replace("Z", "+00:00"))
+                    age_h = round((now - dt).total_seconds() / 3600, 1)
+                    reports[name] = {
+                        "status": "stale" if age_h > _REPORT_STALE_HOURS else "ok",
+                        "age_hours": age_h,
+                        "generatedAt": gen,
+                    }
+                else:
+                    reports[name] = {"status": "ok", "age_hours": None}
+            except Exception as exc:
+                reports[name] = {"status": "error", "detail": str(exc)}
+
+    overall = "ok" if all(r.get("status") == "ok" for r in reports.values()) else "degraded"
     return {
-        "status": "ok",
-        "ts": datetime.now(timezone.utc).isoformat(),
-        "reports": [p.name for p in REPORTS_DIR.glob("*.json")] if REPORTS_DIR.exists() else [],
+        "status": overall,
+        "ts": now.isoformat(),
+        "reports": reports,
     }
 
 
 @app.get("/api/polymarket")
-def polymarket() -> dict:
+@limiter.limit("30/minute")
+def polymarket(request: Request) -> dict:
     markets = _cached("polymarket", CACHE_TTL["polymarket"], _fetch_polymarket)
     return {
         "markets": markets,
@@ -223,7 +258,8 @@ def polymarket() -> dict:
 
 
 @app.get("/api/overview")
-def overview() -> dict:
+@limiter.limit("30/minute")
+def overview(request: Request) -> dict:
     def _build():
         markets = _fetch_polymarket()
         high_edge = [m for m in markets if m["edgeScore"] > _EDGE_HIGH_THRESHOLD]

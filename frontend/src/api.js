@@ -163,7 +163,7 @@ export function seedQuantReport() {
   };
 }
 
-/** Wake up Render before main data fetches (cold-start can take ~20s on free tier). */
+/** Wake up Render and return health/staleness data. */
 export async function pingBackend() {
   return tryFetch(`${API_BASE}/api/health`, 35_000);
 }

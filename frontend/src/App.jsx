@@ -11,6 +11,7 @@ import {
   seedPolymarket, seedKellySignals, seedSmartMoney, seedMacroReport, EMP_IV,
 } from "./api.js";
 import { Dot, LiveBadge, SeedBadge } from "./components/primitives.jsx";
+import { ErrorBoundary } from "./components/ErrorBoundary.jsx";
 import { OverviewTab }      from "./tabs/Overview.jsx";
 import { VolCurveTab }      from "./tabs/VolCurve.jsx";
 import { TermStructureTab } from "./tabs/TermStructure.jsx";
@@ -53,13 +54,15 @@ export default function AlphaFeed() {
   const [smartMoney,  setSmartMoney]  = useState(seedSmartMoney());
   const [macroReport, setMacroReport] = useState(seedMacroReport());
   const [quantReport, setQuantReport] = useState(seedQuantReport());
+  const [healthData,  setHealthData]  = useState(null);
 
   const load = useCallback(async () => {
     setLoading(true);
     const s = { ...src };
 
-    // Wake up Render backend (free tier sleeps after 15 min of inactivity)
-    await pingBackend();
+    // Wake up Render backend and capture health/staleness data
+    const health = await pingBackend();
+    if (health?.reports) setHealthData(health.reports);
 
     const [price, klines, dvol, hv, book, poly, ks, sm, mr, qr] = await Promise.allSettled([
       fetchBtcPrice(), fetchKlines(), fetchDvol(), fetchHistVol(),
@@ -193,15 +196,17 @@ export default function AlphaFeed() {
 
       {/* Content */}
       <main style={{ maxWidth: 1140, margin: "0 auto", padding: "20px" }}>
-        {tab === "overview"   && <OverviewTab      btcPrice={btcPrice} dvolData={dvolData} polyMarkets={polyMarkets} nowUTC={nowUTC} sess={sess} hourlyVol={hourlyVol} srcPrice={src.price} srcDvol={src.dvol} srcPoly={src.poly} />}
-        {tab === "volatility" && <VolCurveTab      hourlyVol={hourlyVol} weekdayVol={weekdayVol} histVol={histVol} nowUTC={nowUTC} srcKlines={src.klines} srcHistVol={src.histVol} />}
-        {tab === "options"    && <TermStructureTab volSurface={volSurface} srcBook={src.book} />}
-        {tab === "polymarket" && <PolymarketTab    polyAnalysis={polyMarkets} srcPoly={src.poly} />}
-        {tab === "alpha"      && <AlphaTab         kellySignals={kellySignals} srcAlpha={src.alpha} />}
-        {tab === "quant"      && <QuantReportTab   quantReport={quantReport} srcQuant={src.quant} />}
-        {tab === "macro"      && <MacroReportTab   macroReport={macroReport} srcMacro={src.macro} />}
-        {tab === "bankroll"   && <BankrollTab />}
-        {tab === "apis"       && <ConfigTab        src={src} />}
+        <ErrorBoundary key={tab}>
+          {tab === "overview"   && <OverviewTab      btcPrice={btcPrice} dvolData={dvolData} polyMarkets={polyMarkets} nowUTC={nowUTC} sess={sess} hourlyVol={hourlyVol} srcPrice={src.price} srcDvol={src.dvol} srcPoly={src.poly} />}
+          {tab === "volatility" && <VolCurveTab      hourlyVol={hourlyVol} weekdayVol={weekdayVol} histVol={histVol} nowUTC={nowUTC} srcKlines={src.klines} srcHistVol={src.histVol} />}
+          {tab === "options"    && <TermStructureTab volSurface={volSurface} srcBook={src.book} />}
+          {tab === "polymarket" && <PolymarketTab    polyAnalysis={polyMarkets} srcPoly={src.poly} />}
+          {tab === "alpha"      && <AlphaTab         kellySignals={kellySignals} srcAlpha={src.alpha} />}
+          {tab === "quant"      && <QuantReportTab   quantReport={quantReport} srcQuant={src.quant} />}
+          {tab === "macro"      && <MacroReportTab   macroReport={macroReport} srcMacro={src.macro} />}
+          {tab === "bankroll"   && <BankrollTab />}
+          {tab === "apis"       && <ConfigTab        src={src} health={healthData} />}
+        </ErrorBoundary>
       </main>
 
       {/* Footer */}

@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import json
 import logging
-import pickle
 import sys
 import time
 from datetime import datetime, timezone
@@ -39,7 +38,7 @@ logger = logging.getLogger("quant_report")
 
 POLYTRADERS_PATH = REPO_ROOT / "reports/polytraders.json"
 POLY2_PATH       = REPO_ROOT / "reports/poly2.json"
-MODEL_PATH       = REPO_ROOT / "models/xgboost_model.pkl"
+MODEL_PATH       = REPO_ROOT / "models/xgboost_model.json"
 CALIBRATION_PATH = REPO_ROOT / "models/calibration_params.json"
 METRICS_PATH     = REPO_ROOT / "models/training_metrics.json"
 OUTPUT_PATH      = REPO_ROOT / "reports/quant_report.json"
@@ -260,8 +259,9 @@ def main() -> None:
     metrics     = json.loads(METRICS_PATH.read_text(encoding="utf-8"))
 
     logger.info("Loading model...")
-    with open(MODEL_PATH, "rb") as f:
-        model = pickle.load(f)
+    import xgboost as xgb
+    model = xgb.XGBClassifier()
+    model.load_model(str(MODEL_PATH))
     calibration = json.loads(CALIBRATION_PATH.read_text(encoding="utf-8"))
 
     # Build poly2 slug set to find uncovered opportunities

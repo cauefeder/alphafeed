@@ -15,7 +15,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import pickle
 import sys
 from datetime import datetime, timezone
 from math import log1p
@@ -28,7 +27,7 @@ REPO_ROOT = _HERE.parent.parent.parent
 sys.path.insert(0, str(_HERE.parent))
 from quant_features import FEATURE_NAMES
 
-MODEL_PATH       = REPO_ROOT / "models/xgboost_model.pkl"
+MODEL_PATH       = REPO_ROOT / "models/xgboost_model.json"
 CALIBRATION_PATH = REPO_ROOT / "models/calibration_params.json"
 METRICS_PATH     = REPO_ROOT / "models/training_metrics.json"
 AUC_THRESHOLD    = 0.58
@@ -176,8 +175,7 @@ def main() -> None:
     # Save outputs
     (REPO_ROOT / "models").mkdir(exist_ok=True)
 
-    with open(MODEL_PATH, "wb") as f:
-        pickle.dump(model, f)
+    model.save_model(str(MODEL_PATH))
     print(f"[train_model] Model saved -> {MODEL_PATH}")
 
     calibration = {
