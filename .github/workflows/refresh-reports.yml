@@ -18,6 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Checkout quant-scheduler (PolyTraders source)
+        uses: actions/checkout@v4
+        with:
+          repository: cauefeder/quant-scheduler
+          path: quant-scheduler
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -39,6 +45,7 @@ jobs:
           POLYTRADERS_TOP_N: "25"
           POLYTRADERS_BANKROLL: "100"
           POLYTRADERS_TIME_PERIOD: "WEEK"
+          POLYTRADERS_DIR: ${{ github.workspace }}/quant-scheduler/PolyTraders
 
       - name: Run quant_report (scored opportunities)
         run: python backend/adapters/quant_report.py
