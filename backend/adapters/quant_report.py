@@ -10,12 +10,24 @@ Usage (invoked by GitHub Actions every Sunday):
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+_MONOREPO_ROOT = Path(__file__).resolve().parents[3]
+# quant_report.py -> adapters -> backend -> AlphaFeed -> Projetos
+if str(_MONOREPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_MONOREPO_ROOT))
+
+try:
+    from signal_tracker import log_signal as _log_signal
+except ImportError:
+    def _log_signal(*args, **kwargs):  # type: ignore[no-redef]
+        return -1
+
 import json
 import logging
-import sys
 import time
 from datetime import datetime, timezone
-from pathlib import Path
 
 import httpx
 import numpy as np
@@ -213,7 +225,27 @@ def run_inference(
             "days_left":   enrich.get("days_left", 14),
             "category":    enrich.get("_category", _infer_category_from_slug(slug, title=opp.get("title", ""))),
         }
-        scored.append(score_opportunity(enriched, model, calibration))
+        opp_scored = score_opportunity(enriched, model, calibration)
+        scored.append(opp_scored)
+        try:
+            _log_signal(
+                system="alphafeed",
+                signal_type="polymarket",
+                direction=opp_scored.get("direction", "YES"),
+                estimated_edge=float(opp_scored.get("quantScore", 0)),
+                estimated_prob=float(opp_scored.get("quantScore", 0)),
+                market_price=float(opp_scored.get("curPrice", 0.5)),
+                market_slug=opp_scored.get("slug"),
+                condition_id=opp_scored.get("conditionId"),
+                signal_tier=opp_scored.get("signalTier"),
+                raw_features={
+                    k: v for k, v in opp_scored.items()
+                    if k in ("countSignal", "sizeSignal", "info_ratio", "infoRatio",
+                            "volume_24h", "liquidity", "days_left", "contraryFlag")
+                },
+            )
+        except Exception as exc:
+            logger.debug("log_signal failed: %s", exc)
 
     scored.sort(key=lambda o: o["quantScore"], reverse=True)
 
