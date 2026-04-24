@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-23T20:52:26.575569+00:00",
-  "totalMarkets": 87,
+  "generatedAt": "2026-04-24T09:45:15.484452+00:00",
+  "totalMarkets": 90,
   "categories": {
     "macro": {
       "name": "Macroeconomics",
@@ -8,154 +8,154 @@
       "count": 15,
       "markets": [
         {
+          "question": "Will Kevin Warsh be confirmed as Fed Chair?",
+          "slug": "will-kevin-warsh-be-confirmed-as-fed-chair",
+          "url": "https://polymarket.com/event/will-kevin-warsh-be-confirmed-as-fed-chair",
+          "yes_price": 0.943,
+          "volume_24h": 759337.0,
+          "volume_total": 10236612.0,
+          "liquidity": 116706.0,
+          "days_left": 189.6
+        },
+        {
           "question": "Will the Fed increase interest rates by 25+ bps after the April 2026 meeting?",
           "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-april-2026-meeting",
           "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-april-2026-meeting",
           "yes_price": 0.0025,
-          "volume_24h": 2748702.0,
-          "volume_total": 33533571.0,
-          "liquidity": 3064929.0,
-          "days_left": 5.1
+          "volume_24h": 557443.0,
+          "volume_total": 33695157.0,
+          "liquidity": 3286818.0,
+          "days_left": 4.6
+        },
+        {
+          "question": "Will Judy Shelton be confirmed as Fed Chair?",
+          "slug": "will-judy-shelton-be-confirmed-as-fed-chair",
+          "url": "https://polymarket.com/event/will-judy-shelton-be-confirmed-as-fed-chair",
+          "yes_price": 0.0195,
+          "volume_24h": 549268.0,
+          "volume_total": 15203011.0,
+          "liquidity": 232295.0,
+          "days_left": 189.6
         },
         {
           "question": "Will there be no change in Fed interest rates after the April 2026 meeting?",
           "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-april-2026-meeting",
           "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-april-2026-meeting",
           "yes_price": 0.9945,
-          "volume_24h": 2026214.0,
-          "volume_total": 28734189.0,
-          "liquidity": 2029124.0,
-          "days_left": 5.1
-        },
-        {
-          "question": "Will the Fed decrease interest rates by 50+ bps after the April 2026 meeting?",
-          "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-april-2026-meeting",
-          "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-april-2026-meeting",
-          "yes_price": 0.0015,
-          "volume_24h": 1828415.0,
-          "volume_total": 46771239.0,
-          "liquidity": 10272563.0,
-          "days_left": 5.1
+          "volume_24h": 529822.0,
+          "volume_total": 28901256.0,
+          "liquidity": 2902650.0,
+          "days_left": 4.6
         },
         {
           "question": "Will the Fed decrease interest rates by 25 bps after the April 2026 meeting?",
           "slug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-april-2026-meeting",
           "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-april-2026-meeting",
           "yes_price": 0.0025,
-          "volume_24h": 967801.0,
-          "volume_total": 26982087.0,
-          "liquidity": 2049695.0,
-          "days_left": 5.1
-        },
-        {
-          "question": "Will Kevin Warsh be confirmed as Fed Chair?",
-          "slug": "will-kevin-warsh-be-confirmed-as-fed-chair",
-          "url": "https://polymarket.com/event/will-kevin-warsh-be-confirmed-as-fed-chair",
-          "yes_price": 0.944,
-          "volume_24h": 806038.0,
-          "volume_total": 9862067.0,
-          "liquidity": 91404.0,
-          "days_left": 190.1
+          "volume_24h": 497299.0,
+          "volume_total": 27160953.0,
+          "liquidity": 1954902.0,
+          "days_left": 4.6
         },
         {
           "question": "Will the Fed increase interest rates by 50+ bps after the June 2026 meeting?",
           "slug": "will-the-fed-increase-interest-rates-by-50-bps-after-the-june-2026-meeting",
           "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-june-2026-meeting",
           "yes_price": 0.0035,
-          "volume_24h": 434133.0,
-          "volume_total": 2077679.0,
-          "liquidity": 415230.0,
-          "days_left": 54.1
+          "volume_24h": 455894.0,
+          "volume_total": 2111825.0,
+          "liquidity": 401306.0,
+          "days_left": 53.6
         },
         {
-          "question": "Will Judy Shelton be confirmed as Fed Chair?",
-          "slug": "will-judy-shelton-be-confirmed-as-fed-chair",
-          "url": "https://polymarket.com/event/will-judy-shelton-be-confirmed-as-fed-chair",
-          "yes_price": 0.014,
-          "volume_24h": 319341.0,
-          "volume_total": 14906241.0,
-          "liquidity": 322960.0,
-          "days_left": 190.1
+          "question": "Will the Fed decrease interest rates by 50+ bps after the April 2026 meeting?",
+          "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-april-2026-meeting",
+          "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-april-2026-meeting",
+          "yes_price": 0.0015,
+          "volume_24h": 420843.0,
+          "volume_total": 46947051.0,
+          "liquidity": 10174833.0,
+          "days_left": 4.6
+        },
+        {
+          "question": "Will no Fed rate cuts happen in 2026?",
+          "slug": "will-no-fed-rate-cuts-happen-in-2026",
+          "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
+          "yes_price": 0.41,
+          "volume_24h": 67166.0,
+          "volume_total": 3427970.0,
+          "liquidity": 76011.0,
+          "days_left": 250.6
         },
         {
           "question": "No change in Bank of Japan’s interest rates after the April 2026 meeting?",
           "slug": "no-change-in-bank-of-japans-interest-rates-after-the-april-2026-meeting",
           "url": "https://polymarket.com/event/no-change-in-bank-of-japans-interest-rates-after-the-april-2026-meeting",
-          "yes_price": 0.971,
-          "volume_24h": 63634.0,
-          "volume_total": 285663.0,
-          "liquidity": 17053.0,
-          "days_left": 4.1
+          "yes_price": 0.974,
+          "volume_24h": 59497.0,
+          "volume_total": 289492.0,
+          "liquidity": 28543.0,
+          "days_left": 3.6
         },
         {
           "question": "Will Scott Bessent be confirmed as Fed Chair?",
           "slug": "will-scott-bessent-be-confirmed-as-fed-chair",
           "url": "https://polymarket.com/event/will-scott-bessent-be-confirmed-as-fed-chair",
           "yes_price": 0.0015,
-          "volume_24h": 61546.0,
-          "volume_total": 3575618.0,
-          "liquidity": 255277.0,
-          "days_left": 190.1
-        },
-        {
-          "question": "Will Kevin Hassett be confirmed as Fed Chair?",
-          "slug": "will-kevin-hassett-be-confirmed-as-fed-chair",
-          "url": "https://polymarket.com/event/will-kevin-hassett-be-confirmed-as-fed-chair",
-          "yes_price": 0.0025,
-          "volume_24h": 35091.0,
-          "volume_total": 1430498.0,
-          "liquidity": 162356.0,
-          "days_left": 190.1
-        },
-        {
-          "question": "Will no Fed rate cuts happen in 2026?",
-          "slug": "will-no-fed-rate-cuts-happen-in-2026",
-          "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
-          "yes_price": 0.399,
-          "volume_24h": 32719.0,
-          "volume_total": 3384143.0,
-          "liquidity": 87562.0,
-          "days_left": 251.1
+          "volume_24h": 51901.0,
+          "volume_total": 3588844.0,
+          "liquidity": 248594.0,
+          "days_left": 189.6
         },
         {
           "question": "Will 11 Fed rate cuts happen in 2026?",
           "slug": "will-11-fed-rate-cuts-happen-in-2026",
           "url": "https://polymarket.com/event/will-11-fed-rate-cuts-happen-in-2026",
           "yes_price": 0.0025,
-          "volume_24h": 30893.0,
-          "volume_total": 2286580.0,
-          "liquidity": 210623.0,
-          "days_left": 251.1
+          "volume_24h": 41543.0,
+          "volume_total": 2301233.0,
+          "liquidity": 207629.0,
+          "days_left": 250.6
         },
         {
-          "question": "Bank of Japan increases interest rates by 50+ bps after the April 2026 meeting?",
-          "slug": "bank-of-japan-increases-interest-rates-by-50-bps-after-the-april-2026-meeting",
-          "url": "https://polymarket.com/event/bank-of-japan-increases-interest-rates-by-50-bps-after-the-april-2026-meeting",
+          "question": "Will 9 Fed rate cuts happen in 2026?",
+          "slug": "will-9-fed-rate-cuts-happen-in-2026",
+          "url": "https://polymarket.com/event/will-9-fed-rate-cuts-happen-in-2026",
           "yes_price": 0.0025,
-          "volume_24h": 25141.0,
-          "volume_total": 333556.0,
-          "liquidity": 28301.0,
-          "days_left": 4.1
+          "volume_24h": 30459.0,
+          "volume_total": 1371126.0,
+          "liquidity": 158521.0,
+          "days_left": 250.6
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the June 2026 meeting?",
+          "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-june-2026-meeting",
+          "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-june-2026-meeting",
+          "yes_price": 0.0185,
+          "volume_24h": 22933.0,
+          "volume_total": 1925994.0,
+          "liquidity": 194074.0,
+          "days_left": 53.6
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the June 2026 meeting?",
+          "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-june-2026-meeting",
+          "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-june-2026-meeting",
+          "yes_price": 0.0075,
+          "volume_24h": 19867.0,
+          "volume_total": 2715623.0,
+          "liquidity": 253672.0,
+          "days_left": 53.6
         },
         {
           "question": "Will the Communist Party of the Russian Federation (KPRF) gain the most seats in the next Russian parliamentary election?",
           "slug": "will-the-communist-party-of-the-russian-federation-kprf-gain-the-most-seats-in-the-next-russian-parliamentary-election",
           "url": "https://polymarket.com/event/will-the-communist-party-of-the-russian-federation-kprf-gain-the-most-seats-in-the-next-russian-parliamentary-election",
           "yes_price": 0.0075,
-          "volume_24h": 25058.0,
-          "volume_total": 427922.0,
-          "liquidity": 38225.0,
-          "days_left": 159.1
-        },
-        {
-          "question": "Iran agrees to unrestricted shipping through Hormuz in April?",
-          "slug": "iran-agrees-to-unrestricted-shipping-through-hormuz-in-april",
-          "url": "https://polymarket.com/event/iran-agrees-to-unrestricted-shipping-through-hormuz-in-april",
-          "yes_price": 0.095,
-          "volume_24h": 25010.0,
-          "volume_total": 296016.0,
-          "liquidity": 40035.0,
-          "days_left": 6.1
+          "volume_24h": 19621.0,
+          "volume_total": 428574.0,
+          "liquidity": 41198.0,
+          "days_left": 158.6
         }
       ]
     },
@@ -165,124 +165,134 @@
       "count": 15,
       "markets": [
         {
-          "question": "US x Iran permanent peace deal by April 30, 2026?",
-          "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026-925",
-          "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-30-2026-925",
-          "yes_price": 0.075,
-          "volume_24h": 2172117.0,
-          "volume_total": 11398644.0,
-          "liquidity": 875039.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "Indian Premier League: Mumbai Indians vs Chennai Super Kings",
-          "slug": "cricipl-mum-che-2026-04-23",
-          "url": "https://polymarket.com/event/cricipl-mum-che-2026-04-23",
-          "yes_price": 0.0005,
-          "volume_24h": 1926302.0,
-          "volume_total": 1975217.0,
-          "liquidity": 347303.0,
-          "days_left": 6.5
-        },
-        {
           "question": "Iran x Israel/US conflict ends by May 15?",
           "slug": "iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
           "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
           "yes_price": 0.9995,
-          "volume_24h": 1733365.0,
-          "volume_total": 10682975.0,
-          "liquidity": 2954522.0,
-          "days_left": 21.1
+          "volume_24h": 3196960.0,
+          "volume_total": 12972056.0,
+          "liquidity": 3691442.0,
+          "days_left": 20.6
+        },
+        {
+          "question": "US x Iran permanent peace deal by April 30, 2026?",
+          "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026-925",
+          "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-30-2026-925",
+          "yes_price": 0.055,
+          "volume_24h": 2017955.0,
+          "volume_total": 11860281.0,
+          "liquidity": 919962.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will Iraq win the 2026 FIFA World Cup?",
+          "slug": "will-iraq-win-the-2026-fifa-world-cup",
+          "url": "https://polymarket.com/event/will-iraq-win-the-2026-fifa-world-cup",
+          "yes_price": 0.0015,
+          "volume_24h": 1253489.0,
+          "volume_total": 5865098.0,
+          "liquidity": 5615680.0,
+          "days_left": 86.6
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "slug": "will-the-iranian-regime-fall-by-may-31",
+          "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-may-31",
+          "yes_price": 0.0415,
+          "volume_24h": 955869.0,
+          "volume_total": 5658950.0,
+          "liquidity": 311486.0,
+          "days_left": 36.6
         },
         {
           "question": "Will the Iranian regime fall by April 30?",
           "slug": "will-the-iranian-regime-fall-by-april-30",
           "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-april-30",
           "yes_price": 0.0075,
-          "volume_24h": 1465480.0,
-          "volume_total": 40620092.0,
-          "liquidity": 2800967.0,
-          "days_left": 6.1
+          "volume_24h": 888457.0,
+          "volume_total": 40805717.0,
+          "liquidity": 3416385.0,
+          "days_left": 5.6
         },
         {
           "question": "US x Iran permanent peace deal by May 31, 2026?",
           "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333",
           "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-may-31-2026-333",
-          "yes_price": 0.305,
-          "volume_24h": 1103261.0,
-          "volume_total": 4315027.0,
-          "liquidity": 238657.0,
-          "days_left": 37.1
+          "yes_price": 0.285,
+          "volume_24h": 850601.0,
+          "volume_total": 4705621.0,
+          "liquidity": 353114.0,
+          "days_left": 36.6
         },
         {
-          "question": "Will Iran win the 2026 FIFA World Cup?",
-          "slug": "will-iran-win-the-2026-fifa-world-cup-788",
-          "url": "https://polymarket.com/event/will-iran-win-the-2026-fifa-world-cup-788",
-          "yes_price": 0.0015,
-          "volume_24h": 943204.0,
-          "volume_total": 16616778.0,
-          "liquidity": 4856084.0,
-          "days_left": 87.1
+          "question": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
+          "slug": "israel-x-hezbollah-ceasefire-extended-by-april-26-2026",
+          "url": "https://polymarket.com/event/israel-x-hezbollah-ceasefire-extended-by-april-26-2026",
+          "yes_price": 0.555,
+          "volume_24h": 729332.0,
+          "volume_total": 902274.0,
+          "liquidity": 36802.0,
+          "days_left": null
         },
         {
-          "question": "US x Iran permanent peace deal by April 24, 2026?",
-          "slug": "us-x-iran-permanent-peace-deal-by-april-24-2026",
-          "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-24-2026",
-          "yes_price": 0.0045,
-          "volume_24h": 846713.0,
-          "volume_total": 1684910.0,
-          "liquidity": 245650.0,
-          "days_left": 0.1
+          "question": "Iran x Israel/US conflict ends by June 30?",
+          "slug": "iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
+          "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
+          "yes_price": 0.9995,
+          "volume_24h": 590096.0,
+          "volume_total": 5715014.0,
+          "liquidity": 2950105.0,
+          "days_left": 66.6
         },
         {
-          "question": "Will the Iranian regime fall by May 31?",
-          "slug": "will-the-iranian-regime-fall-by-may-31",
-          "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-may-31",
-          "yes_price": 0.043,
-          "volume_24h": 823208.0,
-          "volume_total": 5279034.0,
-          "liquidity": 334183.0,
-          "days_left": 37.1
+          "question": "Will the All India Trinamool Congress (AITC) win the most seats in the 2026 West Bengal Legislative Assembly election?",
+          "slug": "will-the-all-india-trinamool-congress-aitc-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election",
+          "url": "https://polymarket.com/event/will-the-all-india-trinamool-congress-aitc-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election",
+          "yes_price": 0.494,
+          "volume_24h": 471087.0,
+          "volume_total": 832046.0,
+          "liquidity": 42751.0,
+          "days_left": 4.6
         },
         {
           "question": "Will the U.S. invade Iran before 2027?",
           "slug": "will-the-us-invade-iran-before-2027",
           "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
           "yes_price": 0.325,
-          "volume_24h": 563841.0,
-          "volume_total": 16535474.0,
-          "liquidity": 397735.0,
-          "days_left": 251.1
-        },
-        {
-          "question": "Will the Iranian regime fall by June 30?",
-          "slug": "will-the-iranian-regime-fall-by-june-30",
-          "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-june-30",
-          "yes_price": 0.085,
-          "volume_24h": 427647.0,
-          "volume_total": 33423982.0,
-          "liquidity": 549570.0,
-          "days_left": 67.1
-        },
-        {
-          "question": "Kharg Island no longer under Iranian control by April 30?",
-          "slug": "kharg-island-no-longer-under-iranian-control-by-april-30-912",
-          "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-april-30-912",
-          "yes_price": 0.057,
-          "volume_24h": 368259.0,
-          "volume_total": 13741214.0,
-          "liquidity": 216363.0,
-          "days_left": 7.1
+          "volume_24h": 413417.0,
+          "volume_total": 16651997.0,
+          "liquidity": 655848.0,
+          "days_left": 250.6
         },
         {
           "question": "Will Jon Stewart win the 2028 Democratic presidential nomination?",
           "slug": "will-jon-stewart-win-the-2028-democratic-presidential-nomination-518",
           "url": "https://polymarket.com/event/will-jon-stewart-win-the-2028-democratic-presidential-nomination-518",
           "yes_price": 0.0225,
-          "volume_24h": 341632.0,
-          "volume_total": 22191309.0,
-          "liquidity": 1028313.0,
-          "days_left": 928.1
+          "volume_24h": 349252.0,
+          "volume_total": 22295579.0,
+          "liquidity": 1030142.0,
+          "days_left": 927.6
+        },
+        {
+          "question": "Will the Iranian regime fall by June 30?",
+          "slug": "will-the-iranian-regime-fall-by-june-30",
+          "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-june-30",
+          "yes_price": 0.085,
+          "volume_24h": 346293.0,
+          "volume_total": 33525846.0,
+          "liquidity": 451599.0,
+          "days_left": 66.6
+        },
+        {
+          "question": "Kharg Island no longer under Iranian control by April 30?",
+          "slug": "kharg-island-no-longer-under-iranian-control-by-april-30-912",
+          "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-april-30-912",
+          "yes_price": 0.0495,
+          "volume_24h": 341287.0,
+          "volume_total": 13802453.0,
+          "liquidity": 272866.0,
+          "days_left": 6.6
         },
         {
           "question": "Will China invade Taiwan by end of 2026?",
@@ -292,27 +302,17 @@
           "volume_24h": 335460.0,
           "volume_total": 23356221.0,
           "liquidity": 979681.0,
-          "days_left": 251.1
+          "days_left": 250.6
         },
         {
-          "question": "Iran x Israel/US conflict ends by June 30?",
-          "slug": "iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
-          "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
-          "yes_price": 0.9995,
-          "volume_24h": 334820.0,
-          "volume_total": 5369161.0,
-          "liquidity": 3301691.0,
-          "days_left": 67.1
-        },
-        {
-          "question": "US x Iran permanent peace deal by June 30, 2026?",
-          "slug": "us-x-iran-permanent-peace-deal-by-june-30-2026",
-          "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-june-30-2026",
-          "yes_price": 0.49,
-          "volume_24h": 320292.0,
-          "volume_total": 1624037.0,
-          "liquidity": 218611.0,
-          "days_left": 37.1
+          "question": "US x Iran diplomatic meeting by April 30, 2026?",
+          "slug": "us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225",
+          "url": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225",
+          "yes_price": 0.24,
+          "volume_24h": 329654.0,
+          "volume_total": 1723114.0,
+          "liquidity": 61324.0,
+          "days_left": 5.6
         }
       ]
     },
@@ -329,147 +329,147 @@
           "volume_24h": 5821653.0,
           "volume_total": 15734008.0,
           "liquidity": 19823.0,
-          "days_left": 68.3
+          "days_left": 67.8
         },
         {
           "question": "Will MegaETH launch a token by April 30, 2026?",
           "slug": "will-megaeth-launch-a-token-by-april-30-2026-798",
           "url": "https://polymarket.com/event/will-megaeth-launch-a-token-by-april-30-2026-798",
-          "yes_price": 0.9545,
-          "volume_24h": 897206.0,
-          "volume_total": 1847434.0,
-          "liquidity": 24260.0,
-          "days_left": 252.3
+          "yes_price": 0.9395,
+          "volume_24h": 916022.0,
+          "volume_total": 1919211.0,
+          "liquidity": 52223.0,
+          "days_left": 251.8
         },
         {
-          "question": "Will Bitcoin reach $150,000 in April?",
-          "slug": "will-bitcoin-reach-150k-in-april-2026",
-          "url": "https://polymarket.com/event/will-bitcoin-reach-150k-in-april-2026",
-          "yes_price": 0.0005,
-          "volume_24h": 223321.0,
-          "volume_total": 7785448.0,
-          "liquidity": 1216769.0,
-          "days_left": 7.3
-        },
-        {
-          "question": "Will Ethereum reach $4,000 in April?",
-          "slug": "will-ethereum-reach-4000-in-april-2026",
-          "url": "https://polymarket.com/event/will-ethereum-reach-4000-in-april-2026",
-          "yes_price": 0.0005,
-          "volume_24h": 219829.0,
-          "volume_total": 2596033.0,
-          "liquidity": 423327.0,
-          "days_left": 7.3
-        },
-        {
-          "question": "Will Bitcoin reach $80,000 in April?",
-          "slug": "will-bitcoin-reach-80k-in-april-2026-794",
-          "url": "https://polymarket.com/event/will-bitcoin-reach-80k-in-april-2026-794",
-          "yes_price": 0.595,
-          "volume_24h": 209358.0,
-          "volume_total": 5573361.0,
-          "liquidity": 297152.0,
-          "days_left": 7.3
+          "question": "Will the price of Bitcoin be above $72,000 on April 24?",
+          "slug": "bitcoin-above-72k-on-april-24",
+          "url": "https://polymarket.com/event/bitcoin-above-72k-on-april-24",
+          "yes_price": 0.9995,
+          "volume_24h": 525572.0,
+          "volume_total": 601701.0,
+          "liquidity": 34385.0,
+          "days_left": 0.3
         },
         {
           "question": "Will the price of Bitcoin be above $70,000 on April 24?",
           "slug": "bitcoin-above-70k-on-april-24",
           "url": "https://polymarket.com/event/bitcoin-above-70k-on-april-24",
           "yes_price": 0.9995,
-          "volume_24h": 170772.0,
-          "volume_total": 237353.0,
-          "liquidity": 38284.0,
-          "days_left": 0.8
+          "volume_24h": 379195.0,
+          "volume_total": 461193.0,
+          "liquidity": 75819.0,
+          "days_left": 0.3
         },
         {
-          "question": "Will the price of Bitcoin be above $68,000 on April 24?",
-          "slug": "bitcoin-above-68k-on-april-24",
-          "url": "https://polymarket.com/event/bitcoin-above-68k-on-april-24",
+          "question": "Will the price of Ethereum be above $2,000 on April 24?",
+          "slug": "ethereum-above-2000-on-april-24",
+          "url": "https://polymarket.com/event/ethereum-above-2000-on-april-24",
           "yes_price": 0.9995,
-          "volume_24h": 158073.0,
-          "volume_total": 202948.0,
-          "liquidity": 41792.0,
-          "days_left": 0.8
+          "volume_24h": 227397.0,
+          "volume_total": 235657.0,
+          "liquidity": 27752.0,
+          "days_left": 0.3
         },
         {
           "question": "Will Netherlands win the 2026 FIFA World Cup?",
           "slug": "will-netherlands-win-the-2026-fifa-world-cup-739",
           "url": "https://polymarket.com/event/will-netherlands-win-the-2026-fifa-world-cup-739",
           "yes_price": 0.0335,
-          "volume_24h": 139116.0,
-          "volume_total": 14938836.0,
-          "liquidity": 1665629.0,
-          "days_left": 87.1
+          "volume_24h": 219147.0,
+          "volume_total": 15123346.0,
+          "liquidity": 1708111.0,
+          "days_left": 86.6
         },
         {
-          "question": "Will Ethereum dip to $200 in April?",
-          "slug": "will-ethereum-dip-to-200-in-april-2026",
-          "url": "https://polymarket.com/event/will-ethereum-dip-to-200-in-april-2026",
-          "yes_price": 0.0005,
-          "volume_24h": 117162.0,
-          "volume_total": 832744.0,
-          "liquidity": 229176.0,
-          "days_left": 7.3
+          "question": "Will the price of Bitcoin be above $80,000 on April 24?",
+          "slug": "bitcoin-above-80k-on-april-24",
+          "url": "https://polymarket.com/event/bitcoin-above-80k-on-april-24",
+          "yes_price": 0.0135,
+          "volume_24h": 204502.0,
+          "volume_total": 233142.0,
+          "liquidity": 42689.0,
+          "days_left": 0.3
         },
         {
-          "question": "Will Bitcoin dip to $60,000 in April?",
-          "slug": "will-bitcoin-dip-to-60k-in-april-2026-459-838-781",
-          "url": "https://polymarket.com/event/will-bitcoin-dip-to-60k-in-april-2026-459-838-781",
-          "yes_price": 0.0125,
-          "volume_24h": 113265.0,
-          "volume_total": 2143286.0,
-          "liquidity": 164473.0,
-          "days_left": 7.3
-        },
-        {
-          "question": "LoL: Solary vs Vitality.Bee (BO1) - LFL Regular Season",
-          "slug": "lol-sly-vitb-2026-04-23",
-          "url": "https://polymarket.com/event/lol-sly-vitb-2026-04-23",
-          "yes_price": 0.9995,
-          "volume_24h": 110009.0,
-          "volume_total": 110044.0,
-          "liquidity": 162024.0,
-          "days_left": 0.2
-        },
-        {
-          "question": "Will MegaETH launch a token by May 31, 2026?",
-          "slug": "will-megaeth-launch-a-token-by-may-31-2026",
-          "url": "https://polymarket.com/event/will-megaeth-launch-a-token-by-may-31-2026",
-          "yes_price": 0.996,
-          "volume_24h": 109762.0,
-          "volume_total": 201417.0,
-          "liquidity": 46284.0,
-          "days_left": 252.3
+          "question": "Will the price of Bitcoin be above $82,000 on April 24?",
+          "slug": "bitcoin-above-82k-on-april-24",
+          "url": "https://polymarket.com/event/bitcoin-above-82k-on-april-24",
+          "yes_price": 0.0015,
+          "volume_24h": 199826.0,
+          "volume_total": 250437.0,
+          "liquidity": 108023.0,
+          "days_left": 0.3
         },
         {
           "question": "Will the price of Bitcoin be above $74,000 on April 24?",
           "slug": "bitcoin-above-74k-on-april-24",
           "url": "https://polymarket.com/event/bitcoin-above-74k-on-april-24",
-          "yes_price": 0.9805,
-          "volume_24h": 105850.0,
-          "volume_total": 156421.0,
-          "liquidity": 31326.0,
-          "days_left": 0.8
-        },
-        {
-          "question": "Will the price of Bitcoin be above $66,000 on April 25?",
-          "slug": "bitcoin-above-66k-on-april-25",
-          "url": "https://polymarket.com/event/bitcoin-above-66k-on-april-25",
-          "yes_price": 0.9995,
-          "volume_24h": 105765.0,
-          "volume_total": 115525.0,
-          "liquidity": 21758.0,
-          "days_left": 1.8
+          "yes_price": 0.9945,
+          "volume_24h": 183465.0,
+          "volume_total": 255923.0,
+          "liquidity": 48065.0,
+          "days_left": 0.3
         },
         {
           "question": "Will MegaETH launch a token by June 30, 2026?",
           "slug": "will-megaeth-launch-a-token-by-june-30-2026-676-993-477",
           "url": "https://polymarket.com/event/will-megaeth-launch-a-token-by-june-30-2026-676-993-477",
-          "yes_price": 0.9975,
-          "volume_24h": 104982.0,
-          "volume_total": 482326.0,
-          "liquidity": 35375.0,
-          "days_left": 252.3
+          "yes_price": 0.9965,
+          "volume_24h": 155136.0,
+          "volume_total": 535231.0,
+          "liquidity": 21129.0,
+          "days_left": 251.8
+        },
+        {
+          "question": "Will the price of Bitcoin be above $76,000 on April 24?",
+          "slug": "bitcoin-above-76k-on-april-24",
+          "url": "https://polymarket.com/event/bitcoin-above-76k-on-april-24",
+          "yes_price": 0.9445,
+          "volume_24h": 154645.0,
+          "volume_total": 180805.0,
+          "liquidity": 45882.0,
+          "days_left": 0.3
+        },
+        {
+          "question": "Will the price of Bitcoin be above $84,000 on April 24?",
+          "slug": "bitcoin-above-84k-on-april-24",
+          "url": "https://polymarket.com/event/bitcoin-above-84k-on-april-24",
+          "yes_price": 0.0005,
+          "volume_24h": 154453.0,
+          "volume_total": 179332.0,
+          "liquidity": 83214.0,
+          "days_left": 0.3
+        },
+        {
+          "question": "Will Bitcoin dip to $65,000 in April?",
+          "slug": "will-bitcoin-dip-to-65k-in-april-2026-355-765",
+          "url": "https://polymarket.com/event/will-bitcoin-dip-to-65k-in-april-2026-355-765",
+          "yes_price": 0.0285,
+          "volume_24h": 145356.0,
+          "volume_total": 3279050.0,
+          "liquidity": 138422.0,
+          "days_left": 6.8
+        },
+        {
+          "question": "MegaETH market cap (FDV) >$800M one day after launch?",
+          "slug": "megaeth-market-cap-fdv-800m-one-day-after-launch-987-114-655",
+          "url": "https://polymarket.com/event/megaeth-market-cap-fdv-800m-one-day-after-launch-987-114-655",
+          "yes_price": 0.935,
+          "volume_24h": 142346.0,
+          "volume_total": 616820.0,
+          "liquidity": 84318.0,
+          "days_left": 67.8
+        },
+        {
+          "question": "Will Bitcoin reach $90,000 in April?",
+          "slug": "will-bitcoin-reach-90k-in-april-2026",
+          "url": "https://polymarket.com/event/will-bitcoin-reach-90k-in-april-2026",
+          "yes_price": 0.014,
+          "volume_24h": 139277.0,
+          "volume_total": 2766745.0,
+          "liquidity": 139504.0,
+          "days_left": 6.8
         }
       ]
     },
@@ -483,277 +483,307 @@
           "slug": "us-forces-seize-another-oil-tanker-by-april-30",
           "url": "https://polymarket.com/event/us-forces-seize-another-oil-tanker-by-april-30",
           "yes_price": 0.9995,
-          "volume_24h": 878637.0,
-          "volume_total": 2454990.0,
-          "liquidity": 2896696.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in April?",
-          "slug": "will-wti-crude-oil-wti-hit-high-120-in-april",
-          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-120-in-april",
-          "yes_price": 0.1165,
-          "volume_24h": 188065.0,
-          "volume_total": 4838002.0,
-          "liquidity": 87169.0,
-          "days_left": 6.1
+          "volume_24h": 2344931.0,
+          "volume_total": 4173572.0,
+          "liquidity": 1014943.0,
+          "days_left": 5.6
         },
         {
           "question": "Will WTI Crude Oil (WTI) hit (HIGH) $100 in April?",
           "slug": "will-wti-crude-oil-wti-hit-high-100-in-april",
           "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-100-in-april",
-          "yes_price": 0.775,
-          "volume_24h": 184907.0,
-          "volume_total": 1088776.0,
-          "liquidity": 32765.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in April?",
-          "slug": "will-wti-crude-oil-wti-hit-high-140-in-april",
-          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-140-in-april",
-          "yes_price": 0.0155,
-          "volume_24h": 181904.0,
-          "volume_total": 3257618.0,
-          "liquidity": 136661.0,
-          "days_left": 6.1
+          "yes_price": 0.815,
+          "volume_24h": 183592.0,
+          "volume_total": 1165692.0,
+          "liquidity": 32995.0,
+          "days_left": 5.6
         },
         {
           "question": "Will Google have the best AI model at the end of April 2026?",
           "slug": "will-google-have-the-best-ai-model-at-the-end-of-april-2026",
           "url": "https://polymarket.com/event/will-google-have-the-best-ai-model-at-the-end-of-april-2026",
-          "yes_price": 0.0025,
-          "volume_24h": 117228.0,
-          "volume_total": 774113.0,
-          "liquidity": 109201.0,
-          "days_left": 6.1
+          "yes_price": 0.0225,
+          "volume_24h": 183031.0,
+          "volume_total": 909706.0,
+          "liquidity": 37042.0,
+          "days_left": 5.6
         },
         {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $200 in April?",
-          "slug": "will-wti-crude-oil-wti-hit-high-200-in-april",
-          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-200-in-april",
-          "yes_price": 0.0045,
-          "volume_24h": 114836.0,
-          "volume_total": 6389047.0,
-          "liquidity": 127482.0,
-          "days_left": 6.1
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in April?",
+          "slug": "will-wti-crude-oil-wti-hit-high-140-in-april",
+          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-140-in-april",
+          "yes_price": 0.0175,
+          "volume_24h": 165085.0,
+          "volume_total": 3307958.0,
+          "liquidity": 168028.0,
+          "days_left": 5.6
         },
         {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in April?",
-          "slug": "will-wti-crude-oil-wti-hit-high-150-in-april",
-          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-150-in-april",
-          "yes_price": 0.0145,
-          "volume_24h": 111857.0,
-          "volume_total": 3718977.0,
-          "liquidity": 217831.0,
-          "days_left": 6.1
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in April?",
+          "slug": "will-wti-crude-oil-wti-hit-high-120-in-april",
+          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-120-in-april",
+          "yes_price": 0.1225,
+          "volume_24h": 146690.0,
+          "volume_total": 4890911.0,
+          "liquidity": 137008.0,
+          "days_left": 5.6
         },
         {
           "question": "Will Tesla be the largest company in the world by market cap on June 30?",
           "slug": "will-tesla-be-the-largest-company-in-the-world-by-market-cap-on-june-30",
           "url": "https://polymarket.com/event/will-tesla-be-the-largest-company-in-the-world-by-market-cap-on-june-30",
           "yes_price": 0.0035,
-          "volume_24h": 105993.0,
-          "volume_total": 1049938.0,
-          "liquidity": 219353.0,
-          "days_left": 67.1
+          "volume_24h": 112697.0,
+          "volume_total": 1061809.0,
+          "liquidity": 230815.0,
+          "days_left": 66.6
         },
         {
           "question": "Will Amazon be the largest company in the world by market cap on June 30?",
           "slug": "will-amazon-be-the-largest-company-in-the-world-by-market-cap-on-june-30-123",
           "url": "https://polymarket.com/event/will-amazon-be-the-largest-company-in-the-world-by-market-cap-on-june-30-123",
           "yes_price": 0.0045,
-          "volume_24h": 100628.0,
-          "volume_total": 928491.0,
-          "liquidity": 191083.0,
-          "days_left": 67.1
-        },
-        {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $110 in April?",
-          "slug": "will-wti-crude-oil-wti-hit-high-110-in-april",
-          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-110-in-april",
-          "yes_price": 0.28,
-          "volume_24h": 99614.0,
-          "volume_total": 1502840.0,
-          "liquidity": 27435.0,
-          "days_left": 6.1
+          "volume_24h": 108412.0,
+          "volume_total": 937080.0,
+          "liquidity": 189375.0,
+          "days_left": 66.6
         },
         {
           "question": "Will Microsoft be the largest company in the world by market cap on June 30?",
           "slug": "will-microsoft-be-the-largest-company-in-the-world-by-market-cap-on-june-30-612",
           "url": "https://polymarket.com/event/will-microsoft-be-the-largest-company-in-the-world-by-market-cap-on-june-30-612",
           "yes_price": 0.0035,
-          "volume_24h": 93676.0,
-          "volume_total": 700478.0,
-          "liquidity": 146312.0,
-          "days_left": 67.1
+          "volume_24h": 99129.0,
+          "volume_total": 709562.0,
+          "liquidity": 146390.0,
+          "days_left": 66.6
         },
         {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $130 in April?",
-          "slug": "will-wti-crude-oil-wti-hit-high-130-in-april",
-          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-130-in-april",
-          "yes_price": 0.0335,
-          "volume_24h": 87285.0,
-          "volume_total": 3247131.0,
-          "liquidity": 176803.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "WTI Crude Oil (WTI) Up or Down on April 23?",
-          "slug": "wti-up-or-down-on-april-23-2026",
-          "url": "https://polymarket.com/event/wti-up-or-down-on-april-23-2026",
-          "yes_price": 0.999,
-          "volume_24h": 81413.0,
-          "volume_total": 81435.0,
-          "liquidity": 7075.0,
-          "days_left": 0.0
-        },
-        {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $125 in April?",
-          "slug": "will-wti-crude-oil-wti-hit-high-125-in-april",
-          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-125-in-april",
-          "yes_price": 0.0545,
-          "volume_24h": 76032.0,
-          "volume_total": 510965.0,
-          "liquidity": 82847.0,
-          "days_left": 6.1
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $110 in April?",
+          "slug": "will-wti-crude-oil-wti-hit-high-110-in-april",
+          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-110-in-april",
+          "yes_price": 0.32,
+          "volume_24h": 97479.0,
+          "volume_total": 1542204.0,
+          "liquidity": 36623.0,
+          "days_left": 5.6
         },
         {
           "question": "Crude Oil all time high by April 30?",
           "slug": "crude-oil-all-time-high-by-april-30",
           "url": "https://polymarket.com/event/crude-oil-all-time-high-by-april-30",
-          "yes_price": 0.032,
-          "volume_24h": 75785.0,
-          "volume_total": 435573.0,
-          "liquidity": 55217.0,
-          "days_left": 6.1
+          "yes_price": 0.0205,
+          "volume_24h": 84753.0,
+          "volume_total": 477264.0,
+          "liquidity": 66486.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $125 in April?",
+          "slug": "will-wti-crude-oil-wti-hit-high-125-in-april",
+          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-125-in-april",
+          "yes_price": 0.071,
+          "volume_24h": 83294.0,
+          "volume_total": 556239.0,
+          "liquidity": 78672.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $200 in April?",
+          "slug": "will-wti-crude-oil-wti-hit-high-200-in-april",
+          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-200-in-april",
+          "yes_price": 0.0035,
+          "volume_24h": 79719.0,
+          "volume_total": 6443901.0,
+          "liquidity": 1099156.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in April?",
+          "slug": "will-wti-crude-oil-wti-hit-high-150-in-april",
+          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-150-in-april",
+          "yes_price": 0.0135,
+          "volume_24h": 73335.0,
+          "volume_total": 3767680.0,
+          "liquidity": 207598.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will Meta have the best AI model at the end of April 2026?",
+          "slug": "will-meta-have-the-best-ai-model-at-the-end-of-april-2026",
+          "url": "https://polymarket.com/event/will-meta-have-the-best-ai-model-at-the-end-of-april-2026",
+          "yes_price": 0.0015,
+          "volume_24h": 66360.0,
+          "volume_total": 490679.0,
+          "liquidity": 41437.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $105 in April?",
+          "slug": "will-wti-crude-oil-wti-hit-high-105-in-april-yyy",
+          "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-105-in-april-yyy",
+          "yes_price": 0.525,
+          "volume_24h": 63638.0,
+          "volume_total": 480500.0,
+          "liquidity": 32580.0,
+          "days_left": 5.6
         }
       ]
     },
     "ai_tech": {
       "name": "AI & Technology",
       "emoji": "🤖",
-      "count": 12,
+      "count": 15,
       "markets": [
         {
           "question": "Will OpenAI have the best AI model at the end of April 2026?",
           "slug": "will-openai-have-the-best-ai-model-at-the-end-of-april-2026",
           "url": "https://polymarket.com/event/will-openai-have-the-best-ai-model-at-the-end-of-april-2026",
-          "yes_price": 0.085,
-          "volume_24h": 504998.0,
-          "volume_total": 2381907.0,
-          "liquidity": 44162.0,
-          "days_left": 6.1
+          "yes_price": 0.084,
+          "volume_24h": 482606.0,
+          "volume_total": 2514392.0,
+          "liquidity": 37401.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will DeepSeek have the best AI model at the end of April 2026?",
+          "slug": "will-deepseek-have-the-best-ai-model-at-the-end-of-april-2026",
+          "url": "https://polymarket.com/event/will-deepseek-have-the-best-ai-model-at-the-end-of-april-2026",
+          "yes_price": 0.004,
+          "volume_24h": 372631.0,
+          "volume_total": 2986266.0,
+          "liquidity": 43180.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will Anthropic have the best AI model at the end of April 2026?",
+          "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-april-2026",
+          "url": "https://polymarket.com/event/will-anthropic-have-the-best-ai-model-at-the-end-of-april-2026",
+          "yes_price": 0.885,
+          "volume_24h": 194940.0,
+          "volume_total": 1225683.0,
+          "liquidity": 33925.0,
+          "days_left": 5.6
         },
         {
           "question": "Will the Orlando Magic win the 2026 NBA Finals?",
           "slug": "will-the-orlando-magic-win-the-2026-nba-finals",
           "url": "https://polymarket.com/event/will-the-orlando-magic-win-the-2026-nba-finals",
           "yes_price": 0.0035,
-          "volume_24h": 283082.0,
-          "volume_total": 12935798.0,
-          "liquidity": 839766.0,
-          "days_left": 68.1
-        },
-        {
-          "question": "Will Anthropic have the best AI model at the end of April 2026?",
-          "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-april-2026",
-          "url": "https://polymarket.com/event/will-anthropic-have-the-best-ai-model-at-the-end-of-april-2026",
-          "yes_price": 0.865,
-          "volume_24h": 165354.0,
-          "volume_total": 1143383.0,
-          "liquidity": 20568.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "Will DeepSeek have the best AI model at the end of April 2026?",
-          "slug": "will-deepseek-have-the-best-ai-model-at-the-end-of-april-2026",
-          "url": "https://polymarket.com/event/will-deepseek-have-the-best-ai-model-at-the-end-of-april-2026",
-          "yes_price": 0.0045,
-          "volume_24h": 149153.0,
-          "volume_total": 2709741.0,
-          "liquidity": 65241.0,
-          "days_left": 6.1
+          "volume_24h": 124524.0,
+          "volume_total": 13010114.0,
+          "liquidity": 847324.0,
+          "days_left": 67.6
         },
         {
           "question": "Will Baidu have the best AI model at the end of April 2026?",
           "slug": "will-baidu-have-the-best-ai-model-at-the-end-of-april-2026",
           "url": "https://polymarket.com/event/will-baidu-have-the-best-ai-model-at-the-end-of-april-2026",
           "yes_price": 0.0015,
-          "volume_24h": 92132.0,
-          "volume_total": 1195074.0,
-          "liquidity": 397783.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "Will Meituan have the best AI model at the end of April 2026?",
-          "slug": "will-meituan-have-the-best-ai-model-at-the-end-of-april-2026",
-          "url": "https://polymarket.com/event/will-meituan-have-the-best-ai-model-at-the-end-of-april-2026",
-          "yes_price": 0.0015,
-          "volume_24h": 74687.0,
-          "volume_total": 1068412.0,
-          "liquidity": 401124.0,
-          "days_left": 6.1
+          "volume_24h": 95865.0,
+          "volume_total": 1246901.0,
+          "liquidity": 444360.0,
+          "days_left": 5.6
         },
         {
           "question": "Will Z.ai have the best AI model at the end of April 2026?",
           "slug": "will-zai-have-the-best-ai-model-at-the-end-of-april-2026",
           "url": "https://polymarket.com/event/will-zai-have-the-best-ai-model-at-the-end-of-april-2026",
           "yes_price": 0.0015,
-          "volume_24h": 73106.0,
-          "volume_total": 984080.0,
-          "liquidity": 344210.0,
-          "days_left": 6.1
+          "volume_24h": 90401.0,
+          "volume_total": 1034957.0,
+          "liquidity": 408276.0,
+          "days_left": 5.6
         },
         {
-          "question": "Will xAI have the best AI model at the end of April 2026?",
-          "slug": "will-xai-have-the-best-ai-model-at-the-end-of-april-2026",
-          "url": "https://polymarket.com/event/will-xai-have-the-best-ai-model-at-the-end-of-april-2026",
+          "question": "Will Meituan have the best AI model at the end of April 2026?",
+          "slug": "will-meituan-have-the-best-ai-model-at-the-end-of-april-2026",
+          "url": "https://polymarket.com/event/will-meituan-have-the-best-ai-model-at-the-end-of-april-2026",
           "yes_price": 0.0005,
-          "volume_24h": 65966.0,
-          "volume_total": 883296.0,
-          "liquidity": 224318.0,
-          "days_left": 6.1
+          "volume_24h": 52558.0,
+          "volume_total": 1078735.0,
+          "liquidity": 437139.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will DeepSeek have the best AI model at the end of April 2026?",
+          "slug": "will-deepseek-have-the-best-ai-model-at-the-end-of-april-2026-266",
+          "url": "https://polymarket.com/event/will-deepseek-have-the-best-ai-model-at-the-end-of-april-2026-266",
+          "yes_price": 0.033,
+          "volume_24h": 45100.0,
+          "volume_total": 83427.0,
+          "liquidity": 15120.0,
+          "days_left": 5.6
         },
         {
           "question": "Will Alibaba have the best AI model at the end of April 2026?",
           "slug": "will-alibaba-have-the-best-ai-model-at-the-end-of-april-2026",
           "url": "https://polymarket.com/event/will-alibaba-have-the-best-ai-model-at-the-end-of-april-2026",
           "yes_price": 0.0005,
-          "volume_24h": 63925.0,
-          "volume_total": 1146305.0,
-          "liquidity": 377162.0,
-          "days_left": 6.1
+          "volume_24h": 37241.0,
+          "volume_total": 1153592.0,
+          "liquidity": 392064.0,
+          "days_left": 5.6
         },
         {
           "question": "Will OpenAI have the best AI model at the end of June 2026?",
           "slug": "will-openai-have-the-best-ai-model-at-the-end-of-june-2026",
           "url": "https://polymarket.com/event/will-openai-have-the-best-ai-model-at-the-end-of-june-2026",
-          "yes_price": 0.165,
-          "volume_24h": 21909.0,
-          "volume_total": 234468.0,
-          "liquidity": 28097.0,
-          "days_left": 67.1
+          "yes_price": 0.14,
+          "volume_24h": 24669.0,
+          "volume_total": 240260.0,
+          "liquidity": 43496.0,
+          "days_left": 66.6
         },
         {
-          "question": "Will Claude 5 be released by April 30, 2026?",
-          "slug": "will-claude-5-be-released-by-april-30-2026",
-          "url": "https://polymarket.com/event/will-claude-5-be-released-by-april-30-2026",
-          "yes_price": 0.005,
-          "volume_24h": 21886.0,
-          "volume_total": 1295046.0,
-          "liquidity": 40608.0,
-          "days_left": 6.1
+          "question": "Will Moonshot have the best AI model at the end of June 2026?",
+          "slug": "will-moonshot-have-the-best-ai-model-at-the-end-of-june-2026",
+          "url": "https://polymarket.com/event/will-moonshot-have-the-best-ai-model-at-the-end-of-june-2026",
+          "yes_price": 0.0025,
+          "volume_24h": 22189.0,
+          "volume_total": 218207.0,
+          "liquidity": 56414.0,
+          "days_left": 66.6
         },
         {
           "question": "Will Alibaba have the best AI model at the end of June 2026?",
           "slug": "will-alibaba-have-the-best-ai-model-at-the-end-of-june-2026",
           "url": "https://polymarket.com/event/will-alibaba-have-the-best-ai-model-at-the-end-of-june-2026",
           "yes_price": 0.0025,
-          "volume_24h": 17571.0,
-          "volume_total": 196472.0,
-          "liquidity": 74982.0,
-          "days_left": 67.1
+          "volume_24h": 19070.0,
+          "volume_total": 206945.0,
+          "liquidity": 81653.0,
+          "days_left": 66.6
+        },
+        {
+          "question": "Will DeepSeek have a #1 AI model by June 30?",
+          "slug": "will-deepseek-have-a-1-ai-model-by-june-30",
+          "url": "https://polymarket.com/event/will-deepseek-have-a-1-ai-model-by-june-30",
+          "yes_price": 0.0125,
+          "volume_24h": 18985.0,
+          "volume_total": 258781.0,
+          "liquidity": 11639.0,
+          "days_left": 66.6
+        },
+        {
+          "question": "Will OpenAI have the best Math AI model at the end of April 2026?",
+          "slug": "will-openai-have-the-best-math-ai-model-at-the-end-of-april-2026",
+          "url": "https://polymarket.com/event/will-openai-have-the-best-math-ai-model-at-the-end-of-april-2026",
+          "yes_price": 0.18,
+          "volume_24h": 18175.0,
+          "volume_total": 27035.0,
+          "liquidity": 9711.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will Alibaba have the best AI model at the end of April 2026?",
+          "slug": "will-alibaba-have-the-best-ai-model-at-the-end-of-april-2026-984",
+          "url": "https://polymarket.com/event/will-alibaba-have-the-best-ai-model-at-the-end-of-april-2026-984",
+          "yes_price": 0.95,
+          "volume_24h": 17946.0,
+          "volume_total": 51407.0,
+          "liquidity": 14336.0,
+          "days_left": 5.6
         }
       ]
     },
@@ -763,154 +793,154 @@
       "count": 15,
       "markets": [
         {
-          "question": "Will Jared Polis win the 2028 Democratic presidential nomination?",
-          "slug": "will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
-          "url": "https://polymarket.com/event/will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
-          "yes_price": 0.0075,
-          "volume_24h": 1641252.0,
-          "volume_total": 24144304.0,
-          "liquidity": 588284.0,
-          "days_left": 928.1
-        },
-        {
           "question": "Will Jasmine Crockett win the 2028 Democratic presidential nomination?",
           "slug": "will-jasmine-crockett-win-the-2028-democratic-presidential-nomination",
           "url": "https://polymarket.com/event/will-jasmine-crockett-win-the-2028-democratic-presidential-nomination",
           "yes_price": 0.0055,
-          "volume_24h": 1523022.0,
-          "volume_total": 30330029.0,
-          "liquidity": 551158.0,
-          "days_left": 928.1
+          "volume_24h": 1818717.0,
+          "volume_total": 30676585.0,
+          "liquidity": 775457.0,
+          "days_left": 927.6
         },
         {
-          "question": "Will Roberto Sánchez Palomino win the 2026 Peruvian presidential election?",
-          "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election",
-          "url": "https://polymarket.com/event/will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election",
-          "yes_price": 0.2515,
-          "volume_24h": 794725.0,
-          "volume_total": 11415382.0,
-          "liquidity": 154577.0,
-          "days_left": 44.1
+          "question": "Will Jared Polis win the 2028 Democratic presidential nomination?",
+          "slug": "will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
+          "url": "https://polymarket.com/event/will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
+          "yes_price": 0.0075,
+          "volume_24h": 1620799.0,
+          "volume_total": 24192168.0,
+          "liquidity": 752726.0,
+          "days_left": 927.6
         },
         {
-          "question": "Will Beto O’Rourke win the 2028 Democratic presidential nomination?",
-          "slug": "will-beto-orourke-win-the-2028-democratic-presidential-nomination",
-          "url": "https://polymarket.com/event/will-beto-orourke-win-the-2028-democratic-presidential-nomination",
-          "yes_price": 0.0055,
-          "volume_24h": 621211.0,
-          "volume_total": 37391382.0,
-          "liquidity": 1591626.0,
-          "days_left": 928.1
+          "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
+          "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+          "url": "https://polymarket.com/event/will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+          "yes_price": 0.0535,
+          "volume_24h": 682997.0,
+          "volume_total": 9295686.0,
+          "liquidity": 268640.0,
+          "days_left": 927.6
+        },
+        {
+          "question": "Will Rafael López Aliaga win the 2026 Peruvian presidential election?",
+          "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election",
+          "url": "https://polymarket.com/event/will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election",
+          "yes_price": 0.033,
+          "volume_24h": 654844.0,
+          "volume_total": 8724225.0,
+          "liquidity": 220568.0,
+          "days_left": 43.6
+        },
+        {
+          "question": "Trump out as President by April 30?",
+          "slug": "trump-out-as-president-by-april-30",
+          "url": "https://polymarket.com/event/trump-out-as-president-by-april-30",
+          "yes_price": 0.0035,
+          "volume_24h": 610637.0,
+          "volume_total": 11859138.0,
+          "liquidity": 4743079.0,
+          "days_left": 5.6
         },
         {
           "question": "Will Eric Trump win the 2028 US Presidential Election?",
           "slug": "will-eric-trump-win-the-2028-us-presidential-election",
           "url": "https://polymarket.com/event/will-eric-trump-win-the-2028-us-presidential-election",
           "yes_price": 0.0065,
-          "volume_24h": 606478.0,
-          "volume_total": 7912052.0,
-          "liquidity": 1620475.0,
-          "days_left": 928.1
+          "volume_24h": 603816.0,
+          "volume_total": 7930581.0,
+          "liquidity": 1630593.0,
+          "days_left": 927.6
+        },
+        {
+          "question": "Will Beto O’Rourke win the 2028 Democratic presidential nomination?",
+          "slug": "will-beto-orourke-win-the-2028-democratic-presidential-nomination",
+          "url": "https://polymarket.com/event/will-beto-orourke-win-the-2028-democratic-presidential-nomination",
+          "yes_price": 0.0055,
+          "volume_24h": 594170.0,
+          "volume_total": 37422689.0,
+          "liquidity": 1611081.0,
+          "days_left": 927.6
+        },
+        {
+          "question": "Will Elon Musk post 180-199 tweets from April 17 to April 24, 2026?",
+          "slug": "elon-musk-of-tweets-april-17-april-24-180-199",
+          "url": "https://polymarket.com/event/elon-musk-of-tweets-april-17-april-24-180-199",
+          "yes_price": 0.4525,
+          "volume_24h": 572423.0,
+          "volume_total": 1072175.0,
+          "liquidity": 19237.0,
+          "days_left": 0.3
         },
         {
           "question": "Will Phil Murphy win the 2028 Democratic presidential nomination?",
           "slug": "will-phil-murphy-win-the-2028-democratic-presidential-nomination-611",
           "url": "https://polymarket.com/event/will-phil-murphy-win-the-2028-democratic-presidential-nomination-611",
           "yes_price": 0.0065,
-          "volume_24h": 581316.0,
-          "volume_total": 38438175.0,
-          "liquidity": 2424690.0,
-          "days_left": 928.1
-        },
-        {
-          "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
-          "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
-          "url": "https://polymarket.com/event/will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
-          "yes_price": 0.06,
-          "volume_24h": 536877.0,
-          "volume_total": 9023048.0,
-          "liquidity": 253349.0,
-          "days_left": 928.1
-        },
-        {
-          "question": "Will Brazil win the 2026 FIFA World Cup?",
-          "slug": "will-brazil-win-the-2026-fifa-world-cup-183",
-          "url": "https://polymarket.com/event/will-brazil-win-the-2026-fifa-world-cup-183",
-          "yes_price": 0.0855,
-          "volume_24h": 512466.0,
-          "volume_total": 14229332.0,
-          "liquidity": 1631361.0,
-          "days_left": 87.1
-        },
-        {
-          "question": "Trump out as President by April 30?",
-          "slug": "trump-out-as-president-by-april-30",
-          "url": "https://polymarket.com/event/trump-out-as-president-by-april-30",
-          "yes_price": 0.0055,
-          "volume_24h": 508690.0,
-          "volume_total": 11656740.0,
-          "liquidity": 2153862.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "Will Rafael López Aliaga win the 2026 Peruvian presidential election?",
-          "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election",
-          "url": "https://polymarket.com/event/will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election",
-          "yes_price": 0.038,
-          "volume_24h": 471917.0,
-          "volume_total": 8452954.0,
-          "liquidity": 225994.0,
-          "days_left": 44.1
-        },
-        {
-          "question": "Will France win the 2026 FIFA World Cup?",
-          "slug": "will-france-win-the-2026-fifa-world-cup-924",
-          "url": "https://polymarket.com/event/will-france-win-the-2026-fifa-world-cup-924",
-          "yes_price": 0.1675,
-          "volume_24h": 467880.0,
-          "volume_total": 17558128.0,
-          "liquidity": 798680.0,
-          "days_left": 87.1
+          "volume_24h": 541401.0,
+          "volume_total": 38455512.0,
+          "liquidity": 2421543.0,
+          "days_left": 927.6
         },
         {
           "question": "Will Mexico win the 2026 FIFA World Cup?",
           "slug": "will-mexico-win-the-2026-fifa-world-cup-529",
           "url": "https://polymarket.com/event/will-mexico-win-the-2026-fifa-world-cup-529",
           "yes_price": 0.0105,
-          "volume_24h": 367133.0,
-          "volume_total": 15233931.0,
-          "liquidity": 2280032.0,
-          "days_left": 87.1
+          "volume_24h": 368832.0,
+          "volume_total": 15407217.0,
+          "liquidity": 2223099.0,
+          "days_left": 86.6
         },
         {
-          "question": "Will Elon Musk post 180-199 tweets from April 17 to April 24, 2026?",
-          "slug": "elon-musk-of-tweets-april-17-april-24-180-199",
-          "url": "https://polymarket.com/event/elon-musk-of-tweets-april-17-april-24-180-199",
-          "yes_price": 0.0935,
-          "volume_24h": 319682.0,
-          "volume_total": 674025.0,
-          "liquidity": 67530.0,
-          "days_left": 0.8
-        },
-        {
-          "question": "Will Mark Cuban win the 2028 Democratic presidential nomination?",
-          "slug": "will-mark-cuban-win-the-2028-democratic-presidential-nomination-329",
-          "url": "https://polymarket.com/event/will-mark-cuban-win-the-2028-democratic-presidential-nomination-329",
-          "yes_price": 0.0105,
-          "volume_24h": 293469.0,
-          "volume_total": 20933775.0,
-          "liquidity": 1758607.0,
-          "days_left": 928.1
+          "question": "Will Elon Musk post 260-279 tweets from April 17 to April 24, 2026?",
+          "slug": "elon-musk-of-tweets-april-17-april-24-260-279",
+          "url": "https://polymarket.com/event/elon-musk-of-tweets-april-17-april-24-260-279",
+          "yes_price": 0.0005,
+          "volume_24h": 364127.0,
+          "volume_total": 650109.0,
+          "liquidity": 69011.0,
+          "days_left": 0.3
         },
         {
           "question": "Will John Thune win the 2028 Republican presidential nomination?",
           "slug": "will-john-thune-win-the-2028-republican-presidential-nomination",
           "url": "https://polymarket.com/event/will-john-thune-win-the-2028-republican-presidential-nomination",
           "yes_price": 0.0065,
-          "volume_24h": 292203.0,
-          "volume_total": 31702228.0,
-          "liquidity": 1554543.0,
-          "days_left": 928.1
+          "volume_24h": 319039.0,
+          "volume_total": 31786642.0,
+          "liquidity": 1548111.0,
+          "days_left": 927.6
+        },
+        {
+          "question": "Will Germany win the 2026 FIFA World Cup?",
+          "slug": "will-germany-win-the-2026-fifa-world-cup-467",
+          "url": "https://polymarket.com/event/will-germany-win-the-2026-fifa-world-cup-467",
+          "yes_price": 0.054,
+          "volume_24h": 294289.0,
+          "volume_total": 13145073.0,
+          "liquidity": 1266928.0,
+          "days_left": 86.6
+        },
+        {
+          "question": "Will Donald Trump announce that the United States blockade of the Strait of Hormuz has been lifted by April 30, 2026?",
+          "slug": "will-donald-trump-announce-that-the-united-states-blockade-of-the-strait-of-hormuz-has-been-lifted-by-april-30-2026-731",
+          "url": "https://polymarket.com/event/will-donald-trump-announce-that-the-united-states-blockade-of-the-strait-of-hormuz-has-been-lifted-by-april-30-2026-731",
+          "yes_price": 0.105,
+          "volume_24h": 286752.0,
+          "volume_total": 931787.0,
+          "liquidity": 110070.0,
+          "days_left": 5.6
+        },
+        {
+          "question": "Will Ruben Gallego win the 2028 Democratic presidential nomination?",
+          "slug": "will-ruben-gallego-win-the-2028-democratic-presidential-nomination",
+          "url": "https://polymarket.com/event/will-ruben-gallego-win-the-2028-democratic-presidential-nomination",
+          "yes_price": 0.0075,
+          "volume_24h": 272243.0,
+          "volume_total": 5384998.0,
+          "liquidity": 570245.0,
+          "days_left": 927.6
         }
       ]
     }
@@ -924,197 +954,197 @@
       "volume_24h": 5821653.0,
       "volume_total": 15734008.0,
       "liquidity": 19823.0,
-      "days_left": 68.3
-    },
-    {
-      "question": "Will the Fed increase interest rates by 25+ bps after the April 2026 meeting?",
-      "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-april-2026-meeting",
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-april-2026-meeting",
-      "yes_price": 0.0025,
-      "volume_24h": 2748702.0,
-      "volume_total": 33533571.0,
-      "liquidity": 3064929.0,
-      "days_left": 5.1
-    },
-    {
-      "question": "US x Iran permanent peace deal by April 30, 2026?",
-      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026-925",
-      "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-30-2026-925",
-      "yes_price": 0.075,
-      "volume_24h": 2172117.0,
-      "volume_total": 11398644.0,
-      "liquidity": 875039.0,
-      "days_left": 6.1
-    },
-    {
-      "question": "Will there be no change in Fed interest rates after the April 2026 meeting?",
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-april-2026-meeting",
-      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-april-2026-meeting",
-      "yes_price": 0.9945,
-      "volume_24h": 2026214.0,
-      "volume_total": 28734189.0,
-      "liquidity": 2029124.0,
-      "days_left": 5.1
-    },
-    {
-      "question": "Indian Premier League: Mumbai Indians vs Chennai Super Kings",
-      "slug": "cricipl-mum-che-2026-04-23",
-      "url": "https://polymarket.com/event/cricipl-mum-che-2026-04-23",
-      "yes_price": 0.0005,
-      "volume_24h": 1926302.0,
-      "volume_total": 1975217.0,
-      "liquidity": 347303.0,
-      "days_left": 6.5
-    },
-    {
-      "question": "Will the Fed decrease interest rates by 50+ bps after the April 2026 meeting?",
-      "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-april-2026-meeting",
-      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-april-2026-meeting",
-      "yes_price": 0.0015,
-      "volume_24h": 1828415.0,
-      "volume_total": 46771239.0,
-      "liquidity": 10272563.0,
-      "days_left": 5.1
+      "days_left": 67.8
     },
     {
       "question": "Iran x Israel/US conflict ends by May 15?",
       "slug": "iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
       "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
       "yes_price": 0.9995,
-      "volume_24h": 1733365.0,
-      "volume_total": 10682975.0,
-      "liquidity": 2954522.0,
-      "days_left": 21.1
-    },
-    {
-      "question": "Will Jared Polis win the 2028 Democratic presidential nomination?",
-      "slug": "will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
-      "url": "https://polymarket.com/event/will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
-      "yes_price": 0.0075,
-      "volume_24h": 1641252.0,
-      "volume_total": 24144304.0,
-      "liquidity": 588284.0,
-      "days_left": 928.1
-    },
-    {
-      "question": "Will Jasmine Crockett win the 2028 Democratic presidential nomination?",
-      "slug": "will-jasmine-crockett-win-the-2028-democratic-presidential-nomination",
-      "url": "https://polymarket.com/event/will-jasmine-crockett-win-the-2028-democratic-presidential-nomination",
-      "yes_price": 0.0055,
-      "volume_24h": 1523022.0,
-      "volume_total": 30330029.0,
-      "liquidity": 551158.0,
-      "days_left": 928.1
-    },
-    {
-      "question": "Will the Iranian regime fall by April 30?",
-      "slug": "will-the-iranian-regime-fall-by-april-30",
-      "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-april-30",
-      "yes_price": 0.0075,
-      "volume_24h": 1465480.0,
-      "volume_total": 40620092.0,
-      "liquidity": 2800967.0,
-      "days_left": 6.1
-    },
-    {
-      "question": "US x Iran permanent peace deal by May 31, 2026?",
-      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333",
-      "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-may-31-2026-333",
-      "yes_price": 0.305,
-      "volume_24h": 1103261.0,
-      "volume_total": 4315027.0,
-      "liquidity": 238657.0,
-      "days_left": 37.1
-    },
-    {
-      "question": "Will the Fed decrease interest rates by 25 bps after the April 2026 meeting?",
-      "slug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-april-2026-meeting",
-      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-april-2026-meeting",
-      "yes_price": 0.0025,
-      "volume_24h": 967801.0,
-      "volume_total": 26982087.0,
-      "liquidity": 2049695.0,
-      "days_left": 5.1
-    },
-    {
-      "question": "Will Iran win the 2026 FIFA World Cup?",
-      "slug": "will-iran-win-the-2026-fifa-world-cup-788",
-      "url": "https://polymarket.com/event/will-iran-win-the-2026-fifa-world-cup-788",
-      "yes_price": 0.0015,
-      "volume_24h": 943204.0,
-      "volume_total": 16616778.0,
-      "liquidity": 4856084.0,
-      "days_left": 87.1
-    },
-    {
-      "question": "Will MegaETH launch a token by April 30, 2026?",
-      "slug": "will-megaeth-launch-a-token-by-april-30-2026-798",
-      "url": "https://polymarket.com/event/will-megaeth-launch-a-token-by-april-30-2026-798",
-      "yes_price": 0.9545,
-      "volume_24h": 897206.0,
-      "volume_total": 1847434.0,
-      "liquidity": 24260.0,
-      "days_left": 252.3
+      "volume_24h": 3196960.0,
+      "volume_total": 12972056.0,
+      "liquidity": 3691442.0,
+      "days_left": 20.6
     },
     {
       "question": "U.S. forces seize another oil tanker by April 30?",
       "slug": "us-forces-seize-another-oil-tanker-by-april-30",
       "url": "https://polymarket.com/event/us-forces-seize-another-oil-tanker-by-april-30",
       "yes_price": 0.9995,
-      "volume_24h": 878637.0,
-      "volume_total": 2454990.0,
-      "liquidity": 2896696.0,
-      "days_left": 6.1
+      "volume_24h": 2344931.0,
+      "volume_total": 4173572.0,
+      "liquidity": 1014943.0,
+      "days_left": 5.6
     },
     {
-      "question": "US x Iran permanent peace deal by April 24, 2026?",
-      "slug": "us-x-iran-permanent-peace-deal-by-april-24-2026",
-      "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-24-2026",
-      "yes_price": 0.0045,
-      "volume_24h": 846713.0,
-      "volume_total": 1684910.0,
-      "liquidity": 245650.0,
-      "days_left": 0.1
+      "question": "US x Iran permanent peace deal by April 30, 2026?",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026-925",
+      "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-30-2026-925",
+      "yes_price": 0.055,
+      "volume_24h": 2017955.0,
+      "volume_total": 11860281.0,
+      "liquidity": 919962.0,
+      "days_left": 5.6
+    },
+    {
+      "question": "Will Jasmine Crockett win the 2028 Democratic presidential nomination?",
+      "slug": "will-jasmine-crockett-win-the-2028-democratic-presidential-nomination",
+      "url": "https://polymarket.com/event/will-jasmine-crockett-win-the-2028-democratic-presidential-nomination",
+      "yes_price": 0.0055,
+      "volume_24h": 1818717.0,
+      "volume_total": 30676585.0,
+      "liquidity": 775457.0,
+      "days_left": 927.6
+    },
+    {
+      "question": "Will Jared Polis win the 2028 Democratic presidential nomination?",
+      "slug": "will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
+      "url": "https://polymarket.com/event/will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
+      "yes_price": 0.0075,
+      "volume_24h": 1620799.0,
+      "volume_total": 24192168.0,
+      "liquidity": 752726.0,
+      "days_left": 927.6
+    },
+    {
+      "question": "Will Iraq win the 2026 FIFA World Cup?",
+      "slug": "will-iraq-win-the-2026-fifa-world-cup",
+      "url": "https://polymarket.com/event/will-iraq-win-the-2026-fifa-world-cup",
+      "yes_price": 0.0015,
+      "volume_24h": 1253489.0,
+      "volume_total": 5865098.0,
+      "liquidity": 5615680.0,
+      "days_left": 86.6
     },
     {
       "question": "Will the Iranian regime fall by May 31?",
       "slug": "will-the-iranian-regime-fall-by-may-31",
       "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-may-31",
-      "yes_price": 0.043,
-      "volume_24h": 823208.0,
-      "volume_total": 5279034.0,
-      "liquidity": 334183.0,
-      "days_left": 37.1
+      "yes_price": 0.0415,
+      "volume_24h": 955869.0,
+      "volume_total": 5658950.0,
+      "liquidity": 311486.0,
+      "days_left": 36.6
+    },
+    {
+      "question": "Will MegaETH launch a token by April 30, 2026?",
+      "slug": "will-megaeth-launch-a-token-by-april-30-2026-798",
+      "url": "https://polymarket.com/event/will-megaeth-launch-a-token-by-april-30-2026-798",
+      "yes_price": 0.9395,
+      "volume_24h": 916022.0,
+      "volume_total": 1919211.0,
+      "liquidity": 52223.0,
+      "days_left": 251.8
+    },
+    {
+      "question": "Will the Iranian regime fall by April 30?",
+      "slug": "will-the-iranian-regime-fall-by-april-30",
+      "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-april-30",
+      "yes_price": 0.0075,
+      "volume_24h": 888457.0,
+      "volume_total": 40805717.0,
+      "liquidity": 3416385.0,
+      "days_left": 5.6
+    },
+    {
+      "question": "US x Iran permanent peace deal by May 31, 2026?",
+      "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333",
+      "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-may-31-2026-333",
+      "yes_price": 0.285,
+      "volume_24h": 850601.0,
+      "volume_total": 4705621.0,
+      "liquidity": 353114.0,
+      "days_left": 36.6
     },
     {
       "question": "Will Kevin Warsh be confirmed as Fed Chair?",
       "slug": "will-kevin-warsh-be-confirmed-as-fed-chair",
       "url": "https://polymarket.com/event/will-kevin-warsh-be-confirmed-as-fed-chair",
-      "yes_price": 0.944,
-      "volume_24h": 806038.0,
-      "volume_total": 9862067.0,
-      "liquidity": 91404.0,
-      "days_left": 190.1
+      "yes_price": 0.943,
+      "volume_24h": 759337.0,
+      "volume_total": 10236612.0,
+      "liquidity": 116706.0,
+      "days_left": 189.6
     },
     {
-      "question": "Will Roberto Sánchez Palomino win the 2026 Peruvian presidential election?",
-      "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election",
-      "url": "https://polymarket.com/event/will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election",
-      "yes_price": 0.2515,
-      "volume_24h": 794725.0,
-      "volume_total": 11415382.0,
-      "liquidity": 154577.0,
-      "days_left": 44.1
+      "question": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
+      "slug": "israel-x-hezbollah-ceasefire-extended-by-april-26-2026",
+      "url": "https://polymarket.com/event/israel-x-hezbollah-ceasefire-extended-by-april-26-2026",
+      "yes_price": 0.555,
+      "volume_24h": 729332.0,
+      "volume_total": 902274.0,
+      "liquidity": 36802.0,
+      "days_left": null
+    },
+    {
+      "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
+      "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+      "url": "https://polymarket.com/event/will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+      "yes_price": 0.0535,
+      "volume_24h": 682997.0,
+      "volume_total": 9295686.0,
+      "liquidity": 268640.0,
+      "days_left": 927.6
+    },
+    {
+      "question": "Will Rafael López Aliaga win the 2026 Peruvian presidential election?",
+      "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election",
+      "url": "https://polymarket.com/event/will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election",
+      "yes_price": 0.033,
+      "volume_24h": 654844.0,
+      "volume_total": 8724225.0,
+      "liquidity": 220568.0,
+      "days_left": 43.6
+    },
+    {
+      "question": "Trump out as President by April 30?",
+      "slug": "trump-out-as-president-by-april-30",
+      "url": "https://polymarket.com/event/trump-out-as-president-by-april-30",
+      "yes_price": 0.0035,
+      "volume_24h": 610637.0,
+      "volume_total": 11859138.0,
+      "liquidity": 4743079.0,
+      "days_left": 5.6
+    },
+    {
+      "question": "Will Eric Trump win the 2028 US Presidential Election?",
+      "slug": "will-eric-trump-win-the-2028-us-presidential-election",
+      "url": "https://polymarket.com/event/will-eric-trump-win-the-2028-us-presidential-election",
+      "yes_price": 0.0065,
+      "volume_24h": 603816.0,
+      "volume_total": 7930581.0,
+      "liquidity": 1630593.0,
+      "days_left": 927.6
     },
     {
       "question": "Will Beto O’Rourke win the 2028 Democratic presidential nomination?",
       "slug": "will-beto-orourke-win-the-2028-democratic-presidential-nomination",
       "url": "https://polymarket.com/event/will-beto-orourke-win-the-2028-democratic-presidential-nomination",
       "yes_price": 0.0055,
-      "volume_24h": 621211.0,
-      "volume_total": 37391382.0,
-      "liquidity": 1591626.0,
-      "days_left": 928.1
+      "volume_24h": 594170.0,
+      "volume_total": 37422689.0,
+      "liquidity": 1611081.0,
+      "days_left": 927.6
+    },
+    {
+      "question": "Iran x Israel/US conflict ends by June 30?",
+      "slug": "iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
+      "url": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
+      "yes_price": 0.9995,
+      "volume_24h": 590096.0,
+      "volume_total": 5715014.0,
+      "liquidity": 2950105.0,
+      "days_left": 66.6
+    },
+    {
+      "question": "Will Elon Musk post 180-199 tweets from April 17 to April 24, 2026?",
+      "slug": "elon-musk-of-tweets-april-17-april-24-180-199",
+      "url": "https://polymarket.com/event/elon-musk-of-tweets-april-17-april-24-180-199",
+      "yes_price": 0.4525,
+      "volume_24h": 572423.0,
+      "volume_total": 1072175.0,
+      "liquidity": 19237.0,
+      "days_left": 0.3
     }
   ]
 }
