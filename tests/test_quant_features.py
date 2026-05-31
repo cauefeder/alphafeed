@@ -1,5 +1,6 @@
 """Tests for quant_features.py — all pure functions, no model required."""
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import pytest
 
@@ -223,7 +224,8 @@ def test_generate_insights_stale_model_fires_after_60_days():
 
 
 def test_generate_insights_fresh_model_no_stale_alert():
-    insights = generate_insights(SAMPLE_RANKING, SAMPLE_OPPS, "2026-03-30")
+    fresh = (datetime.now(timezone.utc) - timedelta(days=10)).strftime("%Y-%m-%d")
+    insights = generate_insights(SAMPLE_RANKING, SAMPLE_OPPS, fresh)
     stale = next((s for s in insights if "days old" in s), None)
     assert stale is None
 
