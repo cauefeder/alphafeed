@@ -23,7 +23,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 try:
     import requests
@@ -35,101 +35,32 @@ except ImportError:
 _HERE = Path(__file__).resolve()
 REPORTS_DIR = _HERE.parent.parent.parent / "reports"
 
+# Allow `python backend/adapters/poly2_export.py` to import sibling modules.
+# Matches the pattern used by quant_report.py and train_model.py.
+sys.path.insert(0, str(_HERE.parent))
+
+from poly2_categories import CATEGORIES, CategorySpec  # noqa: E402
+
 GAMMA_API = "https://gamma-api.polymarket.com/markets"
-
-# ── Category definitions (matches Poly2 macro_report1.py) ─────────────────────
-
-CATEGORIES = {
-    "macro": {
-        "name": "Macroeconomics",
-        "emoji": "📊",
-        "keywords": [
-            "fed", "federal reserve", "interest rate", "rate cut", "rate hike",
-            "inflation", "cpi", "pce", "gdp", "recession", "unemployment",
-            "jobs", "nonfarm", "payroll", "treasury", "yield", "bond",
-            "debt ceiling", "government shutdown", "deficit", "tariff",
-            "trade war", "sanctions", "ecb", "bank of japan", "boj",
-            "bank of england", "imf", "world bank", "core inflation",
-            "consumer price", "producer price", "ppi", "retail sales",
-            "housing", "mortgage", "real estate", "home price",
-            "manufacturing", "pmi", "ism", "consumer confidence",
-            "wage growth", "labor market", "initial claims",
-            "quantitative", "balance sheet", "fomc", "dot plot",
-            "soft landing", "hard landing", "stagflation",
-        ],
-    },
-    "geopolitics": {
-        "name": "Geopolitics & Global Affairs",
-        "emoji": "🌍",
-        "keywords": [
-            "war", "ukraine", "russia", "china", "taiwan", "nato",
-            "iran", "israel", "gaza", "hamas", "hezbollah", "north korea",
-            "missile", "nuclear", "ceasefire", "peace", "invasion",
-            "coup", "regime", "diplomacy", "summit",
-            "united nations", "european union", "brexit",
-            "middle east", "india", "modi", "xi jinping",
-            "putin", "zelensky", "military", "troops", "border",
-            "strike", "airstrike", "bomb", "attack", "conflict",
-            "houthi", "yemen", "syria", "iraq", "saudi",
-            "arms", "weapon", "defense", "pentagon", "escalat",
-        ],
-    },
-    "crypto": {
-        "name": "Crypto & Digital Assets",
-        "emoji": "₿",
-        "keywords": [
-            "bitcoin", "btc", "ethereum", "eth", "crypto", "solana", "sol",
-            "xrp", "dogecoin", "doge", "defi", "nft", "stablecoin",
-            "usdc", "usdt", "binance", "coinbase", "sec crypto",
-            "bitcoin etf", "halving", "mining", "blockchain",
-            "memecoin", "altcoin", "token",
-        ],
-    },
-    "stocks": {
-        "name": "Stocks & Traditional Assets",
-        "emoji": "📈",
-        "keywords": [
-            "s&p", "sp500", "nasdaq", "dow jones", "stock", "equity",
-            "earnings", "revenue", "ipo", "market cap",
-            "oil", "gold", "silver", "commodity", "wti", "brent",
-            "apple", "nvidia", "tesla", "microsoft", "amazon", "google",
-            "meta", "netflix", "spy", "qqq",
-        ],
-    },
-    "ai_tech": {
-        "name": "AI & Technology",
-        "emoji": "🤖",
-        "keywords": [
-            "openai", "anthropic", "google ai", "deepmind", "claude",
-            "gpt", "gemini", "llama", "ai model", "artificial intelligence",
-            "agi", "machine learning", "chatbot", "ai regulation",
-            "ai safety", "chips act", "semiconductor", "tsmc",
-            "ai act", "compute", "data center",
-        ],
-    },
-    "politics": {
-        "name": "US & Global Politics",
-        "emoji": "🏛️",
-        "keywords": [
-            "trump", "biden", "harris", "republican", "democrat",
-            "congress", "senate", "house", "election", "poll",
-            "impeach", "supreme court", "executive order", "veto",
-            "governor", "mayor", "primary", "nominee", "campaign",
-            "doge ", "elon musk", "musk", "cabinet", "secretary",
-            "fbi", "doj", "cia", "pardon", "indictment",
-            "uk election", "france", "macron", "germany", "canada",
-            "trudeau", "brazil", "lula", "mexico", "president",
-        ],
-    },
-}
 
 
 # ── Scraper ────────────────────────────────────────────────────────────────────
 
-def _fetch_markets(pages: int = 8) -> list[dict]:
-    session = requests.Session()
-    session.headers.update({"User-Agent": "AlphaFeedMacro/1.0", "Accept": "application/json"})
-    all_markets: list[dict] = []
+
+def _fetch_markets(
+    pages: int = 8,
+    *,
+    session: Any | None = None,
+    sleep_s: float = 0.2,
+) -> list[dict[str, Any]]:
+    """Page through the Gamma API. Session is injectable for tests; sleep_s=0
+    in tests."""
+    if session is None:
+        session = requests.Session()
+        session.headers.update(
+            {"User-Agent": "AlphaFeedMacro/1.0", "Accept": "application/json"}
+        )
+    all_markets: list[dict[str, Any]] = []
 
     for page in range(pages):
         try:
@@ -153,81 +84,117 @@ def _fetch_markets(pages: int = 8) -> list[dict]:
         except requests.RequestException as e:
             print(f"  [API] Page {page + 1} failed: {e}")
             break
-        time.sleep(0.2)
+        if sleep_s:
+            time.sleep(sleep_s)
 
     print(f"  Fetched {len(all_markets)} markets from {pages} pages")
     return all_markets
 
 
-def _classify(raw_markets: list[dict]) -> tuple[dict[str, list[dict]], list[dict]]:
-    """Classify markets into categories, return (classified, all_markets_flat)."""
-    classified: dict[str, list[dict]] = {cat: [] for cat in CATEGORIES}
-    seen_in_any: set[str] = set()
+# ── Classification helpers (pure functions) ────────────────────────────────────
+
+
+def _search_text(raw: dict[str, Any]) -> str:
+    """Lowercase concatenation of question + groupItemTitle + slug."""
+    question = (raw.get("question", "") or "").lower()
+    group = (raw.get("groupItemTitle", "") or "").lower()
+    slug = (raw.get("slug", "") or "").lower()
+    return f"{question} {group} {slug}"
+
+
+def _parse_market_info(
+    raw: dict[str, Any],
+    *,
+    now: datetime | None = None,
+) -> dict[str, Any]:
+    """Normalize a raw Gamma market into the report-row shape.
+
+    `now` is injectable so tests can pin the days_left calculation.
+    """
+    if now is None:
+        now = datetime.now(timezone.utc)
+
+    volume_24h = float(raw.get("volume24hr") or 0)
+
+    end_str = raw.get("endDate") or raw.get("end_date_iso")
+    days_left: Optional[float] = None
+    if end_str:
+        try:
+            end_dt = datetime.fromisoformat(end_str.replace("Z", "+00:00"))
+            days_left = (end_dt - now).total_seconds() / 86400
+        except (ValueError, TypeError):
+            pass
+
+    yes_price: Optional[float] = None
+    prices_str = raw.get("outcomePrices")
+    if prices_str:
+        try:
+            prices = json.loads(prices_str) if isinstance(prices_str, str) else prices_str
+            if prices:
+                yes_price = float(prices[0])
+        except Exception:
+            pass
+
+    raw_slug = raw.get("slug", "")
+    return {
+        "question": raw.get("question", "Unknown"),
+        "slug": raw_slug,
+        "url": f"https://polymarket.com/event/{raw_slug}" if raw_slug else "https://polymarket.com",
+        "yes_price": round(yes_price, 4) if yes_price is not None else None,
+        "volume_24h": round(volume_24h, 0),
+        "volume_total": round(float(raw.get("volume") or 0), 0),
+        "liquidity": round(float(raw.get("liquidityClob") or raw.get("liquidity") or 0), 0),
+        "days_left": round(days_left, 1) if days_left is not None else None,
+    }
+
+
+def _passes_quality_filter(info: dict[str, Any]) -> bool:
+    """Volume >= 100 and (no end date OR not yet expired)."""
+    if (info.get("volume_24h") or 0) < 100:
+        return False
+    days_left = info.get("days_left")
+    if days_left is not None and days_left < 0:
+        return False
+    return True
+
+
+def _match_category(
+    text: str,
+    categories: dict[str, CategorySpec],
+) -> Optional[str]:
+    """Return first category whose any keyword appears in text, else None."""
+    for cat, cat_info in categories.items():
+        for kw in cat_info["keywords"]:
+            if kw in text:
+                return cat
+    return None
+
+
+def _classify(
+    raw_markets: list[dict[str, Any]],
+    *,
+    now: datetime | None = None,
+    categories: dict[str, CategorySpec] | None = None,
+) -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]]]:
+    """Classify markets into categories. Returns (per-category, top-volume-flat)."""
+    if categories is None:
+        categories = CATEGORIES
+    classified: dict[str, list[dict[str, Any]]] = {cat: [] for cat in categories}
 
     for raw in raw_markets:
-        question = (raw.get("question", "") or "").lower()
-        group_title = (raw.get("groupItemTitle", "") or "").lower()
-        slug = (raw.get("slug", "") or "").lower()
-        search_text = f"{question} {group_title} {slug}"
-
-        # Quality filter
-        volume_24h = float(raw.get("volume24hr") or 0)
-        if volume_24h < 100:
+        info = _parse_market_info(raw, now=now)
+        if not _passes_quality_filter(info):
             continue
+        cat = _match_category(_search_text(raw), categories)
+        if cat is None:
+            continue
+        classified[cat].append(info)
 
-        # Parse end date
-        end_str = raw.get("endDate") or raw.get("end_date_iso")
-        days_left: Optional[float] = None
-        if end_str:
-            try:
-                end_dt = datetime.fromisoformat(end_str.replace("Z", "+00:00"))
-                days_left = (end_dt - datetime.now(timezone.utc)).total_seconds() / 86400
-                if days_left < 0:
-                    continue
-            except (ValueError, TypeError):
-                pass
-
-        # Parse YES price
-        yes_price: Optional[float] = None
-        prices_str = raw.get("outcomePrices")
-        if prices_str:
-            try:
-                prices = json.loads(prices_str) if isinstance(prices_str, str) else prices_str
-                if prices:
-                    yes_price = float(prices[0])
-            except Exception:
-                pass
-
-        raw_slug = raw.get("slug", "")
-        market_info = {
-            "question": raw.get("question", "Unknown"),
-            "slug": raw_slug,
-            "url": f"https://polymarket.com/event/{raw_slug}" if raw_slug else "https://polymarket.com",
-            "yes_price": round(yes_price, 4) if yes_price is not None else None,
-            "volume_24h": round(volume_24h, 0),
-            "volume_total": round(float(raw.get("volume") or 0), 0),
-            "liquidity": round(float(raw.get("liquidityClob") or raw.get("liquidity") or 0), 0),
-            "days_left": round(days_left, 1) if days_left is not None else None,
-        }
-
-        assigned = False
-        for cat, cat_info in CATEGORIES.items():
-            for kw in cat_info["keywords"]:
-                if kw in search_text:
-                    classified[cat].append(market_info)
-                    seen_in_any.add(raw_slug)
-                    assigned = True
-                    break
-            if assigned:
-                break
-
-    # Sort by 24h volume, cap at 15 per category
     for cat in classified:
         classified[cat].sort(key=lambda m: m["volume_24h"], reverse=True)
         classified[cat] = classified[cat][:15]
 
-    # Top-volume flat list across all categories (for the report header)
-    all_flat: list[dict] = []
+    all_flat: list[dict[str, Any]] = []
     seen_q: set[str] = set()
     for markets in classified.values():
         for m in markets:
@@ -241,7 +208,8 @@ def _classify(raw_markets: list[dict]) -> tuple[dict[str, list[dict]], list[dict
 
 # ── Export ─────────────────────────────────────────────────────────────────────
 
-def run_export(pages: int = 8) -> dict:
+
+def run_export(pages: int = 8) -> dict[str, Any]:
     print(f"  Fetching Polymarket macro data ({pages} pages = ~{pages*100} markets)...")
     raw = _fetch_markets(pages)
 
@@ -263,7 +231,7 @@ def run_export(pages: int = 8) -> dict:
         print(f"    {cat_name}: {len(markets)} markets")
     print(f"    Total classified: {total}")
 
-    categories_out: dict = {}
+    categories_out: dict[str, Any] = {}
     for cat, markets in classified.items():
         cat_info = CATEGORIES[cat]
         categories_out[cat] = {
