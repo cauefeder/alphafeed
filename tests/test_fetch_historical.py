@@ -106,3 +106,90 @@ def test_csv_output_has_required_columns(tmp_path):
         cols = reader.fieldnames
     for col in REQUIRED_COLUMNS:
         assert col in cols
+
+
+# ---------- parse_market edge cases (previously uncovered) ----------
+
+
+def test_parse_market_invalid_last_trade_price_returns_none():
+    from fetch_historical import parse_market
+    market = _make_market()
+    market["lastTradePrice"] = "not-a-number"
+    assert parse_market(market) is None
+
+
+def test_parse_market_missing_outcome_prices_returns_none():
+    from fetch_historical import parse_market
+    market = _make_market()
+    market["outcomePrices"] = None
+    assert parse_market(market) is None
+
+
+def test_parse_market_malformed_outcome_prices_returns_none():
+    from fetch_historical import parse_market
+    market = _make_market(outcome_prices="not-json")
+    assert parse_market(market) is None
+
+
+def test_parse_market_empty_outcome_prices_returns_none():
+    from fetch_historical import parse_market
+    market = _make_market(outcome_prices="[]")
+    assert parse_market(market) is None
+
+
+def test_parse_market_bad_dates_falls_back_to_default_days():
+    from fetch_historical import parse_market
+    market = _make_market(start_date="garbage", end_date="more-garbage")
+    row = parse_market(market)
+    assert row is not None
+    assert row["days_left"] == 14.0  # documented default fallback
+
+
+def test_parse_market_empty_tags_yields_other_category():
+    from fetch_historical import parse_market
+    market = _make_market()
+    market["tags"] = []  # _make_market's `tags or default` defaults [] → set explicitly here
+    row = parse_market(market)
+    assert row["category"] == "other"
+
+
+# ---------- fetch_page with injected session ----------
+
+
+class _StubResp:
+    def __init__(self, payload, status=200):
+        self._payload = payload
+        self.status_code = status
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise RuntimeError(f"{self.status_code}")
+
+    def json(self):
+        return self._payload
+
+
+class _StubSession:
+    def __init__(self, payloads):
+        self._payloads = list(payloads)
+        self.calls = []
+
+    def get(self, url, params=None, timeout=None):
+        self.calls.append({"url": url, "params": params})
+        return _StubResp(self._payloads.pop(0))
+
+
+def test_fetch_page_paginates_offset():
+    from fetch_historical import fetch_page
+    sess = _StubSession([[{"slug": "a"}]])
+    out = fetch_page(page=3, limit=50, session=sess)
+    assert sess.calls[0]["params"]["offset"] == 150
+    assert sess.calls[0]["params"]["limit"] == 50
+    assert out == [{"slug": "a"}]
+
+
+def test_fetch_page_handles_non_list_payload():
+    from fetch_historical import fetch_page
+    sess = _StubSession([{"error": "rate-limited"}])  # dict, not list
+    out = fetch_page(page=0, session=sess)
+    assert out == []

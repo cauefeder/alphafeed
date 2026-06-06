@@ -170,3 +170,118 @@ def test_quant_report_returns_report(client):
     assert resp.status_code == 200
     assert resp.json()["generatedAt"] == "2026-03-30T20:00:00Z"
 
+
+# ── _fetch_polymarket enrichment logic (was previously mocked away) ──────────
+
+
+class _StubHttpxResp:
+    def __init__(self, data):
+        self._data = data
+        self.status_code = 200
+
+    def raise_for_status(self):
+        pass
+
+    def json(self):
+        return self._data
+
+
+class _StubHttpxClient:
+    def __init__(self, data):
+        self._data = data
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        return False
+
+    def get(self, url, params=None):
+        return _StubHttpxResp(self._data)
+
+
+def test_fetch_polymarket_enriches_and_sorts_by_edge(monkeypatch):
+    import backend.server as srv
+
+    raw = [
+        # Low uncertainty (yes=0.95 -> uncertainty 0.10), high volume → low edge
+        {"slug": "low", "question": "low", "endDate": None,
+         "outcomePrices": "[0.95, 0.05]", "liquidity": 50000,
+         "volume24hr": 5000, "spread": 0.01},
+        # High uncertainty (yes=0.5 -> uncertainty 1.0), high volume → high edge
+        {"slug": "high", "question": "high", "endDate": None,
+         "outcomePrices": "[0.5, 0.5]", "liquidity": 50000,
+         "volume24hr": 5000, "spread": 0.01},
+    ]
+    monkeypatch.setattr(srv.httpx, "Client", lambda timeout: _StubHttpxClient(raw))
+    srv._cache.clear()
+
+    markets = srv._fetch_polymarket()
+    assert len(markets) == 2
+    # Sorted desc by edgeScore: 'high' first
+    assert markets[0]["slug"] == "high"
+    assert markets[0]["edgeScore"] >= markets[1]["edgeScore"]
+    assert markets[0]["yesPrice"] == 0.5
+    assert markets[0]["uncertainty"] == 1.0  # 1 - |0.5 - 0.5|*2
+
+
+def test_fetch_polymarket_returns_empty_on_http_failure(monkeypatch):
+    import backend.server as srv
+
+    def boom(timeout):
+        raise RuntimeError("network down")
+
+    monkeypatch.setattr(srv.httpx, "Client", boom)
+    srv._cache.clear()
+    assert srv._fetch_polymarket() == []
+
+
+def test_fetch_polymarket_skips_malformed_entries(monkeypatch):
+    import backend.server as srv
+
+    raw = [
+        {"slug": "good", "question": "g", "endDate": None,
+         "outcomePrices": "[0.5, 0.5]", "liquidity": 1000,
+         "volume24hr": 100, "spread": 0.01},
+        {"slug": "bad", "question": "b", "outcomePrices": "not-json"},
+    ]
+    monkeypatch.setattr(srv.httpx, "Client", lambda timeout: _StubHttpxClient(raw))
+    srv._cache.clear()
+    markets = srv._fetch_polymarket()
+    assert len(markets) == 1
+    assert markets[0]["slug"] == "good"
+
+
+# ── Health endpoint extended states ──────────────────────────────────────────
+
+
+def test_health_flags_stale_report(client, tmp_reports):
+    """A report with generatedAt > 26h ago is flagged stale."""
+    from datetime import datetime, timedelta, timezone
+    old = (datetime.now(timezone.utc) - timedelta(hours=30)).isoformat()
+    (tmp_reports / "poly2.json").write_text(json.dumps({"generatedAt": old}))
+
+    r = client.get("/api/health")
+    body = r.json()
+    assert body["reports"]["poly2"]["status"] == "stale"
+    assert body["reports"]["poly2"]["age_hours"] > 26
+    assert body["status"] == "degraded"
+
+
+def test_health_flags_unparseable_report(client, tmp_reports):
+    """A report with invalid JSON is flagged error, not stale."""
+    (tmp_reports / "polytraders.json").write_text("{{{invalid")
+    r = client.get("/api/health")
+    assert r.json()["reports"]["polytraders"]["status"] == "error"
+
+
+# ── Macro report ─────────────────────────────────────────────────────────────
+
+
+def test_macro_report_round_trip(client, tmp_reports):
+    payload = {"generatedAt": "2026-06-05T00:00:00Z", "totalMarkets": 7, "categories": {}}
+    (tmp_reports / "poly2.json").write_text(json.dumps(payload))
+    r = client.get("/api/macro-report")
+    assert r.status_code == 200
+    assert r.json()["totalMarkets"] == 7
+

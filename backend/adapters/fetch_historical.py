@@ -98,8 +98,12 @@ def parse_market(m: dict) -> dict | None:
     }
 
 
-def fetch_page(page: int, limit: int = 100) -> list[dict]:
-    """Fetch one page of closed markets from Gamma API."""
+def fetch_page(page: int, limit: int = 100, *, session: object | None = None) -> list[dict]:
+    """Fetch one page of closed markets from Gamma API.
+
+    `session` is injectable for tests; defaults to module-level `requests`.
+    """
+    getter = session.get if session is not None else requests.get
     params = {
         "closed": "true",
         "limit": limit,
@@ -107,7 +111,7 @@ def fetch_page(page: int, limit: int = 100) -> list[dict]:
         "order": "endDate",
         "ascending": "false",
     }
-    resp = requests.get(GAMMA_URL, params=params, timeout=20)
+    resp = getter(GAMMA_URL, params=params, timeout=20)
     resp.raise_for_status()
     data = resp.json()
     return data if isinstance(data, list) else []
