@@ -44,15 +44,14 @@ from quant_features import (
     compute_features,
     generate_insights,
 )
+from model_store import load_current, model_paths_for
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("quant_report")
 
 POLYTRADERS_PATH = REPO_ROOT / "reports/polytraders.json"
 POLY2_PATH       = REPO_ROOT / "reports/poly2.json"
-MODEL_PATH       = REPO_ROOT / "models/xgboost_model.json"
-CALIBRATION_PATH = REPO_ROOT / "models/calibration_params.json"
-METRICS_PATH     = REPO_ROOT / "models/training_metrics.json"
+MODELS_ROOT      = REPO_ROOT / "models"
 OUTPUT_PATH      = REPO_ROOT / "reports/quant_report.json"
 
 GAMMA_URL = "https://gamma-api.polymarket.com/markets"
@@ -288,13 +287,16 @@ def main() -> None:
     logger.info("Loading input files...")
     polytraders = json.loads(POLYTRADERS_PATH.read_text(encoding="utf-8"))
     poly2       = json.loads(POLY2_PATH.read_text(encoding="utf-8"))
-    metrics     = json.loads(METRICS_PATH.read_text(encoding="utf-8"))
 
     logger.info("Loading model...")
+    version_dir, metrics = load_current(MODELS_ROOT)
+    model_path, calibration_path, _ = model_paths_for(version_dir)
+    logger.info("Active model version: %s", version_dir.name)
+
     import xgboost as xgb
     model = xgb.XGBClassifier()
-    model.load_model(str(MODEL_PATH))
-    calibration = json.loads(CALIBRATION_PATH.read_text(encoding="utf-8"))
+    model.load_model(str(model_path))
+    calibration = json.loads(calibration_path.read_text(encoding="utf-8"))
 
     # Build poly2 slug set to find uncovered opportunities
     poly2_slugs: set[str] = set()

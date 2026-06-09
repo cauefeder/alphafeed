@@ -27,10 +27,9 @@ _HERE = Path(__file__).resolve()
 REPO_ROOT = _HERE.parent.parent.parent
 sys.path.insert(0, str(_HERE.parent))
 from quant_features import FEATURE_NAMES  # noqa: E402
+from model_store import model_paths_for, next_version_dir  # noqa: E402
 
-MODEL_PATH       = REPO_ROOT / "models/xgboost_model.json"
-CALIBRATION_PATH = REPO_ROOT / "models/calibration_params.json"
-METRICS_PATH     = REPO_ROOT / "models/training_metrics.json"
+MODELS_ROOT      = REPO_ROOT / "models"
 AUC_THRESHOLD    = 0.58
 
 
@@ -288,16 +287,25 @@ def main() -> None:
     df = pd.read_csv(args.data)
     print(f"[train_model] {len(df):,} resolved markets loaded")
 
+    version_dir = next_version_dir(MODELS_ROOT)
+    model_path, calibration_path, metrics_path = model_paths_for(version_dir)
+    print(f"[train_model] Writing artifacts to {version_dir.name}/ (not yet promoted)")
+
     try:
         train_pipeline(
             df,
-            model_path=MODEL_PATH,
-            calibration_path=CALIBRATION_PATH,
-            metrics_path=METRICS_PATH,
+            model_path=model_path,
+            calibration_path=calibration_path,
+            metrics_path=metrics_path,
         )
     except AucGateError as e:
         print(f"[train_model] ERROR: {e}. Model NOT saved.")
         sys.exit(1)
+
+    print(
+        f"[train_model] Trained {version_dir.name}. To activate, run:\n"
+        f"  python scripts/promote_model.py {version_dir.name}",
+    )
 
 
 if __name__ == "__main__":
