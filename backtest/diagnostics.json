@@ -1,0 +1,108 @@
+{
+  "n_markets": 5060,
+  "fold_results": [
+    {
+      "fold": 1,
+      "n_train": 3036,
+      "n_test": 404,
+      "test_auc": 0.9903448275862068,
+      "brier_raw": 0.03873984143137932,
+      "brier_calibrated": 0.01786392368376255,
+      "feature_importance": {
+        "yes_price": 0.5494851469993591,
+        "info_ratio": 0.027681097388267517,
+        "log_volume_total": 0.04743456840515137,
+        "log_liquidity": 0.0,
+        "days_left": 0.05408420041203499,
+        "price_extremity": 0.3213149607181549
+      },
+      "platt": {
+        "a": -4.176963806152344,
+        "b": 5.203025817871094
+      }
+    },
+    {
+      "fold": 2,
+      "n_train": 3440,
+      "n_test": 404,
+      "test_auc": 0.9755747126436781,
+      "brier_raw": 0.06993822753429413,
+      "brier_calibrated": 0.03519909828901291,
+      "feature_importance": {
+        "yes_price": 0.5516427159309387,
+        "info_ratio": 0.02163478545844555,
+        "log_volume_total": 0.03989579156041145,
+        "log_liquidity": 0.0,
+        "days_left": 0.05254822224378586,
+        "price_extremity": 0.33427852392196655
+      },
+      "platt": {
+        "a": -4.677023410797119,
+        "b": 5.481335639953613
+      }
+    },
+    {
+      "fold": 3,
+      "n_train": 3844,
+      "n_test": 404,
+      "test_auc": 0.9802431610942249,
+      "brier_raw": 0.014215083792805672,
+      "brier_calibrated": 0.018378091976046562,
+      "feature_importance": {
+        "yes_price": 0.5218045115470886,
+        "info_ratio": 0.023585444316267967,
+        "log_volume_total": 0.03718765079975128,
+        "log_liquidity": 0.0,
+        "days_left": 0.046880122274160385,
+        "price_extremity": 0.3705422580242157
+      },
+      "platt": {
+        "a": -4.819321632385254,
+        "b": 6.3412322998046875
+      }
+    },
+    {
+      "fold": 4,
+      "n_train": 4248,
+      "n_test": 404,
+      "test_auc": 0.9883292637503622,
+      "brier_raw": 0.023973677307367325,
+      "brier_calibrated": 0.029127521440386772,
+      "feature_importance": {
+        "yes_price": 0.5872402787208557,
+        "info_ratio": 0.02402491122484207,
+        "log_volume_total": 0.031042758375406265,
+        "log_liquidity": 0.0,
+        "days_left": 0.03955334797501564,
+        "price_extremity": 0.3181387186050415
+      },
+      "platt": {
+        "a": -3.773129463195801,
+        "b": 5.800508975982666
+      }
+    },
+    {
+      "fold": 5,
+      "n_train": 4652,
+      "n_test": 408,
+      "test_auc": 0.94320987654321,
+      "brier_raw": 0.008463365957140923,
+      "brier_calibrated": 0.006478303577750921,
+      "feature_importance": {
+        "yes_price": 0.5886642336845398,
+        "info_ratio": 0.03155866637825966,
+        "log_volume_total": 0.030808348208665848,
+        "log_liquidity": 0.0,
+        "days_left": 0.03795269876718521,
+        "price_extremity": 0.31101611256599426
+      },
+      "platt": {
+        "a": -3.609592914581299,
+        "b": 6.220084190368652
+      }
+    }
+  ],
+  "final_bankroll": 9007908576145222.0,
+  "total_pnl": 9007908576145278.0,
+  "bets_taken": 1729
+}
