@@ -93,8 +93,16 @@ def run_export(
         bankroll=bankroll,
     )
 
+    # Refuse bets at the price tails — model calibration is unreliable
+    # there and Kelly compounding amplifies the losses. See E1b finding.
+    PRICE_MIN, PRICE_MAX = 0.10, 0.90
+    filtered = [o for o in opportunities if PRICE_MIN <= float(o.cur_price) <= PRICE_MAX]
+    skipped = len(opportunities) - len(filtered)
+    if skipped:
+        print(f"  Skipped {skipped} opportunities outside [{PRICE_MIN}, {PRICE_MAX}] price range")
+
     opps_out = []
-    for opp in opportunities:
+    for opp in filtered:
         opps_out.append({
             "title": opp.title,
             "outcome": opp.outcome,

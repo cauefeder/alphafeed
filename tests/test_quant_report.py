@@ -107,8 +107,11 @@ def test_score_opportunity_uses_feature_names_order():
     score_opportunity(_make_opp(curPrice=0.6, volume_24h=10000, days_left=14),
                       model, _make_calibration())
     X = captured[0][0]
-    assert X[0] == pytest.approx(0.6)   # yes_price is index 0 in FEATURE_NAMES
-    assert X[-1] == pytest.approx(0.2)  # price_extremity = abs(0.6-0.5)*2
+    # New canonical order: info_ratio, log_volume_total, days_left
+    # info_ratio = 10000 / sqrt(14+1) / 10000 = 1/sqrt(15)
+    from math import sqrt
+    assert X[0] == pytest.approx(1.0 / sqrt(15), rel=1e-3)
+    assert X[-1] == pytest.approx(14.0)  # days_left, clamped >= 0.5
 
 
 # ── score_opportunity — convergentScore ───────────────────────────────────────

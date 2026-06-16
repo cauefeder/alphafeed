@@ -43,6 +43,7 @@ from quant_features import (
     compute_edge_ranking,
     compute_features,
     generate_insights,
+    in_live_bet_price_range,
 )
 from model_store import load_current, model_paths_for
 
@@ -150,7 +151,16 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     X = np.array([[features[f] for f in feat_order]])
     raw_score = float(model.predict_proba(X)[0][1])
     calibrated_prob = calibrate(raw_score, calibration)
-    tier = "A" if raw_score >= 0.65 else "B" if raw_score >= 0.40 else "C"
+
+    cur_price = float(opp.get("curPrice") or 0)
+    in_range = in_live_bet_price_range(cur_price)
+    if not in_range:
+        # Force Skip: model is poorly calibrated at price tails and Kelly
+        # compounding amplifies the resulting losses. See backtest/no_leakage.
+        tier = "Skip"
+    else:
+        tier = "A" if raw_score >= 0.65 else "B" if raw_score >= 0.40 else "C"
+
     count_signal = float(opp.get("countSignal") or 0)
     convergent = round(raw_score * count_signal, 4)
     contrary = raw_score < 0.20 and count_signal > 0.10
@@ -162,6 +172,7 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
         "infoRatio":        round(features["info_ratio"], 4),
         "convergentScore":  convergent,
         "contraryFlag":     contrary,
+        "betEligible":      in_range,
     }
 
 

@@ -1,0 +1,15 @@
+{
+  "modelVersion": "2026-06-16",
+  "trainedAt": "2026-06-16T06:50:17.243670+00:00",
+  "nSamples": 5060,
+  "cvAuc": 0.6408,
+  "cvAucStd": 0.0843,
+  "valAuc": 0.7741,
+  "testAuc": 0.6742,
+  "aucGatePassed": true,
+  "featureImportance": {
+    "days_left": 0.4065,
+    "info_ratio": 0.3024,
+    "log_volume_total": 0.2911
+  }
+}

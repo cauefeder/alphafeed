@@ -18,13 +18,10 @@ from quant_features import (
 # ── FEATURE_NAMES ─────────────────────────────────────────────────────────────
 
 def test_feature_names_length():
-    assert len(FEATURE_NAMES) == 6
+    assert len(FEATURE_NAMES) == 3
 
 def test_feature_names_canonical_order():
-    assert FEATURE_NAMES == [
-        "yes_price", "info_ratio", "log_volume_total",
-        "log_liquidity", "days_left", "price_extremity",
-    ]
+    assert FEATURE_NAMES == ["info_ratio", "log_volume_total", "days_left"]
 
 
 # ── compute_features ──────────────────────────────────────────────────────────
@@ -38,13 +35,14 @@ def test_compute_features_known_input():
         "days_left": 15,
     }
     f = compute_features(opp)
-    assert f["yes_price"] == pytest.approx(0.6)
     # info_ratio = 10_000 / sqrt(15 + 1) / 10_000 = 1 / 4 = 0.25
     assert f["info_ratio"] == pytest.approx(0.25, rel=1e-3)
-    # price_extremity = abs(0.6 - 0.5) * 2 = 0.2
-    assert f["price_extremity"] == pytest.approx(0.2)
     # days_left clamped: max(15, 0.5) = 15
     assert f["days_left"] == pytest.approx(15)
+    # Dropped features must not appear
+    assert "yes_price" not in f
+    assert "price_extremity" not in f
+    assert "log_liquidity" not in f
 
 def test_compute_features_days_zero_no_divide_by_zero():
     """days_left=0 → info_ratio uses sqrt(0+1)=1, never divides by zero."""
@@ -62,8 +60,23 @@ def test_compute_features_missing_optionals_default_zero():
     opp = {"curPrice": 0.3}
     f = compute_features(opp)
     assert f["log_volume_total"] == pytest.approx(0.0)
-    assert f["log_liquidity"] == pytest.approx(0.0)
     assert f["days_left"] == pytest.approx(0.5)    # default 0, then clamped
+
+
+# ── in_live_bet_price_range ───────────────────────────────────────────────────
+
+def test_live_bet_price_range_inside():
+    from quant_features import in_live_bet_price_range
+    assert in_live_bet_price_range(0.5) is True
+    assert in_live_bet_price_range(0.10) is True
+    assert in_live_bet_price_range(0.90) is True
+
+def test_live_bet_price_range_outside():
+    from quant_features import in_live_bet_price_range
+    assert in_live_bet_price_range(0.05) is False
+    assert in_live_bet_price_range(0.95) is False
+    assert in_live_bet_price_range(0.0) is False
+    assert in_live_bet_price_range(1.0) is False
 
 def test_compute_features_returns_all_feature_names():
     opp = {"curPrice": 0.5}
@@ -76,8 +89,9 @@ def test_compute_features_array_matches_feature_names_order():
            "liquidity": 20_000, "days_left": 7}
     f = compute_features(opp)
     arr = [f[name] for name in FEATURE_NAMES]
-    assert arr[0] == f["yes_price"]
-    assert arr[-1] == f["price_extremity"]
+    # New canonical order: info_ratio, log_volume_total, days_left
+    assert arr[0] == f["info_ratio"]
+    assert arr[-1] == f["days_left"]
 
 
 # ── calibrate ─────────────────────────────────────────────────────────────────

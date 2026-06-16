@@ -42,9 +42,15 @@ class AucGateError(RuntimeError):
 
 def build_feature_matrix(df) -> tuple:
     """
-    Compute the 6 training features for every row in df.
-    Returns (X: np.ndarray of shape (n, 6), y: np.ndarray of shape (n,)).
+    Compute the 3 training features for every row in df.
+    Returns (X: np.ndarray of shape (n, 3), y: np.ndarray of shape (n,)).
     Label: 1 = crowd was wrong (market resolved against crowd's >=0.5 direction).
+
+    yes_price is still read to compute the label (the crowd's direction is
+    yes >= 0.5), but it is NOT included as a feature — same for the engineered
+    `price_extremity = 2 * |yes - 0.5|`. See backtest/report.md for the
+    leakage analysis that justified dropping them. `log_liquidity` was cut
+    in the same pass after registering 0% importance across all 5 folds.
     """
     yes = df["yes_price"].values
     vol = df["volume_24h"].values
@@ -52,12 +58,9 @@ def build_feature_matrix(df) -> tuple:
     days_feat = np.maximum(days_raw, 0.5)
 
     X = np.column_stack([
-        yes,
-        vol / ((days_raw + 1) ** 0.5) / 10_000,
-        np.log1p(df["volume_total"].values),
-        np.log1p(df["liquidity"].values),
-        days_feat,
-        np.abs(yes - 0.5) * 2,
+        vol / ((days_raw + 1) ** 0.5) / 10_000,   # info_ratio
+        np.log1p(df["volume_total"].values),       # log_volume_total
+        days_feat,                                 # days_left
     ])
     assert X.shape[1] == len(FEATURE_NAMES), (
         f"Feature matrix has {X.shape[1]} cols, expected {len(FEATURE_NAMES)}"

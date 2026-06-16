@@ -116,11 +116,10 @@ def _run_one_fold(
         "resolved_yes": resolved,
     })
 
-    feature_names = [
-        "yes_price", "info_ratio", "log_volume_total",
-        "log_liquidity", "days_left", "price_extremity",
-    ]
-    importance = dict(zip(feature_names, [float(v) for v in model.feature_importances_]))
+    # Track in lockstep with train_model.build_feature_matrix — see
+    # quant_features.FEATURE_NAMES for the canonical list.
+    from quant_features import FEATURE_NAMES  # noqa: E402
+    importance = dict(zip(FEATURE_NAMES, [float(v) for v in model.feature_importances_]))
 
     return {
         "fold": fold_id,
@@ -355,6 +354,20 @@ def main() -> int:
         all_bets.append(fr["bets"])
 
     bets_concat = pd.concat(all_bets, ignore_index=True)
+
+    # Apply the live-bet price-range filter — refuse bets outside [0.10, 0.90]
+    # in line with the production policy (quant_features.in_live_bet_price_range).
+    from quant_features import LIVE_BET_PRICE_MIN, LIVE_BET_PRICE_MAX  # noqa: E402
+    pre_filter_n = len(bets_concat)
+    in_range = (bets_concat["market_price"] >= LIVE_BET_PRICE_MIN) & (
+        bets_concat["market_price"] <= LIVE_BET_PRICE_MAX
+    )
+    bets_concat = bets_concat[in_range].reset_index(drop=True)
+    print(
+        f"[backtest] Price-range filter [{LIVE_BET_PRICE_MIN}, {LIVE_BET_PRICE_MAX}]: "
+        f"{len(bets_concat):,} of {pre_filter_n:,} candidates pass",
+    )
+
     print(f"[backtest] Simulating portfolio over {len(bets_concat):,} candidate bets")
     portfolio = simulate_portfolio(
         bets_concat,

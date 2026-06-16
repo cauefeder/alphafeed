@@ -13,43 +13,55 @@ from math import exp, log1p
 # ── Feature names — canonical order, single source of truth ───────────────────
 # Inference must build numpy arrays using this exact order.
 # Training must use the same order in the feature matrix.
+#
+# History: yes_price + price_extremity were cut after E1 backtest revealed
+# label leakage (they are derived from the market price at resolution,
+# which the label is also derived from — see backtest/report.md).
+# log_liquidity was cut because it had 0% importance across all 5 walk-forward
+# folds in both E1 and E1b.
 
 FEATURE_NAMES: list[str] = [
-    "yes_price",          # crowd probability
     "info_ratio",         # volume_24h / sqrt(days_left_raw + 1) / 10_000
     "log_volume_total",   # log1p(volume_total)
-    "log_liquidity",      # log1p(liquidity)
     "days_left",          # time to resolution, clamped >= 0.5
-    "price_extremity",    # abs(yes_price - 0.5) * 2
 ]
+
+# Live-bet filter: refuse bets when yes_price is at the price tails where
+# (a) the model is poorly calibrated and (b) Kelly compounding amplifies
+# losses absurdly. See backtest/no_leakage/report.md.
+LIVE_BET_PRICE_MIN = 0.10
+LIVE_BET_PRICE_MAX = 0.90
+
+
+def in_live_bet_price_range(yes_price: float) -> bool:
+    """True iff `yes_price` is in [LIVE_BET_PRICE_MIN, LIVE_BET_PRICE_MAX]."""
+    return LIVE_BET_PRICE_MIN <= yes_price <= LIVE_BET_PRICE_MAX
 
 
 def compute_features(opp: dict) -> dict[str, float]:
     """
-    Compute the 6 model features from an enriched opportunity dict.
+    Compute the 3 model features from an enriched opportunity dict.
 
     opp must have:
-      - curPrice (float, required)
+      - curPrice (float, required) — kept in the input contract for the
+        downstream live-bet filter even though it's no longer a feature
     opp may have:
-      - volume_24h, volumeTotal, liquidity, days_left  (all optional, default 0/0/0/0)
+      - volume_24h, volumeTotal, days_left  (all optional, default 0/0/0)
 
     Returns a dict with exactly the keys in FEATURE_NAMES.
-    Uses days_left RAW (before clamping) for info_ratio, clamped for the days_left feature.
+    Uses days_left RAW (before clamping) for info_ratio, clamped for the
+    days_left feature.
     """
-    p = float(opp["curPrice"])
+    _ = float(opp["curPrice"])  # validate presence
     vol = float(opp.get("volume_24h") or 0)
     volume_total = float(opp.get("volumeTotal") or 0)
-    liquidity = float(opp.get("liquidity") or 0)
     days_raw = float(opp.get("days_left") or 0)
     days_feat = max(days_raw, 0.5)
 
     return {
-        "yes_price":        p,
         "info_ratio":       vol / ((days_raw + 1) ** 0.5) / 10_000,
         "log_volume_total": log1p(volume_total),
-        "log_liquidity":    log1p(liquidity),
         "days_left":        days_feat,
-        "price_extremity":  abs(p - 0.5) * 2,
     }
 
 

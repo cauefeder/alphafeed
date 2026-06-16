@@ -38,10 +38,12 @@ def test_feature_matrix_columns_match_feature_names():
     from train_model import build_feature_matrix
     df = _make_df(50)
     X, y = build_feature_matrix(df)
-    # X must be ordered per FEATURE_NAMES — verify by checking values
+    # New canonical order: info_ratio, log_volume_total, days_left.
+    # Verify column 0 is info_ratio = vol24h / sqrt(days+1) / 10_000.
+    from math import sqrt
     row = df.iloc[0]
-    expected_yes_price = row["yes_price"]
-    assert X[0, 0] == pytest.approx(expected_yes_price)
+    expected_info_ratio = row["volume_24h"] / (sqrt(row["days_left"] + 1)) / 10_000
+    assert X[0, 0] == pytest.approx(expected_info_ratio, rel=1e-6)
 
 
 def test_temporal_split_no_leakage():
