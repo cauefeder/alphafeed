@@ -1,119 +1,20 @@
 {
-  "generatedAt": "2026-06-19T12:06:54.026800+00:00",
+  "generatedAt": "2026-06-19T21:10:46.376522+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 10,
+  "signalCount": 1,
   "signals": [
-    {
-      "marketSlug": "fifwc-usa-aus-2026-06-19-aus",
-      "question": "Will Australia win on 2026-06-19?",
-      "side": "NO",
-      "yesValue": 181354.37,
-      "noValue": 190625.84,
-      "totalValue": 371980.21,
-      "traderCount": 2,
-      "confidence": 0.512,
-      "url": "https://polymarket.com/event/fifwc-usa-aus-2026-06-19-aus"
-    },
-    {
-      "marketSlug": "fifwc-sco-mar-2026-06-19-mar",
-      "question": "Will Morocco win on 2026-06-19?",
-      "side": "NO",
-      "yesValue": 46472.63,
-      "noValue": 180178.14,
-      "totalValue": 226650.77,
-      "traderCount": 2,
-      "confidence": 0.795,
-      "url": "https://polymarket.com/event/fifwc-sco-mar-2026-06-19-mar"
-    },
-    {
-      "marketSlug": "fifwc-usa-aus-2026-06-19-draw",
-      "question": "Will United States vs. Australia end in a draw?",
-      "side": "YES",
-      "yesValue": 130840.45,
-      "noValue": 18880.99,
-      "totalValue": 149721.44,
-      "traderCount": 2,
-      "confidence": 0.874,
-      "url": "https://polymarket.com/event/fifwc-usa-aus-2026-06-19-draw"
-    },
     {
       "marketSlug": "fifwc-usa-aus-2026-06-19-usa",
       "question": "Will United States win on 2026-06-19?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 100474.23,
-      "totalValue": 100474.23,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-usa-aus-2026-06-19-usa"
-    },
-    {
-      "marketSlug": "atp-shelton-fritz-2026-06-19",
-      "question": "Halle Open: Ben Shelton vs Taylor Fritz",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 73015.92,
-      "totalValue": 73015.92,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-shelton-fritz-2026-06-19"
-    },
-    {
-      "marketSlug": "wta-yaneva-gorgodz-2026-06-19",
-      "question": "Brescia: Elizara Yaneva vs Ekaterine Gorgodze",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 38498.8,
-      "totalValue": 38498.8,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-yaneva-gorgodz-2026-06-19"
-    },
-    {
-      "marketSlug": "fifwc-sco-mar-2026-06-19-sco",
-      "question": "Will Scotland win on 2026-06-19?",
       "side": "YES",
-      "yesValue": 26055.17,
-      "noValue": 7117.08,
-      "totalValue": 33172.26,
+      "yesValue": 227964.47,
+      "noValue": 212.06,
+      "totalValue": 228176.52,
       "traderCount": 2,
-      "confidence": 0.785,
-      "url": "https://polymarket.com/event/fifwc-sco-mar-2026-06-19-sco"
-    },
-    {
-      "marketSlug": "atp-medjedo-humbert-2026-06-17",
-      "question": "HSBC Championships: Hamad Medjedovic vs Ugo Humbert",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 24472.91,
-      "totalValue": 24472.91,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-medjedo-humbert-2026-06-17"
-    },
-    {
-      "marketSlug": "wta-noskova-badosa-2026-06-19",
-      "question": "Grass Court Championships: Linda Noskova vs Paula Badosa",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 20350.01,
-      "totalValue": 20350.01,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-noskova-badosa-2026-06-19"
-    },
-    {
-      "marketSlug": "mlb-tb-bos-2026-05-09",
-      "question": "Tampa Bay Rays vs. Boston Red Sox",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 13634.05,
-      "totalValue": 13634.05,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-tb-bos-2026-05-09"
+      "confidence": 0.999,
+      "url": "https://polymarket.com/event/fifwc-usa-aus-2026-06-19-usa"
     }
   ]
 }
