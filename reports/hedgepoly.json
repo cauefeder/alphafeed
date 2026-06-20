@@ -1,64 +1,141 @@
 {
-  "generatedAt": "2026-06-20T10:33:54.894361+00:00",
+  "generatedAt": "2026-06-20T21:19:28.644380+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 5,
+  "signalCount": 12,
   "signals": [
-    {
-      "marketSlug": "fifwc-nld-swe-2026-06-20-nld",
-      "question": "Will Netherlands win on 2026-06-20?",
-      "side": "NO",
-      "yesValue": 26062.18,
-      "noValue": 140735.26,
-      "totalValue": 166797.44,
-      "traderCount": 3,
-      "confidence": 0.844,
-      "url": "https://polymarket.com/event/fifwc-nld-swe-2026-06-20-nld"
-    },
-    {
-      "marketSlug": "fifwc-nld-swe-2026-06-20-total-2pt5",
-      "question": "Netherlands vs. Sweden: O/U 2.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 152199.67,
-      "totalValue": 152199.67,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-nld-swe-2026-06-20-total-2pt5"
-    },
     {
       "marketSlug": "fifwc-ger-civ-2026-06-20-ger",
       "question": "Will Germany win on 2026-06-20?",
       "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 68203.54,
-      "totalValue": 68203.54,
-      "traderCount": 2,
-      "confidence": 1.0,
+      "yesValue": 142880.98,
+      "noValue": 8133439.78,
+      "totalValue": 8276320.77,
+      "traderCount": 9,
+      "confidence": 0.983,
       "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-ger"
     },
     {
-      "marketSlug": "wta-sabalen-pegula-2026-06-20",
-      "question": "Grass Court Championships: Aryna Sabalenka vs Jessica Pegula",
+      "marketSlug": "fifwc-ger-civ-2026-06-20-spread-home-1pt5",
+      "question": "Spread: Germany (-1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 50823.31,
-      "totalValue": 50823.31,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-sabalen-pegula-2026-06-20"
-    },
-    {
-      "marketSlug": "fifwc-nld-swe-2026-06-20-first-half-total-1pt5",
-      "question": "Netherlands vs. Sweden: 1st Half O/U 1.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 20054.95,
-      "totalValue": 20054.95,
+      "noValue": 464260.74,
+      "totalValue": 464260.74,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-nld-swe-2026-06-20-first-half-total-1pt5"
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-spread-home-1pt5"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-civ",
+      "question": "Will Côte d'Ivoire win on 2026-06-20?",
+      "side": "NO",
+      "yesValue": 160229.39,
+      "noValue": 245951.88,
+      "totalValue": 406181.27,
+      "traderCount": 2,
+      "confidence": 0.606,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-civ"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-halftime-result-home",
+      "question": "Germany leading at halftime?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 235777.75,
+      "totalValue": 235777.75,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-halftime-result-home"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-spread-home-2pt5",
+      "question": "Spread: Germany (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 194092.96,
+      "totalValue": 194092.96,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-spread-home-2pt5"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-total-2pt5",
+      "question": "Germany vs. Côte d'Ivoire: O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 182336.24,
+      "totalValue": 182336.24,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-total-2pt5"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-btts",
+      "question": "Germany vs. Côte d'Ivoire: Both Teams to Score",
+      "side": "YES",
+      "yesValue": 93036.01,
+      "noValue": 84486.65,
+      "totalValue": 177522.67,
+      "traderCount": 3,
+      "confidence": 0.524,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-btts"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-draw",
+      "question": "Will Germany vs. Côte d'Ivoire end in a draw?",
+      "side": "YES",
+      "yesValue": 161504.12,
+      "noValue": 0.0,
+      "totalValue": 161504.12,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-draw"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-total-3pt5",
+      "question": "Germany vs. Côte d'Ivoire: O/U 3.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 155512.59,
+      "totalValue": 155512.59,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-total-3pt5"
+    },
+    {
+      "marketSlug": "fifwc-ecu-kor-2026-06-20-spread-home-2pt5",
+      "question": "Spread: Ecuador (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 99775.75,
+      "totalValue": 99775.75,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ecu-kor-2026-06-20-spread-home-2pt5"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-total-1pt5",
+      "question": "Germany vs. Côte d'Ivoire: O/U 1.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 48465.03,
+      "totalValue": 48465.03,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-total-1pt5"
+    },
+    {
+      "marketSlug": "fifwc-tur-usa-2026-06-25-usa",
+      "question": "Will United States win on 2026-06-25?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 47156.79,
+      "totalValue": 47156.79,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-tur-usa-2026-06-25-usa"
     }
   ]
 }
