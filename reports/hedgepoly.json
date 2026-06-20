@@ -1,20 +1,64 @@
 {
-  "generatedAt": "2026-06-19T21:10:46.376522+00:00",
+  "generatedAt": "2026-06-20T10:33:54.894361+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 1,
+  "signalCount": 5,
   "signals": [
     {
-      "marketSlug": "fifwc-usa-aus-2026-06-19-usa",
-      "question": "Will United States win on 2026-06-19?",
-      "side": "YES",
-      "yesValue": 227964.47,
-      "noValue": 212.06,
-      "totalValue": 228176.52,
+      "marketSlug": "fifwc-nld-swe-2026-06-20-nld",
+      "question": "Will Netherlands win on 2026-06-20?",
+      "side": "NO",
+      "yesValue": 26062.18,
+      "noValue": 140735.26,
+      "totalValue": 166797.44,
+      "traderCount": 3,
+      "confidence": 0.844,
+      "url": "https://polymarket.com/event/fifwc-nld-swe-2026-06-20-nld"
+    },
+    {
+      "marketSlug": "fifwc-nld-swe-2026-06-20-total-2pt5",
+      "question": "Netherlands vs. Sweden: O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 152199.67,
+      "totalValue": 152199.67,
       "traderCount": 2,
-      "confidence": 0.999,
-      "url": "https://polymarket.com/event/fifwc-usa-aus-2026-06-19-usa"
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-nld-swe-2026-06-20-total-2pt5"
+    },
+    {
+      "marketSlug": "fifwc-ger-civ-2026-06-20-ger",
+      "question": "Will Germany win on 2026-06-20?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 68203.54,
+      "totalValue": 68203.54,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-ger"
+    },
+    {
+      "marketSlug": "wta-sabalen-pegula-2026-06-20",
+      "question": "Grass Court Championships: Aryna Sabalenka vs Jessica Pegula",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 50823.31,
+      "totalValue": 50823.31,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/wta-sabalen-pegula-2026-06-20"
+    },
+    {
+      "marketSlug": "fifwc-nld-swe-2026-06-20-first-half-total-1pt5",
+      "question": "Netherlands vs. Sweden: 1st Half O/U 1.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 20054.95,
+      "totalValue": 20054.95,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-nld-swe-2026-06-20-first-half-total-1pt5"
     }
   ]
 }
