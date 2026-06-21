@@ -1,10 +1,32 @@
 {
-  "generatedAt": "2026-06-21T11:16:58.780469+00:00",
+  "generatedAt": "2026-06-21T21:13:40.736061+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 4,
+  "signalCount": 19,
   "signals": [
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-bel",
+      "question": "Will Belgium win on 2026-06-21?",
+      "side": "YES",
+      "yesValue": 3185751.76,
+      "noValue": 610605.24,
+      "totalValue": 3796357.0,
+      "traderCount": 5,
+      "confidence": 0.839,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-bel"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-spread-home-1pt5",
+      "question": "Spread: Belgium (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 387522.98,
+      "totalValue": 387522.98,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-spread-home-1pt5"
+    },
     {
       "marketSlug": "will-brazil-win-the-2026-fifa-world-cup-183",
       "question": "Will Brazil win the 2026 FIFA World Cup?",
@@ -15,6 +37,94 @@
       "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-brazil-win-the-2026-fifa-world-cup-183"
+    },
+    {
+      "marketSlug": "fifwc-ury-cvi-2026-06-21-total-2pt5",
+      "question": "Uruguay vs. Cabo Verde: O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 204465.11,
+      "totalValue": 204465.11,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-ury-cvi-2026-06-21-total-2pt5"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-total-2pt5",
+      "question": "Belgium vs. IR Iran: O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 201666.17,
+      "totalValue": 201666.17,
+      "traderCount": 6,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-2pt5"
+    },
+    {
+      "marketSlug": "mlb-sd-tex-2026-06-21",
+      "question": "San Diego Padres vs. Texas Rangers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 136715.72,
+      "totalValue": 136715.72,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-sd-tex-2026-06-21"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-draw",
+      "question": "Will Belgium vs. IR Iran end in a draw?",
+      "side": "NO",
+      "yesValue": 23732.82,
+      "noValue": 111387.02,
+      "totalValue": 135119.84,
+      "traderCount": 4,
+      "confidence": 0.824,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-draw"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-total-0pt5",
+      "question": "Belgium vs. IR Iran: O/U 0.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 129856.16,
+      "totalValue": 129856.16,
+      "traderCount": 5,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-0pt5"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-btts",
+      "question": "Belgium vs. IR Iran: Both Teams to Score",
+      "side": "NO",
+      "yesValue": 723.67,
+      "noValue": 115668.14,
+      "totalValue": 116391.81,
+      "traderCount": 3,
+      "confidence": 0.994,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-btts"
+    },
+    {
+      "marketSlug": "fifwc-tur-usa-2026-06-25-usa",
+      "question": "Will United States win on 2026-06-25?",
+      "side": "YES",
+      "yesValue": 52602.44,
+      "noValue": 23393.43,
+      "totalValue": 75995.87,
+      "traderCount": 2,
+      "confidence": 0.692,
+      "url": "https://polymarket.com/event/fifwc-tur-usa-2026-06-25-usa"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-team-total-home-2pt5",
+      "question": "Belgium vs. IR Iran: Belgium O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 66249.15,
+      "totalValue": 66249.15,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-team-total-home-2pt5"
     },
     {
       "marketSlug": "will-colombia-win-the-2026-fifa-world-cup-734",
@@ -28,26 +138,81 @@
       "url": "https://polymarket.com/event/will-colombia-win-the-2026-fifa-world-cup-734"
     },
     {
-      "marketSlug": "wta-bouzkov-navarro-2026-06-21",
-      "question": "Nottingham Open: Marie Bouzkova vs Emma Navarro",
+      "marketSlug": "fifwc-bel-irn-2026-06-21-irn",
+      "question": "Will IR Iran win on 2026-06-21?",
       "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 42680.61,
-      "totalValue": 42680.61,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-bouzkov-navarro-2026-06-21"
+      "yesValue": 8290.93,
+      "noValue": 45159.85,
+      "totalValue": 53450.78,
+      "traderCount": 3,
+      "confidence": 0.845,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-irn"
     },
     {
-      "marketSlug": "will-ivory-coast-win-the-2026-fifa-world-cup",
-      "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
-      "side": "YES",
-      "yesValue": 5763.07,
-      "noValue": 0.0,
-      "totalValue": 5763.07,
+      "marketSlug": "fifwc-bel-irn-2026-06-21-total-1pt5",
+      "question": "Belgium vs. IR Iran: O/U 1.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 50938.95,
+      "totalValue": 50938.95,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-ivory-coast-win-the-2026-fifa-world-cup"
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-1pt5"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-halftime-result-draw",
+      "question": "Belgium vs. IR Iran: Draw at halftime?",
+      "side": "YES",
+      "yesValue": 31762.16,
+      "noValue": 0.0,
+      "totalValue": 31762.16,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-halftime-result-draw"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-halftime-result-away",
+      "question": "IR Iran leading at halftime?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 31191.81,
+      "totalValue": 31191.81,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-halftime-result-away"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-total-4pt5",
+      "question": "Belgium vs. IR Iran: O/U 4.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 18539.62,
+      "totalValue": 18539.62,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-4pt5"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-total-3pt5",
+      "question": "Belgium vs. IR Iran: O/U 3.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 17633.58,
+      "totalValue": 17633.58,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-3pt5"
+    },
+    {
+      "marketSlug": "fifwc-bel-irn-2026-06-21-total-5pt5",
+      "question": "Belgium vs. IR Iran: O/U 5.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 9914.5,
+      "totalValue": 9914.5,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-5pt5"
     }
   ]
 }
