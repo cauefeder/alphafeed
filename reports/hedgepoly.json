@@ -1,141 +1,53 @@
 {
-  "generatedAt": "2026-06-20T21:19:28.644380+00:00",
+  "generatedAt": "2026-06-21T11:16:58.780469+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 12,
+  "signalCount": 4,
   "signals": [
     {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-ger",
-      "question": "Will Germany win on 2026-06-20?",
-      "side": "NO",
-      "yesValue": 142880.98,
-      "noValue": 8133439.78,
-      "totalValue": 8276320.77,
-      "traderCount": 9,
-      "confidence": 0.983,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-ger"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-spread-home-1pt5",
-      "question": "Spread: Germany (-1.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 464260.74,
-      "totalValue": 464260.74,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-spread-home-1pt5"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-civ",
-      "question": "Will Côte d'Ivoire win on 2026-06-20?",
-      "side": "NO",
-      "yesValue": 160229.39,
-      "noValue": 245951.88,
-      "totalValue": 406181.27,
-      "traderCount": 2,
-      "confidence": 0.606,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-civ"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-halftime-result-home",
-      "question": "Germany leading at halftime?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 235777.75,
-      "totalValue": 235777.75,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-halftime-result-home"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-spread-home-2pt5",
-      "question": "Spread: Germany (-2.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 194092.96,
-      "totalValue": 194092.96,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-spread-home-2pt5"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-total-2pt5",
-      "question": "Germany vs. Côte d'Ivoire: O/U 2.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 182336.24,
-      "totalValue": 182336.24,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-total-2pt5"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-btts",
-      "question": "Germany vs. Côte d'Ivoire: Both Teams to Score",
+      "marketSlug": "will-brazil-win-the-2026-fifa-world-cup-183",
+      "question": "Will Brazil win the 2026 FIFA World Cup?",
       "side": "YES",
-      "yesValue": 93036.01,
-      "noValue": 84486.65,
-      "totalValue": 177522.67,
-      "traderCount": 3,
-      "confidence": 0.524,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-btts"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-draw",
-      "question": "Will Germany vs. Côte d'Ivoire end in a draw?",
-      "side": "YES",
-      "yesValue": 161504.12,
+      "yesValue": 234422.16,
       "noValue": 0.0,
-      "totalValue": 161504.12,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-draw"
-    },
-    {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-total-3pt5",
-      "question": "Germany vs. Côte d'Ivoire: O/U 3.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 155512.59,
-      "totalValue": 155512.59,
+      "totalValue": 234422.16,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-total-3pt5"
+      "url": "https://polymarket.com/event/will-brazil-win-the-2026-fifa-world-cup-183"
     },
     {
-      "marketSlug": "fifwc-ecu-kor-2026-06-20-spread-home-2pt5",
-      "question": "Spread: Ecuador (-2.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 99775.75,
-      "totalValue": 99775.75,
+      "marketSlug": "will-colombia-win-the-2026-fifa-world-cup-734",
+      "question": "Will Colombia win the 2026 FIFA World Cup?",
+      "side": "YES",
+      "yesValue": 55882.24,
+      "noValue": 0.0,
+      "totalValue": 55882.24,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ecu-kor-2026-06-20-spread-home-2pt5"
+      "url": "https://polymarket.com/event/will-colombia-win-the-2026-fifa-world-cup-734"
     },
     {
-      "marketSlug": "fifwc-ger-civ-2026-06-20-total-1pt5",
-      "question": "Germany vs. Côte d'Ivoire: O/U 1.5",
+      "marketSlug": "wta-bouzkov-navarro-2026-06-21",
+      "question": "Nottingham Open: Marie Bouzkova vs Emma Navarro",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 48465.03,
-      "totalValue": 48465.03,
+      "noValue": 42680.61,
+      "totalValue": 42680.61,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-ger-civ-2026-06-20-total-1pt5"
+      "url": "https://polymarket.com/event/wta-bouzkov-navarro-2026-06-21"
     },
     {
-      "marketSlug": "fifwc-tur-usa-2026-06-25-usa",
-      "question": "Will United States win on 2026-06-25?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 47156.79,
-      "totalValue": 47156.79,
+      "marketSlug": "will-ivory-coast-win-the-2026-fifa-world-cup",
+      "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
+      "side": "YES",
+      "yesValue": 5763.07,
+      "noValue": 0.0,
+      "totalValue": 5763.07,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/fifwc-tur-usa-2026-06-25-usa"
+      "url": "https://polymarket.com/event/will-ivory-coast-win-the-2026-fifa-world-cup"
     }
   ]
 }

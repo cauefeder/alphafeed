@@ -1,131 +1,141 @@
 {
-  "generatedAt": "2026-06-20T21:18:20.553537+00:00",
-  "totalMarkets": 81,
+  "generatedAt": "2026-06-21T11:15:54.638327+00:00",
+  "totalMarkets": 88,
   "categories": {
     "macro": {
       "name": "Macroeconomics",
       "emoji": "📊",
-      "count": 12,
+      "count": 13,
       "markets": [
+        {
+          "question": "Iran agrees to unrestricted shipping through Hormuz by June 30?",
+          "slug": "iran-agrees-to-unrestricted-shipping-through-hormuz-by-june-30",
+          "url": "https://polymarket.com/event/iran-agrees-to-unrestricted-shipping-through-hormuz-by-june-30",
+          "yes_price": 0.036,
+          "volume_24h": 234870.0,
+          "volume_total": 1245244.0,
+          "liquidity": 226017.0,
+          "days_left": 8.5
+        },
         {
           "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
           "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-july-2026-meeting",
           "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-july-2026-meeting",
           "yes_price": 0.0045,
-          "volume_24h": 184732.0,
-          "volume_total": 2162729.0,
-          "liquidity": 358645.0,
-          "days_left": 38.1
+          "volume_24h": 181512.0,
+          "volume_total": 2238965.0,
+          "liquidity": 338350.0,
+          "days_left": 37.5
         },
         {
           "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
           "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
           "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
-          "yes_price": 0.765,
-          "volume_24h": 179570.0,
-          "volume_total": 2970860.0,
-          "liquidity": 386287.0,
-          "days_left": 38.1
-        },
-        {
-          "question": "Iran agrees to unrestricted shipping through Hormuz by June 30?",
-          "slug": "iran-agrees-to-unrestricted-shipping-through-hormuz-by-june-30",
-          "url": "https://polymarket.com/event/iran-agrees-to-unrestricted-shipping-through-hormuz-by-june-30",
-          "yes_price": 0.0175,
-          "volume_24h": 155318.0,
-          "volume_total": 1131266.0,
-          "liquidity": 272434.0,
-          "days_left": 9.1
-        },
-        {
-          "question": "China x Philippines military clash before 2027?",
-          "slug": "china-x-philippines-military-clash-before-2027",
-          "url": "https://polymarket.com/event/china-x-philippines-military-clash-before-2027",
-          "yes_price": 0.175,
-          "volume_24h": 137522.0,
-          "volume_total": 679679.0,
-          "liquidity": 81816.0,
-          "days_left": 193.1
-        },
-        {
-          "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
-          "slug": "will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
-          "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
-          "yes_price": 0.0055,
-          "volume_24h": 108140.0,
-          "volume_total": 2308489.0,
-          "liquidity": 145462.0,
-          "days_left": 38.1
+          "yes_price": 0.785,
+          "volume_24h": 130476.0,
+          "volume_total": 3000655.0,
+          "liquidity": 393073.0,
+          "days_left": 37.5
         },
         {
           "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
           "slug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-july-2026-meeting",
           "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-july-2026-meeting",
           "yes_price": 0.0105,
-          "volume_24h": 94987.0,
-          "volume_total": 1818487.0,
-          "liquidity": 297655.0,
-          "days_left": 38.1
+          "volume_24h": 88529.0,
+          "volume_total": 1840376.0,
+          "liquidity": 282174.0,
+          "days_left": 37.5
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+          "slug": "will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
+          "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
+          "yes_price": 0.0055,
+          "volume_24h": 77434.0,
+          "volume_total": 2330559.0,
+          "liquidity": 147523.0,
+          "days_left": 37.5
         },
         {
           "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
           "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
           "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
-          "yes_price": 0.223,
-          "volume_24h": 78374.0,
-          "volume_total": 5028043.0,
-          "liquidity": 280710.0,
-          "days_left": 38.1
+          "yes_price": 0.206,
+          "volume_24h": 71219.0,
+          "volume_total": 5054604.0,
+          "liquidity": 340451.0,
+          "days_left": 37.5
+        },
+        {
+          "question": "China x Philippines military clash before 2027?",
+          "slug": "china-x-philippines-military-clash-before-2027",
+          "url": "https://polymarket.com/event/china-x-philippines-military-clash-before-2027",
+          "yes_price": 0.155,
+          "volume_24h": 62719.0,
+          "volume_total": 683863.0,
+          "liquidity": 102666.0,
+          "days_left": 192.5
         },
         {
           "question": "Will 12 or more Fed rate cuts happen in 2026?",
           "slug": "will-12-or-more-fed-rate-cuts-happen-in-2026",
           "url": "https://polymarket.com/event/will-12-or-more-fed-rate-cuts-happen-in-2026",
           "yes_price": 0.0035,
-          "volume_24h": 45685.0,
-          "volume_total": 3118234.0,
-          "liquidity": 65037.0,
-          "days_left": 193.1
+          "volume_24h": 46110.0,
+          "volume_total": 3122278.0,
+          "liquidity": 58582.0,
+          "days_left": 192.5
         },
         {
           "question": "Fed rate hike in 2026?",
           "slug": "fed-rate-hike-in-2026",
           "url": "https://polymarket.com/event/fed-rate-hike-in-2026",
-          "yes_price": 0.625,
-          "volume_24h": 38843.0,
-          "volume_total": 2579256.0,
-          "liquidity": 189707.0,
-          "days_left": 171.1
+          "yes_price": 0.62,
+          "volume_24h": 34028.0,
+          "volume_total": 2590526.0,
+          "liquidity": 211750.0,
+          "days_left": 170.5
         },
         {
           "question": "Will 11 Fed rate cuts happen in 2026?",
           "slug": "will-11-fed-rate-cuts-happen-in-2026",
           "url": "https://polymarket.com/event/will-11-fed-rate-cuts-happen-in-2026",
           "yes_price": 0.0025,
-          "volume_24h": 38406.0,
-          "volume_total": 4309782.0,
-          "liquidity": 372955.0,
-          "days_left": 193.1
+          "volume_24h": 32449.0,
+          "volume_total": 4316898.0,
+          "liquidity": 370273.0,
+          "days_left": 192.5
         },
         {
           "question": "Will 10 Fed rate cuts happen in 2026?",
           "slug": "will-10-fed-rate-cuts-happen-in-2026",
           "url": "https://polymarket.com/event/will-10-fed-rate-cuts-happen-in-2026",
           "yes_price": 0.0025,
-          "volume_24h": 20014.0,
-          "volume_total": 4227461.0,
-          "liquidity": 328058.0,
-          "days_left": 193.1
+          "volume_24h": 18883.0,
+          "volume_total": 4232757.0,
+          "liquidity": 331997.0,
+          "days_left": 192.5
         },
         {
           "question": "Will 2 Fed rate cuts happen in 2026?",
           "slug": "will-2-fed-rate-cuts-happen-in-2026",
           "url": "https://polymarket.com/event/will-2-fed-rate-cuts-happen-in-2026",
-          "yes_price": 0.0275,
-          "volume_24h": 18241.0,
-          "volume_total": 1737155.0,
-          "liquidity": 106909.0,
-          "days_left": 193.1
+          "yes_price": 0.0245,
+          "volume_24h": 13130.0,
+          "volume_total": 1741976.0,
+          "liquidity": 112180.0,
+          "days_left": 192.5
+        },
+        {
+          "question": "Will 1 Fed rate cut happen in 2026?",
+          "slug": "will-1-fed-rate-cut-happen-in-2026",
+          "url": "https://polymarket.com/event/will-1-fed-rate-cut-happen-in-2026",
+          "yes_price": 0.135,
+          "volume_24h": 12126.0,
+          "volume_total": 1745042.0,
+          "liquidity": 144844.0,
+          "days_left": 192.5
         }
       ]
     },
@@ -135,154 +145,154 @@
       "count": 15,
       "markets": [
         {
-          "question": "Counter-Strike: Spirit vs Team Falcons (BO3) - IEM Cologne Major Playoffs",
-          "slug": "cs2-ts7-fal2-2026-06-20",
-          "url": "https://polymarket.com/event/cs2-ts7-fal2-2026-06-20",
-          "yes_price": 0.0005,
-          "volume_24h": 5977446.0,
-          "volume_total": 5977446.0,
-          "liquidity": 2341219.0,
-          "days_left": 0.1
+          "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
+          "slug": "will-trump-agree-to-withdraw-troops-from-the-iranian-region-by-june-30",
+          "url": "https://polymarket.com/event/will-trump-agree-to-withdraw-troops-from-the-iranian-region-by-june-30",
+          "yes_price": 0.9995,
+          "volume_24h": 1664973.0,
+          "volume_total": 5551958.0,
+          "liquidity": 5458351.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will Saudi Arabia win on 2026-06-21?",
+          "slug": "fifwc-esp-ksa-2026-06-21-ksa",
+          "url": "https://polymarket.com/event/fifwc-esp-ksa-2026-06-21-ksa",
+          "yes_price": 0.0395,
+          "volume_24h": 1497322.0,
+          "volume_total": 1903793.0,
+          "liquidity": 1105347.0,
+          "days_left": 0.2
+        },
+        {
+          "question": "Belgium vs. IR Iran: O/U 2.5",
+          "slug": "fifwc-bel-irn-2026-06-21-total-2pt5",
+          "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-2pt5",
+          "yes_price": 0.545,
+          "volume_24h": 1314460.0,
+          "volume_total": 1324743.0,
+          "liquidity": 267028.0,
+          "days_left": 0.3
         },
         {
           "question": "Will Iran close its airspace by June 30?",
           "slug": "will-iran-close-its-airspace-by-june-30-20260609184136054",
           "url": "https://polymarket.com/event/will-iran-close-its-airspace-by-june-30-20260609184136054",
           "yes_price": 0.9995,
-          "volume_24h": 1223474.0,
-          "volume_total": 3141495.0,
-          "liquidity": 1916004.0,
-          "days_left": 10.3
+          "volume_24h": 1256936.0,
+          "volume_total": 3180520.0,
+          "liquidity": 3255023.0,
+          "days_left": 9.7
         },
         {
-          "question": " Iran agrees to end enrichment of uranium by June 30?",
-          "slug": "iran-agrees-to-end-enrichment-of-uranium-by-june-30",
-          "url": "https://polymarket.com/event/iran-agrees-to-end-enrichment-of-uranium-by-june-30",
-          "yes_price": 0.04,
-          "volume_24h": 1206450.0,
-          "volume_total": 10861897.0,
-          "liquidity": 547332.0,
-          "days_left": 9.1
+          "question": "Will the Iranian regime fall by June 30?",
+          "slug": "will-the-iranian-regime-fall-by-june-30",
+          "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-june-30",
+          "yes_price": 0.0035,
+          "volume_24h": 1138675.0,
+          "volume_total": 62670609.0,
+          "liquidity": 753123.0,
+          "days_left": 8.5
         },
         {
-          "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
-          "slug": "will-trump-agree-to-withdraw-troops-from-the-iranian-region-by-june-30",
-          "url": "https://polymarket.com/event/will-trump-agree-to-withdraw-troops-from-the-iranian-region-by-june-30",
-          "yes_price": 0.9995,
-          "volume_24h": 1189586.0,
-          "volume_total": 4861712.0,
-          "liquidity": 3112733.0,
-          "days_left": 9.1
-        },
-        {
-          "question": "Counter-Strike: Spirit vs Team Falcons - Map 2 Winner",
-          "slug": "cs2-ts7-fal2-2026-06-20-game2",
-          "url": "https://polymarket.com/event/cs2-ts7-fal2-2026-06-20-game2",
-          "yes_price": 0.9995,
-          "volume_24h": 1128193.0,
-          "volume_total": 1128193.0,
-          "liquidity": 798057.0,
-          "days_left": 0.1
-        },
-        {
-          "question": "US x Iran diplomatic meeting by June 21, 2026?",
-          "slug": "us-x-iran-diplomatic-meeting-by-june-21-2026-631-919-131-645-654-454-281-531-319-585-646",
-          "url": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-june-21-2026-631-919-131-645-654-454-281-531-319-585-646",
-          "yes_price": 0.898,
-          "volume_24h": 1062640.0,
-          "volume_total": 2643601.0,
-          "liquidity": 32557.0,
-          "days_left": 0.1
+          "question": "Counter-Strike: FURIA vs Team Falcons (BO5) - IEM Cologne Major Playoffs",
+          "slug": "cs2-furia-fal2-2026-06-21",
+          "url": "https://polymarket.com/event/cs2-furia-fal2-2026-06-21",
+          "yes_price": 0.405,
+          "volume_24h": 814173.0,
+          "volume_total": 814173.0,
+          "liquidity": 752146.0,
+          "days_left": 0.4
         },
         {
           "question": "Will Iran win the 2026 FIFA World Cup?",
           "slug": "will-iran-win-the-2026-fifa-world-cup-788",
           "url": "https://polymarket.com/event/will-iran-win-the-2026-fifa-world-cup-788",
           "yes_price": 0.0005,
-          "volume_24h": 760387.0,
-          "volume_total": 58007000.0,
-          "liquidity": 16396362.0,
-          "days_left": 29.1
+          "volume_24h": 663656.0,
+          "volume_total": 58125712.0,
+          "liquidity": 16840717.0,
+          "days_left": 28.5
+        },
+        {
+          "question": "Spain vs. Saudi Arabia: O/U 3.5",
+          "slug": "fifwc-esp-ksa-2026-06-21-total-3pt5",
+          "url": "https://polymarket.com/event/fifwc-esp-ksa-2026-06-21-total-3pt5",
+          "yes_price": 0.505,
+          "volume_24h": 662046.0,
+          "volume_total": 675251.0,
+          "liquidity": 457539.0,
+          "days_left": 0.2
+        },
+        {
+          "question": " Iran agrees to end enrichment of uranium by June 30?",
+          "slug": "iran-agrees-to-end-enrichment-of-uranium-by-june-30",
+          "url": "https://polymarket.com/event/iran-agrees-to-end-enrichment-of-uranium-by-june-30",
+          "yes_price": 0.0385,
+          "volume_24h": 469824.0,
+          "volume_total": 11099117.0,
+          "liquidity": 398776.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will Spain vs. Saudi Arabia end in a draw?",
+          "slug": "fifwc-esp-ksa-2026-06-21-draw",
+          "url": "https://polymarket.com/event/fifwc-esp-ksa-2026-06-21-draw",
+          "yes_price": 0.075,
+          "volume_24h": 465295.0,
+          "volume_total": 748697.0,
+          "liquidity": 846155.0,
+          "days_left": 0.2
         },
         {
           "question": "Kharg Island no longer under Iranian control by June 30?",
           "slug": "kharg-island-no-longer-under-iranian-control-by-june-30-561-854-897",
           "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-june-30-561-854-897",
-          "yes_price": 0.008,
-          "volume_24h": 568285.0,
-          "volume_total": 11166105.0,
-          "liquidity": 277814.0,
-          "days_left": 10.1
+          "yes_price": 0.0045,
+          "volume_24h": 351007.0,
+          "volume_total": 11218645.0,
+          "liquidity": 260380.0,
+          "days_left": 9.5
         },
         {
           "question": "Will no qualifying diplomatic US-Iran meeting occur by June 30, 2026?",
           "slug": "will-no-qualifying-diplomatic-us-iran-meeting-occur-by-june-30-2026-673",
           "url": "https://polymarket.com/event/will-no-qualifying-diplomatic-us-iran-meeting-occur-by-june-30-2026-673",
-          "yes_price": 0.0315,
-          "volume_24h": 287794.0,
-          "volume_total": 2401435.0,
-          "liquidity": 44614.0,
-          "days_left": 9.1
-        },
-        {
-          "question": "Will the next diplomatic US-Iran meeting be in Switzerland?",
-          "slug": "will-the-next-diplomatic-us-iran-meeting-be-in-switzerland-861",
-          "url": "https://polymarket.com/event/will-the-next-diplomatic-us-iran-meeting-be-in-switzerland-861",
-          "yes_price": 0.9555,
-          "volume_24h": 270251.0,
-          "volume_total": 2052612.0,
-          "liquidity": 33745.0,
-          "days_left": 9.1
-        },
-        {
-          "question": "Will Saudi Arabia win the 2026 FIFA World Cup?",
-          "slug": "will-saudi-arabia-win-the-2026-fifa-world-cup",
-          "url": "https://polymarket.com/event/will-saudi-arabia-win-the-2026-fifa-world-cup",
-          "yes_price": 0.0005,
-          "volume_24h": 239124.0,
-          "volume_total": 56807838.0,
-          "liquidity": 15289599.0,
-          "days_left": 29.1
-        },
-        {
-          "question": "Kharg Island no longer under Iranian control by June 24?",
-          "slug": "kharg-island-no-longer-under-iranian-control-by-june-24",
-          "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-june-24",
-          "yes_price": 0.0025,
-          "volume_24h": 233752.0,
-          "volume_total": 892171.0,
-          "liquidity": 105312.0,
-          "days_left": 10.1
-        },
-        {
-          "question": "Will Saudi Arabia win on 2026-06-21?",
-          "slug": "fifwc-esp-ksa-2026-06-21-ksa",
-          "url": "https://polymarket.com/event/fifwc-esp-ksa-2026-06-21-ksa",
-          "yes_price": 0.0315,
-          "volume_24h": 228247.0,
-          "volume_total": 579552.0,
-          "liquidity": 496042.0,
-          "days_left": 0.8
+          "yes_price": 0.0085,
+          "volume_24h": 346260.0,
+          "volume_total": 2554599.0,
+          "liquidity": 50134.0,
+          "days_left": 8.5
         },
         {
           "question": "US obtains Iranian enriched uranium by June 30?",
           "slug": "us-obtains-iranian-enriched-uranium-by-june-30",
           "url": "https://polymarket.com/event/us-obtains-iranian-enriched-uranium-by-june-30",
           "yes_price": 0.0055,
-          "volume_24h": 226277.0,
-          "volume_total": 3863552.0,
-          "liquidity": 157399.0,
-          "days_left": 9.1
+          "volume_24h": 264006.0,
+          "volume_total": 3954139.0,
+          "liquidity": 187528.0,
+          "days_left": 8.5
         },
         {
-          "question": "Will the Iranian regime fall by June 30?",
-          "slug": "will-the-iranian-regime-fall-by-june-30",
-          "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-june-30",
-          "yes_price": 0.0025,
-          "volume_24h": 221851.0,
-          "volume_total": 61699391.0,
-          "liquidity": 989453.0,
-          "days_left": 9.1
+          "question": "Will the next diplomatic US-Iran meeting be in Switzerland?",
+          "slug": "will-the-next-diplomatic-us-iran-meeting-be-in-switzerland-861",
+          "url": "https://polymarket.com/event/will-the-next-diplomatic-us-iran-meeting-be-in-switzerland-861",
+          "yes_price": 0.9905,
+          "volume_24h": 259206.0,
+          "volume_total": 2176796.0,
+          "liquidity": 42251.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will China invade Taiwan by end of 2026?",
+          "slug": "will-china-invade-taiwan-before-2027",
+          "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
+          "yes_price": 0.0625,
+          "volume_24h": 256462.0,
+          "volume_total": 36255004.0,
+          "liquidity": 649035.0,
+          "days_left": 192.5
         }
       ]
     },
@@ -295,151 +305,151 @@
           "question": "Will Netherlands win the 2026 FIFA World Cup?",
           "slug": "will-netherlands-win-the-2026-fifa-world-cup-739",
           "url": "https://polymarket.com/event/will-netherlands-win-the-2026-fifa-world-cup-739",
-          "yes_price": 0.058,
-          "volume_24h": 3608224.0,
-          "volume_total": 57759762.0,
-          "liquidity": 1864069.0,
-          "days_left": 29.1
+          "yes_price": 0.0565,
+          "volume_24h": 4119037.0,
+          "volume_total": 58969741.0,
+          "liquidity": 4100143.0,
+          "days_left": 28.5
+        },
+        {
+          "question": "Bad Homburg Open, Qualification: Solana Sierra vs Anna Blinkova",
+          "slug": "wta-sierra-blinkov-2026-06-21",
+          "url": "https://polymarket.com/event/wta-sierra-blinkov-2026-06-21",
+          "yes_price": 0.885,
+          "volume_24h": 314835.0,
+          "volume_total": 314835.0,
+          "liquidity": 89428.0,
+          "days_left": 6.9
+        },
+        {
+          "question": "Will the price of Bitcoin be above $58,000 on June 21?",
+          "slug": "bitcoin-above-58k-on-june-21-2026",
+          "url": "https://polymarket.com/event/bitcoin-above-58k-on-june-21-2026",
+          "yes_price": 0.9995,
+          "volume_24h": 313809.0,
+          "volume_total": 341720.0,
+          "liquidity": 73042.0,
+          "days_left": 0.2
+        },
+        {
+          "question": "Will the price of Bitcoin be above $62,000 on June 21?",
+          "slug": "bitcoin-above-62k-on-june-21-2026",
+          "url": "https://polymarket.com/event/bitcoin-above-62k-on-june-21-2026",
+          "yes_price": 0.9965,
+          "volume_24h": 152586.0,
+          "volume_total": 210091.0,
+          "liquidity": 48917.0,
+          "days_left": 0.2
+        },
+        {
+          "question": "Will the price of Bitcoin be above $66,000 on June 21?",
+          "slug": "bitcoin-above-66k-on-june-21-2026",
+          "url": "https://polymarket.com/event/bitcoin-above-66k-on-june-21-2026",
+          "yes_price": 0.0085,
+          "volume_24h": 152496.0,
+          "volume_total": 187887.0,
+          "liquidity": 38399.0,
+          "days_left": 0.2
+        },
+        {
+          "question": "Will the price of Bitcoin be above $60,000 on June 21?",
+          "slug": "bitcoin-above-60k-on-june-21-2026",
+          "url": "https://polymarket.com/event/bitcoin-above-60k-on-june-21-2026",
+          "yes_price": 0.9995,
+          "volume_24h": 136327.0,
+          "volume_total": 195476.0,
+          "liquidity": 35527.0,
+          "days_left": 0.2
         },
         {
           "question": "Will Bitcoin reach $85,000 in June?",
           "slug": "will-bitcoin-reach-85k-in-june-2026",
           "url": "https://polymarket.com/event/will-bitcoin-reach-85k-in-june-2026",
           "yes_price": 0.0045,
-          "volume_24h": 176393.0,
-          "volume_total": 599558.0,
-          "liquidity": 173771.0,
-          "days_left": 10.3
-        },
-        {
-          "question": "Will the price of Bitcoin be above $58,000 on June 21?",
-          "slug": "bitcoin-above-58k-on-june-21-2026",
-          "url": "https://polymarket.com/event/bitcoin-above-58k-on-june-21-2026",
-          "yes_price": 0.9985,
-          "volume_24h": 111602.0,
-          "volume_total": 132597.0,
-          "liquidity": 64520.0,
-          "days_left": 0.8
+          "volume_24h": 134068.0,
+          "volume_total": 604847.0,
+          "liquidity": 178670.0,
+          "days_left": 9.7
         },
         {
           "question": "Will Bitcoin reach $72,500 in June?",
           "slug": "will-bitcoin-reach-72pt5k-in-june-2026",
           "url": "https://polymarket.com/event/will-bitcoin-reach-72pt5k-in-june-2026",
-          "yes_price": 0.0415,
-          "volume_24h": 110986.0,
-          "volume_total": 812831.0,
-          "liquidity": 93903.0,
-          "days_left": 10.3
+          "yes_price": 0.0425,
+          "volume_24h": 91269.0,
+          "volume_total": 841010.0,
+          "liquidity": 104561.0,
+          "days_left": 9.7
         },
         {
-          "question": "Will Bitcoin dip to $47,500 in June?",
-          "slug": "will-bitcoin-dip-to-47pt5k-in-june-2026-352-889",
-          "url": "https://polymarket.com/event/will-bitcoin-dip-to-47pt5k-in-june-2026-352-889",
-          "yes_price": 0.0075,
-          "volume_24h": 97332.0,
-          "volume_total": 1398755.0,
-          "liquidity": 190622.0,
-          "days_left": 10.3
+          "question": "Will the price of Bitcoin be above $64,000 on June 21?",
+          "slug": "bitcoin-above-64k-on-june-21-2026",
+          "url": "https://polymarket.com/event/bitcoin-above-64k-on-june-21-2026",
+          "yes_price": 0.875,
+          "volume_24h": 89136.0,
+          "volume_total": 114778.0,
+          "liquidity": 21330.0,
+          "days_left": 0.2
         },
         {
-          "question": "Will Bitcoin hit $150k by June 30, 2026?",
-          "slug": "will-bitcoin-hit-150k-by-june-30-2026",
-          "url": "https://polymarket.com/event/will-bitcoin-hit-150k-by-june-30-2026",
-          "yes_price": 0.0015,
-          "volume_24h": 93813.0,
-          "volume_total": 21526498.0,
-          "liquidity": 275334.0,
-          "days_left": 10.3
+          "question": "Bitcoin Up or Down on June 21?",
+          "slug": "bitcoin-up-or-down-on-june-21-2026",
+          "url": "https://polymarket.com/event/bitcoin-up-or-down-on-june-21-2026",
+          "yes_price": 0.875,
+          "volume_24h": 88831.0,
+          "volume_total": 88831.0,
+          "liquidity": 26466.0,
+          "days_left": 0.2
+        },
+        {
+          "question": "Will the price of Bitcoin be above $68,000 on June 21?",
+          "slug": "bitcoin-above-68k-on-june-21-2026",
+          "url": "https://polymarket.com/event/bitcoin-above-68k-on-june-21-2026",
+          "yes_price": 0.0005,
+          "volume_24h": 88641.0,
+          "volume_total": 107822.0,
+          "liquidity": 53975.0,
+          "days_left": 0.2
+        },
+        {
+          "question": "Will Netherlands win on 2026-06-25?",
+          "slug": "fifwc-tun-nld-2026-06-25-nld",
+          "url": "https://polymarket.com/event/fifwc-tun-nld-2026-06-25-nld",
+          "yes_price": 0.845,
+          "volume_24h": 83997.0,
+          "volume_total": 118438.0,
+          "liquidity": 322467.0,
+          "days_left": 4.5
+        },
+        {
+          "question": "Will Bitcoin dip to $57,500 in June?",
+          "slug": "will-bitcoin-dip-to-57pt5k-in-june-2026-623",
+          "url": "https://polymarket.com/event/will-bitcoin-dip-to-57pt5k-in-june-2026-623",
+          "yes_price": 0.1185,
+          "volume_24h": 83145.0,
+          "volume_total": 1876293.0,
+          "liquidity": 85283.0,
+          "days_left": 9.7
+        },
+        {
+          "question": "Will Netherlands win Group F in the 2026 FIFA World Cup?",
+          "slug": "will-netherlands-win-group-f-in-the-2026-fifa-world-cup",
+          "url": "https://polymarket.com/event/will-netherlands-win-group-f-in-the-2026-fifa-world-cup",
+          "yes_price": 0.76,
+          "volume_24h": 73556.0,
+          "volume_total": 279958.0,
+          "liquidity": 31065.0,
+          "days_left": 5.5
         },
         {
           "question": "Will Bitcoin reach $100,000 in June?",
           "slug": "will-bitcoin-reach-100k-in-june-2026",
           "url": "https://polymarket.com/event/will-bitcoin-reach-100k-in-june-2026",
           "yes_price": 0.0025,
-          "volume_24h": 82849.0,
-          "volume_total": 2692170.0,
-          "liquidity": 130564.0,
-          "days_left": 10.3
-        },
-        {
-          "question": "Will Bitcoin dip to $62,000 June 15-21?",
-          "slug": "will-bitcoin-dip-to-62k-june-15-21-2026",
-          "url": "https://polymarket.com/event/will-bitcoin-dip-to-62k-june-15-21-2026",
-          "yes_price": 0.055,
-          "volume_24h": 70987.0,
-          "volume_total": 192302.0,
-          "liquidity": 18060.0,
-          "days_left": 1.3
-        },
-        {
-          "question": "Will the price of Bitcoin be above $66,000 on June 21?",
-          "slug": "bitcoin-above-66k-on-june-21-2026",
-          "url": "https://polymarket.com/event/bitcoin-above-66k-on-june-21-2026",
-          "yes_price": 0.024,
-          "volume_24h": 63157.0,
-          "volume_total": 83387.0,
-          "liquidity": 30675.0,
-          "days_left": 0.8
-        },
-        {
-          "question": "Will Bitcoin reach $67,500 in June?",
-          "slug": "will-bitcoin-reach-67500-in-june-2026-from-june-4",
-          "url": "https://polymarket.com/event/will-bitcoin-reach-67500-in-june-2026-from-june-4",
-          "yes_price": 0.315,
-          "volume_24h": 61951.0,
-          "volume_total": 820833.0,
-          "liquidity": 74402.0,
-          "days_left": 10.3
-        },
-        {
-          "question": "Will Bitcoin dip to $57,500 in June?",
-          "slug": "will-bitcoin-dip-to-57pt5k-in-june-2026-623",
-          "url": "https://polymarket.com/event/will-bitcoin-dip-to-57pt5k-in-june-2026-623",
-          "yes_price": 0.1335,
-          "volume_24h": 59173.0,
-          "volume_total": 1830764.0,
-          "liquidity": 86366.0,
-          "days_left": 10.3
-        },
-        {
-          "question": "Will the price of Bitcoin be above $62,000 on June 21?",
-          "slug": "bitcoin-above-62k-on-june-21-2026",
-          "url": "https://polymarket.com/event/bitcoin-above-62k-on-june-21-2026",
-          "yes_price": 0.9765,
-          "volume_24h": 58452.0,
-          "volume_total": 102528.0,
-          "liquidity": 31456.0,
-          "days_left": 0.8
-        },
-        {
-          "question": "Will Netherlands win Group F in the 2026 FIFA World Cup?",
-          "slug": "will-netherlands-win-group-f-in-the-2026-fifa-world-cup",
-          "url": "https://polymarket.com/event/will-netherlands-win-group-f-in-the-2026-fifa-world-cup",
-          "yes_price": 0.86,
-          "volume_24h": 55503.0,
-          "volume_total": 254345.0,
-          "liquidity": 51415.0,
-          "days_left": 6.1
-        },
-        {
-          "question": "Will Bitcoin reach $65,000 on June 20?",
-          "slug": "will-bitcoin-reach-65k-on-june-20",
-          "url": "https://polymarket.com/event/will-bitcoin-reach-65k-on-june-20",
-          "yes_price": 0.051,
-          "volume_24h": 48846.0,
-          "volume_total": 48846.0,
-          "liquidity": 12333.0,
-          "days_left": 0.3
-        },
-        {
-          "question": "Will Bitcoin dip to $55,000 in June?",
-          "slug": "will-bitcoin-dip-to-55k-in-june-2026-779",
-          "url": "https://polymarket.com/event/will-bitcoin-dip-to-55k-in-june-2026-779",
-          "yes_price": 0.0535,
-          "volume_24h": 43190.0,
-          "volume_total": 1985889.0,
-          "liquidity": 98367.0,
-          "days_left": 10.3
+          "volume_24h": 60315.0,
+          "volume_total": 2707830.0,
+          "liquidity": 129480.0,
+          "days_left": 9.7
         }
       ]
     },
@@ -449,251 +459,311 @@
       "count": 15,
       "markets": [
         {
-          "question": "Will Revolut have the highest IPO Market Cap 2026?",
-          "slug": "will-revolut-have-the-highest-ipo-market-cap-2026-963",
-          "url": "https://polymarket.com/event/will-revolut-have-the-highest-ipo-market-cap-2026-963",
-          "yes_price": 0.0005,
-          "volume_24h": 62770.0,
-          "volume_total": 148788.0,
-          "liquidity": 34875.0,
-          "days_left": 193.1
-        },
-        {
-          "question": "Will Crude Oil (CL) hit (LOW) $70 by end of June?",
-          "slug": "will-crude-oil-cl-hit-low-70-by-end-of-june-776-556-989-392-677-842-888-775-665-545-427-841",
-          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-low-70-by-end-of-june-776-556-989-392-677-842-888-775-665-545-427-841",
-          "yes_price": 0.1305,
-          "volume_24h": 39599.0,
-          "volume_total": 1509994.0,
-          "liquidity": 38228.0,
-          "days_left": 9.9
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $95 in June?",
+          "slug": "will-wti-reach-95-in-june-2026-from-june-10",
+          "url": "https://polymarket.com/event/will-wti-reach-95-in-june-2026-from-june-10",
+          "yes_price": 0.0715,
+          "volume_24h": 62333.0,
+          "volume_total": 220198.0,
+          "liquidity": 48072.0,
+          "days_left": 9.7
         },
         {
           "question": "Will NVIDIA be the largest company in the world by market cap on June 30?",
           "slug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-june-30-824",
           "url": "https://polymarket.com/event/will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-june-30-824",
-          "yes_price": 0.987,
-          "volume_24h": 38746.0,
-          "volume_total": 3216890.0,
-          "liquidity": 145135.0,
-          "days_left": 9.1
+          "yes_price": 0.9875,
+          "volume_24h": 59961.0,
+          "volume_total": 3255772.0,
+          "liquidity": 125030.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will Crude Oil (CL) hit (LOW) $70 by end of June?",
+          "slug": "will-crude-oil-cl-hit-low-70-by-end-of-june-776-556-989-392-677-842-888-775-665-545-427-841",
+          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-low-70-by-end-of-june-776-556-989-392-677-842-888-775-665-545-427-841",
+          "yes_price": 0.132,
+          "volume_24h": 35188.0,
+          "volume_total": 1512329.0,
+          "liquidity": 52564.0,
+          "days_left": 9.3
+        },
+        {
+          "question": "Will Crude Oil (CL) hit (HIGH) $95 by end of June?",
+          "slug": "will-crude-oil-cl-hit-high-95-by-end-of-june",
+          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-high-95-by-end-of-june",
+          "yes_price": 0.032,
+          "volume_24h": 34874.0,
+          "volume_total": 181512.0,
+          "liquidity": 98909.0,
+          "days_left": 9.3
+        },
+        {
+          "question": "Will Alphabet be the largest company in the world by market cap on June 30?",
+          "slug": "will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-june-30",
+          "url": "https://polymarket.com/event/will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-june-30",
+          "yes_price": 0.0075,
+          "volume_24h": 25921.0,
+          "volume_total": 2238671.0,
+          "liquidity": 87239.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "SpaceX IPO: Closing Price Up/Down End of First Month?",
+          "slug": "spacex-ipo-closing-price-updown-end-of-first-month-20260608182738233",
+          "url": "https://polymarket.com/event/spacex-ipo-closing-price-updown-end-of-first-month-20260608182738233",
+          "yes_price": 0.91,
+          "volume_24h": 25915.0,
+          "volume_total": 121875.0,
+          "liquidity": 20437.0,
+          "days_left": 9.7
         },
         {
           "question": "Will Google have the best AI model at the end of June 2026?",
           "slug": "will-google-have-the-best-ai-model-at-the-end-of-june-2026",
           "url": "https://polymarket.com/event/will-google-have-the-best-ai-model-at-the-end-of-june-2026",
-          "yes_price": 0.0365,
-          "volume_24h": 24086.0,
-          "volume_total": 1361298.0,
-          "liquidity": 80733.0,
-          "days_left": 9.1
-        },
-        {
-          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $95 in June?",
-          "slug": "will-wti-reach-95-in-june-2026-from-june-10",
-          "url": "https://polymarket.com/event/will-wti-reach-95-in-june-2026-from-june-10",
-          "yes_price": 0.0635,
-          "volume_24h": 23137.0,
-          "volume_total": 179808.0,
-          "liquidity": 37403.0,
-          "days_left": 10.3
+          "yes_price": 0.0325,
+          "volume_24h": 23327.0,
+          "volume_total": 1379479.0,
+          "liquidity": 60737.0,
+          "days_left": 8.5
         },
         {
           "question": "Will Crude Oil (CL) hit (LOW) $52 by end of June?",
           "slug": "will-crude-oil-cl-hit-low-52-by-end-of-june-554-687-491",
           "url": "https://polymarket.com/event/will-crude-oil-cl-hit-low-52-by-end-of-june-554-687-491",
           "yes_price": 0.0055,
-          "volume_24h": 22935.0,
-          "volume_total": 239086.0,
-          "liquidity": 77006.0,
-          "days_left": 9.9
+          "volume_24h": 23182.0,
+          "volume_total": 239380.0,
+          "liquidity": 78783.0,
+          "days_left": 9.3
+        },
+        {
+          "question": "Will Apple be the largest company in the world by market cap on June 30?",
+          "slug": "will-apple-be-the-largest-company-in-the-world-by-market-cap-on-june-30-416",
+          "url": "https://polymarket.com/event/will-apple-be-the-largest-company-in-the-world-by-market-cap-on-june-30-416",
+          "yes_price": 0.0045,
+          "volume_24h": 21704.0,
+          "volume_total": 2215670.0,
+          "liquidity": 76472.0,
+          "days_left": 8.5
         },
         {
           "question": "Will Crude Oil (CL) hit (HIGH) $150 by end of June?",
           "slug": "will-crude-oil-cl-hit-high-150-by-end-of-june-788-691",
           "url": "https://polymarket.com/event/will-crude-oil-cl-hit-high-150-by-end-of-june-788-691",
           "yes_price": 0.0045,
-          "volume_24h": 21323.0,
-          "volume_total": 3629983.0,
-          "liquidity": 158488.0,
-          "days_left": 9.9
-        },
-        {
-          "question": "Will Crude Oil (CL) hit (HIGH) $95 by end of June?",
-          "slug": "will-crude-oil-cl-hit-high-95-by-end-of-june",
-          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-high-95-by-end-of-june",
-          "yes_price": 0.049,
-          "volume_24h": 20207.0,
-          "volume_total": 157228.0,
-          "liquidity": 44578.0,
-          "days_left": 9.9
-        },
-        {
-          "question": "Will Crude Oil (CL) hit (HIGH) $175 by end of June?",
-          "slug": "will-crude-oil-cl-hit-high-175-by-end-of-june-456-295",
-          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-high-175-by-end-of-june-456-295",
-          "yes_price": 0.0045,
-          "volume_24h": 19011.0,
-          "volume_total": 3336181.0,
-          "liquidity": 146706.0,
-          "days_left": 9.9
-        },
-        {
-          "question": "Will WTI Crude Oil (WTI) hit (LOW) $60 in June?",
-          "slug": "will-wti-dip-to-60-in-june-2026-371-314-412-288-264-636-149",
-          "url": "https://polymarket.com/event/will-wti-dip-to-60-in-june-2026-371-314-412-288-264-636-149",
-          "yes_price": 0.0205,
-          "volume_24h": 17959.0,
-          "volume_total": 146251.0,
-          "liquidity": 109353.0,
-          "days_left": 10.3
-        },
-        {
-          "question": "Will Crude Oil (CL) hit (HIGH) $200 by end of June?",
-          "slug": "will-crude-oil-cl-hit-high-200-by-end-of-june-677",
-          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-high-200-by-end-of-june-677",
-          "yes_price": 0.0025,
-          "volume_24h": 17938.0,
-          "volume_total": 5188333.0,
-          "liquidity": 195769.0,
-          "days_left": 9.9
-        },
-        {
-          "question": "Will Crude Oil (CL) hit (HIGH) $100 by end of June?",
-          "slug": "will-crude-oil-cl-hit-high-100-by-end-of-june",
-          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-high-100-by-end-of-june",
-          "yes_price": 0.0225,
-          "volume_24h": 15869.0,
-          "volume_total": 132208.0,
-          "liquidity": 99440.0,
-          "days_left": 9.9
-        },
-        {
-          "question": "Will Crude Oil (CL) hit (LOW) $75 by end of June?",
-          "slug": "will-crude-oil-cl-hit-low-75-by-end-of-june",
-          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-low-75-by-end-of-june",
-          "yes_price": 0.5865,
-          "volume_24h": 15505.0,
-          "volume_total": 212877.0,
-          "liquidity": 12472.0,
-          "days_left": 9.9
+          "volume_24h": 21637.0,
+          "volume_total": 3644137.0,
+          "liquidity": 155412.0,
+          "days_left": 9.3
         },
         {
           "question": "Will WTI Crude Oil (WTI) hit (HIGH) $100 in June?",
           "slug": "will-wti-reach-100-in-june-2026-823-791-134",
           "url": "https://polymarket.com/event/will-wti-reach-100-in-june-2026-823-791-134",
-          "yes_price": 0.0345,
-          "volume_24h": 15273.0,
-          "volume_total": 729105.0,
-          "liquidity": 101825.0,
-          "days_left": 10.3
+          "yes_price": 0.0365,
+          "volume_24h": 19737.0,
+          "volume_total": 735556.0,
+          "liquidity": 110318.0,
+          "days_left": 9.7
+        },
+        {
+          "question": "Will Crude Oil (CL) hit (LOW) $75 by end of June?",
+          "slug": "will-crude-oil-cl-hit-low-75-by-end-of-june",
+          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-low-75-by-end-of-june",
+          "yes_price": 0.612,
+          "volume_24h": 18204.0,
+          "volume_total": 217913.0,
+          "liquidity": 15421.0,
+          "days_left": 9.3
+        },
+        {
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $90 in June?",
+          "slug": "will-wti-reach-90-in-june-2026-from-june-16",
+          "url": "https://polymarket.com/event/will-wti-reach-90-in-june-2026-from-june-16",
+          "yes_price": 0.155,
+          "volume_24h": 17074.0,
+          "volume_total": 46464.0,
+          "liquidity": 14453.0,
+          "days_left": 9.7
         },
         {
           "question": "Will WTI Crude Oil (WTI) hit (LOW) $65 in June?",
           "slug": "will-wti-crude-oil-wti-hit-low-65-in-june-765-291-626-295",
           "url": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-low-65-in-june-765-291-626-295",
-          "yes_price": 0.0785,
-          "volume_24h": 15071.0,
-          "volume_total": 634347.0,
-          "liquidity": 51927.0,
-          "days_left": 10.3
+          "yes_price": 0.0775,
+          "volume_24h": 14572.0,
+          "volume_total": 636862.0,
+          "liquidity": 57914.0,
+          "days_left": 9.7
+        },
+        {
+          "question": "Will Crude Oil (CL) hit (HIGH) $100 by end of June?",
+          "slug": "will-crude-oil-cl-hit-high-100-by-end-of-june",
+          "url": "https://polymarket.com/event/will-crude-oil-cl-hit-high-100-by-end-of-june",
+          "yes_price": 0.014,
+          "volume_24h": 14357.0,
+          "volume_total": 140071.0,
+          "liquidity": 171621.0,
+          "days_left": 9.3
         }
       ]
     },
     "ai_tech": {
       "name": "AI & Technology",
       "emoji": "🤖",
-      "count": 9,
+      "count": 15,
       "markets": [
-        {
-          "question": "Will Claude Fable 5 be restored for US customers by July 1?",
-          "slug": "will-claude-fable-5-be-restored-for-us-customers-by-july-1-20260613193829179-129-881-748-432-345",
-          "url": "https://polymarket.com/event/will-claude-fable-5-be-restored-for-us-customers-by-july-1-20260613193829179-129-881-748-432-345",
-          "yes_price": 0.73,
-          "volume_24h": 59893.0,
-          "volume_total": 415314.0,
-          "liquidity": 12536.0,
-          "days_left": 10.8
-        },
-        {
-          "question": "Will Anthropic have the best AI model at the end of June 2026?",
-          "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-june-2026",
-          "url": "https://polymarket.com/event/will-anthropic-have-the-best-ai-model-at-the-end-of-june-2026",
-          "yes_price": 0.9455,
-          "volume_24h": 40068.0,
-          "volume_total": 2006987.0,
-          "liquidity": 67665.0,
-          "days_left": 9.1
-        },
-        {
-          "question": "Will OpenAI have the best AI model at the end of June 2026?",
-          "slug": "will-openai-have-the-best-ai-model-at-the-end-of-june-2026",
-          "url": "https://polymarket.com/event/will-openai-have-the-best-ai-model-at-the-end-of-june-2026",
-          "yes_price": 0.022,
-          "volume_24h": 27821.0,
-          "volume_total": 1280544.0,
-          "liquidity": 123368.0,
-          "days_left": 9.1
-        },
         {
           "question": "Will xAI have the best AI model at the end of June 2026?",
           "slug": "will-xai-have-the-best-ai-model-at-the-end-of-june-2026",
           "url": "https://polymarket.com/event/will-xai-have-the-best-ai-model-at-the-end-of-june-2026",
           "yes_price": 0.0015,
-          "volume_24h": 25158.0,
-          "volume_total": 1929165.0,
-          "liquidity": 280019.0,
-          "days_left": 9.1
+          "volume_24h": 69831.0,
+          "volume_total": 1991542.0,
+          "liquidity": 242224.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will Claude Fable 5 be restored for US customers by July 1?",
+          "slug": "will-claude-fable-5-be-restored-for-us-customers-by-july-1-20260613193829179-129-881-748-432-345",
+          "url": "https://polymarket.com/event/will-claude-fable-5-be-restored-for-us-customers-by-july-1-20260613193829179-129-881-748-432-345",
+          "yes_price": 0.555,
+          "volume_24h": 65260.0,
+          "volume_total": 443141.0,
+          "liquidity": 14830.0,
+          "days_left": 10.2
+        },
+        {
+          "question": "Will OpenAI have the best AI model at the end of June 2026?",
+          "slug": "will-openai-have-the-best-ai-model-at-the-end-of-june-2026",
+          "url": "https://polymarket.com/event/will-openai-have-the-best-ai-model-at-the-end-of-june-2026",
+          "yes_price": 0.0105,
+          "volume_24h": 55669.0,
+          "volume_total": 1327857.0,
+          "liquidity": 91161.0,
+          "days_left": 8.5
         },
         {
           "question": "Will Claude Fable 5 be restored for US customers by June 22?",
           "slug": "will-claude-fable-5-be-restored-for-us-customers-by-june-22-20260613193829178-738-167-332-255",
           "url": "https://polymarket.com/event/will-claude-fable-5-be-restored-for-us-customers-by-june-22-20260613193829178-738-167-332-255",
-          "yes_price": 0.18,
-          "volume_24h": 22443.0,
-          "volume_total": 284540.0,
-          "liquidity": 9721.0,
-          "days_left": 1.8
+          "yes_price": 0.115,
+          "volume_24h": 35605.0,
+          "volume_total": 308602.0,
+          "liquidity": 10387.0,
+          "days_left": 1.2
         },
         {
-          "question": "Will Claude Fable 5 be restored for US customers by June 26?",
-          "slug": "will-claude-fable-5-be-restored-for-us-customers-by-june-26",
-          "url": "https://polymarket.com/event/will-claude-fable-5-be-restored-for-us-customers-by-june-26",
-          "yes_price": 0.5,
-          "volume_24h": 19963.0,
-          "volume_total": 132046.0,
-          "liquidity": 11816.0,
-          "days_left": 5.8
-        },
-        {
-          "question": "Will Mistral have the best AI model at the end of July 2026?",
-          "slug": "will-mistral-have-the-best-ai-model-at-the-end-of-july-2026",
-          "url": "https://polymarket.com/event/will-mistral-have-the-best-ai-model-at-the-end-of-july-2026",
-          "yes_price": 0.0015,
-          "volume_24h": 19590.0,
-          "volume_total": 47169.0,
-          "liquidity": 46180.0,
-          "days_left": 40.1
+          "question": "Will GPT-5.6 be released between June 22 and June 28, 2026?",
+          "slug": "will-gpt-5pt6-be-released-between-june-22-and-june-28-2026",
+          "url": "https://polymarket.com/event/will-gpt-5pt6-be-released-between-june-22-and-june-28-2026",
+          "yes_price": 0.266,
+          "volume_24h": 28493.0,
+          "volume_total": 96337.0,
+          "liquidity": 8601.0,
+          "days_left": 6.5
         },
         {
           "question": "Will GPT-5.6 not be released by June 28, 2026?",
           "slug": "will-gpt-5pt6-not-be-released-by-june-28-2026",
           "url": "https://polymarket.com/event/will-gpt-5pt6-not-be-released-by-june-28-2026",
-          "yes_price": 0.2975,
-          "volume_24h": 18474.0,
-          "volume_total": 85203.0,
-          "liquidity": 12346.0,
-          "days_left": 7.1
+          "yes_price": 0.7265,
+          "volume_24h": 27320.0,
+          "volume_total": 107246.0,
+          "liquidity": 7328.0,
+          "days_left": 6.5
+        },
+        {
+          "question": "Will Anthropic have the best AI model at the end of June 2026?",
+          "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-june-2026",
+          "url": "https://polymarket.com/event/will-anthropic-have-the-best-ai-model-at-the-end-of-june-2026",
+          "yes_price": 0.958,
+          "volume_24h": 22985.0,
+          "volume_total": 2024750.0,
+          "liquidity": 71365.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will Claude Fable 5 be restored for US customers by June 26?",
+          "slug": "will-claude-fable-5-be-restored-for-us-customers-by-june-26",
+          "url": "https://polymarket.com/event/will-claude-fable-5-be-restored-for-us-customers-by-june-26",
+          "yes_price": 0.36,
+          "volume_24h": 22301.0,
+          "volume_total": 145063.0,
+          "liquidity": 11220.0,
+          "days_left": 5.2
         },
         {
           "question": "Will xAI have the best AI model at the end of July 2026?",
           "slug": "will-xai-have-the-best-ai-model-at-the-end-of-july-2026",
           "url": "https://polymarket.com/event/will-xai-have-the-best-ai-model-at-the-end-of-july-2026",
-          "yes_price": 0.0035,
-          "volume_24h": 14664.0,
-          "volume_total": 41642.0,
-          "liquidity": 27706.0,
-          "days_left": 40.1
+          "yes_price": 0.003,
+          "volume_24h": 20762.0,
+          "volume_total": 50649.0,
+          "liquidity": 40925.0,
+          "days_left": 39.5
+        },
+        {
+          "question": "GPT-5.6 released by June 30, 2026?",
+          "slug": "gpt-5pt6-released-by-june-30-2026-522-692-467",
+          "url": "https://polymarket.com/event/gpt-5pt6-released-by-june-30-2026-522-692-467",
+          "yes_price": 0.38,
+          "volume_24h": 20526.0,
+          "volume_total": 185298.0,
+          "liquidity": 11139.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will Z.ai have the best AI model at the end of July 2026?",
+          "slug": "will-zai-have-the-best-ai-model-at-the-end-of-july-2026",
+          "url": "https://polymarket.com/event/will-zai-have-the-best-ai-model-at-the-end-of-july-2026",
+          "yes_price": 0.0015,
+          "volume_24h": 15378.0,
+          "volume_total": 62649.0,
+          "liquidity": 42999.0,
+          "days_left": 39.5
+        },
+        {
+          "question": "Will Z.ai have the top AI model at the end of June 2026?",
+          "slug": "will-zai-have-the-top-ai-model-at-the-end-of-june-2026-987",
+          "url": "https://polymarket.com/event/will-zai-have-the-top-ai-model-at-the-end-of-june-2026-987",
+          "yes_price": 0.0005,
+          "volume_24h": 13703.0,
+          "volume_total": 458655.0,
+          "liquidity": 21967.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will xAI have the top AI model at the end of June 2026?",
+          "slug": "will-xai-have-the-top-ai-model-at-the-end-of-june-2026-292",
+          "url": "https://polymarket.com/event/will-xai-have-the-top-ai-model-at-the-end-of-june-2026-292",
+          "yes_price": 0.0005,
+          "volume_24h": 11894.0,
+          "volume_total": 55424.0,
+          "liquidity": 10974.0,
+          "days_left": 8.5
+        },
+        {
+          "question": "Will Anthropic have the best AI model at the end of July 2026?",
+          "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-july-2026",
+          "url": "https://polymarket.com/event/will-anthropic-have-the-best-ai-model-at-the-end-of-july-2026",
+          "yes_price": 0.855,
+          "volume_24h": 11197.0,
+          "volume_total": 59710.0,
+          "liquidity": 24514.0,
+          "days_left": 39.5
+        },
+        {
+          "question": "Will OpenAI have the best AI model at the end of July 2026?",
+          "slug": "will-openai-have-the-best-ai-model-at-the-end-of-july-2026",
+          "url": "https://polymarket.com/event/will-openai-have-the-best-ai-model-at-the-end-of-july-2026",
+          "yes_price": 0.047,
+          "volume_24h": 11084.0,
+          "volume_total": 47367.0,
+          "liquidity": 35711.0,
+          "days_left": 39.5
         }
       ]
     },
@@ -706,355 +776,355 @@
           "question": "Will Germany win the 2026 FIFA World Cup?",
           "slug": "will-germany-win-the-2026-fifa-world-cup-467",
           "url": "https://polymarket.com/event/will-germany-win-the-2026-fifa-world-cup-467",
-          "yes_price": 0.0525,
-          "volume_24h": 2400644.0,
-          "volume_total": 57771865.0,
-          "liquidity": 2792161.0,
-          "days_left": 29.1
+          "yes_price": 0.0565,
+          "volume_24h": 3464722.0,
+          "volume_total": 59408834.0,
+          "liquidity": 1925288.0,
+          "days_left": 28.5
         },
         {
           "question": "Will Mexico win the 2026 FIFA World Cup?",
           "slug": "will-mexico-win-the-2026-fifa-world-cup-529",
           "url": "https://polymarket.com/event/will-mexico-win-the-2026-fifa-world-cup-529",
-          "yes_price": 0.0125,
-          "volume_24h": 2251278.0,
-          "volume_total": 79040952.0,
-          "liquidity": 8052330.0,
-          "days_left": 29.1
+          "yes_price": 0.0135,
+          "volume_24h": 1958030.0,
+          "volume_total": 80632743.0,
+          "liquidity": 8508296.0,
+          "days_left": 28.5
+        },
+        {
+          "question": "Will France win the 2026 FIFA World Cup?",
+          "slug": "will-france-win-the-2026-fifa-world-cup-924",
+          "url": "https://polymarket.com/event/will-france-win-the-2026-fifa-world-cup-924",
+          "yes_price": 0.1975,
+          "volume_24h": 1740885.0,
+          "volume_total": 65376163.0,
+          "liquidity": 7380352.0,
+          "days_left": 28.5
         },
         {
           "question": "Will Brazil win the 2026 FIFA World Cup?",
           "slug": "will-brazil-win-the-2026-fifa-world-cup-183",
           "url": "https://polymarket.com/event/will-brazil-win-the-2026-fifa-world-cup-183",
           "yes_price": 0.0595,
-          "volume_24h": 2058601.0,
-          "volume_total": 47842341.0,
-          "liquidity": 5856572.0,
-          "days_left": 29.1
-        },
-        {
-          "question": "Will France win the 2026 FIFA World Cup?",
-          "slug": "will-france-win-the-2026-fifa-world-cup-924",
-          "url": "https://polymarket.com/event/will-france-win-the-2026-fifa-world-cup-924",
-          "yes_price": 0.1965,
-          "volume_24h": 1585864.0,
-          "volume_total": 64402818.0,
-          "liquidity": 6687364.0,
-          "days_left": 29.1
+          "volume_24h": 1388384.0,
+          "volume_total": 48181862.0,
+          "liquidity": 7153113.0,
+          "days_left": 28.5
         },
         {
           "question": "Will Canada win the 2026 FIFA World Cup?",
           "slug": "will-canada-win-the-2026-fifa-world-cup-755",
           "url": "https://polymarket.com/event/will-canada-win-the-2026-fifa-world-cup-755",
           "yes_price": 0.0035,
-          "volume_24h": 1498418.0,
-          "volume_total": 64180254.0,
-          "liquidity": 8517780.0,
-          "days_left": 29.1
+          "volume_24h": 1049480.0,
+          "volume_total": 64764852.0,
+          "liquidity": 9003904.0,
+          "days_left": 28.5
         },
         {
           "question": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
           "slug": "will-ivan-cepeda-castro-win-the-2026-colombian-presidential-election",
           "url": "https://polymarket.com/event/will-ivan-cepeda-castro-win-the-2026-colombian-presidential-election",
           "yes_price": 0.125,
-          "volume_24h": 355478.0,
-          "volume_total": 4383321.0,
-          "liquidity": 144034.0,
-          "days_left": 0.7
-        },
-        {
-          "question": "Will JD Vance win the 2028 US Presidential Election?",
-          "slug": "will-jd-vance-win-the-2028-us-presidential-election",
-          "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-us-presidential-election",
-          "yes_price": 0.1955,
-          "volume_24h": 322473.0,
-          "volume_total": 14114485.0,
-          "liquidity": 454928.0,
-          "days_left": 870.1
+          "volume_24h": 588675.0,
+          "volume_total": 4804873.0,
+          "liquidity": 218107.0,
+          "days_left": 0.1
         },
         {
           "question": "Will Abelardo de la Espriella  win the 2026 Colombian presidential election?",
           "slug": "will-abelardo-de-la-espriella-win-the-2026-colombian-presidential-election",
           "url": "https://polymarket.com/event/will-abelardo-de-la-espriella-win-the-2026-colombian-presidential-election",
-          "yes_price": 0.875,
-          "volume_24h": 204651.0,
-          "volume_total": 4188704.0,
-          "liquidity": 147742.0,
-          "days_left": 0.7
+          "yes_price": 0.865,
+          "volume_24h": 462507.0,
+          "volume_total": 4518805.0,
+          "liquidity": 137576.0,
+          "days_left": 0.1
         },
         {
-          "question": "Will Germany win Group E in the 2026 FIFA World Cup?",
-          "slug": "will-germany-win-group-e-in-the-2026-fifa-world-cup",
-          "url": "https://polymarket.com/event/will-germany-win-group-e-in-the-2026-fifa-world-cup",
-          "yes_price": 0.39,
-          "volume_24h": 188202.0,
-          "volume_total": 596785.0,
-          "liquidity": 4519.0,
-          "days_left": 6.1
+          "question": "Will Germany win on 2026-06-25?",
+          "slug": "fifwc-ecu-ger-2026-06-25-ger",
+          "url": "https://polymarket.com/event/fifwc-ecu-ger-2026-06-25-ger",
+          "yes_price": 0.505,
+          "volume_24h": 335494.0,
+          "volume_total": 421042.0,
+          "liquidity": 502362.0,
+          "days_left": 4.4
+        },
+        {
+          "question": "Halle Open: Taylor Fritz vs Frances Tiafoe",
+          "slug": "atp-fritz-tiafoe-2026-06-21",
+          "url": "https://polymarket.com/event/atp-fritz-tiafoe-2026-06-21",
+          "yes_price": 0.665,
+          "volume_24h": 187399.0,
+          "volume_total": 187399.0,
+          "liquidity": 263080.0,
+          "days_left": 7.1
         },
         {
           "question": "Will Donald Trump Jr. win the 2028 US Presidential Election?",
           "slug": "will-donald-trump-jr-win-the-2028-us-presidential-election",
           "url": "https://polymarket.com/event/will-donald-trump-jr-win-the-2028-us-presidential-election",
           "yes_price": 0.0105,
-          "volume_24h": 177157.0,
-          "volume_total": 13010723.0,
-          "liquidity": 886979.0,
-          "days_left": 870.1
+          "volume_24h": 179398.0,
+          "volume_total": 13013970.0,
+          "liquidity": 888959.0,
+          "days_left": 869.5
         },
         {
-          "question": "Will Tereza Cristina win the 2026 Brazilian presidential election?",
-          "slug": "will-tereza-cristina-win-the-2026-brazilian-presidential-election",
-          "url": "https://polymarket.com/event/will-tereza-cristina-win-the-2026-brazilian-presidential-election",
-          "yes_price": 0.0025,
-          "volume_24h": 163804.0,
-          "volume_total": 1990536.0,
-          "liquidity": 296998.0,
-          "days_left": 105.1
+          "question": "Will Vivek Ramaswamy win the 2028 US Presidential Election?",
+          "slug": "will-vivek-ramaswamy-win-the-2028-us-presidential-election",
+          "url": "https://polymarket.com/event/will-vivek-ramaswamy-win-the-2028-us-presidential-election",
+          "yes_price": 0.0065,
+          "volume_24h": 155238.0,
+          "volume_total": 35532229.0,
+          "liquidity": 1437504.0,
+          "days_left": 869.5
         },
         {
-          "question": "Will Greg Abbott win the 2028 US Presidential Election?",
-          "slug": "will-greg-abbott-win-the-2028-us-presidential-election",
-          "url": "https://polymarket.com/event/will-greg-abbott-win-the-2028-us-presidential-election",
-          "yes_price": 0.0085,
-          "volume_24h": 110479.0,
-          "volume_total": 34591526.0,
-          "liquidity": 2098030.0,
-          "days_left": 870.1
+          "question": "Will Hunter Biden win the 2028 Democratic presidential nomination?",
+          "slug": "will-person-a-win-the-2028-democratic-presidential-nomination",
+          "url": "https://polymarket.com/event/will-person-a-win-the-2028-democratic-presidential-nomination",
+          "yes_price": 0.0105,
+          "volume_24h": 103808.0,
+          "volume_total": 41478691.0,
+          "liquidity": 920596.0,
+          "days_left": 869.5
         },
         {
-          "question": "Will France win on 2026-06-22?",
-          "slug": "fifwc-fra-irq-2026-06-22-fra",
-          "url": "https://polymarket.com/event/fifwc-fra-irq-2026-06-22-fra",
-          "yes_price": 0.905,
-          "volume_24h": 100458.0,
-          "volume_total": 236170.0,
-          "liquidity": 448288.0,
-          "days_left": 2.0
+          "question": "Will Adriano Espaillat be the Democratic Nominee for NY-13?",
+          "slug": "will-adriano-espaillat-be-the-democratic-nominee-for-ny-13",
+          "url": "https://polymarket.com/event/will-adriano-espaillat-be-the-democratic-nominee-for-ny-13",
+          "yes_price": 0.565,
+          "volume_24h": 97478.0,
+          "volume_total": 150368.0,
+          "liquidity": 56990.0,
+          "days_left": 1.5
         },
         {
           "question": "Will Elon Musk post 140-159 tweets from June 16 to June 23, 2026?",
           "slug": "elon-musk-of-tweets-june-16-june-23-140-159",
           "url": "https://polymarket.com/event/elon-musk-of-tweets-june-16-june-23-140-159",
-          "yes_price": 0.0075,
-          "volume_24h": 91105.0,
-          "volume_total": 167798.0,
-          "liquidity": 46216.0,
-          "days_left": 2.8
+          "yes_price": 0.0145,
+          "volume_24h": 89692.0,
+          "volume_total": 203169.0,
+          "liquidity": 29479.0,
+          "days_left": 2.2
         },
         {
-          "question": "Will Eduardo Leite win the 2026 Brazilian presidential election?",
-          "slug": "will-eduardo-leite-win-the-2026-brazilian-presidential-election",
-          "url": "https://polymarket.com/event/will-eduardo-leite-win-the-2026-brazilian-presidential-election",
-          "yes_price": 0.0005,
-          "volume_24h": 87267.0,
-          "volume_total": 7549919.0,
-          "liquidity": 1316755.0,
-          "days_left": 105.1
+          "question": "Will Mexico win on 2026-06-24?",
+          "slug": "fifwc-cze-mex-2026-06-24-mex",
+          "url": "https://polymarket.com/event/fifwc-cze-mex-2026-06-24-mex",
+          "yes_price": 0.505,
+          "volume_24h": 77742.0,
+          "volume_total": 313402.0,
+          "liquidity": 566264.0,
+          "days_left": 3.6
         }
       ]
     }
   },
   "topVolume": [
     {
-      "question": "Counter-Strike: Spirit vs Team Falcons (BO3) - IEM Cologne Major Playoffs",
-      "slug": "cs2-ts7-fal2-2026-06-20",
-      "url": "https://polymarket.com/event/cs2-ts7-fal2-2026-06-20",
-      "yes_price": 0.0005,
-      "volume_24h": 5977446.0,
-      "volume_total": 5977446.0,
-      "liquidity": 2341219.0,
-      "days_left": 0.1
-    },
-    {
       "question": "Will Netherlands win the 2026 FIFA World Cup?",
       "slug": "will-netherlands-win-the-2026-fifa-world-cup-739",
       "url": "https://polymarket.com/event/will-netherlands-win-the-2026-fifa-world-cup-739",
-      "yes_price": 0.058,
-      "volume_24h": 3608224.0,
-      "volume_total": 57759762.0,
-      "liquidity": 1864069.0,
-      "days_left": 29.1
+      "yes_price": 0.0565,
+      "volume_24h": 4119037.0,
+      "volume_total": 58969741.0,
+      "liquidity": 4100143.0,
+      "days_left": 28.5
     },
     {
       "question": "Will Germany win the 2026 FIFA World Cup?",
       "slug": "will-germany-win-the-2026-fifa-world-cup-467",
       "url": "https://polymarket.com/event/will-germany-win-the-2026-fifa-world-cup-467",
-      "yes_price": 0.0525,
-      "volume_24h": 2400644.0,
-      "volume_total": 57771865.0,
-      "liquidity": 2792161.0,
-      "days_left": 29.1
+      "yes_price": 0.0565,
+      "volume_24h": 3464722.0,
+      "volume_total": 59408834.0,
+      "liquidity": 1925288.0,
+      "days_left": 28.5
     },
     {
       "question": "Will Mexico win the 2026 FIFA World Cup?",
       "slug": "will-mexico-win-the-2026-fifa-world-cup-529",
       "url": "https://polymarket.com/event/will-mexico-win-the-2026-fifa-world-cup-529",
-      "yes_price": 0.0125,
-      "volume_24h": 2251278.0,
-      "volume_total": 79040952.0,
-      "liquidity": 8052330.0,
-      "days_left": 29.1
-    },
-    {
-      "question": "Will Brazil win the 2026 FIFA World Cup?",
-      "slug": "will-brazil-win-the-2026-fifa-world-cup-183",
-      "url": "https://polymarket.com/event/will-brazil-win-the-2026-fifa-world-cup-183",
-      "yes_price": 0.0595,
-      "volume_24h": 2058601.0,
-      "volume_total": 47842341.0,
-      "liquidity": 5856572.0,
-      "days_left": 29.1
+      "yes_price": 0.0135,
+      "volume_24h": 1958030.0,
+      "volume_total": 80632743.0,
+      "liquidity": 8508296.0,
+      "days_left": 28.5
     },
     {
       "question": "Will France win the 2026 FIFA World Cup?",
       "slug": "will-france-win-the-2026-fifa-world-cup-924",
       "url": "https://polymarket.com/event/will-france-win-the-2026-fifa-world-cup-924",
-      "yes_price": 0.1965,
-      "volume_24h": 1585864.0,
-      "volume_total": 64402818.0,
-      "liquidity": 6687364.0,
-      "days_left": 29.1
-    },
-    {
-      "question": "Will Canada win the 2026 FIFA World Cup?",
-      "slug": "will-canada-win-the-2026-fifa-world-cup-755",
-      "url": "https://polymarket.com/event/will-canada-win-the-2026-fifa-world-cup-755",
-      "yes_price": 0.0035,
-      "volume_24h": 1498418.0,
-      "volume_total": 64180254.0,
-      "liquidity": 8517780.0,
-      "days_left": 29.1
-    },
-    {
-      "question": "Will Iran close its airspace by June 30?",
-      "slug": "will-iran-close-its-airspace-by-june-30-20260609184136054",
-      "url": "https://polymarket.com/event/will-iran-close-its-airspace-by-june-30-20260609184136054",
-      "yes_price": 0.9995,
-      "volume_24h": 1223474.0,
-      "volume_total": 3141495.0,
-      "liquidity": 1916004.0,
-      "days_left": 10.3
-    },
-    {
-      "question": " Iran agrees to end enrichment of uranium by June 30?",
-      "slug": "iran-agrees-to-end-enrichment-of-uranium-by-june-30",
-      "url": "https://polymarket.com/event/iran-agrees-to-end-enrichment-of-uranium-by-june-30",
-      "yes_price": 0.04,
-      "volume_24h": 1206450.0,
-      "volume_total": 10861897.0,
-      "liquidity": 547332.0,
-      "days_left": 9.1
+      "yes_price": 0.1975,
+      "volume_24h": 1740885.0,
+      "volume_total": 65376163.0,
+      "liquidity": 7380352.0,
+      "days_left": 28.5
     },
     {
       "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
       "slug": "will-trump-agree-to-withdraw-troops-from-the-iranian-region-by-june-30",
       "url": "https://polymarket.com/event/will-trump-agree-to-withdraw-troops-from-the-iranian-region-by-june-30",
       "yes_price": 0.9995,
-      "volume_24h": 1189586.0,
-      "volume_total": 4861712.0,
-      "liquidity": 3112733.0,
-      "days_left": 9.1
+      "volume_24h": 1664973.0,
+      "volume_total": 5551958.0,
+      "liquidity": 5458351.0,
+      "days_left": 8.5
     },
     {
-      "question": "Counter-Strike: Spirit vs Team Falcons - Map 2 Winner",
-      "slug": "cs2-ts7-fal2-2026-06-20-game2",
-      "url": "https://polymarket.com/event/cs2-ts7-fal2-2026-06-20-game2",
+      "question": "Will Saudi Arabia win on 2026-06-21?",
+      "slug": "fifwc-esp-ksa-2026-06-21-ksa",
+      "url": "https://polymarket.com/event/fifwc-esp-ksa-2026-06-21-ksa",
+      "yes_price": 0.0395,
+      "volume_24h": 1497322.0,
+      "volume_total": 1903793.0,
+      "liquidity": 1105347.0,
+      "days_left": 0.2
+    },
+    {
+      "question": "Will Brazil win the 2026 FIFA World Cup?",
+      "slug": "will-brazil-win-the-2026-fifa-world-cup-183",
+      "url": "https://polymarket.com/event/will-brazil-win-the-2026-fifa-world-cup-183",
+      "yes_price": 0.0595,
+      "volume_24h": 1388384.0,
+      "volume_total": 48181862.0,
+      "liquidity": 7153113.0,
+      "days_left": 28.5
+    },
+    {
+      "question": "Belgium vs. IR Iran: O/U 2.5",
+      "slug": "fifwc-bel-irn-2026-06-21-total-2pt5",
+      "url": "https://polymarket.com/event/fifwc-bel-irn-2026-06-21-total-2pt5",
+      "yes_price": 0.545,
+      "volume_24h": 1314460.0,
+      "volume_total": 1324743.0,
+      "liquidity": 267028.0,
+      "days_left": 0.3
+    },
+    {
+      "question": "Will Iran close its airspace by June 30?",
+      "slug": "will-iran-close-its-airspace-by-june-30-20260609184136054",
+      "url": "https://polymarket.com/event/will-iran-close-its-airspace-by-june-30-20260609184136054",
       "yes_price": 0.9995,
-      "volume_24h": 1128193.0,
-      "volume_total": 1128193.0,
-      "liquidity": 798057.0,
-      "days_left": 0.1
+      "volume_24h": 1256936.0,
+      "volume_total": 3180520.0,
+      "liquidity": 3255023.0,
+      "days_left": 9.7
     },
     {
-      "question": "US x Iran diplomatic meeting by June 21, 2026?",
-      "slug": "us-x-iran-diplomatic-meeting-by-june-21-2026-631-919-131-645-654-454-281-531-319-585-646",
-      "url": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-june-21-2026-631-919-131-645-654-454-281-531-319-585-646",
-      "yes_price": 0.898,
-      "volume_24h": 1062640.0,
-      "volume_total": 2643601.0,
-      "liquidity": 32557.0,
-      "days_left": 0.1
+      "question": "Will the Iranian regime fall by June 30?",
+      "slug": "will-the-iranian-regime-fall-by-june-30",
+      "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-june-30",
+      "yes_price": 0.0035,
+      "volume_24h": 1138675.0,
+      "volume_total": 62670609.0,
+      "liquidity": 753123.0,
+      "days_left": 8.5
+    },
+    {
+      "question": "Will Canada win the 2026 FIFA World Cup?",
+      "slug": "will-canada-win-the-2026-fifa-world-cup-755",
+      "url": "https://polymarket.com/event/will-canada-win-the-2026-fifa-world-cup-755",
+      "yes_price": 0.0035,
+      "volume_24h": 1049480.0,
+      "volume_total": 64764852.0,
+      "liquidity": 9003904.0,
+      "days_left": 28.5
+    },
+    {
+      "question": "Counter-Strike: FURIA vs Team Falcons (BO5) - IEM Cologne Major Playoffs",
+      "slug": "cs2-furia-fal2-2026-06-21",
+      "url": "https://polymarket.com/event/cs2-furia-fal2-2026-06-21",
+      "yes_price": 0.405,
+      "volume_24h": 814173.0,
+      "volume_total": 814173.0,
+      "liquidity": 752146.0,
+      "days_left": 0.4
     },
     {
       "question": "Will Iran win the 2026 FIFA World Cup?",
       "slug": "will-iran-win-the-2026-fifa-world-cup-788",
       "url": "https://polymarket.com/event/will-iran-win-the-2026-fifa-world-cup-788",
       "yes_price": 0.0005,
-      "volume_24h": 760387.0,
-      "volume_total": 58007000.0,
-      "liquidity": 16396362.0,
-      "days_left": 29.1
+      "volume_24h": 663656.0,
+      "volume_total": 58125712.0,
+      "liquidity": 16840717.0,
+      "days_left": 28.5
     },
     {
-      "question": "Kharg Island no longer under Iranian control by June 30?",
-      "slug": "kharg-island-no-longer-under-iranian-control-by-june-30-561-854-897",
-      "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-june-30-561-854-897",
-      "yes_price": 0.008,
-      "volume_24h": 568285.0,
-      "volume_total": 11166105.0,
-      "liquidity": 277814.0,
-      "days_left": 10.1
+      "question": "Spain vs. Saudi Arabia: O/U 3.5",
+      "slug": "fifwc-esp-ksa-2026-06-21-total-3pt5",
+      "url": "https://polymarket.com/event/fifwc-esp-ksa-2026-06-21-total-3pt5",
+      "yes_price": 0.505,
+      "volume_24h": 662046.0,
+      "volume_total": 675251.0,
+      "liquidity": 457539.0,
+      "days_left": 0.2
     },
     {
       "question": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
       "slug": "will-ivan-cepeda-castro-win-the-2026-colombian-presidential-election",
       "url": "https://polymarket.com/event/will-ivan-cepeda-castro-win-the-2026-colombian-presidential-election",
       "yes_price": 0.125,
-      "volume_24h": 355478.0,
-      "volume_total": 4383321.0,
-      "liquidity": 144034.0,
-      "days_left": 0.7
+      "volume_24h": 588675.0,
+      "volume_total": 4804873.0,
+      "liquidity": 218107.0,
+      "days_left": 0.1
     },
     {
-      "question": "Will JD Vance win the 2028 US Presidential Election?",
-      "slug": "will-jd-vance-win-the-2028-us-presidential-election",
-      "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-us-presidential-election",
-      "yes_price": 0.1955,
-      "volume_24h": 322473.0,
-      "volume_total": 14114485.0,
-      "liquidity": 454928.0,
-      "days_left": 870.1
+      "question": " Iran agrees to end enrichment of uranium by June 30?",
+      "slug": "iran-agrees-to-end-enrichment-of-uranium-by-june-30",
+      "url": "https://polymarket.com/event/iran-agrees-to-end-enrichment-of-uranium-by-june-30",
+      "yes_price": 0.0385,
+      "volume_24h": 469824.0,
+      "volume_total": 11099117.0,
+      "liquidity": 398776.0,
+      "days_left": 8.5
+    },
+    {
+      "question": "Will Spain vs. Saudi Arabia end in a draw?",
+      "slug": "fifwc-esp-ksa-2026-06-21-draw",
+      "url": "https://polymarket.com/event/fifwc-esp-ksa-2026-06-21-draw",
+      "yes_price": 0.075,
+      "volume_24h": 465295.0,
+      "volume_total": 748697.0,
+      "liquidity": 846155.0,
+      "days_left": 0.2
+    },
+    {
+      "question": "Will Abelardo de la Espriella  win the 2026 Colombian presidential election?",
+      "slug": "will-abelardo-de-la-espriella-win-the-2026-colombian-presidential-election",
+      "url": "https://polymarket.com/event/will-abelardo-de-la-espriella-win-the-2026-colombian-presidential-election",
+      "yes_price": 0.865,
+      "volume_24h": 462507.0,
+      "volume_total": 4518805.0,
+      "liquidity": 137576.0,
+      "days_left": 0.1
+    },
+    {
+      "question": "Kharg Island no longer under Iranian control by June 30?",
+      "slug": "kharg-island-no-longer-under-iranian-control-by-june-30-561-854-897",
+      "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-june-30-561-854-897",
+      "yes_price": 0.0045,
+      "volume_24h": 351007.0,
+      "volume_total": 11218645.0,
+      "liquidity": 260380.0,
+      "days_left": 9.5
     },
     {
       "question": "Will no qualifying diplomatic US-Iran meeting occur by June 30, 2026?",
       "slug": "will-no-qualifying-diplomatic-us-iran-meeting-occur-by-june-30-2026-673",
       "url": "https://polymarket.com/event/will-no-qualifying-diplomatic-us-iran-meeting-occur-by-june-30-2026-673",
-      "yes_price": 0.0315,
-      "volume_24h": 287794.0,
-      "volume_total": 2401435.0,
-      "liquidity": 44614.0,
-      "days_left": 9.1
-    },
-    {
-      "question": "Will the next diplomatic US-Iran meeting be in Switzerland?",
-      "slug": "will-the-next-diplomatic-us-iran-meeting-be-in-switzerland-861",
-      "url": "https://polymarket.com/event/will-the-next-diplomatic-us-iran-meeting-be-in-switzerland-861",
-      "yes_price": 0.9555,
-      "volume_24h": 270251.0,
-      "volume_total": 2052612.0,
-      "liquidity": 33745.0,
-      "days_left": 9.1
-    },
-    {
-      "question": "Will Saudi Arabia win the 2026 FIFA World Cup?",
-      "slug": "will-saudi-arabia-win-the-2026-fifa-world-cup",
-      "url": "https://polymarket.com/event/will-saudi-arabia-win-the-2026-fifa-world-cup",
-      "yes_price": 0.0005,
-      "volume_24h": 239124.0,
-      "volume_total": 56807838.0,
-      "liquidity": 15289599.0,
-      "days_left": 29.1
-    },
-    {
-      "question": "Kharg Island no longer under Iranian control by June 24?",
-      "slug": "kharg-island-no-longer-under-iranian-control-by-june-24",
-      "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-june-24",
-      "yes_price": 0.0025,
-      "volume_24h": 233752.0,
-      "volume_total": 892171.0,
-      "liquidity": 105312.0,
-      "days_left": 10.1
+      "yes_price": 0.0085,
+      "volume_24h": 346260.0,
+      "volume_total": 2554599.0,
+      "liquidity": 50134.0,
+      "days_left": 8.5
     }
   ]
 }
