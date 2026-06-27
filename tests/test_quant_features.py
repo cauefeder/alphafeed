@@ -85,66 +85,68 @@ def test_live_bet_price_range_outside():
 def test_compute_kelly_bet_zero_when_no_edge():
     """When the model agrees with the market (p == price) → no bet."""
     from quant_features import compute_kelly_bet
-    stake = compute_kelly_bet(calibrated_prob_crowd_wrong=0.50, market_price=0.50)
+    stake, _ = compute_kelly_bet(calibrated_prob_crowd_wrong=0.50, market_price=0.50)
     assert stake == 0.0
 
 
 def test_compute_kelly_bet_zero_when_below_min_edge():
     """3% min-edge gate: tiny disagreement is filtered out."""
     from quant_features import compute_kelly_bet
-    # Crowd at 0.50 (no leaning), model says crowd is 51% wrong → p_yes_wins=0.49
-    # YES side edge: 0.49/0.50 - 1 = -0.02 → No.
-    # NO  side edge: 0.51/0.50 - 1 = +0.02. Below MIN_EDGE 0.03 → filtered.
-    stake = compute_kelly_bet(calibrated_prob_crowd_wrong=0.51, market_price=0.50)
+    stake, _ = compute_kelly_bet(calibrated_prob_crowd_wrong=0.51, market_price=0.50)
     assert stake == 0.0
 
 
 def test_compute_kelly_bet_zero_outside_price_range():
     """Tail-priced markets always return 0 stake — matches betEligible logic."""
     from quant_features import compute_kelly_bet
-    # Even at very high model confidence the bet is refused at the tails
-    assert compute_kelly_bet(calibrated_prob_crowd_wrong=0.95, market_price=0.05) == 0.0
-    assert compute_kelly_bet(calibrated_prob_crowd_wrong=0.95, market_price=0.95) == 0.0
+    s1, _ = compute_kelly_bet(calibrated_prob_crowd_wrong=0.95, market_price=0.05)
+    s2, _ = compute_kelly_bet(calibrated_prob_crowd_wrong=0.95, market_price=0.95)
+    assert s1 == 0.0
+    assert s2 == 0.0
 
 
-def test_compute_kelly_bet_positive_yes_side():
-    """Crowd thinks NO (price 0.30), model says crowd 80% wrong → p_yes=0.80.
-    Yes-side edge = 0.80/0.30 - 1 = 1.67 (massive). Stake should be capped at MAX_BET_PCT."""
+def test_compute_kelly_bet_returns_yes_direction_for_underpriced_yes():
+    """Crowd thinks NO (price 0.30), model says crowd 80% wrong → p_yes_wins=0.80.
+    Model says YES underpriced → bet YES."""
     from quant_features import compute_kelly_bet, LIVE_BET_MAX_BET_PCT
-    stake = compute_kelly_bet(calibrated_prob_crowd_wrong=0.80, market_price=0.30,
-                              bankroll=100.0)
-    # MAX_BET_PCT * bankroll caps the stake
+    stake, direction = compute_kelly_bet(
+        calibrated_prob_crowd_wrong=0.80, market_price=0.30, bankroll=100.0,
+    )
+    assert direction == "YES"
     assert stake == pytest.approx(LIVE_BET_MAX_BET_PCT * 100.0)
 
 
-def test_compute_kelly_bet_no_side_payout():
+def test_compute_kelly_bet_returns_no_direction_for_overpriced_yes():
     """Crowd thinks YES (price 0.70), model says crowd 70% wrong → p_yes_wins=0.30.
-    No-side edge: (1 - 0.30) / (1 - 0.70) - 1 = 1.33 → capped."""
+    Model says YES overpriced → bet NO (i.e., bet against the crowd)."""
     from quant_features import compute_kelly_bet, LIVE_BET_MAX_BET_PCT
-    stake = compute_kelly_bet(calibrated_prob_crowd_wrong=0.70, market_price=0.70,
-                              bankroll=100.0)
+    stake, direction = compute_kelly_bet(
+        calibrated_prob_crowd_wrong=0.70, market_price=0.70, bankroll=100.0,
+    )
+    assert direction == "NO"
     assert stake == pytest.approx(LIVE_BET_MAX_BET_PCT * 100.0)
 
 
 def test_compute_kelly_bet_half_kelly_when_edge_modest():
     """Mild edge → half-Kelly fraction × bankroll, not the cap."""
     from quant_features import compute_kelly_bet
-    # Crowd at 0.50, model says 53% wrong → bet No (p_yes=0.47).
-    # No-side: side_prob=0.53, side_price=0.50.
-    # Gross edge = 0.53/0.50 - 1 = 0.06. Net = 0.05 (above MIN_EDGE 0.03).
-    # Kelly = (0.53-0.50)/0.50 = 0.06. Half-Kelly = 0.03 (below MAX_BET_PCT 0.05).
-    # Stake = 100 * 0.03 = 3.
-    stake = compute_kelly_bet(calibrated_prob_crowd_wrong=0.53, market_price=0.50,
-                              bankroll=100.0)
+    stake, direction = compute_kelly_bet(
+        calibrated_prob_crowd_wrong=0.53, market_price=0.50, bankroll=100.0,
+    )
+    assert direction == "NO"  # crowd at 0.50 thinks YES; model says wrong → NO
     assert stake == pytest.approx(3.0, abs=1e-6)
 
 
 def test_compute_kelly_bet_default_bankroll_is_100():
     """bankroll defaults to LIVE_BET_DEFAULT_BANKROLL ($100)."""
     from quant_features import compute_kelly_bet, LIVE_BET_DEFAULT_BANKROLL
-    s_default = compute_kelly_bet(calibrated_prob_crowd_wrong=0.60, market_price=0.50)
-    s_explicit = compute_kelly_bet(calibrated_prob_crowd_wrong=0.60, market_price=0.50,
-                                   bankroll=LIVE_BET_DEFAULT_BANKROLL)
+    s_default, _ = compute_kelly_bet(
+        calibrated_prob_crowd_wrong=0.60, market_price=0.50,
+    )
+    s_explicit, _ = compute_kelly_bet(
+        calibrated_prob_crowd_wrong=0.60, market_price=0.50,
+        bankroll=LIVE_BET_DEFAULT_BANKROLL,
+    )
     assert s_default == s_explicit
     assert LIVE_BET_DEFAULT_BANKROLL == 100.0
 

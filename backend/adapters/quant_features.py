@@ -54,8 +54,8 @@ def compute_kelly_bet(
     calibrated_prob_crowd_wrong: float,
     market_price: float,
     bankroll: float = LIVE_BET_DEFAULT_BANKROLL,
-) -> float:
-    """Return the live-policy Kelly stake (in dollars) for a single market.
+) -> tuple[float, str]:
+    """Return the live-policy Kelly stake + side selection for a single market.
 
     Args:
         calibrated_prob_crowd_wrong: model's calibrated probability that the
@@ -66,16 +66,18 @@ def compute_kelly_bet(
             the stake size is comparable across signals.
 
     Returns:
-        Stake in dollars. Zero when (a) price is outside the live-bet range,
+        (stake_dollars, direction) where direction is "YES" or "NO".
+        Stake is zero when (a) price is outside the live-bet range,
         (b) net edge is below LIVE_BET_MIN_EDGE, or (c) the model agrees with
-        the market direction.
+        the market direction. When stake is zero, direction defaults to "YES"
+        as a neutral placeholder.
 
     Side selection is automatic. The function picks the side (YES or NO)
     that the model deems mispriced, then sizes the bet at half-Kelly capped
     at LIVE_BET_MAX_BET_PCT.
     """
     if not in_live_bet_price_range(market_price):
-        return 0.0
+        return 0.0, "YES"
 
     # Translate model output to p(Yes wins).
     if market_price >= 0.5:
@@ -85,24 +87,26 @@ def compute_kelly_bet(
 
     # Pick the side with positive gross edge and size via binary Kelly.
     if p_yes_wins > market_price:
+        direction = "YES"
         side_prob = p_yes_wins
         side_price = market_price
     elif p_yes_wins < market_price:
+        direction = "NO"
         side_prob = 1.0 - p_yes_wins
         side_price = 1.0 - market_price
     else:
-        return 0.0
+        return 0.0, "YES"
 
     gross_edge = side_prob / side_price - 1.0
     net_edge = gross_edge - LIVE_BET_COST
     if net_edge < LIVE_BET_MIN_EDGE:
-        return 0.0
+        return 0.0, direction
 
     # Closed-form binary Kelly fraction for a one-shot bet.
     kelly_fraction = (side_prob - side_price) / (1.0 - side_price)
     sized = max(0.0, kelly_fraction * LIVE_BET_KELLY_MULTIPLIER)
     capped_fraction = min(sized, LIVE_BET_MAX_BET_PCT)
-    return float(bankroll * capped_fraction)
+    return float(bankroll * capped_fraction), direction
 
 
 def compute_features(opp: dict) -> dict[str, float]:

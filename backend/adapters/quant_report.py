@@ -166,10 +166,13 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     convergent = round(raw_score * count_signal, 4)
     contrary = raw_score < 0.20 and count_signal > 0.10
 
-    # Production live-bet stake for this opportunity.
-    # Zero when betEligible=False, edge below MIN_EDGE, or no directional edge.
-    # This is the same Kelly math the backtest uses — see quant_features.compute_kelly_bet.
-    kelly_bet = compute_kelly_bet(
+    # Production live-bet stake + direction for this opportunity.
+    # Stake is zero when betEligible=False, edge below MIN_EDGE, or no
+    # directional edge. Direction is the side the model deems mispriced —
+    # NEVER hardcode to YES (a 2026-06-27 audit found the legacy code
+    # buried in _log_signal was logging direction="YES" on every signal,
+    # inverting the bet on markets where the model said NO).
+    kelly_bet, bet_direction = compute_kelly_bet(
         calibrated_prob_crowd_wrong=calibrated_prob,
         market_price=cur_price,
     )
@@ -184,6 +187,7 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
         "contraryFlag":     contrary,
         "betEligible":      in_range,
         "kellyBet":         round(kelly_bet, 4),
+        "betDirection":     bet_direction,
     }
 
 
@@ -252,7 +256,12 @@ def run_inference(
             _log_signal(
                 system="alphafeed",
                 signal_type="polymarket",
-                direction=opp_scored.get("direction", "YES"),
+                # betDirection is computed by compute_kelly_bet from the
+                # calibrated probability vs market price. Falling back to
+                # opp_scored.get("direction") for back-compat with callers
+                # that supply a directional opp dict.
+                direction=opp_scored.get("betDirection")
+                          or opp_scored.get("direction", "YES"),
                 estimated_edge=float(opp_scored.get("quantScore", 0)),
                 estimated_prob=float(opp_scored.get("quantScore", 0)),
                 market_price=float(opp_scored.get("curPrice", 0.5)),
