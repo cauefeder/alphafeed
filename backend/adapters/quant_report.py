@@ -42,6 +42,7 @@ from quant_features import (
     calibrate,
     compute_edge_ranking,
     compute_features,
+    compute_kelly_bet,
     generate_insights,
     in_live_bet_price_range,
 )
@@ -164,6 +165,15 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     count_signal = float(opp.get("countSignal") or 0)
     convergent = round(raw_score * count_signal, 4)
     contrary = raw_score < 0.20 and count_signal > 0.10
+
+    # Production live-bet stake for this opportunity.
+    # Zero when betEligible=False, edge below MIN_EDGE, or no directional edge.
+    # This is the same Kelly math the backtest uses — see quant_features.compute_kelly_bet.
+    kelly_bet = compute_kelly_bet(
+        calibrated_prob_crowd_wrong=calibrated_prob,
+        market_price=cur_price,
+    )
+
     return {
         **opp,
         "quantScore":       round(raw_score, 4),
@@ -173,6 +183,7 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
         "convergentScore":  convergent,
         "contraryFlag":     contrary,
         "betEligible":      in_range,
+        "kellyBet":         round(kelly_bet, 4),
     }
 
 
@@ -248,10 +259,12 @@ def run_inference(
                 market_slug=opp_scored.get("slug"),
                 condition_id=opp_scored.get("conditionId"),
                 signal_tier=opp_scored.get("signalTier"),
+                kelly_bet=float(opp_scored.get("kellyBet", 0.0)),
                 raw_features={
                     k: v for k, v in opp_scored.items()
                     if k in ("countSignal", "sizeSignal", "info_ratio", "infoRatio",
-                            "volume_24h", "liquidity", "days_left", "contraryFlag")
+                            "volume_24h", "liquidity", "days_left", "contraryFlag",
+                            "calibratedProb", "betEligible")
                 },
             )
         except Exception as exc:

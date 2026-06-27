@@ -38,6 +38,73 @@ def in_live_bet_price_range(yes_price: float) -> bool:
     return LIVE_BET_PRICE_MIN <= yes_price <= LIVE_BET_PRICE_MAX
 
 
+# ── Live bet sizing policy ────────────────────────────────────────────────────
+# These constants encode the live-deployment bet-policy that the backtest
+# evaluated. Any change here is a real money policy change.
+
+LIVE_BET_KELLY_MULTIPLIER = 0.5      # Half-Kelly stake sizing
+LIVE_BET_MAX_BET_PCT = 0.05          # Cap individual bet at 5% of bankroll
+LIVE_BET_MIN_EDGE = 0.03             # Refuse bets with net edge below 3%
+LIVE_BET_COST = 0.01                 # Fee + slippage proxy for net-edge gate
+LIVE_BET_DEFAULT_BANKROLL = 100.0    # Reference unit when no bankroll passed
+
+
+def compute_kelly_bet(
+    *,
+    calibrated_prob_crowd_wrong: float,
+    market_price: float,
+    bankroll: float = LIVE_BET_DEFAULT_BANKROLL,
+) -> float:
+    """Return the live-policy Kelly stake (in dollars) for a single market.
+
+    Args:
+        calibrated_prob_crowd_wrong: model's calibrated probability that the
+            crowd's directional belief is wrong (per the alphafeed label
+            convention — see backend/adapters/train_model.py).
+        market_price: yes_price (the crowd's current YES probability).
+        bankroll: reference capital. Defaults to LIVE_BET_DEFAULT_BANKROLL so
+            the stake size is comparable across signals.
+
+    Returns:
+        Stake in dollars. Zero when (a) price is outside the live-bet range,
+        (b) net edge is below LIVE_BET_MIN_EDGE, or (c) the model agrees with
+        the market direction.
+
+    Side selection is automatic. The function picks the side (YES or NO)
+    that the model deems mispriced, then sizes the bet at half-Kelly capped
+    at LIVE_BET_MAX_BET_PCT.
+    """
+    if not in_live_bet_price_range(market_price):
+        return 0.0
+
+    # Translate model output to p(Yes wins).
+    if market_price >= 0.5:
+        p_yes_wins = 1.0 - calibrated_prob_crowd_wrong
+    else:
+        p_yes_wins = calibrated_prob_crowd_wrong
+
+    # Pick the side with positive gross edge and size via binary Kelly.
+    if p_yes_wins > market_price:
+        side_prob = p_yes_wins
+        side_price = market_price
+    elif p_yes_wins < market_price:
+        side_prob = 1.0 - p_yes_wins
+        side_price = 1.0 - market_price
+    else:
+        return 0.0
+
+    gross_edge = side_prob / side_price - 1.0
+    net_edge = gross_edge - LIVE_BET_COST
+    if net_edge < LIVE_BET_MIN_EDGE:
+        return 0.0
+
+    # Closed-form binary Kelly fraction for a one-shot bet.
+    kelly_fraction = (side_prob - side_price) / (1.0 - side_price)
+    sized = max(0.0, kelly_fraction * LIVE_BET_KELLY_MULTIPLIER)
+    capped_fraction = min(sized, LIVE_BET_MAX_BET_PCT)
+    return float(bankroll * capped_fraction)
+
+
 def compute_features(opp: dict) -> dict[str, float]:
     """
     Compute the 3 model features from an enriched opportunity dict.
