@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T10:29:15.084966+00:00",
+  "generatedAt": "2026-06-28T21:01:41.922899+00:00",
   "timePeriod": "WEEK",
   "bankroll": 100.0,
   "tradersChecked": 99,
@@ -8,17 +8,17 @@
     "CRYPTO": 25,
     "POLITICS": 24
   },
-  "positionsScanned": 793,
+  "positionsScanned": 773,
   "opportunities": [
     {
       "title": "Wimbledon WTA: Elsa Jacquemot vs Naomi Osaka",
       "outcome": "Naomi Osaka",
       "slug": "wta-jacquem-osaka-2026-06-29",
       "url": "https://polymarket.com/event/wta-jacquem-osaka-2026-06-29",
-      "curPrice": 0.825,
+      "curPrice": 0.845,
       "estimatedEdge": 0.0719,
       "kellyBet": 10.0,
-      "kellyFull": 0.4107,
+      "kellyFull": 0.4637,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
@@ -27,48 +27,8 @@
       ],
       "countSignal": 0.132,
       "sizeSignal": 1.0,
-      "totalExposure": 16579.17,
-      "weightedAvgEntry": 0.8718
-    },
-    {
-      "title": "Exact Score: South Africa 1 - 2 Canada?",
-      "outcome": "No",
-      "slug": "fifwc-rsa-can-2026-06-28-exact-score-1-2",
-      "url": "https://polymarket.com/event/fifwc-rsa-can-2026-06-28-exact-score-1-2",
-      "curPrice": 0.895,
-      "estimatedEdge": 0.0719,
-      "kellyBet": 10.0,
-      "kellyFull": 0.6845,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "swisstony",
-        "0x076daa..."
-      ],
-      "countSignal": 0.132,
-      "sizeSignal": 1.0,
-      "totalExposure": 5865.15,
-      "weightedAvgEntry": 0.9
-    },
-    {
-      "title": "Will Bitcoin dip to $35,000 by December 31, 2026?",
-      "outcome": "No",
-      "slug": "will-bitcoin-dip-to-35000-by-december-31-2026-744-877-748-219-467-465-646-211-122-947-537-552-555-361-972-954-635-887-657",
-      "url": "https://polymarket.com/event/will-bitcoin-dip-to-35000-by-december-31-2026-744-877-748-219-467-465-646-211-122-947-537-552-555-361-972-954-635-887-657",
-      "curPrice": 0.835,
-      "estimatedEdge": 0.0656,
-      "kellyBet": 9.94,
-      "kellyFull": 0.3976,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
-        "justdance"
-      ],
-      "countSignal": 0.1531,
-      "sizeSignal": 1.0,
-      "totalExposure": 21351.38,
-      "weightedAvgEntry": 0.8239
+      "totalExposure": 22145.67,
+      "weightedAvgEntry": 0.8657
     },
     {
       "title": "Will Japan win on 2026-06-29?",
@@ -87,29 +47,28 @@
       ],
       "countSignal": 0.132,
       "sizeSignal": 1.0,
-      "totalExposure": 29652.66,
-      "weightedAvgEntry": 0.8187
+      "totalExposure": 84694.78,
+      "weightedAvgEntry": 0.8195
     },
     {
-      "title": "Bitcoin Up or Down on June 28?",
-      "outcome": "Down",
-      "slug": "bitcoin-up-or-down-on-june-28-2026",
-      "url": "https://polymarket.com/event/bitcoin-up-or-down-on-june-28-2026",
-      "curPrice": 0.875,
-      "estimatedEdge": 0.0393,
-      "kellyBet": 7.85,
-      "kellyFull": 0.3142,
-      "nSmartTraders": 3,
+      "title": "Will Bitcoin dip to $35,000 by December 31, 2026?",
+      "outcome": "No",
+      "slug": "will-bitcoin-dip-to-35000-by-december-31-2026-744-877-748-219-467-465-646-211-122-947-537-552-555-361-972-954-635-887-657",
+      "url": "https://polymarket.com/event/will-bitcoin-dip-to-35000-by-december-31-2026-744-877-748-219-467-465-646-211-122-947-537-552-555-361-972-954-635-887-657",
+      "curPrice": 0.835,
+      "estimatedEdge": 0.0634,
+      "kellyBet": 9.61,
+      "kellyFull": 0.3845,
+      "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "bosona",
-        "mo-money",
-        "almach"
+        "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+        "justdance"
       ],
-      "countSignal": 0.0485,
+      "countSignal": 0.126,
       "sizeSignal": 1.0,
-      "totalExposure": 1788.73,
-      "weightedAvgEntry": 0.836
+      "totalExposure": 21351.38,
+      "weightedAvgEntry": 0.8239
     },
     {
       "title": "Will there be no change in Fed interest rates after the July 2026 meeting?",
@@ -117,183 +76,121 @@
       "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
       "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
       "curPrice": 0.8149,
-      "estimatedEdge": 0.0504,
-      "kellyBet": 6.81,
-      "kellyFull": 0.2723,
+      "estimatedEdge": 0.0492,
+      "kellyBet": 6.64,
+      "kellyFull": 0.2655,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
         "alliswell",
         "browne"
       ],
-      "countSignal": 0.0838,
+      "countSignal": 0.0653,
       "sizeSignal": 1.0,
       "totalExposure": 43847.61,
       "weightedAvgEntry": 0.7895
-    },
-    {
-      "title": "Will South Africa vs. Canada end in a draw?",
-      "outcome": "No",
-      "slug": "fifwc-rsa-can-2026-06-28-draw",
-      "url": "https://polymarket.com/event/fifwc-rsa-can-2026-06-28-draw",
-      "curPrice": 0.745,
-      "estimatedEdge": 0.0677,
-      "kellyBet": 6.63,
-      "kellyFull": 0.2653,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "swisstony",
-        "0x076daa..."
-      ],
-      "countSignal": 0.132,
-      "sizeSignal": 1.0,
-      "totalExposure": 50795.51,
-      "weightedAvgEntry": 0.7391
     },
     {
       "title": "Will Mike Mazzei win the 2026 Oklahoma Governor Republican primary election?",
       "outcome": "Yes",
       "slug": "will-mike-mazzei-win-the-2026-oklahoma-governor-republican-primary-election",
       "url": "https://polymarket.com/event/will-mike-mazzei-win-the-2026-oklahoma-governor-republican-primary-election",
-      "curPrice": 0.7865,
-      "estimatedEdge": 0.0546,
-      "kellyBet": 6.4,
-      "kellyFull": 0.2559,
+      "curPrice": 0.7925,
+      "estimatedEdge": 0.0508,
+      "kellyBet": 6.12,
+      "kellyFull": 0.2448,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
         "Hakei.",
         "Bertapotamous"
       ],
-      "countSignal": 0.0558,
+      "countSignal": 0.0567,
       "sizeSignal": 1.0,
-      "totalExposure": 2723.65,
+      "totalExposure": 2744.43,
       "weightedAvgEntry": 0.7705
-    },
-    {
-      "title": "Lexus Eastbourne Open: Zizou Bergs vs Ugo Humbert",
-      "outcome": "Ugo Humbert",
-      "slug": "atp-bergs-humbert-2026-06-27",
-      "url": "https://polymarket.com/event/atp-bergs-humbert-2026-06-27",
-      "curPrice": 0.685,
-      "estimatedEdge": 0.0799,
-      "kellyBet": 6.34,
-      "kellyFull": 0.2537,
-      "nSmartTraders": 5,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "RN1",
-        "ferrariChampions2026",
-        "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
-        "swisstony",
-        "0x076daa..."
-      ],
-      "countSignal": 0.2212,
-      "sizeSignal": 1.0,
-      "totalExposure": 87841.11,
-      "weightedAvgEntry": 0.6992
     },
     {
       "title": "US-Iran Final Nuclear Deal by August 31, 2026?",
       "outcome": "No",
       "slug": "us-iran-final-nuclear-deal-by-august-31-2026-20260621201255154",
       "url": "https://polymarket.com/event/us-iran-final-nuclear-deal-by-august-31-2026-20260621201255154",
-      "curPrice": 0.755,
-      "estimatedEdge": 0.0527,
-      "kellyBet": 5.38,
-      "kellyFull": 0.2151,
+      "curPrice": 0.765,
+      "estimatedEdge": 0.0463,
+      "kellyBet": 4.92,
+      "kellyFull": 0.1969,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
         "denizz",
         "timmythewhale"
       ],
-      "countSignal": 0.044,
+      "countSignal": 0.0435,
       "sizeSignal": 1.0,
-      "totalExposure": 113511.12,
+      "totalExposure": 110578.25,
       "weightedAvgEntry": 0.7374
     },
     {
-      "title": "Strait of Hormuz traffic returns to normal by December 31?",
-      "outcome": "Yes",
-      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-      "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-      "curPrice": 0.81,
-      "estimatedEdge": 0.0336,
-      "kellyBet": 4.42,
-      "kellyFull": 0.1767,
+      "title": "Spread: Argentina (-1.5)",
+      "outcome": "Argentina",
+      "slug": "fifwc-arg-cvi-2026-07-03-spread-home-1pt5",
+      "url": "https://polymarket.com/event/fifwc-arg-cvi-2026-07-03-spread-home-1pt5",
+      "curPrice": 0.625,
+      "estimatedEdge": 0.0658,
+      "kellyBet": 4.38,
+      "kellyFull": 0.1754,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "Bertapotamous",
-        "EVP-HalfKelly"
-      ],
-      "countSignal": 0.0588,
-      "sizeSignal": 1.0,
-      "totalExposure": 12081.85,
-      "weightedAvgEntry": 0.7614
-    },
-    {
-      "title": "Wimbledon WTA: Antonia Ruzic vs Emma Raducanu",
-      "outcome": "Emma Raducanu",
-      "slug": "wta-ruzic-raducan-2026-06-29",
-      "url": "https://polymarket.com/event/wta-ruzic-raducan-2026-06-29",
-      "curPrice": 0.5649,
-      "estimatedEdge": 0.0723,
-      "kellyBet": 4.16,
-      "kellyFull": 0.1663,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
         "swisstony",
-        "rabbitfoot1",
-        "0x076daa..."
+        "RN1"
       ],
-      "countSignal": 0.1372,
+      "countSignal": 0.0737,
       "sizeSignal": 1.0,
-      "totalExposure": 8497.25,
-      "weightedAvgEntry": 0.6325
+      "totalExposure": 56387.35,
+      "weightedAvgEntry": 0.6237
     },
     {
       "title": "Will Netherlands win on 2026-06-29?",
       "outcome": "No",
       "slug": "fifwc-nld-mar-2026-06-29-nld",
       "url": "https://polymarket.com/event/fifwc-nld-mar-2026-06-29-nld",
-      "curPrice": 0.545,
-      "estimatedEdge": 0.0719,
-      "kellyBet": 3.95,
-      "kellyFull": 0.158,
-      "nSmartTraders": 2,
+      "curPrice": 0.5649,
+      "estimatedEdge": 0.066,
+      "kellyBet": 3.79,
+      "kellyFull": 0.1517,
+      "nSmartTraders": 3,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "swisstony",
+        "filthybetz",
+        "vanjie",
         "0x076daa..."
       ],
-      "countSignal": 0.132,
+      "countSignal": 0.1037,
       "sizeSignal": 1.0,
-      "totalExposure": 8448.56,
-      "weightedAvgEntry": 0.55
+      "totalExposure": 208655.11,
+      "weightedAvgEntry": 0.5601
     },
     {
-      "title": "Spread: United States (-1.5)",
-      "outcome": "Bosnia and Herzegovina",
-      "slug": "fifwc-usa-bih-2026-07-01-spread-home-1pt5",
-      "url": "https://polymarket.com/event/fifwc-usa-bih-2026-07-01-spread-home-1pt5",
-      "curPrice": 0.535,
-      "estimatedEdge": 0.0719,
-      "kellyBet": 3.86,
-      "kellyFull": 0.1546,
-      "nSmartTraders": 2,
+      "title": "Bitcoin Up or Down - June 28, 4:00PM-8:00PM ET",
+      "outcome": "Up",
+      "slug": "btc-updown-4h-1782676800",
+      "url": "https://polymarket.com/event/btc-updown-4h-1782676800",
+      "curPrice": 0.635,
+      "estimatedEdge": 0.0553,
+      "kellyBet": 3.79,
+      "kellyFull": 0.1515,
+      "nSmartTraders": 3,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "swisstony",
-        "0x076daa..."
+        "0xb55fa1296E6ec55D0cE53d93B9237389f11764d4-1777575277609",
+        "bosona",
+        "Bonereaper"
       ],
-      "countSignal": 0.132,
-      "sizeSignal": 1.0,
-      "totalExposure": 6722.85,
-      "weightedAvgEntry": 0.5416
+      "countSignal": 0.0939,
+      "sizeSignal": 0.7807,
+      "totalExposure": 1171.08,
+      "weightedAvgEntry": 0.6499
     },
     {
       "title": "Will Norway win on 2026-06-30?",
@@ -312,68 +209,28 @@
       ],
       "countSignal": 0.132,
       "sizeSignal": 1.0,
-      "totalExposure": 47940.26,
-      "weightedAvgEntry": 0.5301
-    },
-    {
-      "title": "Côte d'Ivoire vs. Norway: O/U 2.5",
-      "outcome": "Under",
-      "slug": "fifwc-civ-nor-2026-06-30-total-2pt5",
-      "url": "https://polymarket.com/event/fifwc-civ-nor-2026-06-30-total-2pt5",
-      "curPrice": 0.485,
-      "estimatedEdge": 0.0719,
-      "kellyBet": 3.49,
-      "kellyFull": 0.1396,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "swisstony",
-        "0x076daa..."
-      ],
-      "countSignal": 0.132,
-      "sizeSignal": 1.0,
-      "totalExposure": 8258.07,
-      "weightedAvgEntry": 0.49
+      "totalExposure": 89490.58,
+      "weightedAvgEntry": 0.528
     },
     {
       "title": "Spread: Germany (-1.5)",
-      "outcome": "Germany",
+      "outcome": "Paraguay",
       "slug": "fifwc-ger-par-2026-06-29-spread-home-1pt5",
       "url": "https://polymarket.com/event/fifwc-ger-par-2026-06-29-spread-home-1pt5",
-      "curPrice": 0.465,
-      "estimatedEdge": 0.0683,
-      "kellyBet": 3.19,
-      "kellyFull": 0.1276,
+      "curPrice": 0.515,
+      "estimatedEdge": 0.0656,
+      "kellyBet": 3.38,
+      "kellyFull": 0.1352,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "swisstony",
-        "0x076daa..."
+        "0x076daa...",
+        "FootballFan98"
       ],
-      "countSignal": 0.132,
+      "countSignal": 0.0618,
       "sizeSignal": 1.0,
-      "totalExposure": 8595.51,
-      "weightedAvgEntry": 0.46
-    },
-    {
-      "title": "Boston Red Sox vs. New York Yankees",
-      "outcome": "New York Yankees",
-      "slug": "mlb-bos-nyy-2026-06-06",
-      "url": "https://polymarket.com/event/mlb-bos-nyy-2026-06-06",
-      "curPrice": 0.49,
-      "estimatedEdge": 0.0649,
-      "kellyBet": 3.18,
-      "kellyFull": 0.1272,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
-        "RN1"
-      ],
-      "countSignal": 0.0543,
-      "sizeSignal": 1.0,
-      "totalExposure": 15078.57,
-      "weightedAvgEntry": 0.491
+      "totalExposure": 54278.27,
+      "weightedAvgEntry": 0.5277
     },
     {
       "title": "Will Brazil win on 2026-06-29?",
@@ -392,8 +249,28 @@
       ],
       "countSignal": 0.132,
       "sizeSignal": 1.0,
-      "totalExposure": 38889.49,
-      "weightedAvgEntry": 0.4256
+      "totalExposure": 40597.31,
+      "weightedAvgEntry": 0.4258
+    },
+    {
+      "title": "Atlanta Braves vs. San Francisco Giants",
+      "outcome": "Atlanta Braves",
+      "slug": "mlb-atl-sf-2026-06-28",
+      "url": "https://polymarket.com/event/mlb-atl-sf-2026-06-28",
+      "curPrice": 0.605,
+      "estimatedEdge": 0.049,
+      "kellyBet": 3.1,
+      "kellyFull": 0.1241,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "ferrariChampions2026",
+        "RN1"
+      ],
+      "countSignal": 0.0395,
+      "sizeSignal": 1.0,
+      "totalExposure": 6825.39,
+      "weightedAvgEntry": 0.5822
     },
     {
       "title": "Tampa Bay Rays vs. Boston Red Sox",
@@ -401,50 +278,29 @@
       "slug": "mlb-tb-bos-2026-05-09",
       "url": "https://polymarket.com/event/mlb-tb-bos-2026-05-09",
       "curPrice": 0.475,
-      "estimatedEdge": 0.0632,
-      "kellyBet": 3.01,
-      "kellyFull": 0.1205,
+      "estimatedEdge": 0.0636,
+      "kellyBet": 3.03,
+      "kellyFull": 0.1211,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
         "ferrariChampions2026",
         "RN1"
       ],
-      "countSignal": 0.0361,
+      "countSignal": 0.0395,
       "sizeSignal": 1.0,
       "totalExposure": 76918.85,
       "weightedAvgEntry": 0.5561
-    },
-    {
-      "title": "Will Canada win on 2026-06-28?",
-      "outcome": "Yes",
-      "slug": "fifwc-rsa-can-2026-06-28-can",
-      "url": "https://polymarket.com/event/fifwc-rsa-can-2026-06-28-can",
-      "curPrice": 0.595,
-      "estimatedEdge": 0.0483,
-      "kellyBet": 2.98,
-      "kellyFull": 0.1193,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "0x076daa...",
-        "Allezpapa",
-        "swisstony"
-      ],
-      "countSignal": 0.1408,
-      "sizeSignal": 1.0,
-      "totalExposure": 203484.55,
-      "weightedAvgEntry": 0.5615
     },
     {
       "title": "Billionaire one-time wealth tax passes in California election 2026?",
       "outcome": "Yes",
       "slug": "billionaire-one-time-wealth-tax-passes-in-california-election-2026",
       "url": "https://polymarket.com/event/billionaire-one-time-wealth-tax-passes-in-california-election-2026",
-      "curPrice": 0.3449,
-      "estimatedEdge": 0.0749,
-      "kellyBet": 2.86,
-      "kellyFull": 0.1143,
+      "curPrice": 0.355,
+      "estimatedEdge": 0.0763,
+      "kellyBet": 2.96,
+      "kellyFull": 0.1183,
       "nSmartTraders": 4,
       "totalTradersChecked": 99,
       "smartTraderNames": [
@@ -453,61 +309,125 @@
         "bernardbulletin",
         "ImJustKen"
       ],
-      "countSignal": 0.1651,
+      "countSignal": 0.1815,
       "sizeSignal": 1.0,
-      "totalExposure": 260973.29,
+      "totalExposure": 268615.59,
       "weightedAvgEntry": 0.5002
     },
     {
-      "title": "Will Canada win on 2026-06-28?",
-      "outcome": "No",
-      "slug": "fifwc-rsa-can-2026-06-28-can",
-      "url": "https://polymarket.com/event/fifwc-rsa-can-2026-06-28-can",
-      "curPrice": 0.405,
-      "estimatedEdge": 0.0677,
-      "kellyBet": 2.84,
-      "kellyFull": 0.1137,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "Badgeroff",
-        "warluigi",
-        "0x076daa..."
-      ],
-      "countSignal": 0.0852,
-      "sizeSignal": 1.0,
-      "totalExposure": 163362.11,
-      "weightedAvgEntry": 0.4347
-    },
-    {
-      "title": "Boston Red Sox vs. New York Yankees: O/U 8.5",
+      "title": "Brazil vs. Japan: O/U 2.5",
       "outcome": "Over",
-      "slug": "mlb-bos-nyy-2026-06-06-total-8pt5",
-      "url": "https://polymarket.com/event/mlb-bos-nyy-2026-06-06-total-8pt5",
-      "curPrice": 0.465,
-      "estimatedEdge": 0.0605,
-      "kellyBet": 2.83,
-      "kellyFull": 0.1131,
+      "slug": "fifwc-bra-jpn-2026-06-29-total-2pt5",
+      "url": "https://polymarket.com/event/fifwc-bra-jpn-2026-06-29-total-2pt5",
+      "curPrice": 0.435,
+      "estimatedEdge": 0.0666,
+      "kellyBet": 2.95,
+      "kellyFull": 0.1179,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "Talvez10",
+        "swisstony",
         "RN1"
       ],
-      "countSignal": 0.0054,
+      "countSignal": 0.0737,
       "sizeSignal": 1.0,
-      "totalExposure": 1964.69,
-      "weightedAvgEntry": 0.48
+      "totalExposure": 70774.75,
+      "weightedAvgEntry": 0.4446
+    },
+    {
+      "title": "Bitcoin Up or Down - June 28, 5:00PM-5:05PM ET",
+      "outcome": "Down",
+      "slug": "btc-updown-5m-1782680400",
+      "url": "https://polymarket.com/event/btc-updown-5m-1782680400",
+      "curPrice": 0.495,
+      "estimatedEdge": 0.0592,
+      "kellyBet": 2.93,
+      "kellyFull": 0.1173,
+      "nSmartTraders": 5,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "std0",
+        "Bonereaper",
+        "0x50f7",
+        "0x20d230...",
+        "powerwinner"
+      ],
+      "countSignal": 0.163,
+      "sizeSignal": 0.7425,
+      "totalExposure": 1856.26,
+      "weightedAvgEntry": 0.5094
+    },
+    {
+      "title": "Will Netherlands win on 2026-06-29?",
+      "outcome": "Yes",
+      "slug": "fifwc-nld-mar-2026-06-29-nld",
+      "url": "https://polymarket.com/event/fifwc-nld-mar-2026-06-29-nld",
+      "curPrice": 0.435,
+      "estimatedEdge": 0.0654,
+      "kellyBet": 2.89,
+      "kellyFull": 0.1157,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "0x076daa...",
+        "bbb17367162806"
+      ],
+      "countSignal": 0.0598,
+      "sizeSignal": 1.0,
+      "totalExposure": 54205.67,
+      "weightedAvgEntry": 0.4419
+    },
+    {
+      "title": "Spread: Argentina (-2.5)",
+      "outcome": "Argentina",
+      "slug": "fifwc-arg-cvi-2026-07-03-spread-home-2pt5",
+      "url": "https://polymarket.com/event/fifwc-arg-cvi-2026-07-03-spread-home-2pt5",
+      "curPrice": 0.385,
+      "estimatedEdge": 0.0666,
+      "kellyBet": 2.71,
+      "kellyFull": 0.1083,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "swisstony",
+        "RN1"
+      ],
+      "countSignal": 0.0737,
+      "sizeSignal": 1.0,
+      "totalExposure": 21558.19,
+      "weightedAvgEntry": 0.3862
+    },
+    {
+      "title": "Bitcoin Up or Down - June 28, 5:00PM-5:05PM ET",
+      "outcome": "Up",
+      "slug": "btc-updown-5m-1782680400",
+      "url": "https://polymarket.com/event/btc-updown-5m-1782680400",
+      "curPrice": 0.505,
+      "estimatedEdge": 0.0505,
+      "kellyBet": 2.55,
+      "kellyFull": 0.1021,
+      "nSmartTraders": 4,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "std0",
+        "Bonereaper",
+        "powerwinner",
+        "gansinimen"
+      ],
+      "countSignal": 0.077,
+      "sizeSignal": 0.7821,
+      "totalExposure": 1564.12,
+      "weightedAvgEntry": 0.4989
     },
     {
       "title": "Will J.D. Vance win the 2028 Republican presidential nomination?",
       "outcome": "Yes",
       "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
       "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-republican-presidential-nomination",
-      "curPrice": 0.3785,
+      "curPrice": 0.3775,
       "estimatedEdge": 0.0629,
       "kellyBet": 2.53,
-      "kellyFull": 0.1012,
+      "kellyFull": 0.101,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
@@ -516,28 +436,49 @@
       ],
       "countSignal": 0.032,
       "sizeSignal": 1.0,
-      "totalExposure": 4095.08,
+      "totalExposure": 4084.22,
       "weightedAvgEntry": 0.4885
     },
     {
-      "title": "Will Germany win on 2026-06-29?",
-      "outcome": "No",
-      "slug": "fifwc-ger-par-2026-06-29-ger",
-      "url": "https://polymarket.com/event/fifwc-ger-par-2026-06-29-ger",
-      "curPrice": 0.275,
-      "estimatedEdge": 0.0719,
-      "kellyBet": 2.48,
-      "kellyFull": 0.0991,
+      "title": "Bitcoin Up or Down - June 28, 5:00PM-5:15PM ET",
+      "outcome": "Down",
+      "slug": "btc-updown-15m-1782680400",
+      "url": "https://polymarket.com/event/btc-updown-15m-1782680400",
+      "curPrice": 0.495,
+      "estimatedEdge": 0.0485,
+      "kellyBet": 2.4,
+      "kellyFull": 0.0961,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "std0",
+        "Bonereaper",
+        "0x20d230..."
+      ],
+      "countSignal": 0.0824,
+      "sizeSignal": 0.6855,
+      "totalExposure": 1028.25,
+      "weightedAvgEntry": 0.5016
+    },
+    {
+      "title": "Los Angeles Dodgers vs. San Diego Padres",
+      "outcome": "San Diego Padres",
+      "slug": "mlb-lad-sd-2026-06-28",
+      "url": "https://polymarket.com/event/mlb-lad-sd-2026-06-28",
+      "curPrice": 0.325,
+      "estimatedEdge": 0.0636,
+      "kellyBet": 2.35,
+      "kellyFull": 0.0942,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "0x076daa...",
-        "swisstony"
+        "ferrariChampions2026",
+        "RN1"
       ],
-      "countSignal": 0.132,
+      "countSignal": 0.0395,
       "sizeSignal": 1.0,
-      "totalExposure": 47482.47,
-      "weightedAvgEntry": 0.2801
+      "totalExposure": 13974.42,
+      "weightedAvgEntry": 0.3295
     },
     {
       "title": "Will Jordan Bardella win the 2027 French presidential election?",
@@ -556,8 +497,68 @@
       ],
       "countSignal": 0.0906,
       "sizeSignal": 1.0,
-      "totalExposure": 3338.38,
-      "weightedAvgEntry": 0.3587
+      "totalExposure": 2584.13,
+      "weightedAvgEntry": 0.3175
+    },
+    {
+      "title": "Will Germany win on 2026-06-29?",
+      "outcome": "No",
+      "slug": "fifwc-ger-par-2026-06-29-ger",
+      "url": "https://polymarket.com/event/fifwc-ger-par-2026-06-29-ger",
+      "curPrice": 0.265,
+      "estimatedEdge": 0.0654,
+      "kellyBet": 2.23,
+      "kellyFull": 0.089,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "0x076daa...",
+        "bomber"
+      ],
+      "countSignal": 0.0604,
+      "sizeSignal": 1.0,
+      "totalExposure": 42321.03,
+      "weightedAvgEntry": 0.2764
+    },
+    {
+      "title": "Will Bitcoin dip to $55,000 by December 31, 2026?",
+      "outcome": "No",
+      "slug": "will-bitcoin-dip-to-55000-by-december-31-2026-527-627-868-745-188-361-314-673-612-946-821-624-855-557-684-381-884-939-182",
+      "url": "https://polymarket.com/event/will-bitcoin-dip-to-55000-by-december-31-2026-527-627-868-745-188-361-314-673-612-946-821-624-855-557-684-381-884-939-182",
+      "curPrice": 0.2,
+      "estimatedEdge": 0.0682,
+      "kellyBet": 2.13,
+      "kellyFull": 0.0853,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "0xf705fa...",
+        "justdance"
+      ],
+      "countSignal": 0.0914,
+      "sizeSignal": 1.0,
+      "totalExposure": 2876.39,
+      "weightedAvgEntry": 0.2693
+    },
+    {
+      "title": "Will Bitcoin reach $90,000 by December 31, 2026?",
+      "outcome": "Yes",
+      "slug": "will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343",
+      "url": "https://polymarket.com/event/will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343",
+      "curPrice": 0.195,
+      "estimatedEdge": 0.0682,
+      "kellyBet": 2.12,
+      "kellyFull": 0.0848,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "0xf705fa...",
+        "justdance"
+      ],
+      "countSignal": 0.0914,
+      "sizeSignal": 1.0,
+      "totalExposure": 2147.83,
+      "weightedAvgEntry": 0.2722
     },
     {
       "title": "Will Brazil vs. Japan end in a draw?",
@@ -565,40 +566,41 @@
       "slug": "fifwc-bra-jpn-2026-06-29-draw",
       "url": "https://polymarket.com/event/fifwc-bra-jpn-2026-06-29-draw",
       "curPrice": 0.255,
-      "estimatedEdge": 0.0676,
-      "kellyBet": 2.27,
-      "kellyFull": 0.0908,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "Allezpapa",
-        "0x076daa...",
-        "swisstony"
-      ],
-      "countSignal": 0.1408,
-      "sizeSignal": 1.0,
-      "totalExposure": 72195.61,
-      "weightedAvgEntry": 0.2481
-    },
-    {
-      "title": "Will France win on 2026-06-30?",
-      "outcome": "No",
-      "slug": "fifwc-fra-swe-2026-06-30-fra",
-      "url": "https://polymarket.com/event/fifwc-fra-swe-2026-06-30-fra",
-      "curPrice": 0.235,
-      "estimatedEdge": 0.0644,
-      "kellyBet": 2.1,
-      "kellyFull": 0.0842,
+      "estimatedEdge": 0.062,
+      "kellyBet": 2.08,
+      "kellyFull": 0.0832,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "bbb17367162806",
-        "swisstony"
+        "Allezpapa",
+        "0x076daa..."
       ],
-      "countSignal": 0.0738,
+      "countSignal": 0.0655,
       "sizeSignal": 1.0,
-      "totalExposure": 41819.35,
-      "weightedAvgEntry": 0.2316
+      "totalExposure": 73985.3,
+      "weightedAvgEntry": 0.249
+    },
+    {
+      "title": "Bitcoin Up or Down - June 28, 5:00PM-5:15PM ET",
+      "outcome": "Up",
+      "slug": "btc-updown-15m-1782680400",
+      "url": "https://polymarket.com/event/btc-updown-15m-1782680400",
+      "curPrice": 0.505,
+      "estimatedEdge": 0.0409,
+      "kellyBet": 2.06,
+      "kellyFull": 0.0826,
+      "nSmartTraders": 4,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "std0",
+        "0xb55fa1296E6ec55D0cE53d93B9237389f11764d4-1777575277609",
+        "Bonereaper",
+        "0xcE25E214D5cfE4f459cf67F08DF581885AAE7Fdc-1777575398144"
+      ],
+      "countSignal": 0.1152,
+      "sizeSignal": 0.5554,
+      "totalExposure": 1110.75,
+      "weightedAvgEntry": 0.4986
     },
     {
       "title": "Will JD Vance win the 2028 US Presidential Election?",
@@ -606,32 +608,51 @@
       "slug": "will-jd-vance-win-the-2028-us-presidential-election",
       "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-us-presidential-election",
       "curPrice": 0.1925,
-      "estimatedEdge": 0.0671,
-      "kellyBet": 2.08,
-      "kellyFull": 0.083,
-      "nSmartTraders": 4,
+      "estimatedEdge": 0.0647,
+      "kellyBet": 2.0,
+      "kellyFull": 0.0801,
+      "nSmartTraders": 3,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "0xd4aa6f8e91cfea29b66a48ebff52814",
         "ImJustKen",
         "bernardbulletin",
         "alwayslatetotheparty"
       ],
-      "countSignal": 0.0784,
+      "countSignal": 0.0574,
       "sizeSignal": 1.0,
-      "totalExposure": 251610.09,
-      "weightedAvgEntry": 0.4748
+      "totalExposure": 20569.47,
+      "weightedAvgEntry": 0.1917
+    },
+    {
+      "title": "Kansas City Royals vs. Chicago White Sox",
+      "outcome": "Chicago White Sox",
+      "slug": "mlb-kc-cws-2026-06-28",
+      "url": "https://polymarket.com/event/mlb-kc-cws-2026-06-28",
+      "curPrice": 0.185,
+      "estimatedEdge": 0.0636,
+      "kellyBet": 1.95,
+      "kellyFull": 0.078,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "RN1",
+        "ferrariChampions2026"
+      ],
+      "countSignal": 0.0395,
+      "sizeSignal": 1.0,
+      "totalExposure": 4854.54,
+      "weightedAvgEntry": 0.4464
     },
     {
       "title": "Will Spain win the 2026 FIFA World Cup?",
       "outcome": "Yes",
       "slug": "will-spain-win-the-2026-fifa-world-cup-963",
       "url": "https://polymarket.com/event/will-spain-win-the-2026-fifa-world-cup-963",
-      "curPrice": 0.1055,
-      "estimatedEdge": 0.0682,
-      "kellyBet": 1.91,
-      "kellyFull": 0.0763,
-      "nSmartTraders": 7,
+      "curPrice": 0.1115,
+      "estimatedEdge": 0.0685,
+      "kellyBet": 1.93,
+      "kellyFull": 0.0771,
+      "nSmartTraders": 8,
       "totalTradersChecked": 99,
       "smartTraderNames": [
         "Allezpapa",
@@ -640,10 +661,50 @@
         "Joe-Biden",
         "pilimili"
       ],
-      "countSignal": 0.0916,
+      "countSignal": 0.0942,
       "sizeSignal": 1.0,
-      "totalExposure": 484109.23,
-      "weightedAvgEntry": 0.1237
+      "totalExposure": 528737.67,
+      "weightedAvgEntry": 0.1225
+    },
+    {
+      "title": "Will Bitcoin dip to $55,000 in June?",
+      "outcome": "Yes",
+      "slug": "will-bitcoin-dip-to-55k-in-june-2026-779-111",
+      "url": "https://polymarket.com/event/will-bitcoin-dip-to-55k-in-june-2026-779-111",
+      "curPrice": 0.1035,
+      "estimatedEdge": 0.0682,
+      "kellyBet": 1.9,
+      "kellyFull": 0.0761,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "0xf705fa...",
+        "justdance"
+      ],
+      "countSignal": 0.0914,
+      "sizeSignal": 1.0,
+      "totalExposure": 3282.68,
+      "weightedAvgEntry": 0.1114
+    },
+    {
+      "title": "Seattle Mariners vs. Cleveland Guardians",
+      "outcome": "Seattle Mariners",
+      "slug": "mlb-sea-cle-2026-06-28",
+      "url": "https://polymarket.com/event/mlb-sea-cle-2026-06-28",
+      "curPrice": 0.155,
+      "estimatedEdge": 0.0636,
+      "kellyBet": 1.88,
+      "kellyFull": 0.0752,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 99,
+      "smartTraderNames": [
+        "ferrariChampions2026",
+        "RN1"
+      ],
+      "countSignal": 0.0395,
+      "sizeSignal": 1.0,
+      "totalExposure": 8429.16,
+      "weightedAvgEntry": 0.5577
     },
     {
       "title": "Will the U.S. invade Iran before 2027?",
@@ -651,59 +712,19 @@
       "slug": "will-the-us-invade-iran-before-2027",
       "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
       "curPrice": 0.145,
-      "estimatedEdge": 0.0624,
-      "kellyBet": 1.82,
-      "kellyFull": 0.073,
+      "estimatedEdge": 0.0629,
+      "kellyBet": 1.84,
+      "kellyFull": 0.0735,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
         "timmythewhale",
         "Hakei."
       ],
-      "countSignal": 0.0265,
+      "countSignal": 0.0317,
       "sizeSignal": 1.0,
       "totalExposure": 3502.24,
       "weightedAvgEntry": 0.1564
-    },
-    {
-      "title": "Lexus Eastbourne Open: Zizou Bergs vs Ugo Humbert",
-      "outcome": "Zizou Bergs",
-      "slug": "atp-bergs-humbert-2026-06-27",
-      "url": "https://polymarket.com/event/atp-bergs-humbert-2026-06-27",
-      "curPrice": 0.315,
-      "estimatedEdge": 0.0498,
-      "kellyBet": 1.82,
-      "kellyFull": 0.0728,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "ferrariChampions2026",
-        "0x076daa..."
-      ],
-      "countSignal": 0.0939,
-      "sizeSignal": 1.0,
-      "totalExposure": 49149.07,
-      "weightedAvgEntry": 0.2878
-    },
-    {
-      "title": "Will Javier Milei win the 2027 Argentina presidential election?",
-      "outcome": "Yes",
-      "slug": "will-javier-milei-win-the-2027-argentina-presidential-election",
-      "url": "https://polymarket.com/event/will-javier-milei-win-the-2027-argentina-presidential-election",
-      "curPrice": 0.475,
-      "estimatedEdge": 0.0372,
-      "kellyBet": 1.77,
-      "kellyFull": 0.0709,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 99,
-      "smartTraderNames": [
-        "CopyTradersDESTROYER",
-        "Binotto"
-      ],
-      "countSignal": 0.1182,
-      "sizeSignal": 0.5483,
-      "totalExposure": 548.28,
-      "weightedAvgEntry": 0.4605
     },
     {
       "title": "Will England win the 2026 FIFA World Cup?",
@@ -723,10 +744,10 @@
         "pilimili",
         "DimSumConnoisseur."
       ],
-      "countSignal": 0.1377,
+      "countSignal": 0.1325,
       "sizeSignal": 1.0,
-      "totalExposure": 342154.42,
-      "weightedAvgEntry": 0.0883
+      "totalExposure": 361518.82,
+      "weightedAvgEntry": 0.0889
     },
     {
       "title": "Boston Red Sox vs. New York Yankees",
@@ -734,41 +755,39 @@
       "slug": "mlb-bos-nyy-2026-06-06",
       "url": "https://polymarket.com/event/mlb-bos-nyy-2026-06-06",
       "curPrice": 0.51,
-      "estimatedEdge": 0.0335,
-      "kellyBet": 1.71,
-      "kellyFull": 0.0684,
+      "estimatedEdge": 0.0337,
+      "kellyBet": 1.72,
+      "kellyFull": 0.0688,
       "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
         "texaskid",
         "ferrariChampions2026"
       ],
-      "countSignal": 0.0359,
+      "countSignal": 0.0399,
       "sizeSignal": 1.0,
       "totalExposure": 16574.49,
       "weightedAvgEntry": 0.463
     },
     {
-      "title": "Bitcoin Up or Down - June 28, 6:25AM-6:30AM ET",
-      "outcome": "Up",
-      "slug": "btc-updown-5m-1782642300",
-      "url": "https://polymarket.com/event/btc-updown-5m-1782642300",
-      "curPrice": 0.155,
-      "estimatedEdge": 0.0393,
-      "kellyBet": 1.16,
-      "kellyFull": 0.0465,
-      "nSmartTraders": 4,
+      "title": "Chicago Cubs vs. Milwaukee Brewers",
+      "outcome": "Chicago Cubs",
+      "slug": "mlb-chc-mil-2026-06-28",
+      "url": "https://polymarket.com/event/mlb-chc-mil-2026-06-28",
+      "curPrice": 0.45,
+      "estimatedEdge": 0.027,
+      "kellyBet": 1.23,
+      "kellyFull": 0.0491,
+      "nSmartTraders": 2,
       "totalTradersChecked": 99,
       "smartTraderNames": [
-        "Bonereaper",
-        "std0",
-        "powerwinner",
-        "gansinimen"
+        "RN1",
+        "ferrariChampions2026"
       ],
-      "countSignal": 0.1221,
-      "sizeSignal": 0.4724,
-      "totalExposure": 944.72,
-      "weightedAvgEntry": 0.2671
+      "countSignal": 0.0395,
+      "sizeSignal": 1.0,
+      "totalExposure": 31100.51,
+      "weightedAvgEntry": 0.3925
     }
   ]
 }
