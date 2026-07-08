@@ -27,7 +27,12 @@ from backend.adapters.poly2_export import (
 from backend.adapters.poly2_categories import CATEGORIES
 
 
-NOW = datetime(2026, 6, 3, 12, 0, tzinfo=timezone.utc)
+# Pushed far into the future so _raw(end_in_days=30) markets are never
+# treated as expired against wall-clock at test time. Was 2026-06-03 —
+# started failing test_run_export_end_to_end once real time drifted
+# past 2026-07-03 (30 days after NOW), because run_export's quality
+# filter (days_left >= 0) uses real UTC now, not this NOW.
+NOW = datetime(2030, 1, 1, 12, 0, tzinfo=timezone.utc)
 
 
 def _raw(

@@ -75,22 +75,56 @@ def test_score_opportunity_returns_quant_score():
     assert result["quantScore"] == pytest.approx(0.75, rel=1e-3)
 
 
-def test_score_opportunity_tier_a():
+def test_score_opportunity_tier_a(monkeypatch):
+    """Tier A when the shrunk score is confidently away from 0.5.
+
+    With SHRINKAGE_ALPHA=1.0 (pass-through) and raw=0.85, confidence
+    = |0.85 - 0.5| * 2 = 0.70 → A (>= 0.30).
+    """
+    import quant_features
+    monkeypatch.setattr(quant_features, "SHRINKAGE_ALPHA", 1.0)
     from quant_report import score_opportunity
-    result = score_opportunity(_make_opp(curPrice=0.5), _make_model(0.70), _make_calibration())
+    result = score_opportunity(_make_opp(curPrice=0.5), _make_model(0.85), _make_calibration())
     assert result["signalTier"] == "A"
 
 
-def test_score_opportunity_tier_b():
+def test_score_opportunity_tier_b(monkeypatch):
+    """Tier B when confidence is moderate.
+
+    raw=0.60, alpha=1 → confidence 0.20 → B (in [0.10, 0.30)).
+    """
+    import quant_features
+    monkeypatch.setattr(quant_features, "SHRINKAGE_ALPHA", 1.0)
     from quant_report import score_opportunity
-    result = score_opportunity(_make_opp(curPrice=0.5), _make_model(0.50), _make_calibration())
+    result = score_opportunity(_make_opp(curPrice=0.5), _make_model(0.60), _make_calibration())
     assert result["signalTier"] == "B"
 
 
-def test_score_opportunity_tier_c():
+def test_score_opportunity_tier_c(monkeypatch):
+    """Tier C when the model has effectively no opinion.
+
+    raw=0.52, alpha=1 → confidence 0.04 → C (< 0.10).
+    """
+    import quant_features
+    monkeypatch.setattr(quant_features, "SHRINKAGE_ALPHA", 1.0)
     from quant_report import score_opportunity
-    result = score_opportunity(_make_opp(curPrice=0.5), _make_model(0.30), _make_calibration())
+    result = score_opportunity(_make_opp(curPrice=0.5), _make_model(0.52), _make_calibration())
     assert result["signalTier"] == "C"
+
+
+def test_score_opportunity_shrinkage_alpha_zero_silences_all_signals():
+    """Regression for N3: production SHRINKAGE_ALPHA=0 means every
+    prediction shrinks to 0.5, confidence=0, tier=C. Even a very
+    confident raw prediction gets routed to the silent bucket."""
+    from quant_report import score_opportunity
+    for raw in [0.05, 0.30, 0.50, 0.70, 0.95]:
+        result = score_opportunity(
+            _make_opp(curPrice=0.5), _make_model(raw), _make_calibration(),
+        )
+        assert result["signalTier"] == "C", (
+            f"raw={raw} produced tier {result['signalTier']} — "
+            f"SHRINKAGE_ALPHA=0 must silence the channel"
+        )
 
 
 def test_score_opportunity_uses_feature_names_order():

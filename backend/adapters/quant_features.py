@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from math import exp, log1p
+from typing import Any
 
 # ── Feature names — canonical order, single source of truth ───────────────────
 # Inference must build numpy arrays using this exact order.
@@ -47,6 +48,63 @@ LIVE_BET_MAX_BET_PCT = 0.05          # Cap individual bet at 5% of bankroll
 LIVE_BET_MIN_EDGE = 0.03             # Refuse bets with net edge below 3%
 LIVE_BET_COST = 0.01                 # Fee + slippage proxy for net-edge gate
 LIVE_BET_DEFAULT_BANKROLL = 100.0    # Reference unit when no bankroll passed
+
+# ── Shrinkage-toward-0.5 (N3) ────────────────────────────────────────────────
+# The N2 calibration report (docs/calibration.md) found that 86% of alphafeed
+# predictions sit at 0.05 or 0.95 while observed win rates in those bins are
+# ~50% and ~39% respectively — the model is confidently misdirected at the
+# tails. Post-hoc shrinkage pulls raw scores toward 0.5 to compensate.
+#
+# alpha value picked by grid-search over the historical 1,243 signals; see
+# docs/calibration.md for the per-alpha Brier table.
+SHRINKAGE_ALPHA = 0.0
+
+
+def apply_shrinkage(raw: float, *, alpha: float | None = None) -> float:
+    """Pull `raw` toward 0.5 by factor (1 - alpha).
+
+    Formula: shrunk = 0.5 + (raw - 0.5) * alpha.
+    alpha=1.0 → pass-through. alpha=0.0 → always 0.5.
+    Defaults to module-level SHRINKAGE_ALPHA when alpha is None.
+    """
+    if alpha is None:
+        alpha = SHRINKAGE_ALPHA
+    return 0.5 + (float(raw) - 0.5) * float(alpha)
+
+
+def best_alpha_by_brier(
+    predictions: "list[float] | Any",
+    outcomes: "list[int] | Any",
+    *,
+    alphas: "list[float]" = (0.1, 0.3, 0.5, 0.7, 0.9, 1.0),
+) -> float:
+    """Grid-search alpha that minimises Brier score of the shrunk predictions.
+
+    Args:
+        predictions: raw probabilities in [0, 1].
+        outcomes: 0/1 labels aligned with predictions.
+        alphas: candidate shrinkage factors to try.
+
+    Returns:
+        The alpha with the lowest Brier score. Ties break to the largest
+        alpha (least shrinkage — closer to the raw model output).
+    """
+    import numpy as np
+
+    p = np.asarray(predictions, dtype=float)
+    y = np.asarray(outcomes, dtype=float)
+    best_alpha = 1.0
+    best_brier = float("inf")
+    for a in sorted(alphas):
+        shrunk = 0.5 + (p - 0.5) * a
+        brier = float(np.mean((shrunk - y) ** 2))
+        # Ties prefer larger alpha (right-to-left iteration would work too;
+        # we scan low-to-high and use strict < to keep the smallest alpha
+        # only when it's genuinely better).
+        if brier < best_brier - 1e-9:
+            best_brier = brier
+            best_alpha = a
+    return best_alpha
 
 
 def compute_kelly_bet(

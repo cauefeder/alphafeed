@@ -150,6 +150,83 @@ def test_compute_kelly_bet_default_bankroll_is_100():
     assert s_default == s_explicit
     assert LIVE_BET_DEFAULT_BANKROLL == 100.0
 
+
+# ── apply_shrinkage ──────────────────────────────────────────────────────────
+
+
+def test_shrinkage_identity_at_0_5():
+    """0.5 is the fixed point — no shrinkage regardless of alpha."""
+    from quant_features import apply_shrinkage
+    for alpha in [0.0, 0.3, 0.5, 0.7, 1.0]:
+        assert apply_shrinkage(0.5, alpha=alpha) == pytest.approx(0.5)
+
+
+def test_shrinkage_alpha_1_is_pass_through():
+    """alpha=1.0 → no shrinkage; input passes through unchanged."""
+    from quant_features import apply_shrinkage
+    for raw in [0.0, 0.05, 0.3, 0.65, 0.95, 1.0]:
+        assert apply_shrinkage(raw, alpha=1.0) == pytest.approx(raw)
+
+
+def test_shrinkage_alpha_0_collapses_to_half():
+    """alpha=0 → complete shrinkage; everything becomes 0.5."""
+    from quant_features import apply_shrinkage
+    for raw in [0.05, 0.5, 0.95]:
+        assert apply_shrinkage(raw, alpha=0.0) == pytest.approx(0.5)
+
+
+def test_shrinkage_arithmetic_reference():
+    """Two reference values: 0.95 at alpha=0.5 → 0.725; 0.05 at alpha=0.3 → 0.365."""
+    from quant_features import apply_shrinkage
+    assert apply_shrinkage(0.95, alpha=0.5) == pytest.approx(0.725)
+    assert apply_shrinkage(0.05, alpha=0.3) == pytest.approx(0.365)
+
+
+def test_shrinkage_uses_module_default_alpha():
+    """No alpha arg → uses SHRINKAGE_ALPHA from the module."""
+    from quant_features import apply_shrinkage, SHRINKAGE_ALPHA
+    result = apply_shrinkage(0.9)
+    expected = 0.5 + (0.9 - 0.5) * SHRINKAGE_ALPHA
+    assert result == pytest.approx(expected)
+
+
+# ── best_alpha_by_brier (grid search) ────────────────────────────────────────
+
+
+def test_best_alpha_prefers_smaller_alpha_when_predictions_are_extreme():
+    """When predictions cluster at extremes but outcomes are ~50/50 (the
+    alphafeed pattern), grid search should pick a small alpha."""
+    from quant_features import best_alpha_by_brier
+    import numpy as np
+
+    rng = np.random.default_rng(0)
+    # 1000 predictions clustered at 0.95, actual outcomes ~50/50
+    probs = np.full(1000, 0.95)
+    outcomes = rng.integers(0, 2, 1000)
+
+    best = best_alpha_by_brier(
+        probs, outcomes, alphas=[0.1, 0.3, 0.5, 0.7, 1.0],
+    )
+    # Anything below 1.0 is better than pass-through here
+    assert best < 1.0
+
+
+def test_best_alpha_returns_one_when_predictions_are_already_calibrated():
+    """When predictions match observed frequency, no shrinkage is optimal."""
+    from quant_features import best_alpha_by_brier
+    import numpy as np
+
+    probs = np.concatenate([np.full(100, 0.3), np.full(100, 0.7)])
+    outcomes = np.concatenate([
+        np.array([1 if i < 30 else 0 for i in range(100)]),
+        np.array([1 if i < 70 else 0 for i in range(100)]),
+    ])
+    best = best_alpha_by_brier(
+        probs, outcomes, alphas=[0.1, 0.3, 0.5, 0.7, 1.0],
+    )
+    assert best == 1.0
+
+
 def test_compute_features_returns_all_feature_names():
     opp = {"curPrice": 0.5}
     f = compute_features(opp)

@@ -38,6 +38,8 @@ sys.path.insert(0, str(_HERE.parent))
 
 from quant_features import (
     FEATURE_NAMES,
+    SHRINKAGE_ALPHA,
+    apply_shrinkage,
     build_category_trends,
     calibrate,
     compute_edge_ranking,
@@ -153,33 +155,53 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     raw_score = float(model.predict_proba(X)[0][1])
     calibrated_prob = calibrate(raw_score, calibration)
 
+    # N3 shrinkage: pull the raw score toward 0.5 by (1 - SHRINKAGE_ALPHA).
+    # The N2 calibration report found the raw score has Brier 0.50 on
+    # historical outcomes — worse than random. Grid search picked α = 0.0
+    # as best, meaning any positive weight on the raw score hurts predictive
+    # accuracy. That flattens shrunk_score to 0.5 and the confidence-based
+    # tier logic below routes everything to tier C (silent).
+    shrunk_score = apply_shrinkage(raw_score)
+    # Confidence = distance from 0.5 mapped to [0, 1]. Zero means "model has
+    # no opinion." Was: hardcoded thresholds on raw_score (0.65 A / 0.40 B);
+    # replaced so α = 0 correctly silences the channel rather than flooding
+    # tier B.
+    confidence = abs(shrunk_score - 0.5) * 2.0
+
     cur_price = float(opp.get("curPrice") or 0)
     in_range = in_live_bet_price_range(cur_price)
     if not in_range:
         # Force Skip: model is poorly calibrated at price tails and Kelly
         # compounding amplifies the resulting losses. See backtest/no_leakage.
         tier = "Skip"
+    elif confidence >= 0.30:
+        tier = "A"
+    elif confidence >= 0.10:
+        tier = "B"
     else:
-        tier = "A" if raw_score >= 0.65 else "B" if raw_score >= 0.40 else "C"
+        tier = "C"
 
     count_signal = float(opp.get("countSignal") or 0)
     convergent = round(raw_score * count_signal, 4)
     contrary = raw_score < 0.20 and count_signal > 0.10
 
     # Production live-bet stake + direction for this opportunity.
-    # Stake is zero when betEligible=False, edge below MIN_EDGE, or no
-    # directional edge. Direction is the side the model deems mispriced —
-    # NEVER hardcode to YES (a 2026-06-27 audit found the legacy code
-    # buried in _log_signal was logging direction="YES" on every signal,
-    # inverting the bet on markets where the model said NO).
+    # Feeds the SHRUNK-and-Platt-calibrated probability to Kelly. With
+    # SHRINKAGE_ALPHA = 0 the value collapses to 0.5, meaning
+    # compute_kelly_bet returns zero stake for every signal — matches the
+    # confidence-based tier gate above. Kelly kept in the loop so if a
+    # later SHRINKAGE_ALPHA > 0 lands, stakes size correctly again.
     kelly_bet, bet_direction = compute_kelly_bet(
-        calibrated_prob_crowd_wrong=calibrated_prob,
+        calibrated_prob_crowd_wrong=apply_shrinkage(calibrated_prob),
         market_price=cur_price,
     )
 
     return {
         **opp,
         "quantScore":       round(raw_score, 4),
+        "shrunkScore":      round(shrunk_score, 4),
+        "shrinkageAlpha":   SHRINKAGE_ALPHA,
+        "confidence":       round(confidence, 4),
         "signalTier":       tier,
         "calibratedProb":   round(calibrated_prob, 4),
         "infoRatio":        round(features["info_ratio"], 4),
