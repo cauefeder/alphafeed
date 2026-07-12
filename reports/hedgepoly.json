@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-12T09:51:28.025903+00:00",
+  "generatedAt": "2026-07-12T20:45:30.624178+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 10,
+  "signalCount": 9,
   "signals": [
     {
       "marketSlug": "will-england-win-the-2026-fifa-world-cup-937",
       "question": "Will England win the 2026 FIFA World Cup?",
       "side": "YES",
-      "yesValue": 2126626.88,
+      "yesValue": 2010647.83,
       "noValue": 0.0,
-      "totalValue": 2126626.88,
-      "traderCount": 6,
+      "totalValue": 2010647.83,
+      "traderCount": 5,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-england-win-the-2026-fifa-world-cup-937"
     },
@@ -20,9 +20,9 @@
       "marketSlug": "will-spain-win-the-2026-fifa-world-cup-963",
       "question": "Will Spain win the 2026 FIFA World Cup?",
       "side": "YES",
-      "yesValue": 1066526.57,
+      "yesValue": 1137239.56,
       "noValue": 0.0,
-      "totalValue": 1066526.57,
+      "totalValue": 1137239.56,
       "traderCount": 7,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-spain-win-the-2026-fifa-world-cup-963"
@@ -31,9 +31,9 @@
       "marketSlug": "will-france-win-the-2026-fifa-world-cup-924",
       "question": "Will France win the 2026 FIFA World Cup?",
       "side": "YES",
-      "yesValue": 667120.1,
+      "yesValue": 677584.73,
       "noValue": 0.0,
-      "totalValue": 667120.1,
+      "totalValue": 677584.73,
       "traderCount": 4,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-france-win-the-2026-fifa-world-cup-924"
@@ -43,77 +43,66 @@
       "question": "France vs. Spain: Team to Advance",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 321438.91,
-      "totalValue": 321438.91,
+      "noValue": 411601.51,
+      "totalValue": 411601.51,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/fifwc-fra-esp-2026-07-14-team-to-advance"
-    },
-    {
-      "marketSlug": "will-argentina-win-the-2026-fifa-world-cup-245",
-      "question": "Will Argentina win the 2026 FIFA World Cup?",
-      "side": "YES",
-      "yesValue": 320404.61,
-      "noValue": 0.0,
-      "totalValue": 320404.61,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-argentina-win-the-2026-fifa-world-cup-245"
-    },
-    {
-      "marketSlug": "atp-sinner-zverev-2026-07-12",
-      "question": "Wimbledon ATP: Jannik Sinner vs Alexander Zverev",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 274203.72,
-      "totalValue": 274203.72,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-sinner-zverev-2026-07-12"
     },
     {
       "marketSlug": "fifwc-fra-esp-2026-07-14-fra",
       "question": "Will France win on 2026-07-14?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 173458.69,
-      "totalValue": 173458.69,
+      "noValue": 346319.1,
+      "totalValue": 346319.1,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/fifwc-fra-esp-2026-07-14-fra"
+    },
+    {
+      "marketSlug": "will-argentina-win-the-2026-fifa-world-cup-245",
+      "question": "Will Argentina win the 2026 FIFA World Cup?",
+      "side": "YES",
+      "yesValue": 313569.31,
+      "noValue": 0.0,
+      "totalValue": 313569.31,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-argentina-win-the-2026-fifa-world-cup-245"
     },
     {
       "marketSlug": "fifwc-fra-esp-2026-07-14-total-2pt5",
       "question": "France vs. Spain: O/U 2.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 149252.68,
-      "totalValue": 149252.68,
-      "traderCount": 2,
+      "noValue": 213517.29,
+      "totalValue": 213517.29,
+      "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/fifwc-fra-esp-2026-07-14-total-2pt5"
     },
     {
-      "marketSlug": "kor-seo-gwo-2026-07-12-total-2pt5",
-      "question": "FC Seoul vs. Gangwon FC: O/U 2.5",
+      "marketSlug": "mlb-ari-lad-2026-07-12-total-9pt5",
+      "question": "Arizona Diamondbacks vs. Los Angeles Dodgers: O/U 9.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 10525.69,
-      "totalValue": 10525.69,
+      "noValue": 15078.26,
+      "totalValue": 15078.26,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/kor-seo-gwo-2026-07-12-total-2pt5"
+      "url": "https://polymarket.com/event/mlb-ari-lad-2026-07-12-total-9pt5"
     },
     {
-      "marketSlug": "nor-bra-ik-2026-07-12-total-3pt5",
-      "question": "SK Brann vs. IK Start: O/U 3.5",
+      "marketSlug": "mlb-col-sf-2026-07-12-total-8pt5",
+      "question": "Colorado Rockies vs. San Francisco Giants: O/U 8.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 7115.28,
-      "totalValue": 7115.28,
+      "noValue": 1381.14,
+      "totalValue": 1381.14,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nor-bra-ik-2026-07-12-total-3pt5"
+      "url": "https://polymarket.com/event/mlb-col-sf-2026-07-12-total-8pt5"
     }
   ]
 }
