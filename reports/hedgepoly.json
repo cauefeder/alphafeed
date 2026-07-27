@@ -1,31 +1,207 @@
 {
-  "generatedAt": "2026-07-27T11:21:10.095788+00:00",
+  "generatedAt": "2026-07-27T21:09:47.038674+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 2,
+  "signalCount": 18,
   "signals": [
     {
-      "marketSlug": "wta-eala-zhen-2026-07-27",
-      "question": "Mubadala Citi DC Open: Alexandra Eala vs Qinwen Zheng",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 112630.19,
-      "totalValue": 112630.19,
-      "traderCount": 2,
+      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
+      "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+      "side": "YES",
+      "yesValue": 1243157.57,
+      "noValue": 0.0,
+      "totalValue": 1243157.57,
+      "traderCount": 5,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-eala-zhen-2026-07-27"
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting"
     },
     {
-      "marketSlug": "will-harry-kane-win-the-2026-ballon-dor",
-      "question": "Will Harry Kane win the 2026 Ballon d'Or?",
+      "marketSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
+      "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 1082733.99,
+      "totalValue": 1082733.99,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting"
+    },
+    {
+      "marketSlug": "will-no-fed-rate-cuts-happen-in-2026",
+      "question": "Will no Fed rate cuts happen in 2026?",
       "side": "YES",
-      "yesValue": 1024.98,
+      "yesValue": 469685.97,
       "noValue": 0.0,
-      "totalValue": 1024.98,
+      "totalValue": 469685.97,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026"
+    },
+    {
+      "marketSlug": "fed-rate-hike-in-2026",
+      "question": "Fed rate hike in 2026?",
+      "side": "YES",
+      "yesValue": 450468.83,
+      "noValue": 0.0,
+      "totalValue": 450468.83,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/fed-rate-hike-in-2026"
+    },
+    {
+      "marketSlug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-july-2026-meeting",
+      "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+      "side": "NO",
+      "yesValue": 367.55,
+      "noValue": 426186.58,
+      "totalValue": 426554.13,
+      "traderCount": 2,
+      "confidence": 0.999,
+      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-july-2026-meeting"
+    },
+    {
+      "marketSlug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-july-31-20260624192329841",
+      "question": "Will NVIDIA be the largest company in the world by market cap on July 31?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 331637.28,
+      "totalValue": 331637.28,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-july-31-20260624192329841"
+    },
+    {
+      "marketSlug": "mlb-sea-tex-2026-07-27",
+      "question": "Seattle Mariners vs. Texas Rangers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 234663.56,
+      "totalValue": 234663.56,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-sea-tex-2026-07-27"
+    },
+    {
+      "marketSlug": "mlb-cle-cin-2026-07-27-total-8pt5",
+      "question": "Cleveland Guardians vs. Cincinnati Reds: O/U 8.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 128266.89,
+      "totalValue": 128266.89,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-harry-kane-win-the-2026-ballon-dor"
+      "url": "https://polymarket.com/event/mlb-cle-cin-2026-07-27-total-8pt5"
+    },
+    {
+      "marketSlug": "will-apple-be-the-largest-company-in-the-world-by-market-cap-on-july-31-20260624192329843",
+      "question": "Will Apple be the largest company in the world by market cap on July 31?",
+      "side": "YES",
+      "yesValue": 113153.91,
+      "noValue": 0.0,
+      "totalValue": 113153.91,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-apple-be-the-largest-company-in-the-world-by-market-cap-on-july-31-20260624192329843"
+    },
+    {
+      "marketSlug": "mlb-atl-cws-2026-06-11-total-8pt5",
+      "question": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 97521.13,
+      "totalValue": 97521.13,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
+    },
+    {
+      "marketSlug": "will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
+      "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+      "side": "NO",
+      "yesValue": 8454.14,
+      "noValue": 79560.0,
+      "totalValue": 88014.14,
+      "traderCount": 4,
+      "confidence": 0.904,
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting"
+    },
+    {
+      "marketSlug": "mlb-tor-wsh-2026-07-27",
+      "question": "Toronto Blue Jays vs. Washington Nationals",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 60003.85,
+      "totalValue": 60003.85,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-tor-wsh-2026-07-27"
+    },
+    {
+      "marketSlug": "will-apple-be-the-largest-company-in-the-world-by-market-cap-on-december-31-291",
+      "question": "Will Apple be the largest company in the world by market cap on December 31?",
+      "side": "YES",
+      "yesValue": 35970.41,
+      "noValue": 0.0,
+      "totalValue": 35970.41,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-apple-be-the-largest-company-in-the-world-by-market-cap-on-december-31-291"
+    },
+    {
+      "marketSlug": "will-1-fed-rate-cut-happen-in-2026",
+      "question": "Will 1 Fed rate cut happen in 2026?",
+      "side": "NO",
+      "yesValue": 2642.6,
+      "noValue": 24084.05,
+      "totalValue": 26726.65,
+      "traderCount": 2,
+      "confidence": 0.901,
+      "url": "https://polymarket.com/event/will-1-fed-rate-cut-happen-in-2026"
+    },
+    {
+      "marketSlug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
+      "question": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 23904.13,
+      "totalValue": 23904.13,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-the-republican-party-control-the-senate-after-the-2026-midterm-elections"
+    },
+    {
+      "marketSlug": "will-the-upper-bound-of-the-target-federal-funds-rate-be-4pt0-at-the-end-of-2026-386",
+      "question": "Will the upper bound of the target federal funds rate be 4.0% at the end of 2026?",
+      "side": "YES",
+      "yesValue": 1688.05,
+      "noValue": 0.0,
+      "totalValue": 1688.05,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-4pt0-at-the-end-of-2026-386"
+    },
+    {
+      "marketSlug": "will-the-feds-lower-bound-reach-3pt25-or-lower-before-2027-269",
+      "question": "Will the Fed’s lower bound reach 3.25% or lower before 2027?",
+      "side": "NO",
+      "yesValue": 220.19,
+      "noValue": 1430.27,
+      "totalValue": 1650.46,
+      "traderCount": 2,
+      "confidence": 0.867,
+      "url": "https://polymarket.com/event/will-the-feds-lower-bound-reach-3pt25-or-lower-before-2027-269"
+    },
+    {
+      "marketSlug": "will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-december-31-872",
+      "question": "Will Alphabet be the largest company in the world by market cap on December 31?",
+      "side": "YES",
+      "yesValue": 998.27,
+      "noValue": 0.0,
+      "totalValue": 998.27,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-december-31-872"
     }
   ]
 }
