@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-27T06:01:37.896193+00:00",
+  "generatedAt": "2026-07-27T11:21:10.095788+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 3,
+  "signalCount": 2,
   "signals": [
     {
       "marketSlug": "wta-eala-zhen-2026-07-27",
@@ -17,23 +17,12 @@
       "url": "https://polymarket.com/event/wta-eala-zhen-2026-07-27"
     },
     {
-      "marketSlug": "mlb-det-cle-2026-06-14",
-      "question": "Detroit Tigers vs. Cleveland Guardians",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 2173.78,
-      "totalValue": 2173.78,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-det-cle-2026-06-14"
-    },
-    {
       "marketSlug": "will-harry-kane-win-the-2026-ballon-dor",
       "question": "Will Harry Kane win the 2026 Ballon d'Or?",
       "side": "YES",
-      "yesValue": 1014.69,
+      "yesValue": 1024.98,
       "noValue": 0.0,
-      "totalValue": 1014.69,
+      "totalValue": 1024.98,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-harry-kane-win-the-2026-ballon-dor"
