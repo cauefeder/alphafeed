@@ -39,6 +39,86 @@ def in_live_bet_price_range(yes_price: float) -> bool:
     return LIVE_BET_PRICE_MIN <= yes_price <= LIVE_BET_PRICE_MAX
 
 
+# ── Evidence-based focus filter ───────────────────────────────────────────────
+# Derived from the signal_tracker.db forward-test (docs/top5-accuracy-report-
+# 2026-07-28.md). Findings, on the 42.5% of signals with a real resolution:
+#   * Theme: sports is the ONLY theme with measurable positive edge (49% hit,
+#     20% NO_MATCH). politics/crypto/geopolitics hit 28-36% with 64-75% of
+#     signals unmeasurable, so they are excluded from the staked book.
+#   * Price band [0.15, 0.45): 59% hit and stable out-of-sample (time-split
+#     first/second half both > baseline). Excludes extreme longshots (<0.15,
+#     noisy) and favorites (>=0.45, negative-EV — the >=0.65 bucket lost money).
+#   * Same-day (days_left < 1): most temporally stable slice (55.8% -> 55.0%
+#     across the time split; 63% combined with the price band).
+#   * Deep value (price < 0.35): highest-accuracy sub-band (64%).
+#   * Point markets (spread/total) beat moneylines (54-59% vs 46%).
+FOCUS_THEMES = frozenset({"sports"})
+FOCUS_PRICE_MIN = 0.15
+FOCUS_PRICE_MAX = 0.45          # exclusive upper bound
+FOCUS_SAMEDAY_DAYS = 1.0        # days_left below this = same-day priority
+FOCUS_DEEP_VALUE_MAX = 0.35     # price below this = highest-accuracy sub-band
+
+# Priority weights (added to a base of 1.0 for any eligible bet). These rank
+# eligible focus bets; they intentionally do NOT use the model's quantScore,
+# which the accuracy report found to be anti-predictive.
+FOCUS_SAMEDAY_BONUS = 0.4
+FOCUS_DEEP_VALUE_BONUS = 0.3
+FOCUS_POINT_MARKET_BONUS = 0.15
+
+# Flat staking on the focus-eligible book. Kelly sizing off the model's
+# probability is deliberately NOT used — the accuracy report found that
+# probability anti-predictive, and under SHRINKAGE_ALPHA=0 compute_kelly_bet
+# sizes off a spurious 0.5-vs-price "edge" that maxes the cap on every market.
+# A flat fraction decouples stake size from the broken probability estimate.
+FOCUS_FLAT_STAKE_PCT = 0.02      # 2% of bankroll per eligible bet
+
+
+def is_focus_eligible(category: str, cur_price: float) -> bool:
+    """True iff the opportunity is in a validated-edge theme and price band.
+
+    This is the staked-book gate: sports markets priced in [0.15, 0.45).
+    """
+    return (
+        category in FOCUS_THEMES
+        and FOCUS_PRICE_MIN <= cur_price < FOCUS_PRICE_MAX
+    )
+
+
+def focus_score(
+    category: str,
+    cur_price: float,
+    days_left: float | None = None,
+    point_market: bool = False,
+) -> float:
+    """Rank eligible focus bets by validated accuracy drivers.
+
+    Returns 0.0 for anything not focus-eligible, otherwise a base of 1.0 plus
+    bonuses for the conditions that empirically raised hit rate. Higher = more
+    accurate historically. Not a probability — a ranking key.
+    """
+    if not is_focus_eligible(category, cur_price):
+        return 0.0
+    score = 1.0
+    if days_left is not None and days_left < FOCUS_SAMEDAY_DAYS:
+        score += FOCUS_SAMEDAY_BONUS
+    if cur_price < FOCUS_DEEP_VALUE_MAX:
+        score += FOCUS_DEEP_VALUE_BONUS
+    if point_market:
+        score += FOCUS_POINT_MARKET_BONUS
+    return round(score, 4)
+
+
+def compute_focus_stake(bankroll: float | None = None) -> float:
+    """Flat stake for a focus-eligible bet: a fixed fraction of bankroll.
+
+    Sizing is intentionally independent of any probability estimate (see
+    FOCUS_FLAT_STAKE_PCT). Callers apply this only when is_focus_eligible().
+    """
+    if bankroll is None:
+        bankroll = LIVE_BET_DEFAULT_BANKROLL
+    return round(bankroll * FOCUS_FLAT_STAKE_PCT, 4)
+
+
 # ── Live bet sizing policy ────────────────────────────────────────────────────
 # These constants encode the live-deployment bet-policy that the backtest
 # evaluated. Any change here is a real money policy change.

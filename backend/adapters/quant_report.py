@@ -44,9 +44,12 @@ from quant_features import (
     calibrate,
     compute_edge_ranking,
     compute_features,
+    compute_focus_stake,
     compute_kelly_bet,
+    focus_score,
     generate_insights,
     in_live_bet_price_range,
+    is_focus_eligible,
 )
 from model_store import load_current, model_paths_for
 
@@ -100,6 +103,18 @@ def _infer_category_from_slug(slug: str, market: dict | None = None, title: str 
         if any(kw in combined for kw in keywords):
             return category
     return "other"
+
+
+# Point-market (spread / total / handicap) slugs beat moneylines on accuracy
+# (54-59% vs 46% — docs/top5-accuracy-report-2026-07-28.md). Detected from the
+# Polymarket slug, which encodes the market type (e.g. "-total-8pt5",
+# "-spread-away-2pt5", "-btts").
+_POINT_MARKET_TOKENS = ("-total-", "-spread-", "-handicap-", "-o-u-", "-btts")
+
+
+def _is_point_market(slug: str) -> bool:
+    """True iff the slug looks like a spread/total/handicap market."""
+    return any(tok in (slug or "").lower() for tok in _POINT_MARKET_TOKENS)
 
 
 def _days_left(end_date_str: str | None) -> float:
@@ -181,20 +196,36 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     else:
         tier = "C"
 
+    # Evidence-based focus filter (docs/top5-accuracy-report-2026-07-28.md).
+    # betEligible now reflects the validated staked-book gate — sports markets
+    # in the [0.15, 0.45) price band — not the loose legacy [0.10, 0.90] range.
+    # focusScore ranks eligible bets by drivers that empirically raised hit
+    # rate (same-day, deep value, point markets); it deliberately does NOT use
+    # quantScore, which the accuracy report found to be anti-predictive.
+    category = opp.get("category", "other")
+    focus_eligible = is_focus_eligible(category, cur_price)
+    focus_pts = focus_score(
+        category,
+        cur_price,
+        days_left=opp.get("days_left"),
+        point_market=_is_point_market(opp.get("slug", "")),
+    )
+
     count_signal = float(opp.get("countSignal") or 0)
     convergent = round(raw_score * count_signal, 4)
     contrary = raw_score < 0.20 and count_signal > 0.10
 
-    # Production live-bet stake + direction for this opportunity.
-    # Feeds the SHRUNK-and-Platt-calibrated probability to Kelly. With
-    # SHRINKAGE_ALPHA = 0 the value collapses to 0.5, meaning
-    # compute_kelly_bet returns zero stake for every signal — matches the
-    # confidence-based tier gate above. Kelly kept in the loop so if a
-    # later SHRINKAGE_ALPHA > 0 lands, stakes size correctly again.
-    kelly_bet, bet_direction = compute_kelly_bet(
+    # Direction still comes from compute_kelly_bet (which, under
+    # SHRINKAGE_ALPHA=0, picks the cheaper/underdog side — the convention the
+    # forward-test hit rates were measured under, so we keep it). We DISCARD
+    # its stake: with a flat 0.5 probability it sizes off a spurious 0.5-vs-
+    # price "edge" and maxes the 5% cap on every in-range market. Instead we
+    # stake a flat fraction ONLY on the focus-eligible book, and zero elsewhere.
+    _kelly_stake_unused, bet_direction = compute_kelly_bet(
         calibrated_prob_crowd_wrong=apply_shrinkage(calibrated_prob),
         market_price=cur_price,
     )
+    kelly_bet = compute_focus_stake() if focus_eligible else 0.0
 
     return {
         **opp,
@@ -207,7 +238,8 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
         "infoRatio":        round(features["info_ratio"], 4),
         "convergentScore":  convergent,
         "contraryFlag":     contrary,
-        "betEligible":      in_range,
+        "betEligible":      focus_eligible,
+        "focusScore":       focus_pts,
         "kellyBet":         round(kelly_bet, 4),
         "betDirection":     bet_direction,
     }
@@ -301,7 +333,10 @@ def run_inference(
         except Exception as exc:
             logger.debug("log_signal failed: %s", exc)
 
-    scored.sort(key=lambda o: o["quantScore"], reverse=True)
+    # Rank by the evidence-based focusScore first (validated positive-edge
+    # bets surface to the top-5), then quantScore as a tiebreak. Ineligible
+    # opportunities have focusScore 0 and sink to the bottom.
+    scored.sort(key=lambda o: (o.get("focusScore", 0.0), o["quantScore"]), reverse=True)
 
     tier_a = sum(1 for o in scored if o["signalTier"] == "A")
     tier_b = sum(1 for o in scored if o["signalTier"] == "B")

@@ -437,3 +437,83 @@ def test_telegram_message_under_4096_chars():
                            _make_calibration(), SAMPLE_METRICS)
     msg = format_message(result)
     assert len(msg) <= 4096, f"Message too long: {len(msg)} chars"
+
+
+# ── score_opportunity — focus filter (evidence-based, 2026-07-28) ──────────────
+
+def test_focus_eligible_for_sports_in_band():
+    from quant_report import score_opportunity
+    r = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=5),
+                          _make_model(0.7), _make_calibration())
+    assert r["betEligible"] is True
+    assert r["focusScore"] > 0.0
+
+
+def test_focus_excludes_politics_theme():
+    from quant_report import score_opportunity
+    r = score_opportunity(_make_opp(curPrice=0.30, category="politics", days_left=5),
+                          _make_model(0.7), _make_calibration())
+    assert r["betEligible"] is False
+    assert r["focusScore"] == 0.0
+
+
+def test_focus_excludes_favorite_price():
+    from quant_report import score_opportunity
+    r = score_opportunity(_make_opp(curPrice=0.85, category="sports", days_left=5),
+                          _make_model(0.7), _make_calibration())
+    assert r["betEligible"] is False
+    assert r["focusScore"] == 0.0
+
+
+def test_focus_sameday_outranks_multiday():
+    from quant_report import score_opportunity
+    soon = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=0.5),
+                             _make_model(0.7), _make_calibration())
+    later = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=6),
+                              _make_model(0.7), _make_calibration())
+    assert soon["focusScore"] > later["focusScore"]
+
+
+# ── run_inference — focus ranking (2026-07-28) ────────────────────────────────
+
+def test_run_inference_ranks_focus_bets_first():
+    """Eligible sports bets rank above ineligible favorites, best focusScore first.
+
+    With a mocked constant model every quantScore is equal, so ordering must be
+    driven by focusScore, not the (anti-predictive) model score.
+    """
+    from quant_report import run_inference
+    polytraders = {"opportunities": [
+        # ineligible favorite (politics @ 0.85) — must sink to the bottom
+        _make_opp(title="Election favorite", slug="presidential-election-winner-2026",
+                  curPrice=0.85, countSignal=0.05),
+        # eligible sports moneyline, mid-band price
+        _make_opp(title="MLB ML", slug="mlb-nyy-bos-2026-08-05",
+                  curPrice=0.40, countSignal=0.05),
+        # eligible sports point-market, deep value — highest focusScore
+        _make_opp(title="NBA total", slug="nba-lal-bos-2026-08-05-total-8pt5",
+                  curPrice=0.30, countSignal=0.05),
+    ]}
+    result = run_inference(polytraders, {"categories": {}}, _make_model(0.7),
+                           _make_calibration(), SAMPLE_METRICS)
+    ops = result["opportunities"]
+    assert ops[0]["slug"] == "nba-lal-bos-2026-08-05-total-8pt5"
+    assert ops[-1]["slug"] == "presidential-election-winner-2026"
+    assert ops[-1]["betEligible"] is False
+
+
+# ── score_opportunity — flat 2% staking on the focus book (2026-07-28) ─────────
+
+def test_focus_eligible_bet_gets_flat_two_percent_stake():
+    from quant_report import score_opportunity
+    r = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=5),
+                          _make_model(0.7), _make_calibration())
+    assert r["kellyBet"] == 2.0  # 2% of the $100 reference bankroll
+
+
+def test_ineligible_bet_gets_zero_stake():
+    # Previously every in-range market got the spurious $5 cap stake.
+    from quant_report import score_opportunity
+    r = score_opportunity(_make_opp(curPrice=0.85, category="politics", days_left=5),
+                          _make_model(0.7), _make_calibration())
+    assert r["kellyBet"] == 0.0
