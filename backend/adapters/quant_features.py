@@ -114,6 +114,39 @@ def focus_score(
     return round(score, 4)
 
 
+# Empirical win probability q for a focus point-market bet at a given price,
+# from the forward-test (docs/top5-accuracy-report-2026-07-28.md). Used to
+# compute expected value instead of the model's (broken) probability. These
+# are HISTORICAL hit rates on the 42.5%-resolved sample, not guarantees.
+_FOCUS_WIN_PROB_TABLE: tuple[tuple[float, float], ...] = (
+    (0.25, 0.733),   # price < 0.25      -> 73.3% hit (n=30)
+    (0.35, 0.697),   # 0.25 <= p < 0.35  -> 69.7% hit (n=33)
+    (1.00, 0.543),   # 0.35 <= p         -> 54.3% hit (n=138)
+)
+
+
+def focus_win_prob(price: float) -> float:
+    """Empirical win probability for a focus point-market bet at `price`."""
+    for hi, q in _FOCUS_WIN_PROB_TABLE:
+        if price < hi:
+            return q
+    return _FOCUS_WIN_PROB_TABLE[-1][1]
+
+
+def expected_value(win_prob: float, price: float, cost: float | None = None) -> float:
+    """Expected ROI per $1 staked: q/p - 1 - cost.
+
+    A binary bet at `price` pays 1/price on a win, -1 on a loss, so
+    EV = win_prob*(1/price - 1) - (1 - win_prob) = win_prob/price - 1, minus
+    the fee/slippage proxy. Returns a fraction (0.5 == +50% expected ROI).
+    """
+    if cost is None:
+        cost = LIVE_BET_COST
+    if price <= 0:
+        return 0.0
+    return round(win_prob / price - 1.0 - cost, 4)
+
+
 def compute_focus_stake(bankroll: float | None = None) -> float:
     """Flat stake for a focus-eligible bet: a fixed fraction of bankroll.
 

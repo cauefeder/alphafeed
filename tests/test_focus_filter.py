@@ -70,3 +70,23 @@ def test_focus_stake_is_two_percent_of_bankroll():
     from quant_features import compute_focus_stake
     assert compute_focus_stake(100.0) == 2.0
     assert compute_focus_stake(250.0) == 5.0
+
+
+# ── expected_value / focus_win_prob (EV-based ranking) ────────────────────────
+
+def test_expected_value_formula():
+    from quant_features import expected_value
+    # q/p - 1 - cost. q=0.60 @ 0.30, no cost -> +1.0 (100% ROI)
+    assert expected_value(0.60, 0.30, cost=0.0) == 1.0
+    # q == price -> zero edge
+    assert expected_value(0.30, 0.30, cost=0.0) == 0.0
+
+def test_expected_value_higher_for_cheaper_at_same_absolute_edge():
+    from quant_features import expected_value
+    cheap = expected_value(0.25, 0.15, cost=0.0)   # +0.667
+    dear = expected_value(0.55, 0.45, cost=0.0)     # +0.222
+    assert cheap > dear
+
+def test_focus_win_prob_decreases_with_price():
+    from quant_features import focus_win_prob
+    assert focus_win_prob(0.18) > focus_win_prob(0.40)

@@ -380,3 +380,43 @@ transfers to the forward-test.
 
 *Kept as future levers (not shipped, to avoid overfitting small samples): point+same-day (79% but
 n=29) and per-league sizing.*
+
+---
+---
+
+# Part 5 — Steer by expected value, not accuracy
+
+Q: *"If we copy the most profitable Polymarket traders, why is accuracy so low?"*
+A: **Profit comes from payoff, not frequency.** The leaderboard ranks traders by P&L/ROI, and
+they make money on mispriced cheap outcomes — a 44% hit rate paid us +$1,031 because winners at
+low prices pay 3–7×. Grading that strategy on *accuracy* is the wrong ruler; its edge is EV.
+
+| Entry price | Hit% | Win payoff | ROI/bet |
+|---|---|---|---|
+| < 0.20 | 64% | ~7.4× | **+381%** |
+| 0.20–0.40 | 57% | ~3.3× | +98% |
+| 0.40–0.60 | 52% | ~2.2× | +17% |
+| 0.60–0.80 | 40% | ~1.5× | −44% |
+| ≥ 0.80 | 25% | ~1.2× | −70% |
+
+Low accuracy is only a problem when ROI is *also* negative (the ≥0.60 favorites — where the old
+model ranked us). The focus band 0.15–0.45 is the "low accuracy, high ROI" zone.
+
+**Shipped:** the dashboard now leads with an **Exp. ROI** column and the book is **ranked by
+expected value**, not focusScore. EV uses the *empirical* win probability (not the broken model
+prob): `EV = q/price − 1 − cost`, where `q` is the historical point-market hit rate by price
+bucket (73% <0.25, 70% 0.25–0.35, 54% 0.35–0.45). Live ordering:
+
+| Bet | Price | q | **Exp. ROI** | Stake |
+|---|---|---|---|---|
+| Cardinals–Jays O/U | 0.17 | 73% | **+330%** | $2 |
+| Spread: Rays −1.5 | 0.295 | 70% | +135% | $2 |
+| Spread: Liberty −2.5 | 0.335 | 70% | +107% | $2 |
+| Spread: Blue Jays −1.5 | 0.355 | 54% | +52% | $2 |
+
+`expectedValue` + `winProbEst` are emitted per opportunity; `run_inference` sorts by
+`(expectedValue, focusScore, quantScore)`. Test suite: **230 passed**; frontend builds clean.
+
+**Caveat:** `q` is a coarse historical estimate on the 42.5%-resolved sample, and the cheap
+buckets are small (n=30–33), so the headline EVs (+300%) are optimistic point estimates — treat
+them as *ordering*, not promises. The real fix is still proper calibration (§8).

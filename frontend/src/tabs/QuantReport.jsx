@@ -276,6 +276,7 @@ function ContrarianPlays({ opportunities }) {
 const COLS = [
   { label: "Tier",       key: null },
   { label: "Market",     key: null },
+  { label: "Exp. ROI",   key: "expectedValue" },
   { label: "Signal",     key: "quantScore" },
   { label: "Convergent", key: "convergentScore" },
   { label: "Crowd",      key: "curPrice" },
@@ -285,7 +286,7 @@ const COLS = [
 ];
 
 function OpportunitiesTable({ opportunities }) {
-  const [sortKey, setSortKey] = useState("convergentScore");
+  const [sortKey, setSortKey] = useState("expectedValue");
   const [sortAsc, setSortAsc] = useState(false);
 
   const sorted = [...(opportunities ?? [])].sort((a, b) => {
@@ -301,7 +302,7 @@ function OpportunitiesTable({ opportunities }) {
 
   return (
     <Panel title="Scored Opportunities"
-           sub={`${Math.min(sorted.length, 20)} shown · sorted by convergent score · click column to sort`}
+           sub={`${Math.min(sorted.length, 20)} shown · sorted by expected ROI · click column to sort`}
            delay="d5">
       {sorted.length ? (
         <div style={{ overflowX: "auto" }}>
@@ -348,6 +349,11 @@ function OpportunitiesTable({ opportunities }) {
                         : <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", display: "block" }}>{opp.title?.slice(0, 48)}</span>
                       }
                     </div>
+                  </td>
+                  <td title={opp.winProbEst ? `est. win prob ${(opp.winProbEst * 100).toFixed(0)}% @ ${(opp.curPrice * 100).toFixed(0)}¢` : "not in the focus book"}
+                    style={{ padding: "9px 10px", textAlign: "right", fontFamily: T.mono, fontWeight: 700,
+                    color: opp.expectedValue > 0 ? T.green : T.dim }}>
+                    {opp.expectedValue ? `${opp.expectedValue > 0 ? "+" : ""}${(opp.expectedValue * 100).toFixed(0)}%` : "—"}
                   </td>
                   <td style={{ padding: "9px 10px", textAlign: "right", fontFamily: T.mono, color: tierColor(opp.signalTier) }}>
                     {opp.quantScore?.toFixed(3) ?? "—"}

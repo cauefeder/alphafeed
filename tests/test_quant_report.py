@@ -540,3 +540,31 @@ def test_focus_requires_point_market():
         _make_model(0.7), _make_calibration())
     assert moneyline["betEligible"] is False
     assert point["betEligible"] is True
+
+
+# ── Expected-value ranking (2026-07-28) ───────────────────────────────────────
+
+def test_focus_eligible_bet_has_positive_expected_value():
+    from quant_report import score_opportunity
+    r = score_opportunity(
+        _make_opp(curPrice=0.30, category="sports", days_left=0.5,
+                  slug="mlb-nyy-bos-2026-08-05-total-8pt5"),
+        _make_model(0.7), _make_calibration())
+    assert r["expectedValue"] > 0
+
+
+def test_run_inference_ranks_focus_book_by_expected_value():
+    """Among equal-focusScore point-market bets, the cheaper (higher-EV) ranks first."""
+    from quant_report import run_inference
+    polytraders = {"opportunities": [
+        # both deep-value point markets -> identical focusScore; EV must break the tie
+        _make_opp(title="dearer", slug="mlb-aaa-bbb-2026-08-05-total-9pt5",
+                  curPrice=0.30, countSignal=0.05),
+        _make_opp(title="cheaper", slug="nba-ccc-ddd-2026-08-05-total-8pt5",
+                  curPrice=0.17, countSignal=0.05),
+    ]}
+    result = run_inference(polytraders, {"categories": {}}, _make_model(0.7),
+                           _make_calibration(), SAMPLE_METRICS)
+    ops = result["opportunities"]
+    assert ops[0]["curPrice"] == 0.17
+    assert ops[0]["expectedValue"] > ops[1]["expectedValue"]

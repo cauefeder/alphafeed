@@ -46,8 +46,10 @@ from quant_features import (
     compute_features,
     compute_focus_stake,
     compute_kelly_bet,
+    expected_value,
     FOCUS_REQUIRE_POINT_MARKET,
     focus_score,
+    focus_win_prob,
     generate_insights,
     in_live_bet_price_range,
     is_focus_eligible,
@@ -214,6 +216,12 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
         days_left=opp.get("days_left"),
         point_market=point_market,
     )
+    # Expected ROI from the EMPIRICAL win probability (not the broken model
+    # prob). This is the metric the traders' edge actually optimises — a low
+    # hit rate at a cheap price can still be strongly +EV. Only meaningful for
+    # eligible bets; 0.0 otherwise so they sort to the bottom.
+    win_prob = focus_win_prob(cur_price) if focus_eligible else 0.0
+    exp_value = expected_value(win_prob, cur_price) if focus_eligible else 0.0
 
     count_signal = float(opp.get("countSignal") or 0)
     convergent = round(raw_score * count_signal, 4)
@@ -244,6 +252,8 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
         "contraryFlag":     contrary,
         "betEligible":      focus_eligible,
         "focusScore":       focus_pts,
+        "winProbEst":       round(win_prob, 4),
+        "expectedValue":    exp_value,
         "kellyBet":         round(kelly_bet, 4),
         "betDirection":     bet_direction,
     }
@@ -337,10 +347,14 @@ def run_inference(
         except Exception as exc:
             logger.debug("log_signal failed: %s", exc)
 
-    # Rank by the evidence-based focusScore first (validated positive-edge
-    # bets surface to the top-5), then quantScore as a tiebreak. Ineligible
-    # opportunities have focusScore 0 and sink to the bottom.
-    scored.sort(key=lambda o: (o.get("focusScore", 0.0), o["quantScore"]), reverse=True)
+    # Rank by expected ROI first — the metric the traders' edge actually
+    # optimises (a cheap, low-hit-rate bet can out-rank a pricier one). Then
+    # focusScore and quantScore as tiebreaks. Ineligible bets have
+    # expectedValue 0 and sink to the bottom.
+    scored.sort(
+        key=lambda o: (o.get("expectedValue", 0.0), o.get("focusScore", 0.0), o["quantScore"]),
+        reverse=True,
+    )
 
     tier_a = sum(1 for o in scored if o["signalTier"] == "A")
     tier_b = sum(1 for o in scored if o["signalTier"] == "B")
