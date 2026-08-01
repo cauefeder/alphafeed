@@ -443,7 +443,8 @@ def test_telegram_message_under_4096_chars():
 
 def test_focus_eligible_for_sports_in_band():
     from quant_report import score_opportunity
-    r = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=5),
+    r = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=5,
+                                     slug="mlb-nyy-bos-2026-08-05-total-8pt5"),
                           _make_model(0.7), _make_calibration())
     assert r["betEligible"] is True
     assert r["focusScore"] > 0.0
@@ -506,7 +507,8 @@ def test_run_inference_ranks_focus_bets_first():
 
 def test_focus_eligible_bet_gets_flat_two_percent_stake():
     from quant_report import score_opportunity
-    r = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=5),
+    r = score_opportunity(_make_opp(curPrice=0.30, category="sports", days_left=5,
+                                     slug="mlb-nyy-bos-2026-08-05-total-8pt5"),
                           _make_model(0.7), _make_calibration())
     assert r["kellyBet"] == 2.0  # 2% of the $100 reference bankroll
 
@@ -517,3 +519,24 @@ def test_ineligible_bet_gets_zero_stake():
     r = score_opportunity(_make_opp(curPrice=0.85, category="politics", days_left=5),
                           _make_model(0.7), _make_calibration())
     assert r["kellyBet"] == 0.0
+
+
+# ── score_opportunity — point-market accuracy requirement (2026-07-28) ─────────
+
+def test_focus_requires_point_market():
+    """Moneyline sports bets in-band are no longer staked; spread/total are.
+
+    Point markets hit 67.9% vs the 59% blended rule (out-of-sample robust),
+    so eligibility now requires a spread/total/handicap slug.
+    """
+    from quant_report import score_opportunity
+    moneyline = score_opportunity(
+        _make_opp(curPrice=0.30, category="sports", days_left=0.5,
+                  slug="mlb-nyy-bos-2026-08-05"),
+        _make_model(0.7), _make_calibration())
+    point = score_opportunity(
+        _make_opp(curPrice=0.30, category="sports", days_left=0.5,
+                  slug="mlb-nyy-bos-2026-08-05-total-8pt5"),
+        _make_model(0.7), _make_calibration())
+    assert moneyline["betEligible"] is False
+    assert point["betEligible"] is True

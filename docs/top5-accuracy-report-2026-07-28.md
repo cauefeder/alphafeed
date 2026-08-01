@@ -351,3 +351,32 @@ The band was tuned for accuracy, not just inclusion: adding the `≥0.15` floor 
 the top of the book toward the 63–64% slices. All levers were **out-of-sample validated** on a
 time split before shipping. Remaining ceiling is the broken calibration (§2/§8) — until that's
 fixed, this rule-based filter is the accuracy lever; the model score should stay silenced.
+
+---
+---
+
+# Part 4 — Signal accuracy test + improvement
+
+Backtested the *exact shipped rule* on the 293 historical resolved sports signals in the focus
+band (flat $2 stake), then tested principled refinements with a first/second-half time split.
+
+| Rule variant | n | Hit% | P&L | ROI | 1st half | 2nd half |
+|---|---|---|---|---|---|---|
+| Shipped (sports 0.15–0.45) | 293 | 59.0% | +$536 | 91% | 64.2% | 56.0% |
+| **+ require point market** | 109 | **67.9%** | +$267 | 123% | 80.0% | 59.4% |
+| + same-day only | 81 | 63.0% | +$154 | 95% | 62.1% | 63.5% |
+| + point AND same-day | 29 | 79.3% | +$88 | 151% | 100% | 70.0% |
+| tighten to 0.20–0.40 | 188 | 58.5% | +$354 | 94% | 67.2% | 54.3% |
+
+**Improvement shipped:** require point markets (`FOCUS_REQUIRE_POINT_MARKET=True`). It lifts the
+staked book from **59% → 67.9%** hit and holds out-of-sample (both halves beat the moneyline-
+inclusive rule). Mechanistically sound — spread/total lines are sharp-set, so smart-money signals
+on them are more reliable. Tightening the price band added nothing; same-day is kept as a ranking
+bonus (most *stable* slice) rather than a hard gate to preserve volume.
+
+Live effect: staked book **14 → 8 bets** (all spreads/totals), $2 each = **$16 exposure**,
+projected ~68% hit. Test suite: **225 passed**. Direction unchanged, so the measured hit rate
+transfers to the forward-test.
+
+*Kept as future levers (not shipped, to avoid overfitting small samples): point+same-day (79% but
+n=29) and per-league sizing.*

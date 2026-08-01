@@ -46,6 +46,7 @@ from quant_features import (
     compute_features,
     compute_focus_stake,
     compute_kelly_bet,
+    FOCUS_REQUIRE_POINT_MARKET,
     focus_score,
     generate_insights,
     in_live_bet_price_range,
@@ -203,12 +204,15 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     # rate (same-day, deep value, point markets); it deliberately does NOT use
     # quantScore, which the accuracy report found to be anti-predictive.
     category = opp.get("category", "other")
-    focus_eligible = is_focus_eligible(category, cur_price)
+    point_market = _is_point_market(opp.get("slug", ""))
+    focus_eligible = is_focus_eligible(category, cur_price) and (
+        point_market or not FOCUS_REQUIRE_POINT_MARKET
+    )
     focus_pts = focus_score(
         category,
         cur_price,
         days_left=opp.get("days_left"),
-        point_market=_is_point_market(opp.get("slug", "")),
+        point_market=point_market,
     )
 
     count_signal = float(opp.get("countSignal") or 0)

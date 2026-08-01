@@ -72,6 +72,12 @@ FOCUS_POINT_MARKET_BONUS = 0.15
 # A flat fraction decouples stake size from the broken probability estimate.
 FOCUS_FLAT_STAKE_PCT = 0.02      # 2% of bankroll per eligible bet
 
+# Point markets (spread/total/handicap) hit 67.9% vs 59% for the blended
+# sports rule, and the lift held out-of-sample (time-split 80% -> 59% vs a
+# moneyline-inclusive 56%). Sharp-set lines make these signals more reliable,
+# so the staked book requires a point market.
+FOCUS_REQUIRE_POINT_MARKET = True
+
 
 def is_focus_eligible(category: str, cur_price: float) -> bool:
     """True iff the opportunity is in a validated-edge theme and price band.
