@@ -1,97 +1,42 @@
 {
-  "generatedAt": "2026-08-01T22:46:47.653399+00:00",
+  "generatedAt": "2026-08-02T09:57:36.327185+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 31,
+  "signalCount": 7,
   "signals": [
     {
-      "marketSlug": "chi1-edv-csc-2026-08-01-total-3pt5",
-      "question": "Everton de Viña del Mar vs. CSD Colo-Colo: O/U 3.5",
+      "marketSlug": "lol-tt-we-2026-08-02",
+      "question": "LoL: ThunderTalk Gaming vs Team WE (BO3) - LPL Group Ascend",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 199915.4,
-      "totalValue": 199915.4,
-      "traderCount": 3,
+      "noValue": 264571.24,
+      "totalValue": 264571.24,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/chi1-edv-csc-2026-08-01-total-3pt5"
-    },
-    {
-      "marketSlug": "mlb-min-sea-2026-08-01",
-      "question": "Minnesota Twins vs. Seattle Mariners",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 186452.21,
-      "totalValue": 186452.21,
-      "traderCount": 6,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-min-sea-2026-08-01"
+      "url": "https://polymarket.com/event/lol-tt-we-2026-08-02"
     },
     {
       "marketSlug": "mlb-atl-cws-2026-06-11-total-8pt5",
       "question": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 85330.99,
-      "totalValue": 85330.99,
-      "traderCount": 2,
+      "noValue": 88471.21,
+      "totalValue": 88471.21,
+      "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
-    },
-    {
-      "marketSlug": "mlb-nyy-chc-2026-08-01",
-      "question": "New York Yankees vs. Chicago Cubs",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 77527.1,
-      "totalValue": 77527.1,
-      "traderCount": 5,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-nyy-chc-2026-08-01"
-    },
-    {
-      "marketSlug": "atp-svrcina-droguet-2026-08-01",
-      "question": "Canadian Open, Qualification: Dalibor Svrcina vs Titouan Droguet",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 70668.82,
-      "totalValue": 70668.82,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-svrcina-droguet-2026-08-01"
-    },
-    {
-      "marketSlug": "mlb-mia-nym-2026-08-01",
-      "question": "Miami Marlins vs. New York Mets",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 69998.04,
-      "totalValue": 69998.04,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mia-nym-2026-08-01"
     },
     {
       "marketSlug": "will-harry-kane-win-the-2026-ballon-dor",
       "question": "Will Harry Kane win the 2026 Ballon d'Or?",
       "side": "YES",
-      "yesValue": 65787.85,
+      "yesValue": 74184.16,
       "noValue": 0.0,
-      "totalValue": 65787.85,
+      "totalValue": 74184.16,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-harry-kane-win-the-2026-ballon-dor"
-    },
-    {
-      "marketSlug": "mlb-bos-lad-2026-08-01",
-      "question": "Boston Red Sox vs. Los Angeles Dodgers",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 57825.09,
-      "totalValue": 57825.09,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-bos-lad-2026-08-01"
     },
     {
       "marketSlug": "mlb-stl-cin-2026-05-24",
@@ -105,213 +50,26 @@
       "url": "https://polymarket.com/event/mlb-stl-cin-2026-05-24"
     },
     {
-      "marketSlug": "mlb-mia-nym-2026-08-01-total-8pt5",
-      "question": "Miami Marlins vs. New York Mets: O/U 8.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 42095.14,
-      "totalValue": 42095.14,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mia-nym-2026-08-01-total-8pt5"
-    },
-    {
-      "marketSlug": "mlb-nyy-chc-2026-08-01-total-6pt5",
-      "question": "New York Yankees vs. Chicago Cubs: O/U 6.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 36142.66,
-      "totalValue": 36142.66,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-nyy-chc-2026-08-01-total-6pt5"
-    },
-    {
-      "marketSlug": "mls-mia-clb-2026-08-01-mia",
-      "question": "Will Inter Miami CF win on 2026-08-01?",
-      "side": "YES",
-      "yesValue": 21542.42,
-      "noValue": 11775.79,
-      "totalValue": 33318.21,
-      "traderCount": 2,
-      "confidence": 0.647,
-      "url": "https://polymarket.com/event/mls-mia-clb-2026-08-01-mia"
-    },
-    {
-      "marketSlug": "mlb-det-oak-2026-08-01",
-      "question": "Detroit Tigers vs. Athletics",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 32166.68,
-      "totalValue": 32166.68,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-det-oak-2026-08-01"
-    },
-    {
-      "marketSlug": "mlb-bos-nyy-2026-06-06",
-      "question": "Boston Red Sox vs. New York Yankees",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 28497.63,
-      "totalValue": 28497.63,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-bos-nyy-2026-06-06"
-    },
-    {
       "marketSlug": "mlb-sf-atl-2026-06-18",
       "question": "San Francisco Giants vs. Atlanta Braves",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 22510.17,
-      "totalValue": 22510.17,
+      "noValue": 35427.8,
+      "totalValue": 35427.8,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/mlb-sf-atl-2026-06-18"
     },
     {
-      "marketSlug": "wta-joint-grubor-2026-08-01",
-      "question": "National Bank Open, Qualification: Maya Joint vs Ana Grubor",
+      "marketSlug": "mlb-stl-cin-2026-05-24-total-9pt5",
+      "question": "St. Louis Cardinals vs. Cincinnati Reds: O/U 9.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 21050.11,
-      "totalValue": 21050.11,
+      "noValue": 9317.47,
+      "totalValue": 9317.47,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-joint-grubor-2026-08-01"
-    },
-    {
-      "marketSlug": "mlb-wsh-atl-2026-08-01-total-9pt5",
-      "question": "Washington Nationals vs. Atlanta Braves: O/U 9.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 16889.49,
-      "totalValue": 16889.49,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-wsh-atl-2026-08-01-total-9pt5"
-    },
-    {
-      "marketSlug": "mlb-min-sea-2026-08-01-total-9pt5",
-      "question": "Minnesota Twins vs. Seattle Mariners: O/U 9.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 14983.5,
-      "totalValue": 14983.5,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-min-sea-2026-08-01-total-9pt5"
-    },
-    {
-      "marketSlug": "mls-chi-clt-2026-08-01-chi",
-      "question": "Will Chicago Fire FC win on 2026-08-01?",
-      "side": "YES",
-      "yesValue": 14324.3,
-      "noValue": 619.27,
-      "totalValue": 14943.58,
-      "traderCount": 2,
-      "confidence": 0.959,
-      "url": "https://polymarket.com/event/mls-chi-clt-2026-08-01-chi"
-    },
-    {
-      "marketSlug": "atp-nakashi-fritz-2026-08-01",
-      "question": "Mubadala Citi DC Open: Brandon Nakashima vs Taylor Fritz",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 14553.78,
-      "totalValue": 14553.78,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-nakashi-fritz-2026-08-01"
-    },
-    {
-      "marketSlug": "wta-inglis-preston-2026-08-01",
-      "question": "Vancouver: Maddison Inglis vs Taylah Preston",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 13945.54,
-      "totalValue": 13945.54,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-inglis-preston-2026-08-01"
-    },
-    {
-      "marketSlug": "mlb-mil-laa-2026-08-01-total-8pt5",
-      "question": "Milwaukee Brewers vs. Los Angeles Angels: O/U 8.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 11489.84,
-      "totalValue": 11489.84,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mil-laa-2026-08-01-total-8pt5"
-    },
-    {
-      "marketSlug": "mlb-det-oak-2026-08-01-spread-away-1pt5",
-      "question": "Spread: Detroit Tigers (-1.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 10928.83,
-      "totalValue": 10928.83,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-det-oak-2026-08-01-spread-away-1pt5"
-    },
-    {
-      "marketSlug": "mlb-min-sea-2026-08-01-total-7pt5",
-      "question": "Minnesota Twins vs. Seattle Mariners: O/U 7.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 10200.1,
-      "totalValue": 10200.1,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-min-sea-2026-08-01-total-7pt5"
-    },
-    {
-      "marketSlug": "mlb-bos-lad-2026-08-01-total-7pt5",
-      "question": "Boston Red Sox vs. Los Angeles Dodgers: O/U 7.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 9663.34,
-      "totalValue": 9663.34,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-bos-lad-2026-08-01-total-7pt5"
-    },
-    {
-      "marketSlug": "mlb-mia-nym-2026-08-01-spread-away-2pt5",
-      "question": "Spread: Miami Marlins (-2.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 9263.72,
-      "totalValue": 9263.72,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mia-nym-2026-08-01-spread-away-2pt5"
-    },
-    {
-      "marketSlug": "mls-phi-atl-2026-08-01-phi",
-      "question": "Will Philadelphia Union win on 2026-08-01?",
-      "side": "YES",
-      "yesValue": 5023.22,
-      "noValue": 4113.0,
-      "totalValue": 9136.22,
-      "traderCount": 2,
-      "confidence": 0.55,
-      "url": "https://polymarket.com/event/mls-phi-atl-2026-08-01-phi"
-    },
-    {
-      "marketSlug": "mlb-mil-laa-2026-08-01-total-9pt5",
-      "question": "Milwaukee Brewers vs. Los Angeles Angels: O/U 9.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 8870.54,
-      "totalValue": 8870.54,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mil-laa-2026-08-01-total-9pt5"
+      "url": "https://polymarket.com/event/mlb-stl-cin-2026-05-24-total-9pt5"
     },
     {
       "marketSlug": "mlb-atl-cws-2026-06-11",
@@ -323,28 +81,6 @@
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11"
-    },
-    {
-      "marketSlug": "mls-vwh-laf-2026-08-01-laf",
-      "question": "Will Los Angeles FC win on 2026-08-01?",
-      "side": "NO",
-      "yesValue": 1741.56,
-      "noValue": 3268.46,
-      "totalValue": 5010.01,
-      "traderCount": 2,
-      "confidence": 0.652,
-      "url": "https://polymarket.com/event/mls-vwh-laf-2026-08-01-laf"
-    },
-    {
-      "marketSlug": "mls-stl-rsl-2026-08-01-stl",
-      "question": "Will St. Louis City SC win on 2026-08-01?",
-      "side": "NO",
-      "yesValue": 529.31,
-      "noValue": 556.65,
-      "totalValue": 1085.96,
-      "traderCount": 2,
-      "confidence": 0.513,
-      "url": "https://polymarket.com/event/mls-stl-rsl-2026-08-01-stl"
     }
   ]
 }
