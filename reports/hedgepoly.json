@@ -1,108 +1,64 @@
 {
-  "generatedAt": "2026-08-04T10:39:52.509040+00:00",
+  "generatedAt": "2026-08-04T21:14:07.515057+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 5,
   "signals": [
     {
-      "marketSlug": "lol-t1-hle1-2026-08-04",
-      "question": "LoL: T1 vs Hanwha Life Esports (BO3) - KeSPA Cup Last Chance Qualifier",
+      "marketSlug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
+      "question": "Strait of Hormuz traffic returns to normal by August 31?",
+      "side": "YES",
+      "yesValue": 126051.13,
+      "noValue": 85711.44,
+      "totalValue": 211762.57,
+      "traderCount": 2,
+      "confidence": 0.595,
+      "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320"
+    },
+    {
+      "marketSlug": "us-x-iran-effective-ceasfire-by-july-31-20260715194822045",
+      "question": "US x Iran Effective Ceasefire by July 31?",
+      "side": "YES",
+      "yesValue": 197370.57,
+      "noValue": 0.0,
+      "totalValue": 197370.57,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/us-x-iran-effective-ceasfire-by-july-31-20260715194822045"
+    },
+    {
+      "marketSlug": "us-announces-end-of-iranian-blockade-by-august-7-2026-20260727171523690",
+      "question": "US announces end of Iranian blockade by August 7, 2026?",
+      "side": "YES",
+      "yesValue": 31590.7,
+      "noValue": 0.0,
+      "totalValue": 31590.7,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-by-august-7-2026-20260727171523690"
+    },
+    {
+      "marketSlug": "iran-charges-hormuz-fees-by-august-31-20260625175039062-177",
+      "question": "Iran charges Hormuz fees by August 31?",
+      "side": "NO",
+      "yesValue": 348.22,
+      "noValue": 24145.1,
+      "totalValue": 24493.32,
+      "traderCount": 2,
+      "confidence": 0.986,
+      "url": "https://polymarket.com/event/iran-charges-hormuz-fees-by-august-31-20260625175039062-177"
+    },
+    {
+      "marketSlug": "atp-shang-rublev-2026-08-04",
+      "question": "National Bank Open: Juncheng Shang vs Andrey Rublev",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 101116.64,
-      "totalValue": 101116.64,
-      "traderCount": 4,
+      "noValue": 15774.65,
+      "totalValue": 15774.65,
+      "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-t1-hle1-2026-08-04"
-    },
-    {
-      "marketSlug": "lol-gen-dnf-2026-08-04-game1",
-      "question": "LoL: Gen.G vs DN SOOPers - Game 1 Winner",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 85995.88,
-      "totalValue": 85995.88,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-gen-dnf-2026-08-04-game1"
-    },
-    {
-      "marketSlug": "will-harry-kane-win-the-2026-ballon-dor",
-      "question": "Will Harry Kane win the 2026 Ballon d'Or?",
-      "side": "YES",
-      "yesValue": 21566.45,
-      "noValue": 0.0,
-      "totalValue": 21566.45,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-harry-kane-win-the-2026-ballon-dor"
-    },
-    {
-      "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-      "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
-      "side": "YES",
-      "yesValue": 13657.54,
-      "noValue": 0.0,
-      "totalValue": 13657.54,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
-    },
-    {
-      "marketSlug": "will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-december-31-872",
-      "question": "Will Alphabet be the largest company in the world by market cap on December 31?",
-      "side": "YES",
-      "yesValue": 13567.54,
-      "noValue": 0.0,
-      "totalValue": 13567.54,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-december-31-872"
-    },
-    {
-      "marketSlug": "will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election",
-      "question": "Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the next Russian parliamentary election?",
-      "side": "YES",
-      "yesValue": 5797.33,
-      "noValue": 0.0,
-      "totalValue": 5797.33,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election"
-    },
-    {
-      "marketSlug": "dota2-bb4-og-2026-08-04",
-      "question": "Dota 2: BetBoom Team vs OG (BO3) - 1win Essence Playoffs",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 5460.45,
-      "totalValue": 5460.45,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/dota2-bb4-og-2026-08-04"
-    },
-    {
-      "marketSlug": "argpn-gue-tri-2026-08-02-tri",
-      "question": "Will CSD Tristan Suarez win on 2026-08-02?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 1853.3,
-      "totalValue": 1853.3,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/argpn-gue-tri-2026-08-02-tri"
-    },
-    {
-      "marketSlug": "will-spacex-be-the-largest-company-in-the-world-by-market-cap-on-december-31",
-      "question": "Will SpaceX be the largest company in the world by market cap on December 31?",
-      "side": "YES",
-      "yesValue": 1424.36,
-      "noValue": 0.0,
-      "totalValue": 1424.36,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-spacex-be-the-largest-company-in-the-world-by-market-cap-on-december-31"
+      "url": "https://polymarket.com/event/atp-shang-rublev-2026-08-04"
     }
   ]
 }
