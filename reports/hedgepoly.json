@@ -1,10 +1,21 @@
 {
-  "generatedAt": "2026-08-04T21:14:07.515057+00:00",
+  "generatedAt": "2026-08-05T10:35:15.687536+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 5,
+  "signalCount": 14,
   "signals": [
+    {
+      "marketSlug": "dota2-1win-bb4-2026-08-05",
+      "question": "Dota 2: 1win vs BetBoom Team (BO3) - 1win Essence Playoffs",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 246359.23,
+      "totalValue": 246359.23,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/dota2-1win-bb4-2026-08-05"
+    },
     {
       "marketSlug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
       "question": "Strait of Hormuz traffic returns to normal by August 31?",
@@ -20,20 +31,31 @@
       "marketSlug": "us-x-iran-effective-ceasfire-by-july-31-20260715194822045",
       "question": "US x Iran Effective Ceasefire by July 31?",
       "side": "YES",
-      "yesValue": 197370.57,
+      "yesValue": 201236.21,
       "noValue": 0.0,
-      "totalValue": 197370.57,
+      "totalValue": 201236.21,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/us-x-iran-effective-ceasfire-by-july-31-20260715194822045"
     },
     {
+      "marketSlug": "mlb-atl-cws-2026-06-11-total-8pt5",
+      "question": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 70031.17,
+      "totalValue": 70031.17,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
+    },
+    {
       "marketSlug": "us-announces-end-of-iranian-blockade-by-august-7-2026-20260727171523690",
       "question": "US announces end of Iranian blockade by August 7, 2026?",
       "side": "YES",
-      "yesValue": 31590.7,
+      "yesValue": 37333.92,
       "noValue": 0.0,
-      "totalValue": 31590.7,
+      "totalValue": 37333.92,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-by-august-7-2026-20260727171523690"
@@ -42,23 +64,100 @@
       "marketSlug": "iran-charges-hormuz-fees-by-august-31-20260625175039062-177",
       "question": "Iran charges Hormuz fees by August 31?",
       "side": "NO",
-      "yesValue": 348.22,
-      "noValue": 24145.1,
-      "totalValue": 24493.32,
+      "yesValue": 203.13,
+      "noValue": 29448.52,
+      "totalValue": 29651.65,
       "traderCount": 2,
-      "confidence": 0.986,
+      "confidence": 0.993,
       "url": "https://polymarket.com/event/iran-charges-hormuz-fees-by-august-31-20260625175039062-177"
     },
     {
-      "marketSlug": "atp-shang-rublev-2026-08-04",
-      "question": "National Bank Open: Juncheng Shang vs Andrey Rublev",
+      "marketSlug": "will-renan-santos-win-the-2026-brazilian-presidential-election",
+      "question": "Will Renan Santos win the 2026 Brazilian presidential election?",
+      "side": "NO",
+      "yesValue": 264.84,
+      "noValue": 24115.0,
+      "totalValue": 24379.84,
+      "traderCount": 2,
+      "confidence": 0.989,
+      "url": "https://polymarket.com/event/will-renan-santos-win-the-2026-brazilian-presidential-election"
+    },
+    {
+      "marketSlug": "atp-piros-dedurap-2026-08-05",
+      "question": "Hagen: Zsombor Piros vs Diego Dedura-Palomero",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 15774.65,
-      "totalValue": 15774.65,
-      "traderCount": 3,
+      "noValue": 13878.33,
+      "totalValue": 13878.33,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-shang-rublev-2026-08-04"
+      "url": "https://polymarket.com/event/atp-piros-dedurap-2026-08-05"
+    },
+    {
+      "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
+      "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+      "side": "YES",
+      "yesValue": 12466.47,
+      "noValue": 0.0,
+      "totalValue": 12466.47,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
+    },
+    {
+      "marketSlug": "wta-lee-falei-2026-08-05",
+      "question": "Warsaw: Carol Young Suh Lee vs Aliona Falei",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 8117.47,
+      "totalValue": 8117.47,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/wta-lee-falei-2026-08-05"
+    },
+    {
+      "marketSlug": "atp-canas-donski-2026-08-05",
+      "question": "Grodzisk Mazowiecki: Alejandro Moro Canas vs Alexander Donski",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 7603.64,
+      "totalValue": 7603.64,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-canas-donski-2026-08-05"
+    },
+    {
+      "marketSlug": "will-karen-bass-win-the-2026-los-angeles-mayoral-election",
+      "question": "Will Karen Bass win the 2026 Los Angeles mayoral election?",
+      "side": "NO",
+      "yesValue": 1771.26,
+      "noValue": 4978.18,
+      "totalValue": 6749.45,
+      "traderCount": 2,
+      "confidence": 0.738,
+      "url": "https://polymarket.com/event/will-karen-bass-win-the-2026-los-angeles-mayoral-election"
+    },
+    {
+      "marketSlug": "will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+      "question": "Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the next Russian parliamentary election?",
+      "side": "YES",
+      "yesValue": 5924.74,
+      "noValue": 0.0,
+      "totalValue": 5924.74,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election"
+    },
+    {
+      "marketSlug": "wta-kawa-mikulsk-2026-08-05",
+      "question": "Warsaw: Katarzyna Kawa vs Justina Mikulskyte",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 3260.96,
+      "totalValue": 3260.96,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/wta-kawa-mikulsk-2026-08-05"
     }
   ]
 }
