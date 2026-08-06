@@ -189,3 +189,13 @@ def fit(rows, *, seed=0, folds=5, c=1.0):
               "coefficients": clf.coef_[0].tolist(), "intercept": float(clf.intercept_[0]),
               "isotonic": iso, "clip": [0.02, 0.98]}
     return params, metrics
+
+
+MIN_TRAIN = 300
+MAX_ECE = 0.06
+
+
+def passes_gate(metrics: dict) -> bool:
+    return (metrics.get("n_train", 0) >= MIN_TRAIN
+            and metrics.get("brier", 1.0) <= metrics.get("brier_price_baseline", 0.0)
+            and metrics.get("ece", 1.0) <= MAX_ECE)

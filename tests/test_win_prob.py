@@ -90,3 +90,20 @@ def test_fit_learns_cheap_wins_more():
            m.predict({"curPrice": 0.42, "slug": rows[0]["market_slug"]})
     assert metrics["n_train"] == 600
     assert "brier" in metrics and "brier_price_baseline" in metrics and "ece" in metrics
+
+
+from win_prob import passes_gate
+
+GOOD = {"n_train": 500, "brier": 0.20, "brier_price_baseline": 0.24, "ece": 0.04}
+
+def test_gate_accepts_good():
+    assert passes_gate(GOOD) is True
+
+def test_gate_rejects_small_sample():
+    assert passes_gate({**GOOD, "n_train": 200}) is False
+
+def test_gate_rejects_worse_than_price():
+    assert passes_gate({**GOOD, "brier": 0.25}) is False
+
+def test_gate_rejects_poor_calibration():
+    assert passes_gate({**GOOD, "ece": 0.10}) is False
