@@ -53,6 +53,10 @@ jobs:
         env:
           HEDGEPOLY_DIR: ${{ github.workspace }}/quant-scheduler/HedgePoly/prediction-market-analysis
 
+      - name: Refit win-probability model
+        run: python backend/adapters/fit_win_prob.py
+        timeout-minutes: 5
+
       - name: Run quant_report (scored opportunities)
         run: python backend/adapters/quant_report.py
         timeout-minutes: 8
@@ -64,7 +68,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f reports/poly2.json reports/polytraders.json reports/hedgepoly.json reports/quant_report.json 2>/dev/null || true
+          git add -f reports/poly2.json reports/polytraders.json reports/hedgepoly.json reports/quant_report.json models/win_prob_model.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
             echo "changed=false" >> "$GITHUB_OUTPUT"
