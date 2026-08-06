@@ -10,6 +10,12 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "backend/adapters"))
 from quant_features import FEATURE_NAMES
 
 
+@pytest.fixture(autouse=True)
+def _no_win_prob_model(monkeypatch):
+    import quant_report
+    monkeypatch.setattr(quant_report, "_WIN_PROB_MODEL", None, raising=False)
+
+
 # ── Fixtures ──────────────────────────────────────────────────────────────────
 
 def _make_calibration():
@@ -568,3 +574,32 @@ def test_run_inference_ranks_focus_book_by_expected_value():
     ops = result["opportunities"]
     assert ops[0]["curPrice"] == 0.17
     assert ops[0]["expectedValue"] > ops[1]["expectedValue"]
+
+
+# ── score_opportunity — win-prob model integration (qSource) ───────────────────
+
+def test_uses_model_q_when_artifact_present(monkeypatch):
+    from win_prob import WinProbModel, FEATURES as WP_FEATURES
+    params = {"features": WP_FEATURES,
+              "standardizer": {"mean":[0]*len(WP_FEATURES),"std":[1]*len(WP_FEATURES)},
+              "coefficients":[0]*len(WP_FEATURES), "intercept": 0.4, "isotonic": None, "clip":[0.02,0.98]}
+    import quant_report
+    monkeypatch.setattr(quant_report, "_WIN_PROB_MODEL", WinProbModel.from_dict(params))
+    r = quant_report.score_opportunity(
+        _make_opp(curPrice=0.30, category="sports", days_left=0.5,
+                  slug="mlb-a-b-2026-08-06-total-8pt5"),
+        _make_model(0.7), _make_calibration())
+    assert r["qSource"] == "model"
+    assert 0.02 <= r["winProbEst"] <= 0.98
+    from quant_features import LIVE_BET_COST
+    assert r["expectedValue"] == pytest.approx(r["winProbEst"]/0.30 - 1 - LIVE_BET_COST, abs=1e-4)
+
+def test_falls_back_to_lookup_when_no_model(monkeypatch):
+    import quant_report
+    monkeypatch.setattr(quant_report, "_WIN_PROB_MODEL", None)
+    r = quant_report.score_opportunity(
+        _make_opp(curPrice=0.30, category="sports", days_left=0.5,
+                  slug="mlb-a-b-2026-08-06-total-8pt5"),
+        _make_model(0.7), _make_calibration())
+    assert r["qSource"] == "lookup"
+    assert r["winProbEst"] > 0

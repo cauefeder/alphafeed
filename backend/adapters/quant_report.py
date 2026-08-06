@@ -57,6 +57,7 @@ from quant_features import (
     is_point_market as _is_point_market,
 )
 from model_store import load_current, model_paths_for
+from win_prob import WinProbModel
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("quant_report")
@@ -65,6 +66,24 @@ POLYTRADERS_PATH = REPO_ROOT / "reports/polytraders.json"
 POLY2_PATH       = REPO_ROOT / "reports/poly2.json"
 MODELS_ROOT      = REPO_ROOT / "models"
 OUTPUT_PATH      = REPO_ROOT / "reports/quant_report.json"
+
+_WIN_PROB_ARTIFACT = REPO_ROOT / "models" / "win_prob_model.json"
+
+
+def _load_win_prob_model():
+    try:
+        import json
+        with open(_WIN_PROB_ARTIFACT, encoding="utf-8") as fh:
+            doc = json.load(fh)
+        if not doc.get("gate_passed"):
+            return None
+        return WinProbModel.from_dict(doc)
+    except Exception as exc:                    # missing/corrupt -> fallback
+        logger.info("win_prob model unavailable (%s) — using fallback", exc)
+        return None
+
+
+_WIN_PROB_MODEL = _load_win_prob_model()
 
 GAMMA_URL = "https://gamma-api.polymarket.com/markets"
 
@@ -169,8 +188,16 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
     # prob). This is the metric the traders' edge actually optimises — a low
     # hit rate at a cheap price can still be strongly +EV. Only meaningful for
     # eligible bets; 0.0 otherwise so they sort to the bottom.
-    win_prob = focus_win_prob(cur_price) if focus_eligible else 0.0
-    exp_value = expected_value(win_prob, cur_price) if focus_eligible else 0.0
+    if _WIN_PROB_MODEL is not None:
+        win_prob = _WIN_PROB_MODEL.predict(opp)
+        q_source = "model"
+    elif focus_eligible:
+        win_prob = focus_win_prob(cur_price)
+        q_source = "lookup"
+    else:
+        win_prob = cur_price
+        q_source = "price"
+    exp_value = expected_value(win_prob, cur_price)
 
     count_signal = float(opp.get("countSignal") or 0)
     convergent = round(raw_score * count_signal, 4)
@@ -202,6 +229,7 @@ def score_opportunity(opp: dict, model, calibration: dict) -> dict:
         "betEligible":      focus_eligible,
         "focusScore":       focus_pts,
         "winProbEst":       round(win_prob, 4),
+        "qSource":          q_source,
         "expectedValue":    exp_value,
         "kellyBet":         round(kelly_bet, 4),
         "betDirection":     bet_direction,
