@@ -52,7 +52,9 @@ from quant_features import (
     focus_win_prob,
     generate_insights,
     in_live_bet_price_range,
+    infer_category_from_slug as _infer_category_from_slug,
     is_focus_eligible,
+    is_point_market as _is_point_market,
 )
 from model_store import load_current, model_paths_for
 
@@ -65,59 +67,6 @@ MODELS_ROOT      = REPO_ROOT / "models"
 OUTPUT_PATH      = REPO_ROOT / "reports/quant_report.json"
 
 GAMMA_URL = "https://gamma-api.polymarket.com/markets"
-
-# Keyword sets for category inference from slug / event title
-_CATEGORY_KEYWORDS: list[tuple[str, list[str]]] = [
-    ("sports",    ["nba-", "nfl-", "nhl-", "mlb-", "cbb-", "soccer", "football",
-                   "basketball", "baseball", "hockey", "tennis", "golf", "ufc",
-                   "mma", "f1-", "formula-", "olympic", "-cup-", "stanley-cup",
-                   "world-series", "super-bowl", "uef-", "atp-", "epl-", "laliga",
-                   "la-liga", "serie-a", "ligue-", "bundesliga", "champions-league",
-                   "world-cup", "wimbledon", "nascar-", "pga-", "masters-",
-                   "win-on-202", "will-win-the-202"]),   # "win-on-2026-03-31" pattern
-    ("crypto",    ["bitcoin", "btc-", "-btc-", "ethereum", "-eth-", "crypto",
-                   "solana", "doge", "xrp", "altcoin", "defi", "nft", "binance",
-                   "coinbase", "stablecoin"]),
-    ("geopolitics", ["ukraine", "russia", "china", "taiwan", "nato", "iran",
-                     "israel", "war-", "conflict", "sanction", "ceasefire",
-                     "greenland", "venezuela", "north-korea", "middle-east",
-                     "hamas", "hezbollah", "gaza", "nuclear", "missile"]),
-    ("politics",  ["election", "president", "senate", "congress", "poll", "vote",
-                   "trump", "biden", "harris", "democrat", "republican", "impeach",
-                   "prime-minister", "-out-by-", "vance", "newsom", "desantis",
-                   "buttigieg", "ossoff", "cornyn", "shapiro", "warsh",
-                   "starmer", "orban", "macron", "netanyahu", "maduro", "machado",
-                   "mayor", "governor", "nomination", "cabinet"]),
-    ("macro",     ["fed-", "-fed-", "inflation", "gdp", "recession", "-rate-",
-                   "interest-rate", "mortgage", "dow-jones", "nasdaq", "oil-price",
-                   "gold-price", "sp500", "yield", "treasury", "cpi", "pce"]),
-    ("ai_tech",   ["openai", "anthropic", "gemini", "gpt", "-llm-", "-ai-", "agi",
-                   "deepmind", "mistral", "chatgpt", "claude-"]),
-]
-
-
-def _infer_category_from_slug(slug: str, market: dict | None = None, title: str = "") -> str:
-    """Infer a category string from slug keywords, opportunity title, and Gamma market metadata."""
-    events = (market or {}).get("events") or []
-    ticker = (events[0].get("ticker") or "") if events else ""
-    event_title = (events[0].get("title") or "") if events else ""
-    combined = f"{slug} {ticker} {event_title} {title}".lower()
-    for category, keywords in _CATEGORY_KEYWORDS:
-        if any(kw in combined for kw in keywords):
-            return category
-    return "other"
-
-
-# Point-market (spread / total / handicap) slugs beat moneylines on accuracy
-# (54-59% vs 46% — docs/top5-accuracy-report-2026-07-28.md). Detected from the
-# Polymarket slug, which encodes the market type (e.g. "-total-8pt5",
-# "-spread-away-2pt5", "-btts").
-_POINT_MARKET_TOKENS = ("-total-", "-spread-", "-handicap-", "-o-u-", "-btts")
-
-
-def _is_point_market(slug: str) -> bool:
-    """True iff the slug looks like a spread/total/handicap market."""
-    return any(tok in (slug or "").lower() for tok in _POINT_MARKET_TOKENS)
 
 
 def _days_left(end_date_str: str | None) -> float:

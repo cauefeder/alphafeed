@@ -434,3 +434,11 @@ def test_generate_insights_no_contrarian_when_none():
     ]
     insights = generate_insights(SAMPLE_RANKING, no_contrary, "2026-03-30")
     assert not any("contrarian" in s.lower() for s in insights)
+
+
+def test_point_market_and_category_helpers_exposed():
+    from quant_features import is_point_market, infer_category_from_slug
+    assert is_point_market("mlb-a-b-2026-08-06-total-8pt5") is True
+    assert is_point_market("will-x-win-election") is False
+    assert infer_category_from_slug("mlb-nyy-bos-2026-08-06") == "sports"
+    assert infer_category_from_slug("presidential-election-winner") == "politics"
