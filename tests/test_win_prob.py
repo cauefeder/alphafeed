@@ -107,3 +107,17 @@ def test_gate_rejects_worse_than_price():
 
 def test_gate_rejects_poor_calibration():
     assert passes_gate({**GOOD, "ece": 0.10}) is False
+
+
+from win_prob import maybe_write_artifact
+
+def test_artifact_written_only_when_gate_passes(tmp_path):
+    path = tmp_path / "win_prob_model.json"
+    good_params = {"features": FEATURES, "standardizer": {"mean": [0]*len(FEATURES), "std":[1]*len(FEATURES)},
+                   "coefficients": [0]*len(FEATURES), "intercept": 0.0, "isotonic": None, "clip":[0.02,0.98]}
+    assert maybe_write_artifact(str(path), good_params, {"n_train":500,"brier":0.2,"brier_price_baseline":0.24,"ece":0.04}) is True
+    assert path.exists()
+    before = path.read_text()
+    # a failing gate must NOT overwrite the existing good artifact
+    assert maybe_write_artifact(str(path), good_params, {"n_train":100,"brier":0.9,"brier_price_baseline":0.2,"ece":0.5}) is False
+    assert path.read_text() == before

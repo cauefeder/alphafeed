@@ -199,3 +199,21 @@ def passes_gate(metrics: dict) -> bool:
     return (metrics.get("n_train", 0) >= MIN_TRAIN
             and metrics.get("brier", 1.0) <= metrics.get("brier_price_baseline", 0.0)
             and metrics.get("ece", 1.0) <= MAX_ECE)
+
+
+def maybe_write_artifact(path: str, params: dict, metrics: dict) -> bool:
+    """Atomically write the artifact iff the gate passes. Returns wrote?."""
+    import json, os, tempfile
+    from datetime import datetime, timezone
+    if not passes_gate(metrics):
+        return False
+    doc = {**params, "validation": metrics, "gate_passed": True,
+           "fit_date": datetime.now(timezone.utc).isoformat(),
+           "model_type": "logistic_l2" + ("+isotonic" if params.get("isotonic") else "")}
+    d = os.path.dirname(path) or "."
+    os.makedirs(d, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=d, suffix=".tmp")
+    with os.fdopen(fd, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=2)
+    os.replace(tmp, path)
+    return True
