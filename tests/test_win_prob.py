@@ -2,6 +2,9 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "backend/adapters"))
 
+import numpy as np
+import pytest
+
 from win_prob import FEATURES, featurize
 
 def test_featurize_from_opportunity_dict():
@@ -61,3 +64,29 @@ def test_to_from_dict_roundtrip():
     m = WinProbModel.from_dict(_toy_params())
     m2 = WinProbModel.from_dict(m.to_dict())
     assert m2.predict({"curPrice": 0.3, "slug": "x"}) == m.predict({"curPrice": 0.3, "slug": "x"})
+
+
+from win_prob import brier, ece, fit
+
+def test_brier_and_ece_basic():
+    y = np.array([1, 0, 1, 0]); p = np.array([0.9, 0.1, 0.8, 0.2])
+    assert brier(y, p) == pytest.approx(np.mean((p - y) ** 2))
+    assert 0.0 <= ece(y, p, bins=5) <= 1.0
+
+def test_fit_learns_cheap_wins_more():
+    # synthetic: cheaper price -> more wins. Model must recover q decreasing in price.
+    import random; random.seed(0)
+    rows = []
+    for _ in range(600):
+        price = random.uniform(0.15, 0.45)
+        win = 1 if random.random() < (0.75 - price) else 0   # cheaper -> higher win
+        rows.append({"market_slug": "mlb-a-b-2026-08-06-total-8pt5",
+                     "entry_price": price, "days_left": 0.5, "liquidity": 40000,
+                     "outcome": "WIN" if win else "LOSS",
+                     "created_at": f"2026-06-{1 + (_ % 28):02d}T00:00:00+00:00"})
+    params, metrics = fit(rows)
+    m = WinProbModel.from_dict(params)
+    assert m.predict({"curPrice": 0.18, "slug": rows[0]["market_slug"]}) > \
+           m.predict({"curPrice": 0.42, "slug": rows[0]["market_slug"]})
+    assert metrics["n_train"] == 600
+    assert "brier" in metrics and "brier_price_baseline" in metrics and "ece" in metrics

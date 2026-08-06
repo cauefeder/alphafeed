@@ -56,6 +56,9 @@ def _sigmoid(z: float) -> float:
     return 1.0 / (1.0 + math.exp(-z))
 
 
+_STD_EPS = 1e-8  # below this, a feature is treated as constant (avoid amplifying float noise)
+
+
 class WinProbModel:
     def __init__(self, features, mean, std, coef, intercept, isotonic, clip):
         self.features = list(features)
@@ -69,8 +72,11 @@ class WinProbModel:
     def predict(self, opp: dict) -> float:
         f = featurize(opp)
         x = np.array([f[k] for k in self.features], dtype=float)
-        std = np.where(self.std == 0, 1.0, self.std)
-        z = self.intercept + float(np.dot(self.coef, (x - self.mean) / std))
+        low_var = self.std < _STD_EPS
+        std = np.where(low_var, 1.0, self.std)
+        scaled = (x - self.mean) / std
+        scaled = np.where(low_var, 0.0, scaled)  # avoid amplifying float noise on constant features
+        z = self.intercept + float(np.dot(self.coef, scaled))
         p = _sigmoid(z)
         if self.isotonic:
             p = float(np.interp(p, self.isotonic["x"], self.isotonic["y"]))
@@ -94,3 +100,92 @@ class WinProbModel:
         import json
         with open(path, encoding="utf-8") as fh:
             return cls.from_dict(json.load(fh))
+
+
+def brier(y, p):
+    y = np.asarray(y, float); p = np.asarray(p, float)
+    return float(np.mean((p - y) ** 2))
+
+
+def ece(y, p, bins=10):
+    y = np.asarray(y, float); p = np.asarray(p, float)
+    edges = np.linspace(0, 1, bins + 1)
+    total = len(y); e = 0.0
+    for i in range(bins):
+        m = (p >= edges[i]) & (p < edges[i + 1] if i < bins - 1 else p <= edges[i + 1])
+        if m.sum() == 0:
+            continue
+        e += abs(y[m].mean() - p[m].mean()) * m.sum() / total
+    return float(e)
+
+
+def _design_matrix(rows):
+    X = np.array([[featurize(r)[k] for k in FEATURES] for r in rows], float)
+    y = np.array([1 if r.get("outcome") == "WIN" else 0 for r in rows], float)
+    price = np.array([_price_of(r) for r in rows], float)
+    return X, y, price
+
+
+def fit(rows, *, seed=0, folds=5, c=1.0):
+    """Fit L2 logistic + optional isotonic; return (params_dict, metrics_dict)."""
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.isotonic import IsotonicRegression
+
+    rows = sorted(rows, key=lambda r: r.get("created_at") or "")
+    X, y, price = _design_matrix(rows)
+    n = len(rows)
+    mean = X.mean(axis=0); std = X.std(axis=0)
+    low_var = std < _STD_EPS
+    std_safe = np.where(low_var, 1.0, std)
+    Xs = (X - mean) / std_safe
+    Xs[:, low_var] = 0.0  # avoid amplifying float noise on near-constant features
+
+    # Walk-forward OOS predictions over the trailing (1 - start) fraction.
+    start = 0.5
+    seed_end = int(n * start)
+    oos_p, oos_y, oos_price = [], [], []
+    if n - seed_end >= folds and seed_end >= 50:
+        bounds = np.linspace(seed_end, n, folds + 1).astype(int)
+        for i in range(folds):
+            tr_end, te_end = bounds[i], bounds[i + 1]
+            if te_end <= tr_end:
+                continue
+            clf = LogisticRegression(penalty="l2", C=c, max_iter=1000, random_state=seed)
+            clf.fit(Xs[:tr_end], y[:tr_end])
+            oos_p.extend(clf.predict_proba(Xs[tr_end:te_end])[:, 1])
+            oos_y.extend(y[tr_end:te_end]); oos_price.extend(price[tr_end:te_end])
+    oos_p = np.array(oos_p); oos_y = np.array(oos_y); oos_price = np.array(oos_price)
+
+    # Optional isotonic calibration fit on OOS predictions.
+    iso = None
+    if len(oos_p) >= 100:
+        ir = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0)
+        ir.fit(oos_p, oos_y)
+        cal = ir.predict(oos_p)
+        # keep isotonic only if it does not worsen Brier
+        if brier(oos_y, cal) <= brier(oos_y, oos_p) + 1e-6:
+            xs = np.linspace(0, 1, 51)
+            iso = {"x": xs.tolist(), "y": ir.predict(xs).tolist()}
+
+    # Final model on ALL data (deployed coefficients).
+    clf = LogisticRegression(penalty="l2", C=c, max_iter=1000, random_state=seed)
+    clf.fit(Xs, y)
+
+    from sklearn.metrics import roc_auc_score
+    metrics = {"n_train": n, "n_oos": int(len(oos_y))}
+    if len(oos_y):
+        eval_p = np.interp(oos_p, iso["x"], iso["y"]) if iso else oos_p
+        metrics.update(
+            brier=brier(oos_y, eval_p),
+            brier_price_baseline=brier(oos_y, oos_price),
+            ece=ece(oos_y, eval_p),
+            auc=float(roc_auc_score(oos_y, eval_p)) if len(set(oos_y.tolist())) > 1 else 0.5,
+        )
+    else:
+        metrics.update(brier=1.0, brier_price_baseline=0.0, ece=1.0, auc=0.5)
+
+    params = {"features": FEATURES,
+              "standardizer": {"mean": mean.tolist(), "std": std.tolist()},
+              "coefficients": clf.coef_[0].tolist(), "intercept": float(clf.intercept_[0]),
+              "isotonic": iso, "clip": [0.02, 0.98]}
+    return params, metrics
