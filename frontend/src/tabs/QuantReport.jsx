@@ -350,7 +350,7 @@ function OpportunitiesTable({ opportunities }) {
                       }
                     </div>
                   </td>
-                  <td title={opp.winProbEst ? `est. win prob ${(opp.winProbEst * 100).toFixed(0)}% @ ${(opp.curPrice * 100).toFixed(0)}¢` : "not in the focus book"}
+                  <td title={opp.winProbEst ? `est. win prob ${(opp.winProbEst * 100).toFixed(0)}% @ ${(opp.curPrice * 100).toFixed(0)}¢ · source: ${opp.qSource ?? "—"}` : "not in the focus book"}
                     style={{ padding: "9px 10px", textAlign: "right", fontFamily: T.mono, fontWeight: 700,
                     color: opp.expectedValue > 0 ? T.green : T.dim }}>
                     {opp.expectedValue ? `${opp.expectedValue > 0 ? "+" : ""}${(opp.expectedValue * 100).toFixed(0)}%` : "—"}
