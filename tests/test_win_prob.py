@@ -121,3 +121,13 @@ def test_artifact_written_only_when_gate_passes(tmp_path):
     # a failing gate must NOT overwrite the existing good artifact
     assert maybe_write_artifact(str(path), good_params, {"n_train":100,"brier":0.9,"brier_price_baseline":0.2,"ece":0.5}) is False
     assert path.read_text() == before
+
+
+def test_fit_is_deterministic():
+    import random; random.seed(1)
+    rows = [{"market_slug": "mlb-a-b-2026-08-06-total-8pt5", "entry_price": random.uniform(0.15, 0.45),
+             "days_left": 0.5, "liquidity": 40000,
+             "outcome": "WIN" if random.random() < 0.5 else "LOSS",
+             "created_at": f"2026-06-{1 + (i % 28):02d}T00:00:00+00:00"} for i in range(400)]
+    p1, m1 = fit(rows); p2, m2 = fit(rows)
+    assert p1["coefficients"] == p2["coefficients"] and m1["brier"] == m2["brier"]

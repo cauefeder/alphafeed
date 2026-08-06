@@ -126,10 +126,21 @@ def _design_matrix(rows):
     return X, y, price
 
 
-def fit(rows, *, seed=0, folds=5, c=1.0):
-    """Fit L2 logistic + optional isotonic; return (params_dict, metrics_dict)."""
+def fit(rows, *, seed=0, c=1.0):
+    """Fit L2 logistic + honest isotonic calibration; return (params, metrics).
+
+    Gate metrics are estimated on a TEMPORAL HOLD-OUT so they reflect true
+    out-of-sample calibration of the deployed pipeline (logistic -> isotonic):
+      train  [0, 60%)   -> logistic coefficients
+      calib  [60%, 80%) -> isotonic mapping
+      holdout[80%, 100%)-> brier / ece / auc (never seen by either fit)
+    The deployed model refits logistic on ALL rows; the deployed isotonic is fit
+    on the hold-out-validated model's own out-of-sample predictions (never on the
+    points it is scored on), so the gate is not optimistically in-sample.
+    """
     from sklearn.linear_model import LogisticRegression
     from sklearn.isotonic import IsotonicRegression
+    from sklearn.metrics import roc_auc_score
 
     rows = sorted(rows, key=lambda r: r.get("created_at") or "")
     X, y, price = _design_matrix(rows)
@@ -140,50 +151,42 @@ def fit(rows, *, seed=0, folds=5, c=1.0):
     Xs = (X - mean) / std_safe
     Xs[:, low_var] = 0.0  # avoid amplifying float noise on near-constant features
 
-    # Walk-forward OOS predictions over the trailing (1 - start) fraction.
-    start = 0.5
-    seed_end = int(n * start)
-    oos_p, oos_y, oos_price = [], [], []
-    if n - seed_end >= folds and seed_end >= 50:
-        bounds = np.linspace(seed_end, n, folds + 1).astype(int)
-        for i in range(folds):
-            tr_end, te_end = bounds[i], bounds[i + 1]
-            if te_end <= tr_end:
-                continue
-            clf = LogisticRegression(penalty="l2", C=c, max_iter=1000, random_state=seed)
-            clf.fit(Xs[:tr_end], y[:tr_end])
-            oos_p.extend(clf.predict_proba(Xs[tr_end:te_end])[:, 1])
-            oos_y.extend(y[tr_end:te_end]); oos_price.extend(price[tr_end:te_end])
-    oos_p = np.array(oos_p); oos_y = np.array(oos_y); oos_price = np.array(oos_price)
+    def _logit(C, a, b):
+        return LogisticRegression(penalty="l2", C=C, max_iter=1000, random_state=seed).fit(a, b)
 
-    # Optional isotonic calibration fit on OOS predictions.
+    tr, cal = int(n * 0.6), int(n * 0.8)
+    metrics = {"n_train": n, "n_oos": 0}
     iso = None
-    if len(oos_p) >= 100:
-        ir = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0)
-        ir.fit(oos_p, oos_y)
-        cal = ir.predict(oos_p)
-        # keep isotonic only if it does not worsen Brier
-        if brier(oos_y, cal) <= brier(oos_y, oos_p) + 1e-6:
-            xs = np.linspace(0, 1, 51)
-            iso = {"x": xs.tolist(), "y": ir.predict(xs).tolist()}
-
-    # Final model on ALL data (deployed coefficients).
-    clf = LogisticRegression(penalty="l2", C=c, max_iter=1000, random_state=seed)
-    clf.fit(Xs, y)
-
-    from sklearn.metrics import roc_auc_score
-    metrics = {"n_train": n, "n_oos": int(len(oos_y))}
-    if len(oos_y):
-        eval_p = np.interp(oos_p, iso["x"], iso["y"]) if iso else oos_p
+    use_iso = False
+    if n - cal >= 50 and cal - tr >= 30:
+        clf_h = _logit(c, Xs[:tr], y[:tr])
+        p_cal = clf_h.predict_proba(Xs[tr:cal])[:, 1]
+        p_hold = clf_h.predict_proba(Xs[cal:])[:, 1]
+        yh, ph = y[cal:], price[cal:]
+        ir = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0).fit(p_cal, y[tr:cal])
+        cal_hold = ir.predict(p_hold)
+        # keep isotonic only if it genuinely helps calibration on the hold-out
+        use_iso = ece(yh, cal_hold) <= ece(yh, p_hold) and brier(yh, cal_hold) <= brier(yh, p_hold) + 1e-6
+        eval_p = cal_hold if use_iso else p_hold
         metrics.update(
-            brier=brier(oos_y, eval_p),
-            brier_price_baseline=brier(oos_y, oos_price),
-            ece=ece(oos_y, eval_p),
-            auc=float(roc_auc_score(oos_y, eval_p)) if len(set(oos_y.tolist())) > 1 else 0.5,
+            n_oos=int(len(yh)),
+            brier=brier(yh, eval_p),
+            brier_price_baseline=brier(yh, ph),
+            ece=ece(yh, eval_p),
+            auc=float(roc_auc_score(yh, eval_p)) if len(set(yh.tolist())) > 1 else 0.5,
         )
+        if use_iso:
+            # Deployed isotonic: fit on clf_h's OOS predictions over [tr:] (never
+            # in-sample to the mapping's own evaluation), sampled to a lookup table.
+            p_oos = clf_h.predict_proba(Xs[tr:])[:, 1]
+            ir_dep = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0).fit(p_oos, y[tr:])
+            xs = np.linspace(0, 1, 51)
+            iso = {"x": xs.tolist(), "y": ir_dep.predict(xs).tolist()}
     else:
         metrics.update(brier=1.0, brier_price_baseline=0.0, ece=1.0, auc=0.5)
 
+    # Deployed logistic coefficients: refit on ALL rows.
+    clf = _logit(c, Xs, y)
     params = {"features": FEATURES,
               "standardizer": {"mean": mean.tolist(), "std": std.tolist()},
               "coefficients": clf.coef_[0].tolist(), "intercept": float(clf.intercept_[0]),

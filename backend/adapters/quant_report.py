@@ -70,13 +70,31 @@ OUTPUT_PATH      = REPO_ROOT / "reports/quant_report.json"
 _WIN_PROB_ARTIFACT = REPO_ROOT / "models" / "win_prob_model.json"
 
 
+_WIN_PROB_MAX_AGE_DAYS = 30      # stale artifact -> fall back to lookup
+
+
 def _load_win_prob_model():
     try:
         import json
+        from datetime import datetime, timezone
+        from win_prob import FEATURES as _WP_FEATURES
         with open(_WIN_PROB_ARTIFACT, encoding="utf-8") as fh:
             doc = json.load(fh)
         if not doc.get("gate_passed"):
             return None
+        # Schema guard: a stored feature list that disagrees with the current
+        # code would raise KeyError inside score_opportunity — fall back instead.
+        if doc.get("features") != _WP_FEATURES:
+            logger.warning("win_prob artifact feature mismatch — using fallback")
+            return None
+        # Staleness guard: don't trust a model that stopped being refit.
+        try:
+            age = datetime.now(timezone.utc) - datetime.fromisoformat(doc["fit_date"])
+            if age.days > _WIN_PROB_MAX_AGE_DAYS:
+                logger.warning("win_prob artifact is %d days old — using fallback", age.days)
+                return None
+        except Exception:
+            pass  # missing/unparseable fit_date -> tolerate, keep model
         return WinProbModel.from_dict(doc)
     except Exception as exc:                    # missing/corrupt -> fallback
         logger.info("win_prob model unavailable (%s) — using fallback", exc)
