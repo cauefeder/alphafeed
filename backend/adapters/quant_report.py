@@ -324,12 +324,14 @@ def run_inference(
         except Exception as exc:
             logger.debug("log_signal failed: %s", exc)
 
-    # Rank by expected ROI first — the metric the traders' edge actually
-    # optimises (a cheap, low-hit-rate bet can out-rank a pricier one). Then
-    # focusScore and quantScore as tiebreaks. Ineligible bets have
-    # expectedValue 0 and sink to the bottom.
+    # Rank the STAKED (focus-eligible) book to the top, ordered by expected ROI
+    # — the metric the traders' edge actually optimises. Ineligible markets rank
+    # below regardless of their EV: the win-prob model extrapolates overconfidently
+    # on rare non-focus categories, so their EV is informational only ($0 stake)
+    # and must not bury the actionable book. Tiebreaks: focusScore, quantScore.
     scored.sort(
-        key=lambda o: (o.get("expectedValue", 0.0), o.get("focusScore", 0.0), o["quantScore"]),
+        key=lambda o: (bool(o.get("betEligible")), o.get("expectedValue", 0.0),
+                       o.get("focusScore", 0.0), o["quantScore"]),
         reverse=True,
     )
 

@@ -603,3 +603,23 @@ def test_falls_back_to_lookup_when_no_model(monkeypatch):
         _make_model(0.7), _make_calibration())
     assert r["qSource"] == "lookup"
     assert r["winProbEst"] > 0
+
+
+def test_run_inference_ranks_eligible_bets_above_higher_ev_ineligible(monkeypatch):
+    """Staked (eligible) bets lead the table even when an unstaked market shows
+    higher raw EV — prevents overconfident non-focus longshots from burying the
+    focus book."""
+    from quant_report import run_inference
+    from win_prob import WinProbModel, FEATURES as WP
+    params = {"features": WP, "standardizer": {"mean": [0]*len(WP), "std": [1]*len(WP)},
+              "coefficients": [0]*len(WP), "intercept": 6.0, "isotonic": None, "clip": [0.02, 0.98]}
+    import quant_report
+    monkeypatch.setattr(quant_report, "_WIN_PROB_MODEL", WinProbModel.from_dict(params))
+    polytraders = {"opportunities": [
+        _make_opp(title="pol", slug="presidential-election-2026", curPrice=0.10, countSignal=0.05),
+        _make_opp(title="mlb", slug="mlb-a-b-2026-08-06-total-8pt5", curPrice=0.40, countSignal=0.05),
+    ]}
+    r = run_inference(polytraders, {"categories": {}}, _make_model(0.7), _make_calibration(), SAMPLE_METRICS)
+    ops = r["opportunities"]
+    assert ops[0]["betEligible"] is True and ops[0]["slug"] == "mlb-a-b-2026-08-06-total-8pt5"
+    assert ops[-1]["betEligible"] is False
