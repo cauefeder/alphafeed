@@ -6,6 +6,7 @@ import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -34,6 +35,7 @@ import com.omnp.alphafeed.ui.detail.BetDetailScreen
 import com.omnp.alphafeed.ui.detail.BetDetailViewModel
 import com.omnp.alphafeed.ui.feed.FeedScreen
 import com.omnp.alphafeed.ui.more.MoreScreen
+import com.omnp.alphafeed.ui.paywall.PaywallSheet
 import com.omnp.alphafeed.ui.record.RecordScreen
 import com.omnp.alphafeed.ui.theme.AlphaFeedTheme
 
@@ -59,11 +61,13 @@ private val SAMPLE_BOARD = listOf(
  * bet-detail route. Data isn't wired end-to-end yet — screens run on remembered sample state
  * so the navigation graph compiles and previews.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AlphaFeedNav() {
     val navController = rememberNavController()
-    // TODO(paywall task): drive isPro from a real purchase state and show PaywallSheet on upgrade.
-    val isPro by remember { mutableStateOf(false) }
+    // Local paywall/entitlement state for now — real purchase wiring is a later task.
+    var isPro by remember { mutableStateOf(false) }
+    var showPaywall by remember { mutableStateOf(false) }
     var selectedBet by remember { mutableStateOf<Bet?>(null) }
 
     val betsUi = remember(isPro) {
@@ -114,16 +118,16 @@ fun AlphaFeedNav() {
                         selectedBet = bet
                         navController.navigate(ROUTE_BET_DETAIL)
                     },
-                    onUpgrade = {},
+                    onUpgrade = { showPaywall = true },
                     onRetry = {}
                 )
             }
             composable(Dest.Feed.route) { FeedScreen() }
             composable(Dest.Record.route) {
-                RecordScreen(isPro = isPro, onUpgrade = {})
+                RecordScreen(isPro = isPro, onUpgrade = { showPaywall = true })
             }
             composable(Dest.More.route) {
-                MoreScreen(onUpgrade = {})
+                MoreScreen(onUpgrade = { showPaywall = true })
             }
             composable(ROUTE_BET_DETAIL) {
                 val bet = selectedBet ?: SAMPLE_BOARD.first()
@@ -145,6 +149,16 @@ fun AlphaFeedNav() {
                 )
             }
         }
+    }
+
+    if (showPaywall) {
+        PaywallSheet(
+            onDismiss = { showPaywall = false },
+            onSubscribe = {
+                isPro = true
+                showPaywall = false
+            }
+        )
     }
 }
 
