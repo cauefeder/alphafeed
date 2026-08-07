@@ -37,6 +37,7 @@ Thumbs.db
 # Git worktrees
 .worktrees/
 
-# Training data — large CSV, not committed
-data/
+# Training data — large CSV, not committed (repo-root only; anchored so it
+# does not also ignore Android `data/` packages under alphafeed-android/)
+/data/
 .superpowers/
