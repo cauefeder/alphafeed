@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import com.omnp.alphafeed.domain.Row as BoardRow
 import com.omnp.alphafeed.domain.model.Bet
 import com.omnp.alphafeed.domain.model.Confidence
-import com.omnp.alphafeed.ui.components.AdRowPlaceholder
+import com.omnp.alphafeed.ui.components.AdBanner
 import com.omnp.alphafeed.ui.components.BetCard
 import com.omnp.alphafeed.ui.components.LockedRow
 import com.omnp.alphafeed.ui.theme.AlphaFeedTheme
@@ -96,7 +96,7 @@ private fun ContentState(state: BetsUi.Content, onBet: (Bet) -> Unit, onUpgrade:
         items(state.rows) { row ->
             when (row) {
                 is BoardRow.BetRow -> BetCard(bet = row.bet, onClick = { onBet(row.bet) })
-                is BoardRow.AdRow -> AdRowPlaceholder()
+                is BoardRow.AdRow -> AdBanner()
                 is BoardRow.LockedRow -> LockedRow(remaining = row.remaining, onUpgrade = onUpgrade)
             }
         }

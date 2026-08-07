@@ -58,25 +58,20 @@ private val SAMPLE_BOARD = listOf(
 
 /**
  * App shell: bottom navigation across Bets / Feed / Record / More, with Bets pushing to a
- * bet-detail route. Data isn't wired end-to-end yet — screens run on remembered sample state
- * so the navigation graph compiles and previews.
+ * bet-detail route. [betsState] and [isPro] are driven by the real repositories from
+ * [com.omnp.alphafeed.MainActivity]; [onSubscribe] triggers the real Play purchase flow.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AlphaFeedNav() {
+fun AlphaFeedNav(
+    betsState: BetsUi = rememberSampleBetsUi(),
+    isPro: Boolean = false,
+    onRetryBets: () -> Unit = {},
+    onSubscribe: () -> Unit = {}
+) {
     val navController = rememberNavController()
-    // Local paywall/entitlement state for now — real purchase wiring is a later task.
-    var isPro by remember { mutableStateOf(false) }
     var showPaywall by remember { mutableStateOf(false) }
     var selectedBet by remember { mutableStateOf<Bet?>(null) }
-
-    val betsUi = remember(isPro) {
-        BetsUi.Content(
-            rows = BoardGating.rows(SAMPLE_BOARD, isPro),
-            isOffline = false,
-            updatedAt = "just now"
-        )
-    }
 
     val items = listOf(Dest.Bets, Dest.Feed, Dest.Record, Dest.More)
 
@@ -113,13 +108,13 @@ fun AlphaFeedNav() {
         ) {
             composable(Dest.Bets.route) {
                 BetsScreen(
-                    state = betsUi,
+                    state = betsState,
                     onBet = { bet ->
                         selectedBet = bet
                         navController.navigate(ROUTE_BET_DETAIL)
                     },
                     onUpgrade = { showPaywall = true },
-                    onRetry = {}
+                    onRetry = onRetryBets
                 )
             }
             composable(Dest.Feed.route) { FeedScreen() }
@@ -155,7 +150,7 @@ fun AlphaFeedNav() {
         PaywallSheet(
             onDismiss = { showPaywall = false },
             onSubscribe = {
-                isPro = true
+                onSubscribe()
                 showPaywall = false
             }
         )
@@ -167,6 +162,16 @@ private fun Dest.icon() = when (this) {
     Dest.Feed -> Icons.Filled.Notifications
     Dest.Record -> Icons.Filled.Star
     Dest.More -> Icons.Filled.MoreVert
+}
+
+/** Sample board used only by previews/default param — real data flows in via [betsState]. */
+@Composable
+private fun rememberSampleBetsUi(): BetsUi = remember {
+    BetsUi.Content(
+        rows = BoardGating.rows(SAMPLE_BOARD, isPro = false),
+        isOffline = false,
+        updatedAt = "just now"
+    )
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFF0D1016)
