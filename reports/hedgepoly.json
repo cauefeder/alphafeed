@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-07T06:28:50.048936+00:00",
+  "generatedAt": "2026-08-07T08:59:23.020649+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 7,
+  "signalCount": 8,
   "signals": [
     {
       "marketSlug": "2026-balance-of-power-d-senate-d-house-949",
@@ -21,9 +21,9 @@
       "question": "LoL: JD Gaming vs EDward Gaming (BO3) - LPL Group Ascend",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 245728.69,
-      "totalValue": 245728.69,
-      "traderCount": 2,
+      "noValue": 502583.68,
+      "totalValue": 502583.68,
+      "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/lol-jdg-edg-2026-08-07"
     },
@@ -39,12 +39,23 @@
       "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
     },
     {
+      "marketSlug": "atp-grieksp-arnaldi-2026-08-07",
+      "question": "National Bank Open: Tallon Griekspoor vs Matteo Arnaldi",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 31869.22,
+      "totalValue": 31869.22,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-grieksp-arnaldi-2026-08-07"
+    },
+    {
       "marketSlug": "mlb-bos-nyy-2026-06-06",
       "question": "Boston Red Sox vs. New York Yankees",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 28558.37,
-      "totalValue": 28558.37,
+      "noValue": 28550.78,
+      "totalValue": 28550.78,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/mlb-bos-nyy-2026-06-06"
@@ -53,9 +64,9 @@
       "marketSlug": "will-new-people-nl-gain-the-most-seats-in-the-next-russian-parliamentary-election",
       "question": "Will New People (NL) gain the most seats in the next Russian parliamentary election?",
       "side": "NO",
-      "yesValue": 740.16,
-      "noValue": 7799.98,
-      "totalValue": 8540.14,
+      "yesValue": 741.85,
+      "noValue": 7794.98,
+      "totalValue": 8536.82,
       "traderCount": 2,
       "confidence": 0.913,
       "url": "https://polymarket.com/event/will-new-people-nl-gain-the-most-seats-in-the-next-russian-parliamentary-election"
@@ -64,9 +75,9 @@
       "marketSlug": "will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election",
       "question": "Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the next Russian parliamentary election?",
       "side": "YES",
-      "yesValue": 7007.75,
+      "yesValue": 7198.87,
       "noValue": 0.0,
-      "totalValue": 7007.75,
+      "totalValue": 7198.87,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election"
@@ -75,9 +86,9 @@
       "marketSlug": "will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-december-31-872",
       "question": "Will Alphabet be the largest company in the world by market cap on December 31?",
       "side": "YES",
-      "yesValue": 886.74,
+      "yesValue": 886.38,
       "noValue": 0.0,
-      "totalValue": 886.74,
+      "totalValue": 886.38,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-december-31-872"
