@@ -6,6 +6,7 @@ import com.omnp.alphafeed.data.BetsRepository
 import com.omnp.alphafeed.data.billing.BillingRepository
 import com.omnp.alphafeed.data.billing.PlayBillingGateway
 import com.omnp.alphafeed.data.cache.AppDatabase
+import com.omnp.alphafeed.data.prefs.AppPrefs
 import com.omnp.alphafeed.data.remote.AlphaFeedApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
@@ -41,4 +42,6 @@ class AppContainer(context: Context) {
     val billingGateway = PlayBillingGateway(appContext)
 
     val billingRepository = BillingRepository(billingGateway)
+
+    val appPrefs = AppPrefs(appContext)
 }

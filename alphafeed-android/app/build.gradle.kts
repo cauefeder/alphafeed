@@ -56,6 +56,9 @@ dependencies {
     implementation("com.google.android.gms:play-services-ads:23.3.0")
     implementation("com.google.android.ump:user-messaging-platform:3.0.0")
 
+    // Onboarding/compliance prefs
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+
     // Unit tests
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")

@@ -18,6 +18,7 @@ import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
 import com.omnp.alphafeed.ui.bets.BetsViewModel
 import com.omnp.alphafeed.ui.nav.AlphaFeedNav
+import com.omnp.alphafeed.ui.onboarding.OnboardingScreen
 import com.omnp.alphafeed.ui.theme.AlphaFeedTheme
 import kotlinx.coroutines.launch
 
@@ -43,29 +44,40 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val isPro by container.billingRepository.isPro.collectAsStateWithLifecycle()
-                    val betsViewModel: BetsViewModel = viewModel(
-                        factory = viewModelFactory {
-                            initializer {
-                                BetsViewModel(
-                                    loader = container.betsRepository::load,
-                                    isProFlow = container.billingRepository.isPro
-                                )
-                            }
-                        }
-                    )
-                    val betsState by betsViewModel.state.collectAsStateWithLifecycle()
+                    val seenOnboarding by container.appPrefs.seenOnboarding
+                        .collectAsStateWithLifecycle(initialValue = false)
 
-                    AlphaFeedNav(
-                        betsState = betsState,
-                        isPro = isPro,
-                        onRetryBets = betsViewModel::retry,
-                        onSubscribe = {
-                            lifecycleScope.launch {
-                                container.billingRepository.purchasePro(this@MainActivity)
+                    if (!seenOnboarding) {
+                        OnboardingScreen(
+                            onFinished = {
+                                lifecycleScope.launch { container.appPrefs.setSeenOnboarding(true) }
                             }
-                        }
-                    )
+                        )
+                    } else {
+                        val isPro by container.billingRepository.isPro.collectAsStateWithLifecycle()
+                        val betsViewModel: BetsViewModel = viewModel(
+                            factory = viewModelFactory {
+                                initializer {
+                                    BetsViewModel(
+                                        loader = container.betsRepository::load,
+                                        isProFlow = container.billingRepository.isPro
+                                    )
+                                }
+                            }
+                        )
+                        val betsState by betsViewModel.state.collectAsStateWithLifecycle()
+
+                        AlphaFeedNav(
+                            betsState = betsState,
+                            isPro = isPro,
+                            onRetryBets = betsViewModel::retry,
+                            onSubscribe = {
+                                lifecycleScope.launch {
+                                    container.billingRepository.purchasePro(this@MainActivity)
+                                }
+                            }
+                        )
+                    }
                 }
             }
         }
