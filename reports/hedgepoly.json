@@ -1,108 +1,31 @@
 {
-  "generatedAt": "2026-08-07T20:40:13.170308+00:00",
+  "generatedAt": "2026-08-08T08:41:03.628916+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 2,
   "signals": [
     {
-      "marketSlug": "atp-zandsch-hurkacz-2026-08-07",
-      "question": "National Bank Open: Botic van de Zandschulp vs Hubert Hurkacz",
+      "marketSlug": "lol-t1-hle1-2026-08-08",
+      "question": "LoL: T1 vs Hanwha Life Esports (BO3) - LCK Round 3-4 Legend Group",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 96512.97,
-      "totalValue": 96512.97,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-zandsch-hurkacz-2026-08-07"
-    },
-    {
-      "marketSlug": "will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections",
-      "question": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
-      "side": "YES",
-      "yesValue": 51545.2,
-      "noValue": 0.0,
-      "totalValue": 51545.2,
+      "noValue": 102283.52,
+      "totalValue": 102283.52,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections"
+      "url": "https://polymarket.com/event/lol-t1-hle1-2026-08-08"
     },
     {
-      "marketSlug": "wta-joint-samsono-2026-08-08",
-      "question": "National Bank Open: Maya Joint vs Liudmila Samsonova",
+      "marketSlug": "mlb-atl-cws-2026-06-11-total-8pt5",
+      "question": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 46088.58,
-      "totalValue": 46088.58,
+      "noValue": 64725.78,
+      "totalValue": 64725.78,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-joint-samsono-2026-08-08"
-    },
-    {
-      "marketSlug": "mlb-laa-mia-2026-08-07-spread-home-1pt5",
-      "question": "Spread: Miami Marlins (-1.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 44173.24,
-      "totalValue": 44173.24,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-laa-mia-2026-08-07-spread-home-1pt5"
-    },
-    {
-      "marketSlug": "wnba-phx-conn-2026-08-07-total-174pt5",
-      "question": "Phoenix Mercury vs. Connecticut Sun: O/U 174.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 33745.76,
-      "totalValue": 33745.76,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wnba-phx-conn-2026-08-07-total-174pt5"
-    },
-    {
-      "marketSlug": "atp-bergs-shelton-2026-08-07",
-      "question": "National Bank Open: Zizou Bergs vs Ben Shelton",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 23248.97,
-      "totalValue": 23248.97,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-bergs-shelton-2026-08-07"
-    },
-    {
-      "marketSlug": "will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election",
-      "question": "Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the next Russian parliamentary election?",
-      "side": "YES",
-      "yesValue": 6808.96,
-      "noValue": 0.0,
-      "totalValue": 6808.96,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election"
-    },
-    {
-      "marketSlug": "atp-ilagan-gorzny-2026-08-07",
-      "question": "Lexington: Andre Ilagan vs Sebastian Gorzny",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 4461.59,
-      "totalValue": 4461.59,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-ilagan-gorzny-2026-08-07"
-    },
-    {
-      "marketSlug": "will-yabloko-gain-the-most-seats-in-the-next-russian-parliamentary-election",
-      "question": "Will Yabloko gain the most seats in the next Russian parliamentary election?",
-      "side": "YES",
-      "yesValue": 2325.35,
-      "noValue": 0.0,
-      "totalValue": 2325.35,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-yabloko-gain-the-most-seats-in-the-next-russian-parliamentary-election"
+      "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
     }
   ]
 }
