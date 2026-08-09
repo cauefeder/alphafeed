@@ -1,141 +1,64 @@
 {
-  "generatedAt": "2026-08-08T20:28:24.501301+00:00",
+  "generatedAt": "2026-08-09T08:42:43.788712+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 12,
+  "signalCount": 5,
   "signals": [
     {
-      "marketSlug": "mlb-cle-cws-2026-08-08",
-      "question": "Cleveland Guardians vs. Chicago White Sox",
+      "marketSlug": "lol-dk-kt-2026-08-09",
+      "question": "LoL: Dplus KIA vs KT Rolster (BO3) - LCK Round 3-4 Legend Group",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 189730.69,
-      "totalValue": 189730.69,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cle-cws-2026-08-08"
-    },
-    {
-      "marketSlug": "wta-pegula-shnaide-2026-08-09",
-      "question": "National Bank Open: Jessica Pegula vs Diana Shnaider",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 149433.13,
-      "totalValue": 149433.13,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-pegula-shnaide-2026-08-09"
-    },
-    {
-      "marketSlug": "mlb-tor-phi-2026-08-08-total-9pt5",
-      "question": "Toronto Blue Jays vs. Philadelphia Phillies: O/U 9.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 75678.72,
-      "totalValue": 75678.72,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-tor-phi-2026-08-08-total-9pt5"
-    },
-    {
-      "marketSlug": "mlb-oak-bos-2026-08-08-total-8pt5",
-      "question": "Athletics vs. Boston Red Sox: O/U 8.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 65990.68,
-      "totalValue": 65990.68,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-oak-bos-2026-08-08-total-8pt5"
-    },
-    {
-      "marketSlug": "mlb-laa-mia-2026-08-08-total-8pt5",
-      "question": "Los Angeles Angels vs. Miami Marlins: O/U 8.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 53931.31,
-      "totalValue": 53931.31,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-laa-mia-2026-08-08-total-8pt5"
-    },
-    {
-      "marketSlug": "atp-rinderk-nakashi-2026-08-08",
-      "question": "National Bank Open: Arthur Rinderknech vs Brandon Nakashima",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 44878.88,
-      "totalValue": 44878.88,
+      "noValue": 51379.9,
+      "totalValue": 51379.9,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-rinderk-nakashi-2026-08-08"
+      "url": "https://polymarket.com/event/lol-dk-kt-2026-08-09"
     },
     {
-      "marketSlug": "lol-mkoi-gx-2026-08-08",
-      "question": "LoL: Movistar KOI vs GIANTX (BO3) - LEC Regular Season",
+      "marketSlug": "mlb-atl-cws-2026-06-11-total-8pt5",
+      "question": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 39759.8,
-      "totalValue": 39759.8,
+      "noValue": 25347.95,
+      "totalValue": 25347.95,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-mkoi-gx-2026-08-08"
+      "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
     },
     {
-      "marketSlug": "mlb-cle-cws-2026-08-08-total-7pt5",
-      "question": "Cleveland Guardians vs. Chicago White Sox: O/U 7.5",
+      "marketSlug": "lol-dk-kt-2026-08-09-total-games-2pt5",
+      "question": "Games Total: O/U 2.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 30764.22,
-      "totalValue": 30764.22,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cle-cws-2026-08-08-total-7pt5"
-    },
-    {
-      "marketSlug": "wnba-ind-chi-2026-08-08-total-190pt5",
-      "question": "Indiana Fever vs. Chicago Sky: O/U 190.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 26896.16,
-      "totalValue": 26896.16,
+      "noValue": 23566.28,
+      "totalValue": 23566.28,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wnba-ind-chi-2026-08-08-total-190pt5"
+      "url": "https://polymarket.com/event/lol-dk-kt-2026-08-09-total-games-2pt5"
     },
     {
-      "marketSlug": "mlb-atl-nyy-2026-08-08",
-      "question": "Atlanta Braves vs. New York Yankees",
+      "marketSlug": "mlb-stl-cin-2026-05-24-total-9pt5",
+      "question": "St. Louis Cardinals vs. Cincinnati Reds: O/U 9.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 26853.1,
-      "totalValue": 26853.1,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-atl-nyy-2026-08-08"
-    },
-    {
-      "marketSlug": "mlb-cle-cws-2026-08-08-total-8pt5",
-      "question": "Cleveland Guardians vs. Chicago White Sox: O/U 8.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 17825.49,
-      "totalValue": 17825.49,
+      "noValue": 17783.23,
+      "totalValue": 17783.23,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cle-cws-2026-08-08-total-8pt5"
+      "url": "https://polymarket.com/event/mlb-stl-cin-2026-05-24-total-9pt5"
     },
     {
-      "marketSlug": "wnba-ind-chi-2026-08-08-total-192pt5",
-      "question": "Indiana Fever vs. Chicago Sky: O/U 192.5",
+      "marketSlug": "lol-ig1-lng-2026-08-09-game2",
+      "question": "LoL: Invictus Gaming vs LNG Esports - Game 2 Winner",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 17574.82,
-      "totalValue": 17574.82,
+      "noValue": 2536.1,
+      "totalValue": 2536.1,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wnba-ind-chi-2026-08-08-total-192pt5"
+      "url": "https://polymarket.com/event/lol-ig1-lng-2026-08-09-game2"
     }
   ]
 }
