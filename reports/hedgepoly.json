@@ -1,53 +1,141 @@
 {
-  "generatedAt": "2026-08-10T09:20:58.649314+00:00",
+  "generatedAt": "2026-08-10T20:41:33.963858+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 4,
+  "signalCount": 12,
   "signals": [
     {
-      "marketSlug": "lol-dnf-drx-2026-08-10",
-      "question": "LoL: DN SOOPers vs Kiwoom DRX (BO3) - KeSPA Cup Last Chance Qualifier",
+      "marketSlug": "2026-balance-of-power-d-senate-d-house-949",
+      "question": "2026 Balance of Power: D Senate, D House",
       "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 281683.07,
-      "totalValue": 281683.07,
+      "yesValue": 4708125.0,
+      "noValue": 5416875.0,
+      "totalValue": 10125000.0,
       "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-dnf-drx-2026-08-10"
+      "confidence": 0.535,
+      "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949"
     },
     {
-      "marketSlug": "lol-hle1-gen-2026-08-10",
-      "question": "LoL: Hanwha Life Esports vs Gen.G (BO3) - KeSPA Cup Last Chance Qualifier",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 249591.38,
-      "totalValue": 249591.38,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-hle1-gen-2026-08-10"
-    },
-    {
-      "marketSlug": "lol-hle1-gen-2026-08-10-game2",
-      "question": "LoL: Hanwha Life Esports vs Gen.G - Game 2 Winner",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 63354.44,
-      "totalValue": 63354.44,
+      "marketSlug": "will-no-fed-rate-cuts-happen-in-2026",
+      "question": "Will no Fed rate cuts happen in 2026?",
+      "side": "YES",
+      "yesValue": 514494.13,
+      "noValue": 0.0,
+      "totalValue": 514494.13,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-hle1-gen-2026-08-10-game2"
+      "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026"
     },
     {
-      "marketSlug": "mlb-stl-cin-2026-05-24-total-9pt5",
-      "question": "St. Louis Cardinals vs. Cincinnati Reds: O/U 9.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 18690.38,
-      "totalValue": 18690.38,
+      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649",
+      "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+      "side": "YES",
+      "yesValue": 469592.75,
+      "noValue": 0.0,
+      "totalValue": 469592.75,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-stl-cin-2026-05-24-total-9pt5"
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649"
+    },
+    {
+      "marketSlug": "por-cds-nac-2026-08-10-cds",
+      "question": "Will CD Santa Clara win on 2026-08-10?",
+      "side": "YES",
+      "yesValue": 71010.39,
+      "noValue": 9074.7,
+      "totalValue": 80085.09,
+      "traderCount": 3,
+      "confidence": 0.887,
+      "url": "https://polymarket.com/event/por-cds-nac-2026-08-10-cds"
+    },
+    {
+      "marketSlug": "fed-rate-hike-in-2026",
+      "question": "Fed rate hike in 2026?",
+      "side": "YES",
+      "yesValue": 67135.44,
+      "noValue": 5843.42,
+      "totalValue": 72978.86,
+      "traderCount": 2,
+      "confidence": 0.92,
+      "url": "https://polymarket.com/event/fed-rate-hike-in-2026"
+    },
+    {
+      "marketSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615",
+      "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+      "side": "YES",
+      "yesValue": 34327.95,
+      "noValue": 0.0,
+      "totalValue": 34327.95,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615"
+    },
+    {
+      "marketSlug": "lol-lev-red-2026-08-10",
+      "question": "LoL: Leviatan Esports vs RED Canids (BO3) - CBLOL Regular Season",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 33050.3,
+      "totalValue": 33050.3,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/lol-lev-red-2026-08-10"
+    },
+    {
+      "marketSlug": "will-1-fed-rate-cut-happen-in-2026",
+      "question": "Will 1 Fed rate cut happen in 2026?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 26628.49,
+      "totalValue": 26628.49,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-1-fed-rate-cut-happen-in-2026"
+    },
+    {
+      "marketSlug": "fed-rate-hike-by-september-2026-meeting",
+      "question": "Fed Rate Hike by September 2026 Meeting?",
+      "side": "YES",
+      "yesValue": 14010.26,
+      "noValue": 2015.62,
+      "totalValue": 16025.88,
+      "traderCount": 2,
+      "confidence": 0.874,
+      "url": "https://polymarket.com/event/fed-rate-hike-by-september-2026-meeting"
+    },
+    {
+      "marketSlug": "will-the-us-invade-iran-before-2027",
+      "question": "Will the U.S. invade Iran before 2027?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 12525.04,
+      "totalValue": 12525.04,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027"
+    },
+    {
+      "marketSlug": "will-the-fed-decide-differently-in-the-next-three-decisions-junjulsep",
+      "question": "Will the Fed decide differently in the next three decisions (Jun–Jul–Sep)?",
+      "side": "YES",
+      "yesValue": 2887.16,
+      "noValue": 1679.09,
+      "totalValue": 4566.25,
+      "traderCount": 2,
+      "confidence": 0.632,
+      "url": "https://polymarket.com/event/will-the-fed-decide-differently-in-the-next-three-decisions-junjulsep"
+    },
+    {
+      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
+      "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+      "side": "NO",
+      "yesValue": 515.42,
+      "noValue": 3607.65,
+      "totalValue": 4123.08,
+      "traderCount": 2,
+      "confidence": 0.875,
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
     }
   ]
 }
