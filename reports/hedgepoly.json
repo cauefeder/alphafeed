@@ -1,53 +1,31 @@
 {
-  "generatedAt": "2026-08-11T20:42:00.853189+00:00",
+  "generatedAt": "2026-08-12T09:11:54.729011+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 33,
+  "signalCount": 25,
   "signals": [
     {
-      "marketSlug": "mlb-cle-det-2026-08-11-total-8pt5",
-      "question": "Cleveland Guardians vs. Detroit Tigers: O/U 8.5",
+      "marketSlug": "mlb-atl-cws-2026-06-11-total-8pt5",
+      "question": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 94751.51,
-      "totalValue": 94751.51,
+      "noValue": 75849.77,
+      "totalValue": 75849.77,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cle-det-2026-08-11-total-8pt5"
+      "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
     },
     {
-      "marketSlug": "mlb-chc-wsh-2026-08-11-total-8pt5",
-      "question": "Chicago Cubs vs. Washington Nationals: O/U 8.5",
+      "marketSlug": "atp-su-pankin-2026-08-12",
+      "question": "Astana: Fajing Sun vs Semen Pankin",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 51670.45,
-      "totalValue": 51670.45,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-chc-wsh-2026-08-11-total-8pt5"
-    },
-    {
-      "marketSlug": "mlb-sea-nyy-2026-08-11-total-7pt5",
-      "question": "Seattle Mariners vs. New York Yankees: O/U 7.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 36567.15,
-      "totalValue": 36567.15,
+      "noValue": 46599.21,
+      "totalValue": 46599.21,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-sea-nyy-2026-08-11-total-7pt5"
-    },
-    {
-      "marketSlug": "atp-jodar-fils-2026-08-11",
-      "question": "National Bank Open: Rafael Jodar vs Arthur Fils",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 34439.45,
-      "totalValue": 34439.45,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-jodar-fils-2026-08-11"
+      "url": "https://polymarket.com/event/atp-su-pankin-2026-08-12"
     },
     {
       "marketSlug": "will-oklahoma-city-thunder-win-the-2027-nba-finals",
@@ -61,26 +39,15 @@
       "url": "https://polymarket.com/event/will-oklahoma-city-thunder-win-the-2027-nba-finals"
     },
     {
-      "marketSlug": "mlb-stl-cin-2026-05-24-total-9pt5",
-      "question": "St. Louis Cardinals vs. Cincinnati Reds: O/U 9.5",
+      "marketSlug": "lol-dnf-ns-2026-08-12",
+      "question": "LoL: DN SOOPers vs Nongshim Red Force (BO3) - LCK Round 3-4 Rise Group",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 18206.57,
-      "totalValue": 18206.57,
+      "noValue": 18374.94,
+      "totalValue": 18374.94,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-stl-cin-2026-05-24-total-9pt5"
-    },
-    {
-      "marketSlug": "mlb-pit-mia-2026-08-11-total-6pt5",
-      "question": "Pittsburgh Pirates vs. Miami Marlins: O/U 6.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 17457.83,
-      "totalValue": 17457.83,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-pit-mia-2026-08-11-total-6pt5"
+      "url": "https://polymarket.com/event/lol-dnf-ns-2026-08-12"
     },
     {
       "marketSlug": "will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761",
@@ -92,28 +59,6 @@
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761"
-    },
-    {
-      "marketSlug": "atp-mensik-shelton-2026-08-11",
-      "question": "National Bank Open: Jakub Mensik vs Ben Shelton",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 8690.6,
-      "totalValue": 8690.6,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-mensik-shelton-2026-08-11"
-    },
-    {
-      "marketSlug": "wnba-wsh-las-2026-08-11-spread-home-7pt5",
-      "question": "Spread: Las Vegas Aces (-7.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 6510.7,
-      "totalValue": 6510.7,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wnba-wsh-las-2026-08-11-spread-home-7pt5"
     },
     {
       "marketSlug": "will-manchester-united-win-the-2026-27-english-premier-league-epl-championship-20260701200428762",
@@ -158,17 +103,6 @@
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-chelsea-win-the-2026-27-english-premier-league-epl-championship-20260701200428755"
-    },
-    {
-      "marketSlug": "atp-mcdonal-wu-2026-08-11",
-      "question": "Cincinnati Open, Qualification: Mackenzie McDonald vs Yibing Wu",
-      "side": "YES",
-      "yesValue": 4025.0,
-      "noValue": 0.0,
-      "totalValue": 4025.0,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-mcdonal-wu-2026-08-11"
     },
     {
       "marketSlug": "will-barcelona-win-the-2026-27-uefa-champions-league-championship-20260701202025560",
@@ -226,28 +160,6 @@
       "url": "https://polymarket.com/event/will-washington-wizards-win-the-2027-nba-finals"
     },
     {
-      "marketSlug": "atp-damm-sakella-2026-08-11",
-      "question": "Cincinnati Open, Qualification: Martin Damm vs Stefanos Sakellaridis",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 1726.16,
-      "totalValue": 1726.16,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-damm-sakella-2026-08-11"
-    },
-    {
-      "marketSlug": "ucl-stu1-fen-2026-08-11-exact-score-2-3",
-      "question": "Exact Score: SK Puntigamer Sturm Graz 2 - 3 Fenerbahçe SK?",
-      "side": "YES",
-      "yesValue": 1710.22,
-      "noValue": 0.0,
-      "totalValue": 1710.22,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/ucl-stu1-fen-2026-08-11-exact-score-2-3"
-    },
-    {
       "marketSlug": "will-boston-celtics-win-the-2027-nba-finals",
       "question": "Will Boston Celtics win the 2027 NBA Finals?",
       "side": "YES",
@@ -262,9 +174,9 @@
       "marketSlug": "will-tottenham-win-the-2026-27-english-premier-league-epl-championship-20260701200428765",
       "question": "Will Tottenham win the 2026-27 English Premier League (EPL) Championship?",
       "side": "YES",
-      "yesValue": 1261.68,
+      "yesValue": 1260.82,
       "noValue": 0.0,
-      "totalValue": 1261.68,
+      "totalValue": 1260.82,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-tottenham-win-the-2026-27-english-premier-league-epl-championship-20260701200428765"
@@ -317,9 +229,9 @@
       "marketSlug": "will-detroit-pistons-win-the-2027-nba-finals",
       "question": "Will Detroit Pistons win the 2027 NBA Finals?",
       "side": "YES",
-      "yesValue": 875.38,
+      "yesValue": 875.01,
       "noValue": 0.0,
-      "totalValue": 875.38,
+      "totalValue": 875.01,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-detroit-pistons-win-the-2027-nba-finals"
@@ -361,9 +273,9 @@
       "marketSlug": "will-los-angeles-lakers-win-the-2027-nba-finals",
       "question": "Will Los Angeles Lakers win the 2027 NBA Finals?",
       "side": "YES",
-      "yesValue": 516.65,
+      "yesValue": 514.38,
       "noValue": 0.0,
-      "totalValue": 516.65,
+      "totalValue": 514.38,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-los-angeles-lakers-win-the-2027-nba-finals"
