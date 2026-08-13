@@ -1,32 +1,10 @@
 {
-  "generatedAt": "2026-08-12T20:42:57.005271+00:00",
+  "generatedAt": "2026-08-13T09:12:34.612573+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 7,
+  "signalCount": 9,
   "signals": [
-    {
-      "marketSlug": "2026-balance-of-power-d-senate-d-house-949",
-      "question": "2026 Balance of Power: D Senate, D House",
-      "side": "NO",
-      "yesValue": 5049000.0,
-      "noValue": 5151000.0,
-      "totalValue": 10200000.0,
-      "traderCount": 2,
-      "confidence": 0.505,
-      "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949"
-    },
-    {
-      "marketSlug": "cs2-vit-100t-2026-08-12",
-      "question": "Counter-Strike: Vitality vs 100 Thieves (BO1) - Esports World Cup Group C",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 1332750.94,
-      "totalValue": 1332750.94,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-vit-100t-2026-08-12"
-    },
     {
       "marketSlug": "will-jd-vance-win-the-2028-us-presidential-election",
       "question": "Will JD Vance win the 2028 US Presidential Election?",
@@ -39,48 +17,92 @@
       "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-us-presidential-election"
     },
     {
-      "marketSlug": "usc-psg-av-2026-08-12-psg",
-      "question": "Will Paris Saint-Germain win on 2026-08-12?",
-      "side": "YES",
-      "yesValue": 326000.2,
-      "noValue": 6733.15,
-      "totalValue": 332733.35,
-      "traderCount": 2,
-      "confidence": 0.98,
-      "url": "https://polymarket.com/event/usc-psg-av-2026-08-12-psg"
-    },
-    {
-      "marketSlug": "mlb-atl-cws-2026-06-11-total-8pt5",
-      "question": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
+      "marketSlug": "dota2-ts8-xtreme-2026-08-13",
+      "question": "Dota 2: Team Spirit vs Xtreme Gaming (BO3) - The International Group Stage",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 80590.38,
-      "totalValue": 80590.38,
+      "noValue": 164068.19,
+      "totalValue": 164068.19,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-atl-cws-2026-06-11-total-8pt5"
+      "url": "https://polymarket.com/event/dota2-ts8-xtreme-2026-08-13"
+    },
+    {
+      "marketSlug": "dota2-lgd-tr7-2026-08-13",
+      "question": "Dota 2: LGD Gaming vs Team Resilience (BO3) - The International Group Stage",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 89476.72,
+      "totalValue": 89476.72,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/dota2-lgd-tr7-2026-08-13"
+    },
+    {
+      "marketSlug": "dota2-boombo-ironwi-2026-08-13",
+      "question": "Dota 2: BoomBoys vs Iron Wing (BO3) - The International Group Stage",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 83435.45,
+      "totalValue": 83435.45,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/dota2-boombo-ironwi-2026-08-13"
     },
     {
       "marketSlug": "will-team-falcons-win-the-international-2026-20260629212053616",
       "question": "Will Team Falcons Win The International 2026?",
       "side": "NO",
-      "yesValue": 4688.64,
-      "noValue": 44749.97,
-      "totalValue": 49438.61,
+      "yesValue": 7890.4,
+      "noValue": 43249.97,
+      "totalValue": 51140.37,
       "traderCount": 2,
-      "confidence": 0.905,
+      "confidence": 0.846,
       "url": "https://polymarket.com/event/will-team-falcons-win-the-international-2026-20260629212053616"
     },
     {
-      "marketSlug": "mlb-mil-sd-2026-08-12",
-      "question": "Milwaukee Brewers vs. San Diego Padres",
+      "marketSlug": "lol-drx-fox1-2026-08-13",
+      "question": "LoL: Kiwoom DRX vs BNK FEARX (BO3) - LCK Round 3-4 Rise Group",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 32128.1,
-      "totalValue": 32128.1,
+      "noValue": 21400.15,
+      "totalValue": 21400.15,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/lol-drx-fox1-2026-08-13"
+    },
+    {
+      "marketSlug": "lol-wb-nip-2026-08-13",
+      "question": "LoL: Weibo Gaming vs Ninjas in Pyjamas (BO3) - LPL Group Nirvana",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 17438.92,
+      "totalValue": 17438.92,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mil-sd-2026-08-12"
+      "url": "https://polymarket.com/event/lol-wb-nip-2026-08-13"
+    },
+    {
+      "marketSlug": "lol-drx-fox1-2026-08-13-game2",
+      "question": "LoL: Kiwoom DRX vs BNK FEARX - Game 2 Winner",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 14977.85,
+      "totalValue": 14977.85,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/lol-drx-fox1-2026-08-13-game2"
+    },
+    {
+      "marketSlug": "lol-wb-nip-2026-08-13-game2",
+      "question": "LoL: Weibo Gaming vs Ninjas in Pyjamas - Game 2 Winner",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 6216.11,
+      "totalValue": 6216.11,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/lol-wb-nip-2026-08-13-game2"
     }
   ]
 }
