@@ -15,12 +15,16 @@ interface BillingGateway {
     suspend fun queryPurchases(): List<PurchaseInfo>
 }
 
-class BillingRepository(private val gateway: BillingGateway) {
-    private val _isPro = MutableStateFlow(false)
+class BillingRepository(
+    private val gateway: BillingGateway,
+    private val forcePro: Boolean = false,   // test/paid build: unlock Pro without a purchase
+) {
+    private val _isPro = MutableStateFlow(forcePro)
     val isPro: StateFlow<Boolean> = _isPro.asStateFlow()
 
     suspend fun refresh() {
-        _isPro.value = gateway.queryPurchases().any { it.productId == "pro_monthly" && it.isActive }
+        _isPro.value = forcePro ||
+            gateway.queryPurchases().any { it.productId == "pro_monthly" && it.isActive }
     }
 
     /**

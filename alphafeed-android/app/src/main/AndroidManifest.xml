@@ -5,7 +5,7 @@
 
     <application
         android:name=".AlphaFeedApp"
-        android:label="AlphaFeed"
+        android:label="${appLabel}"
         android:theme="@style/Theme.AlphaFeed"
         android:supportsRtl="true">
 

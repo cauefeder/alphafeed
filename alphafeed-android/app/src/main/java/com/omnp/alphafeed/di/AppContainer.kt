@@ -2,6 +2,7 @@ package com.omnp.alphafeed.di
 
 import android.content.Context
 import androidx.room.Room
+import com.omnp.alphafeed.BuildConfig
 import com.omnp.alphafeed.data.BetsRepository
 import com.omnp.alphafeed.data.billing.BillingRepository
 import com.omnp.alphafeed.data.billing.PlayBillingGateway
@@ -41,7 +42,7 @@ class AppContainer(context: Context) {
 
     val billingGateway = PlayBillingGateway(appContext)
 
-    val billingRepository = BillingRepository(billingGateway)
+    val billingRepository = BillingRepository(billingGateway, forcePro = BuildConfig.FORCE_PRO)
 
     val appPrefs = AppPrefs(appContext)
 }

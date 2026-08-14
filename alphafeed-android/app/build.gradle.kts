@@ -25,6 +25,8 @@ android {
         versionCode = 1
         versionName = "0.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("boolean", "FORCE_PRO", "false")   // default: freemium
+        manifestPlaceholders["appLabel"] = "AlphaFeed"
     }
     buildFeatures { compose = true; buildConfig = true }
     compileOptions {
@@ -47,6 +49,15 @@ android {
             isMinifyEnabled = false   // R8 off for a reliable first release
             signingConfig = if (keystorePropsFile.exists())
                 signingConfigs.getByName("release") else signingConfigs.getByName("debug")
+            // Build the "paid" test APK with -PforcePro=true: unlocks Pro without a
+            // purchase, and uses a distinct package + label so it installs alongside
+            // the free build. (Testing only — real Pro comes from Play Billing.)
+            if (project.findProperty("forcePro") == "true") {
+                buildConfigField("boolean", "FORCE_PRO", "true")
+                applicationIdSuffix = ".pro"
+                versionNameSuffix = "-pro"
+                manifestPlaceholders["appLabel"] = "AlphaFeed Pro"
+            }
         }
     }
     testOptions {
