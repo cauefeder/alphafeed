@@ -1,20 +1,53 @@
 {
-  "generatedAt": "2026-08-16T08:29:20.170220+00:00",
+  "generatedAt": "2026-08-16T20:20:46.794525+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 5,
+  "signalCount": 9,
   "signals": [
     {
-      "marketSlug": "dota2-lgd-ty-2026-08-16-game1",
-      "question": "Dota 2: LGD Gaming vs Team Yandex - Game 1 Winner",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 96101.09,
-      "totalValue": 96101.09,
+      "marketSlug": "ecs-ars-mci-2026-08-16-ars",
+      "question": "Will Arsenal FC win on 2026-08-16?",
+      "side": "YES",
+      "yesValue": 1967095.61,
+      "noValue": 0.0,
+      "totalValue": 1967095.61,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/dota2-lgd-ty-2026-08-16-game1"
+      "url": "https://polymarket.com/event/ecs-ars-mci-2026-08-16-ars"
+    },
+    {
+      "marketSlug": "bra-cam-gre-2026-08-15-cam",
+      "question": "Will CA Mineiro win on 2026-08-15?",
+      "side": "YES",
+      "yesValue": 227587.57,
+      "noValue": 0.0,
+      "totalValue": 227587.57,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/bra-cam-gre-2026-08-15-cam"
+    },
+    {
+      "marketSlug": "atp-rinderk-cerund-2026-08-16",
+      "question": "Cincinnati Open: Arthur Rinderknech vs Juan Manuel Cerundolo",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 204619.09,
+      "totalValue": 204619.09,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-rinderk-cerund-2026-08-16"
+    },
+    {
+      "marketSlug": "atp-rublev-busta-2026-08-16",
+      "question": "Cincinnati Open: Andrey Rublev vs Pablo Carreno Busta",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 60379.08,
+      "totalValue": 60379.08,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-rublev-busta-2026-08-16"
     },
     {
       "marketSlug": "mls-chi-vwh-2026-07-16-vwh",
@@ -28,37 +61,48 @@
       "url": "https://polymarket.com/event/mls-chi-vwh-2026-07-16-vwh"
     },
     {
-      "marketSlug": "ecs-ars-mci-2026-08-16-total-2pt5",
-      "question": "Arsenal FC vs. Manchester City: O/U 2.5",
+      "marketSlug": "bra-cam-gre-2026-08-15-spread-home-1pt5",
+      "question": "Spread: CA Mineiro (-1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 40443.44,
-      "totalValue": 40443.44,
+      "noValue": 42858.93,
+      "totalValue": 42858.93,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/ecs-ars-mci-2026-08-16-total-2pt5"
+      "url": "https://polymarket.com/event/bra-cam-gre-2026-08-15-spread-home-1pt5"
     },
     {
-      "marketSlug": "lal-rrc-vil-2026-08-16-vil",
-      "question": "Will Villarreal CF win on 2026-08-16?",
+      "marketSlug": "nor-ffk-kbk-2026-08-16-ffk",
+      "question": "Will Fredrikstad FK win on 2026-08-16?",
       "side": "YES",
-      "yesValue": 16335.66,
-      "noValue": 1046.09,
-      "totalValue": 17381.76,
-      "traderCount": 2,
-      "confidence": 0.94,
-      "url": "https://polymarket.com/event/lal-rrc-vil-2026-08-16-vil"
-    },
-    {
-      "marketSlug": "lol-t1-gen-2026-08-16-game1",
-      "question": "LoL: T1 vs Gen.G - Game 1 Winner",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 4080.81,
-      "totalValue": 4080.81,
+      "yesValue": 42598.18,
+      "noValue": 0.0,
+      "totalValue": 42598.18,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-t1-gen-2026-08-16-game1"
+      "url": "https://polymarket.com/event/nor-ffk-kbk-2026-08-16-ffk"
+    },
+    {
+      "marketSlug": "val-c9-eg2-2026-08-16",
+      "question": "Valorant: Cloud9 vs Evil Geniuses (BO3) - VCT Americas Stage 2 Play-In",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 24313.2,
+      "totalValue": 24313.2,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/val-c9-eg2-2026-08-16"
+    },
+    {
+      "marketSlug": "atp-nakashi-kovacev-2026-08-16",
+      "question": "Cincinnati Open: Brandon Nakashima vs Aleksandar Kovacevic",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 11885.4,
+      "totalValue": 11885.4,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-nakashi-kovacev-2026-08-16"
     }
   ]
 }
