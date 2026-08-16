@@ -1,185 +1,64 @@
 {
-  "generatedAt": "2026-08-15T20:21:21.196235+00:00",
+  "generatedAt": "2026-08-16T08:29:20.170220+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 16,
+  "signalCount": 5,
   "signals": [
     {
-      "marketSlug": "2026-balance-of-power-d-senate-d-house-949",
-      "question": "2026 Balance of Power: D Senate, D House",
+      "marketSlug": "dota2-lgd-ty-2026-08-16-game1",
+      "question": "Dota 2: LGD Gaming vs Team Yandex - Game 1 Winner",
       "side": "NO",
-      "yesValue": 5177700.0,
-      "noValue": 5282300.0,
-      "totalValue": 10460000.0,
+      "yesValue": 0.0,
+      "noValue": 96101.09,
+      "totalValue": 96101.09,
       "traderCount": 2,
-      "confidence": 0.505,
-      "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949"
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/dota2-lgd-ty-2026-08-16-game1"
     },
     {
-      "marketSlug": "lal-ala-get-2026-08-15-ala",
-      "question": "Will Deportivo Alavés win on 2026-08-15?",
+      "marketSlug": "mls-chi-vwh-2026-07-16-vwh",
+      "question": "Will Vancouver Whitecaps FC win on 2026-07-16?",
+      "side": "NO",
+      "yesValue": 2353.7,
+      "noValue": 43174.74,
+      "totalValue": 45528.44,
+      "traderCount": 2,
+      "confidence": 0.948,
+      "url": "https://polymarket.com/event/mls-chi-vwh-2026-07-16-vwh"
+    },
+    {
+      "marketSlug": "ecs-ars-mci-2026-08-16-total-2pt5",
+      "question": "Arsenal FC vs. Manchester City: O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 40443.44,
+      "totalValue": 40443.44,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/ecs-ars-mci-2026-08-16-total-2pt5"
+    },
+    {
+      "marketSlug": "lal-rrc-vil-2026-08-16-vil",
+      "question": "Will Villarreal CF win on 2026-08-16?",
       "side": "YES",
-      "yesValue": 1237840.99,
-      "noValue": 0.0,
-      "totalValue": 1237840.99,
+      "yesValue": 16335.66,
+      "noValue": 1046.09,
+      "totalValue": 17381.76,
       "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-ala-get-2026-08-15-ala"
+      "confidence": 0.94,
+      "url": "https://polymarket.com/event/lal-rrc-vil-2026-08-16-vil"
     },
     {
-      "marketSlug": "atp-djokovi-tirante-2026-08-15",
-      "question": "Cincinnati Open: Novak Djokovic vs Thiago Agustin Tirante",
+      "marketSlug": "lol-t1-gen-2026-08-16-game1",
+      "question": "LoL: T1 vs Gen.G - Game 1 Winner",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 656406.4,
-      "totalValue": 656406.4,
-      "traderCount": 6,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-djokovi-tirante-2026-08-15"
-    },
-    {
-      "marketSlug": "ufc-isl-ian1-2026-08-15",
-      "question": "UFC 330: Islam Makhachev vs. Ian Machado Garry (Welterweight, Main Card)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 150443.34,
-      "totalValue": 150443.34,
+      "noValue": 4080.81,
+      "totalValue": 4080.81,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/ufc-isl-ian1-2026-08-15"
-    },
-    {
-      "marketSlug": "mlb-wsh-nym-2026-08-15-total-8pt5",
-      "question": "Washington Nationals vs. New York Mets: O/U 8.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 122119.83,
-      "totalValue": 122119.83,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-wsh-nym-2026-08-15-total-8pt5"
-    },
-    {
-      "marketSlug": "lal-sev-ray-2026-08-15-exact-score-0-0",
-      "question": "Exact Score: Sevilla FC 0 - 0 Rayo Vallecano de Madrid?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 87422.84,
-      "totalValue": 87422.84,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-sev-ray-2026-08-15-exact-score-0-0"
-    },
-    {
-      "marketSlug": "lal-sev-ray-2026-08-15-sev",
-      "question": "Will Sevilla FC win on 2026-08-15?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 79733.26,
-      "totalValue": 79733.26,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-sev-ray-2026-08-15-sev"
-    },
-    {
-      "marketSlug": "wta-ostapen-frech-2026-08-15",
-      "question": "Cincinnati Open: Jelena Ostapenko vs Magdalena Frech",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 64610.92,
-      "totalValue": 64610.92,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-ostapen-frech-2026-08-15"
-    },
-    {
-      "marketSlug": "lal-sev-ray-2026-08-15-ray",
-      "question": "Will Rayo Vallecano de Madrid win on 2026-08-15?",
-      "side": "YES",
-      "yesValue": 34711.77,
-      "noValue": 1651.23,
-      "totalValue": 36363.0,
-      "traderCount": 2,
-      "confidence": 0.955,
-      "url": "https://polymarket.com/event/lal-sev-ray-2026-08-15-ray"
-    },
-    {
-      "marketSlug": "atp-bellucc-mensik-2026-08-15",
-      "question": "Cincinnati Open: Mattia Bellucci vs Jakub Mensik",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 35087.67,
-      "totalValue": 35087.67,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-bellucc-mensik-2026-08-15"
-    },
-    {
-      "marketSlug": "ufc-vic-tre3-2026-08-15",
-      "question": "UFC 330: Vicente Luque vs. Tresean Gore (Middleweight, Early Prelims)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 32458.58,
-      "totalValue": 32458.58,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/ufc-vic-tre3-2026-08-15"
-    },
-    {
-      "marketSlug": "cs2-big5-ts7-2026-08-15-game1",
-      "question": "Counter-Strike: BIG vs Spirit - Map 1 Winner",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 25025.7,
-      "totalValue": 25025.7,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-big5-ts7-2026-08-15-game1"
-    },
-    {
-      "marketSlug": "ere-utr-az-2026-08-15-az",
-      "question": "Will AZ win on 2026-08-15?",
-      "side": "YES",
-      "yesValue": 11308.02,
-      "noValue": 0.0,
-      "totalValue": 11308.02,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/ere-utr-az-2026-08-15-az"
-    },
-    {
-      "marketSlug": "bra-flu-pal-2026-08-15-pal",
-      "question": "Will SE Palmeiras win on 2026-08-15?",
-      "side": "YES",
-      "yesValue": 8904.94,
-      "noValue": 0.0,
-      "totalValue": 8904.94,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/bra-flu-pal-2026-08-15-pal"
-    },
-    {
-      "marketSlug": "bra-sao-cor-2026-08-15-sao",
-      "question": "Will São Paulo FC win on 2026-08-15?",
-      "side": "NO",
-      "yesValue": 1635.0,
-      "noValue": 6586.48,
-      "totalValue": 8221.48,
-      "traderCount": 2,
-      "confidence": 0.801,
-      "url": "https://polymarket.com/event/bra-sao-cor-2026-08-15-sao"
-    },
-    {
-      "marketSlug": "arg-est-gim-2026-08-15-est",
-      "question": "Will Estudiantes de La Plata win on 2026-08-15?",
-      "side": "YES",
-      "yesValue": 2846.53,
-      "noValue": 0.0,
-      "totalValue": 2846.53,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/arg-est-gim-2026-08-15-est"
+      "url": "https://polymarket.com/event/lol-t1-gen-2026-08-16-game1"
     }
   ]
 }
