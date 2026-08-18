@@ -42,7 +42,7 @@ handle any bets or money for gambling. Nothing here is a recommendation to place
 are risky and uncertain; past model performance does not guarantee future results. For adults 18+.
 
 Questions: cauefeder@gmail.com
-Privacy policy: <YOUR_HOSTED_PRIVACY_URL>
+Privacy policy: https://alphafeed.vercel.app/privacy.html
 ```
 
 **Category:** Sports (or Finance) · **Tags:** analytics, sports, statistics
