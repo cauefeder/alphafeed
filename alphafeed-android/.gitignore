@@ -1,0 +1,12 @@
+
+# Android / Gradle
+# Local SDK path (machine-specific)
+*.iml
+*.jks
+*.keystore
+.gradle/
+.idea/
+.kotlin/
+build/
+keystore.properties
+local.properties
