@@ -47,7 +47,7 @@ fun BetsScreen(
         when (state) {
             is BetsUi.Loading -> LoadingState()
             is BetsUi.Error -> ErrorState(message = state.message, onRetry = onRetry)
-            is BetsUi.Content -> ContentState(state = state, onBet = onBet, onUpgrade = onUpgrade)
+            is BetsUi.Content -> ContentState(state = state, onBet = onBet, onUpgrade = onUpgrade, onRetry = onRetry)
         }
     }
 }
@@ -59,7 +59,7 @@ private fun LoadingState() {
             CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
             Spacer(modifier = Modifier.padding(top = 16.dp))
             Text(
-                text = "Loading today's board — first load can take up to 30s while the server wakes up.",
+                text = "Loading today's board — the first load can take up to a minute while the free server wakes up.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -91,7 +91,21 @@ private fun ErrorState(message: String, onRetry: () -> Unit) {
 }
 
 @Composable
-private fun ContentState(state: BetsUi.Content, onBet: (Bet) -> Unit, onUpgrade: () -> Unit) {
+private fun ContentState(
+    state: BetsUi.Content,
+    onBet: (Bet) -> Unit,
+    onUpgrade: () -> Unit,
+    onRetry: () -> Unit
+) {
+    // Offline with nothing cached (e.g. a fresh install where the first fetch failed):
+    // show an actionable retry instead of an empty board.
+    if (state.isOffline && state.rows.isEmpty()) {
+        ErrorState(
+            message = "Couldn't reach the server. It may be waking up (up to a minute) — please try again.",
+            onRetry = onRetry
+        )
+        return
+    }
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),

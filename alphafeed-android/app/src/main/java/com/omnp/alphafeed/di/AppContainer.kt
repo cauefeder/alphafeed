@@ -14,6 +14,7 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import java.util.concurrent.TimeUnit
 
 private const val BASE_URL = "https://alphafeed-api.onrender.com/"
 
@@ -26,7 +27,16 @@ class AppContainer(context: Context) {
 
     private val json = Json { ignoreUnknownKeys = true }
 
-    private val okHttpClient = OkHttpClient.Builder().build()
+    // Generous timeouts: the Render free-tier backend spins down when idle and its
+    // cold start can take ~30-50s. With the default 10s timeout the first request
+    // after the server sleeps times out and the app shows "offline". 60s read/call
+    // lets the cold start finish and the board load.
+    private val okHttpClient = OkHttpClient.Builder()
+        .connectTimeout(20, TimeUnit.SECONDS)
+        .readTimeout(60, TimeUnit.SECONDS)
+        .callTimeout(70, TimeUnit.SECONDS)
+        .retryOnConnectionFailure(true)
+        .build()
 
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
