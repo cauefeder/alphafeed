@@ -1,87 +1,10 @@
 {
-  "generatedAt": "2026-08-24T20:29:05.479619+00:00",
+  "generatedAt": "2026-08-25T08:41:54.653306+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 19,
+  "signalCount": 8,
   "signals": [
-    {
-      "marketSlug": "epl-ful-che-2026-08-24-che",
-      "question": "Will Chelsea FC win on 2026-08-24?",
-      "side": "YES",
-      "yesValue": 1488150.14,
-      "noValue": 479.4,
-      "totalValue": 1488629.54,
-      "traderCount": 7,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ful-che-2026-08-24-che"
-    },
-    {
-      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649",
-      "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
-      "side": "YES",
-      "yesValue": 429284.12,
-      "noValue": 0.0,
-      "totalValue": 429284.12,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649"
-    },
-    {
-      "marketSlug": "epl-ful-che-2026-08-24-total-4pt5",
-      "question": "Fulham FC vs. Chelsea FC: O/U 4.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 425222.8,
-      "totalValue": 425222.8,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ful-che-2026-08-24-total-4pt5"
-    },
-    {
-      "marketSlug": "epl-ful-che-2026-08-24-total-2pt5",
-      "question": "Fulham FC vs. Chelsea FC: O/U 2.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 102104.22,
-      "totalValue": 102104.22,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ful-che-2026-08-24-total-2pt5"
-    },
-    {
-      "marketSlug": "lol-gx-g2-2026-08-24",
-      "question": "LoL: GIANTX vs G2 Esports (BO3) - LEC Regular Season",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 101948.75,
-      "totalValue": 101948.75,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-gx-g2-2026-08-24"
-    },
-    {
-      "marketSlug": "lal-mala-dep-2026-08-24-mala",
-      "question": "Will Málaga CF win on 2026-08-24?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 86568.63,
-      "totalValue": 86568.63,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-mala-dep-2026-08-24-mala"
-    },
-    {
-      "marketSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615",
-      "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
-      "side": "NO",
-      "yesValue": 13630.48,
-      "noValue": 52909.9,
-      "totalValue": 66540.38,
-      "traderCount": 2,
-      "confidence": 0.795,
-      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615"
-    },
     {
       "marketSlug": "epl-lee-bre-2026-08-30-bre",
       "question": "Will Brentford FC win on 2026-08-30?",
@@ -92,28 +15,6 @@
       "traderCount": 2,
       "confidence": 0.969,
       "url": "https://polymarket.com/event/epl-lee-bre-2026-08-30-bre"
-    },
-    {
-      "marketSlug": "will-carlos-alcaraz-win-the-2026-mens-us-open",
-      "question": "Will Carlos Alcaraz win the 2026 Men's US Open?",
-      "side": "NO",
-      "yesValue": 6300.0,
-      "noValue": 43110.23,
-      "totalValue": 49410.23,
-      "traderCount": 2,
-      "confidence": 0.872,
-      "url": "https://polymarket.com/event/will-carlos-alcaraz-win-the-2026-mens-us-open"
-    },
-    {
-      "marketSlug": "atp-johnso-garin-2026-08-24",
-      "question": "US Open, Qualification ATP: Spencer Johnson vs Cristian Garin",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 43964.39,
-      "totalValue": 43964.39,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-johnso-garin-2026-08-24"
     },
     {
       "marketSlug": "bitcoin-all-time-high-by-december-31-2026",
@@ -127,92 +28,70 @@
       "url": "https://polymarket.com/event/bitcoin-all-time-high-by-december-31-2026"
     },
     {
-      "marketSlug": "epl-ful-che-2026-08-24-ful",
-      "question": "Will Fulham FC win on 2026-08-24?",
-      "side": "NO",
-      "yesValue": 4121.49,
-      "noValue": 19210.0,
-      "totalValue": 23331.49,
-      "traderCount": 2,
-      "confidence": 0.823,
-      "url": "https://polymarket.com/event/epl-ful-che-2026-08-24-ful"
-    },
-    {
-      "marketSlug": "lal-mala-dep-2026-08-24-dep",
-      "question": "Will RC Deportivo A Coruña win on 2026-08-24?",
-      "side": "YES",
-      "yesValue": 18928.88,
-      "noValue": 0.0,
-      "totalValue": 18928.88,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-mala-dep-2026-08-24-dep"
-    },
-    {
-      "marketSlug": "epl-ful-che-2026-08-24-spread-away-1pt5",
-      "question": "Spread: Chelsea FC (-1.5)",
+      "marketSlug": "atp-gaston-justo-2026-08-25",
+      "question": "US Open, Qualification ATP: Hugo Gaston vs Guido Justo",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 12314.6,
-      "totalValue": 12314.6,
+      "noValue": 5837.13,
+      "totalValue": 5837.13,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ful-che-2026-08-24-spread-away-1pt5"
+      "url": "https://polymarket.com/event/atp-gaston-justo-2026-08-25"
     },
     {
-      "marketSlug": "epl-ful-che-2026-08-24-spread-away-2pt5",
-      "question": "Spread: Chelsea FC (-2.5)",
+      "marketSlug": "lal-val-bet-2026-08-25-total-0pt5",
+      "question": "Valencia CF vs. Real Betis Balompié: O/U 0.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 10281.85,
-      "totalValue": 10281.85,
+      "noValue": 2951.83,
+      "totalValue": 2951.83,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ful-che-2026-08-24-spread-away-2pt5"
-    },
-    {
-      "marketSlug": "sea-rom-fio-2026-08-24-total-2pt5",
-      "question": "AS Roma vs. ACF Fiorentina: O/U 2.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 9078.46,
-      "totalValue": 9078.46,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/sea-rom-fio-2026-08-24-total-2pt5"
-    },
-    {
-      "marketSlug": "sea-rom-fio-2026-08-24-total-3pt5",
-      "question": "AS Roma vs. ACF Fiorentina: O/U 3.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 4362.42,
-      "totalValue": 4362.42,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/sea-rom-fio-2026-08-24-total-3pt5"
+      "url": "https://polymarket.com/event/lal-val-bet-2026-08-25-total-0pt5"
     },
     {
       "marketSlug": "mls-chi-vwh-2026-07-16-vwh",
       "question": "Will Vancouver Whitecaps FC win on 2026-07-16?",
       "side": "YES",
       "yesValue": 2513.64,
-      "noValue": 0.0,
-      "totalValue": 2513.64,
+      "noValue": 353.83,
+      "totalValue": 2867.47,
       "traderCount": 2,
-      "confidence": 1.0,
+      "confidence": 0.877,
       "url": "https://polymarket.com/event/mls-chi-vwh-2026-07-16-vwh"
     },
     {
-      "marketSlug": "sea-rom-fio-2026-08-24-total-4pt5",
-      "question": "AS Roma vs. ACF Fiorentina: O/U 4.5",
+      "marketSlug": "atp-bu-noguchi-2026-08-25",
+      "question": "US Open, Qualification ATP: Yunchaokete Bu vs Rio Noguchi",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 1195.85,
-      "totalValue": 1195.85,
+      "noValue": 1447.97,
+      "totalValue": 1447.97,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/sea-rom-fio-2026-08-24-total-4pt5"
+      "url": "https://polymarket.com/event/atp-bu-noguchi-2026-08-25"
+    },
+    {
+      "marketSlug": "epl-tot-new-2026-08-29-tot",
+      "question": "Will Tottenham Hotspur FC win on 2026-08-29?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 1262.42,
+      "totalValue": 1262.42,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-tot-new-2026-08-29-tot"
+    },
+    {
+      "marketSlug": "epl-che-bri-2026-08-30-che",
+      "question": "Will Chelsea FC win on 2026-08-30?",
+      "side": "YES",
+      "yesValue": 404.65,
+      "noValue": 274.96,
+      "totalValue": 679.61,
+      "traderCount": 2,
+      "confidence": 0.595,
+      "url": "https://polymarket.com/event/epl-che-bri-2026-08-30-che"
     }
   ]
 }
