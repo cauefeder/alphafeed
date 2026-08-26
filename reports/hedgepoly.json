@@ -1,108 +1,75 @@
 {
-  "generatedAt": "2026-08-25T20:27:46.900500+00:00",
+  "generatedAt": "2026-08-26T08:43:10.965437+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 6,
   "signals": [
     {
-      "marketSlug": "clarity-act-signed-into-law-in-2026",
-      "question": "Clarity Act (H.R.3633) signed into law in 2026?",
-      "side": "NO",
-      "yesValue": 2204.0,
-      "noValue": 900207.12,
-      "totalValue": 902411.12,
-      "traderCount": 2,
-      "confidence": 0.998,
-      "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
-    },
-    {
-      "marketSlug": "lal-val-bet-2026-08-25-bet",
-      "question": "Will Real Betis Balompié win on 2026-08-25?",
-      "side": "NO",
-      "yesValue": 1483.42,
-      "noValue": 440091.71,
-      "totalValue": 441575.13,
-      "traderCount": 2,
-      "confidence": 0.997,
-      "url": "https://polymarket.com/event/lal-val-bet-2026-08-25-bet"
-    },
-    {
-      "marketSlug": "atp-kwon-lajovic-2026-08-25",
-      "question": "US Open, Qualification ATP: Soon-Woo Kwon vs Dusan Lajovic",
+      "marketSlug": "cs2-aur1-g2-2026-08-26",
+      "question": "Counter-Strike: Aurora Gaming vs G2 (BO3) - BLAST Open Porto Group A",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 226423.41,
-      "totalValue": 226423.41,
+      "noValue": 406809.57,
+      "totalValue": 406809.57,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-kwon-lajovic-2026-08-25"
+      "url": "https://polymarket.com/event/cs2-aur1-g2-2026-08-26"
     },
     {
-      "marketSlug": "ucl-lin2-cel-2026-08-25-lin2",
-      "question": "Will LASK Linz win on 2026-08-25?",
+      "marketSlug": "epl-lee-bre-2026-08-30-bre",
+      "question": "Will Brentford FC win on 2026-08-30?",
       "side": "YES",
-      "yesValue": 217022.75,
-      "noValue": 781.15,
-      "totalValue": 217803.9,
-      "traderCount": 3,
-      "confidence": 0.996,
-      "url": "https://polymarket.com/event/ucl-lin2-cel-2026-08-25-lin2"
-    },
-    {
-      "marketSlug": "lal-val-bet-2026-08-25-val",
-      "question": "Will Valencia CF win on 2026-08-25?",
-      "side": "YES",
-      "yesValue": 210082.9,
-      "noValue": 0.0,
-      "totalValue": 210082.9,
+      "yesValue": 58649.96,
+      "noValue": 1873.32,
+      "totalValue": 60523.28,
       "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-val-bet-2026-08-25-val"
+      "confidence": 0.969,
+      "url": "https://polymarket.com/event/epl-lee-bre-2026-08-30-bre"
     },
     {
-      "marketSlug": "atp-bellucc-darderi-2026-08-25",
-      "question": "Winston-Salem Open: Mattia Bellucci vs Luciano Darderi",
+      "marketSlug": "epl-tot-new-2026-08-29-new",
+      "question": "Will Newcastle United FC win on 2026-08-29?",
+      "side": "YES",
+      "yesValue": 31499.99,
+      "noValue": 344.48,
+      "totalValue": 31844.47,
+      "traderCount": 2,
+      "confidence": 0.989,
+      "url": "https://polymarket.com/event/epl-tot-new-2026-08-29-new"
+    },
+    {
+      "marketSlug": "lol-kt-bro2-2026-08-26",
+      "question": "LoL: KT Rolster vs HANJIN BRION (BO5) - LCK Play-In",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 205105.12,
-      "totalValue": 205105.12,
-      "traderCount": 3,
+      "noValue": 14695.02,
+      "totalValue": 14695.02,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-bellucc-darderi-2026-08-25"
+      "url": "https://polymarket.com/event/lol-kt-bro2-2026-08-26"
     },
     {
-      "marketSlug": "atp-martine-glinka-2026-08-25",
-      "question": "US Open, Qualification ATP: Pedro Martinez vs Daniil Glinka",
+      "marketSlug": "epl-che-bri-2026-08-30-che",
+      "question": "Will Chelsea FC win on 2026-08-30?",
+      "side": "YES",
+      "yesValue": 2925.54,
+      "noValue": 940.9,
+      "totalValue": 3866.44,
+      "traderCount": 2,
+      "confidence": 0.757,
+      "url": "https://polymarket.com/event/epl-che-bri-2026-08-30-che"
+    },
+    {
+      "marketSlug": "epl-tot-new-2026-08-29-tot",
+      "question": "Will Tottenham Hotspur FC win on 2026-08-29?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 81024.34,
-      "totalValue": 81024.34,
+      "noValue": 1262.42,
+      "totalValue": 1262.42,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-martine-glinka-2026-08-25"
-    },
-    {
-      "marketSlug": "efl-swe-wol-2026-08-25-wol",
-      "question": "Will Wolverhampton Wanderers FC win on 2026-08-25?",
-      "side": "YES",
-      "yesValue": 12800.64,
-      "noValue": 319.26,
-      "totalValue": 13119.89,
-      "traderCount": 2,
-      "confidence": 0.976,
-      "url": "https://polymarket.com/event/efl-swe-wol-2026-08-25-wol"
-    },
-    {
-      "marketSlug": "efl-sot-whu-2026-08-25-sot",
-      "question": "Will Southampton FC win on 2026-08-25?",
-      "side": "NO",
-      "yesValue": 244.28,
-      "noValue": 10350.83,
-      "totalValue": 10595.11,
-      "traderCount": 2,
-      "confidence": 0.977,
-      "url": "https://polymarket.com/event/efl-sot-whu-2026-08-25-sot"
+      "url": "https://polymarket.com/event/epl-tot-new-2026-08-29-tot"
     }
   ]
 }
