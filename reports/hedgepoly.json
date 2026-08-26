@@ -1,75 +1,53 @@
 {
-  "generatedAt": "2026-08-26T08:43:10.965437+00:00",
+  "generatedAt": "2026-08-26T22:44:45.582586+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 6,
+  "signalCount": 4,
   "signals": [
     {
-      "marketSlug": "cs2-aur1-g2-2026-08-26",
-      "question": "Counter-Strike: Aurora Gaming vs G2 (BO3) - BLAST Open Porto Group A",
+      "marketSlug": "mlb-lad-atl-2026-08-26",
+      "question": "Los Angeles Dodgers vs. Atlanta Braves",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 406809.57,
-      "totalValue": 406809.57,
-      "traderCount": 3,
+      "noValue": 162236.81,
+      "totalValue": 162236.81,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-aur1-g2-2026-08-26"
+      "url": "https://polymarket.com/event/mlb-lad-atl-2026-08-26"
     },
     {
-      "marketSlug": "epl-lee-bre-2026-08-30-bre",
-      "question": "Will Brentford FC win on 2026-08-30?",
+      "marketSlug": "efl-pne-eve-2026-08-26-eve",
+      "question": "Will Everton FC win on 2026-08-26?",
       "side": "YES",
-      "yesValue": 58649.96,
-      "noValue": 1873.32,
-      "totalValue": 60523.28,
+      "yesValue": 19226.48,
+      "noValue": 0.0,
+      "totalValue": 19226.48,
       "traderCount": 2,
-      "confidence": 0.969,
-      "url": "https://polymarket.com/event/epl-lee-bre-2026-08-30-bre"
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/efl-pne-eve-2026-08-26-eve"
     },
     {
-      "marketSlug": "epl-tot-new-2026-08-29-new",
-      "question": "Will Newcastle United FC win on 2026-08-29?",
-      "side": "YES",
-      "yesValue": 31499.99,
-      "noValue": 344.48,
-      "totalValue": 31844.47,
-      "traderCount": 2,
-      "confidence": 0.989,
-      "url": "https://polymarket.com/event/epl-tot-new-2026-08-29-new"
-    },
-    {
-      "marketSlug": "lol-kt-bro2-2026-08-26",
-      "question": "LoL: KT Rolster vs HANJIN BRION (BO5) - LCK Play-In",
+      "marketSlug": "lal-bar-bil-2026-08-27-total-3pt5",
+      "question": "FC Barcelona vs. Athletic Club: O/U 3.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 14695.02,
-      "totalValue": 14695.02,
+      "noValue": 1998.39,
+      "totalValue": 1998.39,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-kt-bro2-2026-08-26"
+      "url": "https://polymarket.com/event/lal-bar-bil-2026-08-27-total-3pt5"
     },
     {
-      "marketSlug": "epl-che-bri-2026-08-30-che",
-      "question": "Will Chelsea FC win on 2026-08-30?",
+      "marketSlug": "lal-cel-osa-2026-08-16-cel",
+      "question": "Will RC Celta de Vigo win on 2026-08-16?",
       "side": "YES",
-      "yesValue": 2925.54,
-      "noValue": 940.9,
-      "totalValue": 3866.44,
+      "yesValue": 1070.0,
+      "noValue": 772.5,
+      "totalValue": 1842.5,
       "traderCount": 2,
-      "confidence": 0.757,
-      "url": "https://polymarket.com/event/epl-che-bri-2026-08-30-che"
-    },
-    {
-      "marketSlug": "epl-tot-new-2026-08-29-tot",
-      "question": "Will Tottenham Hotspur FC win on 2026-08-29?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 1262.42,
-      "totalValue": 1262.42,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-tot-new-2026-08-29-tot"
+      "confidence": 0.581,
+      "url": "https://polymarket.com/event/lal-cel-osa-2026-08-16-cel"
     }
   ]
 }
