@@ -1,20 +1,64 @@
 {
-  "generatedAt": "2026-08-29T22:23:25.098021+00:00",
+  "generatedAt": "2026-08-30T13:36:31.663386+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 14,
+  "signalCount": 17,
   "signals": [
     {
       "marketSlug": "2026-balance-of-power-d-senate-d-house-949",
       "question": "2026 Balance of Power: D Senate, D House",
       "side": "NO",
-      "yesValue": 3366000.0,
-      "noValue": 3434000.0,
-      "totalValue": 6800000.0,
+      "yesValue": 3363525.0,
+      "noValue": 3431475.0,
+      "totalValue": 6795000.0,
       "traderCount": 2,
       "confidence": 0.505,
       "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949"
+    },
+    {
+      "marketSlug": "will-jd-vance-win-the-2028-us-presidential-election",
+      "question": "Will JD Vance win the 2028 US Presidential Election?",
+      "side": "NO",
+      "yesValue": 621074.75,
+      "noValue": 1828930.59,
+      "totalValue": 2450005.34,
+      "traderCount": 2,
+      "confidence": 0.747,
+      "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-us-presidential-election"
+    },
+    {
+      "marketSlug": "epl-che-bri-2026-08-30-che",
+      "question": "Will Chelsea FC win on 2026-08-30?",
+      "side": "YES",
+      "yesValue": 2286670.92,
+      "noValue": 15204.83,
+      "totalValue": 2301875.75,
+      "traderCount": 5,
+      "confidence": 0.993,
+      "url": "https://polymarket.com/event/epl-che-bri-2026-08-30-che"
+    },
+    {
+      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649",
+      "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+      "side": "YES",
+      "yesValue": 962102.54,
+      "noValue": 0.0,
+      "totalValue": 962102.54,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649"
+    },
+    {
+      "marketSlug": "epl-lee-bre-2026-08-30-bre",
+      "question": "Will Brentford FC win on 2026-08-30?",
+      "side": "YES",
+      "yesValue": 365072.14,
+      "noValue": 156122.98,
+      "totalValue": 521195.11,
+      "traderCount": 5,
+      "confidence": 0.7,
+      "url": "https://polymarket.com/event/epl-lee-bre-2026-08-30-bre"
     },
     {
       "marketSlug": "will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761",
@@ -28,136 +72,125 @@
       "url": "https://polymarket.com/event/will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761"
     },
     {
-      "marketSlug": "epl-lee-bre-2026-08-30-bre",
-      "question": "Will Brentford FC win on 2026-08-30?",
+      "marketSlug": "epl-sun-ful-2026-08-30-sun",
+      "question": "Will Sunderland AFC win on 2026-08-30?",
       "side": "NO",
-      "yesValue": 83331.32,
-      "noValue": 113121.22,
-      "totalValue": 196452.54,
+      "yesValue": 970.52,
+      "noValue": 451189.18,
+      "totalValue": 452159.7,
       "traderCount": 3,
-      "confidence": 0.576,
-      "url": "https://polymarket.com/event/epl-lee-bre-2026-08-30-bre"
+      "confidence": 0.998,
+      "url": "https://polymarket.com/event/epl-sun-ful-2026-08-30-sun"
     },
     {
-      "marketSlug": "epl-che-bri-2026-08-30-che",
-      "question": "Will Chelsea FC win on 2026-08-30?",
-      "side": "YES",
-      "yesValue": 106807.3,
-      "noValue": 48774.6,
-      "totalValue": 155581.9,
+      "marketSlug": "cs2-m80-aur1-2026-08-30",
+      "question": "Counter-Strike: M80 vs Aurora Gaming (BO3) - BLAST Open Porto Group A",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 365591.34,
+      "totalValue": 365591.34,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cs2-m80-aur1-2026-08-30"
+    },
+    {
+      "marketSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615",
+      "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+      "side": "NO",
+      "yesValue": 64612.02,
+      "noValue": 115827.81,
+      "totalValue": 180439.82,
       "traderCount": 3,
-      "confidence": 0.687,
-      "url": "https://polymarket.com/event/epl-che-bri-2026-08-30-che"
+      "confidence": 0.642,
+      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615"
     },
     {
-      "marketSlug": "mlb-col-atl-2026-08-29-total-8pt5",
-      "question": "Colorado Rockies vs. Atlanta Braves: O/U 8.5",
+      "marketSlug": "bitcoin-all-time-high-by-december-31-2026",
+      "question": "Bitcoin all time high by December 31, 2026?",
+      "side": "NO",
+      "yesValue": 790.0,
+      "noValue": 82953.14,
+      "totalValue": 83743.14,
+      "traderCount": 2,
+      "confidence": 0.991,
+      "url": "https://polymarket.com/event/bitcoin-all-time-high-by-december-31-2026"
+    },
+    {
+      "marketSlug": "cs2-m80-aur1-2026-08-30-map-handicap-home-1pt5",
+      "question": "Map Handicap: AUR (-1.5) vs M80 (+1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 142082.44,
-      "totalValue": 142082.44,
+      "noValue": 60971.76,
+      "totalValue": 60971.76,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-col-atl-2026-08-29-total-8pt5"
+      "url": "https://polymarket.com/event/cs2-m80-aur1-2026-08-30-map-handicap-home-1pt5"
     },
     {
-      "marketSlug": "lal-sev-mad-2026-08-29-mad",
-      "question": "Will Club Atlético de Madrid win on 2026-08-29?",
-      "side": "YES",
-      "yesValue": 140462.44,
-      "noValue": 0.0,
-      "totalValue": 140462.44,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-sev-mad-2026-08-29-mad"
-    },
-    {
-      "marketSlug": "mlb-col-atl-2026-08-29",
-      "question": "Colorado Rockies vs. Atlanta Braves",
+      "marketSlug": "cs2-vit-lgc-2026-08-30",
+      "question": "Counter-Strike: Vitality vs Legacy (BO3) - BLAST Open Porto Group B",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 114953.34,
-      "totalValue": 114953.34,
+      "noValue": 38475.37,
+      "totalValue": 38475.37,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-col-atl-2026-08-29"
+      "url": "https://polymarket.com/event/cs2-vit-lgc-2026-08-30"
     },
     {
-      "marketSlug": "mlb-bos-nyy-2026-08-29-total-7pt5",
-      "question": "Boston Red Sox vs. New York Yankees: O/U 7.5",
+      "marketSlug": "cs2-vit-lgc-2026-08-30-map-handicap-away-1pt5",
+      "question": "Map Handicap: VIT (-1.5) vs Legacy (+1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 64600.4,
-      "totalValue": 64600.4,
+      "noValue": 36020.75,
+      "totalValue": 36020.75,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-bos-nyy-2026-08-29-total-7pt5"
+      "url": "https://polymarket.com/event/cs2-vit-lgc-2026-08-30-map-handicap-away-1pt5"
     },
     {
-      "marketSlug": "mlb-hou-nym-2026-08-29-total-7pt5",
-      "question": "Houston Astros vs. New York Mets: O/U 7.5",
+      "marketSlug": "mlb-tex-mil-2026-08-30-total-8pt5",
+      "question": "Texas Rangers vs. Milwaukee Brewers: O/U 8.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 16448.41,
-      "totalValue": 16448.41,
+      "noValue": 10074.03,
+      "totalValue": 10074.03,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-hou-nym-2026-08-29-total-7pt5"
+      "url": "https://polymarket.com/event/mlb-tex-mil-2026-08-30-total-8pt5"
     },
     {
-      "marketSlug": "cfb-nmxst-flst-2026-08-29",
-      "question": "New Mexico State vs. Florida State",
+      "marketSlug": "cs2-ice-fut-2026-08-30-map-handicap-home-1pt5",
+      "question": "Map Handicap: FUT (-1.5) vs Inner Circle Esports (+1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 16004.03,
-      "totalValue": 16004.03,
+      "noValue": 1896.91,
+      "totalValue": 1896.91,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-nmxst-flst-2026-08-29"
+      "url": "https://polymarket.com/event/cs2-ice-fut-2026-08-30-map-handicap-home-1pt5"
     },
     {
-      "marketSlug": "cs2-shin-isg-2026-08-29",
-      "question": "Counter-Strike: ShindeN vs Isurus (BO3) - ESL Challenger League South America Cup #1 Playoffs",
+      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
+      "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
       "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 11799.21,
-      "totalValue": 11799.21,
+      "yesValue": 557.5,
+      "noValue": 1256.85,
+      "totalValue": 1814.35,
       "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-shin-isg-2026-08-29"
+      "confidence": 0.693,
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
     },
     {
-      "marketSlug": "mlb-bos-nyy-2026-08-29",
-      "question": "Boston Red Sox vs. New York Yankees",
+      "marketSlug": "cs2-og1-ef1-2026-08-30",
+      "question": "Counter-Strike: OG vs Eternal Fire (BO3) - Logitech G Play Connect Closed Qualifier Group C",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 6138.54,
-      "totalValue": 6138.54,
+      "noValue": 1191.46,
+      "totalValue": 1191.46,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-bos-nyy-2026-08-29"
-    },
-    {
-      "marketSlug": "cfb-jaxst-ndkst-2026-08-29",
-      "question": "Jacksonville State vs. North Dakota State Bison",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 4837.12,
-      "totalValue": 4837.12,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-jaxst-ndkst-2026-08-29"
-    },
-    {
-      "marketSlug": "mlb-sea-tor-2026-08-29-total-7pt5",
-      "question": "Seattle Mariners vs. Toronto Blue Jays: O/U 7.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 2117.11,
-      "totalValue": 2117.11,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-sea-tor-2026-08-29-total-7pt5"
+      "url": "https://polymarket.com/event/cs2-og1-ef1-2026-08-30"
     }
   ]
 }
