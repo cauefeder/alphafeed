@@ -1,108 +1,119 @@
 {
-  "generatedAt": "2026-08-31T23:38:35.437363+00:00",
+  "generatedAt": "2026-09-01T13:09:33.266427+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 10,
   "signals": [
     {
-      "marketSlug": "atp-halys-acosta-2026-08-30",
-      "question": "US Open ATP: Quentin Halys vs Facundo Acosta",
+      "marketSlug": "atp-ofner-butvila-2026-09-01",
+      "question": "Manacor: Sebastian Ofner vs Edas Butvilas",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 131287.35,
-      "totalValue": 131287.35,
+      "noValue": 37511.82,
+      "totalValue": 37511.82,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-halys-acosta-2026-08-30"
+      "url": "https://polymarket.com/event/atp-ofner-butvila-2026-09-01"
     },
     {
-      "marketSlug": "mlb-mil-chc-2026-08-31",
-      "question": "Milwaukee Brewers vs. Chicago Cubs",
+      "marketSlug": "cs2-hotu-color-2026-09-01",
+      "question": "Counter-Strike: HOTU vs Color (BO3) - Moscow Cyber Games European Qualifier Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 89021.08,
-      "totalValue": 89021.08,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mil-chc-2026-08-31"
-    },
-    {
-      "marketSlug": "atp-burruch-khachan-2026-08-30",
-      "question": "US Open ATP: Roman Andres Burruchaga vs Karen Khachanov",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 77716.21,
-      "totalValue": 77716.21,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-burruch-khachan-2026-08-30"
-    },
-    {
-      "marketSlug": "mlb-nyy-laa-2026-08-31",
-      "question": "New York Yankees vs. Los Angeles Angels",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 64199.21,
-      "totalValue": 64199.21,
+      "noValue": 13277.57,
+      "totalValue": 13277.57,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-nyy-laa-2026-08-31"
+      "url": "https://polymarket.com/event/cs2-hotu-color-2026-09-01"
     },
     {
-      "marketSlug": "mlb-sf-atl-2026-06-18-total-8pt5",
-      "question": "San Francisco Giants vs. Atlanta Braves: O/U 8.5",
+      "marketSlug": "mlb-sea-bos-2026-09-01-total-7pt5",
+      "question": "Seattle Mariners vs. Boston Red Sox: O/U 7.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 30483.89,
-      "totalValue": 30483.89,
+      "noValue": 10845.43,
+      "totalValue": 10845.43,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-sf-atl-2026-06-18-total-8pt5"
+      "url": "https://polymarket.com/event/mlb-sea-bos-2026-09-01-total-7pt5"
     },
     {
-      "marketSlug": "mlb-nym-tb-2026-08-31",
-      "question": "New York Mets vs. Tampa Bay Rays",
+      "marketSlug": "chfa-dy-shs-2026-09-01-shs",
+      "question": "Will Shanghai Shenhua FC win on 2026-09-01?",
       "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 27261.74,
-      "totalValue": 27261.74,
+      "yesValue": 1115.66,
+      "noValue": 5539.8,
+      "totalValue": 6655.46,
       "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-nym-tb-2026-08-31"
+      "confidence": 0.832,
+      "url": "https://polymarket.com/event/chfa-dy-shs-2026-09-01-shs"
     },
     {
-      "marketSlug": "atp-borges-tien-2026-08-30",
-      "question": "US Open ATP: Nuno Borges vs Learner Tien",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 17317.69,
-      "totalValue": 17317.69,
+      "marketSlug": "spl-hil-ahl-2026-09-01-hil",
+      "question": "Will Al Hilal Saudi Club win on 2026-09-01?",
+      "side": "YES",
+      "yesValue": 6446.09,
+      "noValue": 0.0,
+      "totalValue": 6446.09,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-borges-tien-2026-08-30"
+      "url": "https://polymarket.com/event/spl-hil-ahl-2026-09-01-hil"
     },
     {
       "marketSlug": "will-alexander-zverev-win-the-2026-mens-us-open",
       "question": "Will Alexander Zverev win the 2026 Men's US Open?",
       "side": "YES",
-      "yesValue": 8068.27,
+      "yesValue": 5775.79,
       "noValue": 0.0,
-      "totalValue": 8068.27,
+      "totalValue": 5775.79,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-alexander-zverev-win-the-2026-mens-us-open"
     },
     {
-      "marketSlug": "mlb-sf-atl-2026-06-18",
-      "question": "San Francisco Giants vs. Atlanta Braves",
+      "marketSlug": "cs2-hotu-color-2026-09-01-map-handicap-home-1pt5",
+      "question": "Map Handicap: Color (-1.5) vs HOTU (+1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 7134.7,
-      "totalValue": 7134.7,
+      "noValue": 3201.43,
+      "totalValue": 3201.43,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-sf-atl-2026-06-18"
+      "url": "https://polymarket.com/event/cs2-hotu-color-2026-09-01-map-handicap-home-1pt5"
+    },
+    {
+      "marketSlug": "elc-por-der-2026-09-01-por",
+      "question": "Will Portsmouth FC win on 2026-09-01?",
+      "side": "YES",
+      "yesValue": 3004.74,
+      "noValue": 0.0,
+      "totalValue": 3004.74,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/elc-por-der-2026-09-01-por"
+    },
+    {
+      "marketSlug": "epl-mac-cov-2026-09-05-mac",
+      "question": "Will Manchester City FC win on 2026-09-05?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 2912.09,
+      "totalValue": 2912.09,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-mac-cov-2026-09-05-mac"
+    },
+    {
+      "marketSlug": "atp-izquier-damas-2026-08-31",
+      "question": "Porto: Nikolas Sanchez Izquierdo vs Miguel Damas",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 2426.67,
+      "totalValue": 2426.67,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-izquier-damas-2026-08-31"
     }
   ]
 }
