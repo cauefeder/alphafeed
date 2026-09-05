@@ -1,20 +1,152 @@
 {
-  "generatedAt": "2026-09-04T22:08:55.080821+00:00",
+  "generatedAt": "2026-09-05T11:41:25.259697+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 1,
+  "signalCount": 13,
   "signals": [
     {
-      "marketSlug": "atp-etcheve-navone-2026-09-04",
-      "question": "US Open ATP: Tomas Etcheverry vs Mariano Navone",
+      "marketSlug": "epl-bri-lee-2026-09-05-bri",
+      "question": "Will Brighton & Hove Albion FC win on 2026-09-05?",
+      "side": "YES",
+      "yesValue": 94999.98,
+      "noValue": 26007.78,
+      "totalValue": 121007.76,
+      "traderCount": 2,
+      "confidence": 0.785,
+      "url": "https://polymarket.com/event/epl-bri-lee-2026-09-05-bri"
+    },
+    {
+      "marketSlug": "epl-mac-cov-2026-09-05-spread-home-1pt5",
+      "question": "Spread: Manchester City FC (-1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 89456.13,
-      "totalValue": 89456.13,
-      "traderCount": 4,
+      "noValue": 111112.27,
+      "totalValue": 111112.27,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-etcheve-navone-2026-09-04"
+      "url": "https://polymarket.com/event/epl-mac-cov-2026-09-05-spread-home-1pt5"
+    },
+    {
+      "marketSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615",
+      "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+      "side": "YES",
+      "yesValue": 103715.54,
+      "noValue": 0.0,
+      "totalValue": 103715.54,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615"
+    },
+    {
+      "marketSlug": "epl-new-bou-2026-09-05-total-3pt5",
+      "question": "Newcastle United FC vs. AFC Bournemouth: O/U 3.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 94099.57,
+      "totalValue": 94099.57,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-new-bou-2026-09-05-total-3pt5"
+    },
+    {
+      "marketSlug": "epl-bre-sun-2026-09-05-bre",
+      "question": "Will Brentford FC win on 2026-09-05?",
+      "side": "YES",
+      "yesValue": 68460.44,
+      "noValue": 0.0,
+      "totalValue": 68460.44,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-bre-sun-2026-09-05-bre"
+    },
+    {
+      "marketSlug": "lal-bil-mad-2026-09-05-mad",
+      "question": "Will Club Atlético de Madrid win on 2026-09-05?",
+      "side": "YES",
+      "yesValue": 39499.93,
+      "noValue": 27489.87,
+      "totalValue": 66989.8,
+      "traderCount": 2,
+      "confidence": 0.59,
+      "url": "https://polymarket.com/event/lal-bil-mad-2026-09-05-mad"
+    },
+    {
+      "marketSlug": "epl-mac-cov-2026-09-05-total-3pt5",
+      "question": "Manchester City FC vs. Coventry City FC: O/U 3.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 64491.21,
+      "totalValue": 64491.21,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-mac-cov-2026-09-05-total-3pt5"
+    },
+    {
+      "marketSlug": "cs2-mouz-vit-2026-09-05",
+      "question": "Counter-Strike: MOUZ vs Vitality (BO3) - BLAST Open Porto Playoffs",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 60228.16,
+      "totalValue": 60228.16,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cs2-mouz-vit-2026-09-05"
+    },
+    {
+      "marketSlug": "epl-new-bou-2026-09-05-total-2pt5",
+      "question": "Newcastle United FC vs. AFC Bournemouth: O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 47338.49,
+      "totalValue": 47338.49,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-new-bou-2026-09-05-total-2pt5"
+    },
+    {
+      "marketSlug": "epl-not-tot-2026-09-05-not",
+      "question": "Will Nottingham Forest FC win on 2026-09-05?",
+      "side": "YES",
+      "yesValue": 38499.99,
+      "noValue": 2048.29,
+      "totalValue": 40548.28,
+      "traderCount": 2,
+      "confidence": 0.949,
+      "url": "https://polymarket.com/event/epl-not-tot-2026-09-05-not"
+    },
+    {
+      "marketSlug": "epl-mac-cov-2026-09-05-spread-home-2pt5",
+      "question": "Spread: Manchester City FC (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 40528.83,
+      "totalValue": 40528.83,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-mac-cov-2026-09-05-spread-home-2pt5"
+    },
+    {
+      "marketSlug": "elc-sto-cha-2026-09-05-sto",
+      "question": "Will Stoke City FC win on 2026-09-05?",
+      "side": "YES",
+      "yesValue": 9302.93,
+      "noValue": 3334.84,
+      "totalValue": 12637.77,
+      "traderCount": 2,
+      "confidence": 0.736,
+      "url": "https://polymarket.com/event/elc-sto-cha-2026-09-05-sto"
+    },
+    {
+      "marketSlug": "lol-gen-hle1-2026-09-05",
+      "question": "LoL: Gen.G vs Hanwha Life Esports (BO5) - LCK Playoffs",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 10985.67,
+      "totalValue": 10985.67,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/lol-gen-hle1-2026-09-05"
     }
   ]
 }
