@@ -1,97 +1,86 @@
 {
-  "generatedAt": "2026-09-06T11:59:58.258088+00:00",
+  "generatedAt": "2026-09-06T21:59:02.760471+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 8,
+  "signalCount": 7,
   "signals": [
     {
-      "marketSlug": "atp-turcanu-agafono-2026-09-06",
-      "question": "Istanbul 3: Radu David Turcanu vs Egor Agafonov",
+      "marketSlug": "bra-int-san-2026-09-06-total-2pt5",
+      "question": "SC Internacional vs. Santos FC: O/U 2.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 351544.85,
-      "totalValue": 351544.85,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-turcanu-agafono-2026-09-06"
-    },
-    {
-      "marketSlug": "epl-ars-che-2026-09-06-total-2pt5",
-      "question": "Arsenal FC vs. Chelsea FC: O/U 2.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 79524.91,
-      "totalValue": 79524.91,
+      "noValue": 102146.91,
+      "totalValue": 102146.91,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ars-che-2026-09-06-total-2pt5"
+      "url": "https://polymarket.com/event/bra-int-san-2026-09-06-total-2pt5"
     },
     {
-      "marketSlug": "lol-nip-lgd-2026-09-06-game1",
-      "question": "LoL: Ninjas in Pyjamas vs LGD Gaming - Game 1 Winner",
+      "marketSlug": "atp-medvede-tiafoe-2026-09-06",
+      "question": "US Open ATP: Daniil Medvedev vs Frances Tiafoe",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 55797.25,
-      "totalValue": 55797.25,
+      "noValue": 62200.42,
+      "totalValue": 62200.42,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-nip-lgd-2026-09-06-game1"
+      "url": "https://polymarket.com/event/atp-medvede-tiafoe-2026-09-06"
     },
     {
-      "marketSlug": "atp-mena-dellien-2026-09-06",
-      "question": "Porto: Facundo Mena vs Hugo Dellien",
+      "marketSlug": "arg-cac-ind-2026-09-06-cac",
+      "question": "Will CA Central Córdoba win on 2026-09-06?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 40609.69,
-      "totalValue": 40609.69,
+      "noValue": 54453.69,
+      "totalValue": 54453.69,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-mena-dellien-2026-09-06"
+      "url": "https://polymarket.com/event/arg-cac-ind-2026-09-06-cac"
     },
     {
-      "marketSlug": "epl-eve-mun-2026-09-06-total-2pt5",
-      "question": "Everton FC vs. Manchester United FC: O/U 2.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 39486.17,
-      "totalValue": 39486.17,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-eve-mun-2026-09-06-total-2pt5"
-    },
-    {
-      "marketSlug": "epl-ars-che-2026-09-06-che",
-      "question": "Will Chelsea FC win on 2026-09-06?",
+      "marketSlug": "arg-cac-ind-2026-09-06-ind",
+      "question": "Will CA Independiente win on 2026-09-06?",
       "side": "YES",
-      "yesValue": 18500.0,
-      "noValue": 2479.08,
-      "totalValue": 20979.08,
-      "traderCount": 2,
-      "confidence": 0.882,
-      "url": "https://polymarket.com/event/epl-ars-che-2026-09-06-che"
-    },
-    {
-      "marketSlug": "epl-eve-mun-2026-09-06-total-3pt5",
-      "question": "Everton FC vs. Manchester United FC: O/U 3.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 11185.85,
-      "totalValue": 11185.85,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-eve-mun-2026-09-06-total-3pt5"
-    },
-    {
-      "marketSlug": "will-donald-trump-win-the-2028-republican-presidential-nomination",
-      "question": "Will Donald Trump win the 2028 Republican presidential nomination?",
-      "side": "YES",
-      "yesValue": 7436.83,
+      "yesValue": 43789.43,
       "noValue": 0.0,
-      "totalValue": 7436.83,
+      "totalValue": 43789.43,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-donald-trump-win-the-2028-republican-presidential-nomination"
+      "url": "https://polymarket.com/event/arg-cac-ind-2026-09-06-ind"
+    },
+    {
+      "marketSlug": "mlb-tb-tex-2026-09-06",
+      "question": "Tampa Bay Rays vs. Texas Rangers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 24042.48,
+      "totalValue": 24042.48,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-tb-tex-2026-09-06"
+    },
+    {
+      "marketSlug": "mlb-oak-sea-2026-09-06",
+      "question": "Athletics vs. Seattle Mariners",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 20335.1,
+      "totalValue": 20335.1,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-oak-sea-2026-09-06"
+    },
+    {
+      "marketSlug": "chi1-cdh-csc-2026-09-06-csc",
+      "question": "Will CSD Colo-Colo win on 2026-09-06?",
+      "side": "YES",
+      "yesValue": 7480.21,
+      "noValue": 3689.94,
+      "totalValue": 11170.14,
+      "traderCount": 2,
+      "confidence": 0.67,
+      "url": "https://polymarket.com/event/chi1-cdh-csc-2026-09-06-csc"
     }
   ]
 }
