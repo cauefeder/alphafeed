@@ -1,86 +1,75 @@
 {
-  "generatedAt": "2026-09-06T21:59:02.760471+00:00",
+  "generatedAt": "2026-09-07T14:01:25.657135+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 7,
+  "signalCount": 6,
   "signals": [
     {
-      "marketSlug": "bra-int-san-2026-09-06-total-2pt5",
-      "question": "SC Internacional vs. Santos FC: O/U 2.5",
+      "marketSlug": "lol-al-blg-2026-09-07-game3",
+      "question": "LoL: Anyone's Legend vs Bilibili Gaming - Game 3 Winner",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 102146.91,
-      "totalValue": 102146.91,
-      "traderCount": 2,
+      "noValue": 248553.74,
+      "totalValue": 248553.74,
+      "traderCount": 5,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/bra-int-san-2026-09-06-total-2pt5"
+      "url": "https://polymarket.com/event/lol-al-blg-2026-09-07-game3"
     },
     {
-      "marketSlug": "atp-medvede-tiafoe-2026-09-06",
-      "question": "US Open ATP: Daniil Medvedev vs Frances Tiafoe",
+      "marketSlug": "atp-khachan-tien-2026-09-07",
+      "question": "US Open ATP: Karen Khachanov vs Learner Tien",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 62200.42,
-      "totalValue": 62200.42,
+      "noValue": 117854.94,
+      "totalValue": 117854.94,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-medvede-tiafoe-2026-09-06"
+      "url": "https://polymarket.com/event/atp-khachan-tien-2026-09-07"
     },
     {
-      "marketSlug": "arg-cac-ind-2026-09-06-cac",
-      "question": "Will CA Central Córdoba win on 2026-09-06?",
+      "marketSlug": "cs2-sin2-pha-2026-09-07",
+      "question": "Counter-Strike: Sinners vs Phantom (BO3) - 1win Private Club #1: Closed Qualifier Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 54453.69,
-      "totalValue": 54453.69,
+      "noValue": 104947.42,
+      "totalValue": 104947.42,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/arg-cac-ind-2026-09-06-cac"
+      "url": "https://polymarket.com/event/cs2-sin2-pha-2026-09-07"
     },
     {
-      "marketSlug": "arg-cac-ind-2026-09-06-ind",
-      "question": "Will CA Independiente win on 2026-09-06?",
-      "side": "YES",
-      "yesValue": 43789.43,
-      "noValue": 0.0,
-      "totalValue": 43789.43,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/arg-cac-ind-2026-09-06-ind"
-    },
-    {
-      "marketSlug": "mlb-tb-tex-2026-09-06",
-      "question": "Tampa Bay Rays vs. Texas Rangers",
+      "marketSlug": "cs2-ntr-cs1-2026-09-07",
+      "question": "Counter-Strike: Nuclear TigeRES vs CYBERSHOKE Esports (BO3) - 1win Private Club #1: Closed Qualifier Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 24042.48,
-      "totalValue": 24042.48,
-      "traderCount": 2,
+      "noValue": 55579.87,
+      "totalValue": 55579.87,
+      "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-tb-tex-2026-09-06"
+      "url": "https://polymarket.com/event/cs2-ntr-cs1-2026-09-07"
     },
     {
-      "marketSlug": "mlb-oak-sea-2026-09-06",
-      "question": "Athletics vs. Seattle Mariners",
+      "marketSlug": "will-cdu-win-between-20-and-23-of-all-valid-second-votes-sachsen-anhalt",
+      "question": "Will CDU win between 20% and 23% of all valid second votes?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 20335.1,
-      "totalValue": 20335.1,
+      "noValue": 14222.63,
+      "totalValue": 14222.63,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-oak-sea-2026-09-06"
+      "url": "https://polymarket.com/event/will-cdu-win-between-20-and-23-of-all-valid-second-votes-sachsen-anhalt"
     },
     {
-      "marketSlug": "chi1-cdh-csc-2026-09-06-csc",
-      "question": "Will CSD Colo-Colo win on 2026-09-06?",
-      "side": "YES",
-      "yesValue": 7480.21,
-      "noValue": 3689.94,
-      "totalValue": 11170.14,
+      "marketSlug": "atp-echargu-poullai-2026-09-07",
+      "question": "Cassis: Moez Echargui vs Lucas Poullain",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 14086.64,
+      "totalValue": 14086.64,
       "traderCount": 2,
-      "confidence": 0.67,
-      "url": "https://polymarket.com/event/chi1-cdh-csc-2026-09-06-csc"
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-echargu-poullai-2026-09-07"
     }
   ]
 }
