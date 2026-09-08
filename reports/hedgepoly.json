@@ -1,174 +1,130 @@
 {
-  "generatedAt": "2026-09-07T22:31:42.521903+00:00",
+  "generatedAt": "2026-09-08T12:39:57.433119+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 15,
+  "signalCount": 11,
   "signals": [
     {
-      "marketSlug": "putin-out-before-2027-346",
-      "question": "Putin out as President of Russia by December 31, 2026?",
-      "side": "YES",
-      "yesValue": 298992.44,
-      "noValue": 38849.98,
-      "totalValue": 337842.42,
-      "traderCount": 3,
-      "confidence": 0.885,
-      "url": "https://polymarket.com/event/putin-out-before-2027-346"
-    },
-    {
-      "marketSlug": "atp-khachan-tien-2026-09-07",
-      "question": "US Open ATP: Karen Khachanov vs Learner Tien",
+      "marketSlug": "lol-ig1-lgd-2026-09-08",
+      "question": "LoL: Invictus Gaming vs LGD Gaming (BO5) - LPL Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 322643.96,
-      "totalValue": 322643.96,
-      "traderCount": 4,
+      "noValue": 459423.45,
+      "totalValue": 459423.45,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-khachan-tien-2026-09-07"
+      "url": "https://polymarket.com/event/lol-ig1-lgd-2026-09-08"
     },
     {
-      "marketSlug": "mlb-cin-lad-2026-09-07",
-      "question": "Cincinnati Reds vs. Los Angeles Dodgers",
+      "marketSlug": "cs2-g2-ast10-2026-09-08-map-handicap-away-1pt5",
+      "question": "Map Handicap: G2 (-1.5) vs Astralis (+1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 202878.4,
-      "totalValue": 202878.4,
+      "noValue": 73733.39,
+      "totalValue": 73733.39,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cin-lad-2026-09-07"
+      "url": "https://polymarket.com/event/cs2-g2-ast10-2026-09-08-map-handicap-away-1pt5"
     },
     {
-      "marketSlug": "atp-gea-zandsch-2026-09-07",
-      "question": "US Open ATP: Arthur Gea vs Botic van de Zandschulp",
+      "marketSlug": "cs2-g2-ast10-2026-09-08",
+      "question": "Counter-Strike: G2 vs Astralis (BO3) - FISSURE PLAYGROUND Group A",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 155751.27,
-      "totalValue": 155751.27,
-      "traderCount": 5,
+      "noValue": 47299.27,
+      "totalValue": 47299.27,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-gea-zandsch-2026-09-07"
+      "url": "https://polymarket.com/event/cs2-g2-ast10-2026-09-08"
     },
     {
-      "marketSlug": "mlb-wsh-sd-2026-09-07",
-      "question": "Washington Nationals vs. San Diego Padres",
+      "marketSlug": "lol-ig1-lgd-2026-09-08-game2",
+      "question": "LoL: Invictus Gaming vs LGD Gaming - Game 2 Winner",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 122007.11,
-      "totalValue": 122007.11,
+      "noValue": 41279.26,
+      "totalValue": 41279.26,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-wsh-sd-2026-09-07"
+      "url": "https://polymarket.com/event/lol-ig1-lgd-2026-09-08-game2"
     },
     {
-      "marketSlug": "will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections",
-      "question": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
-      "side": "YES",
-      "yesValue": 56801.23,
-      "noValue": 24250.0,
-      "totalValue": 81051.23,
-      "traderCount": 2,
-      "confidence": 0.701,
-      "url": "https://polymarket.com/event/will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections"
-    },
-    {
-      "marketSlug": "cfb-smu-flst-2026-09-07",
-      "question": "SMU vs. Florida State",
+      "marketSlug": "cs2-gl1-furia-2026-09-08-map-handicap-home-1pt5",
+      "question": "Map Handicap: FURIA (-1.5) vs GamerLegion (+1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 65051.49,
-      "totalValue": 65051.49,
+      "noValue": 39891.25,
+      "totalValue": 39891.25,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-smu-flst-2026-09-07"
+      "url": "https://polymarket.com/event/cs2-gl1-furia-2026-09-08-map-handicap-home-1pt5"
     },
     {
-      "marketSlug": "russia-x-ukraine-ceasefire-by-december-31-2026",
-      "question": "Russia x Ukraine ceasefire by December 31, 2026?",
-      "side": "NO",
-      "yesValue": 1947.67,
-      "noValue": 58560.6,
-      "totalValue": 60508.27,
-      "traderCount": 2,
-      "confidence": 0.968,
-      "url": "https://polymarket.com/event/russia-x-ukraine-ceasefire-by-december-31-2026"
-    },
-    {
-      "marketSlug": "will-the-us-invade-iran-before-2027",
-      "question": "Will the U.S. invade Iran before 2027?",
+      "marketSlug": "lol-ig1-lgd-2026-09-08-game3",
+      "question": "LoL: Invictus Gaming vs LGD Gaming - Game 3 Winner",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 38604.8,
-      "totalValue": 38604.8,
+      "noValue": 38550.98,
+      "totalValue": 38550.98,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027"
+      "url": "https://polymarket.com/event/lol-ig1-lgd-2026-09-08-game3"
     },
     {
-      "marketSlug": "mlb-wsh-sd-2026-09-07-total-8pt5",
-      "question": "Washington Nationals vs. San Diego Padres: O/U 8.5",
+      "marketSlug": "ucl-por-mnc-2026-09-08-total-2pt5",
+      "question": "FC Porto vs. Manchester City FC: O/U 2.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 30672.15,
-      "totalValue": 30672.15,
+      "noValue": 12166.45,
+      "totalValue": 12166.45,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-wsh-sd-2026-09-07-total-8pt5"
+      "url": "https://polymarket.com/event/ucl-por-mnc-2026-09-08-total-2pt5"
     },
     {
-      "marketSlug": "us-obtains-iranian-enriched-uranium-by-december-31-725-733-123-574-634",
-      "question": "US obtains Iranian enriched uranium by December 31?",
-      "side": "NO",
-      "yesValue": 550.0,
-      "noValue": 28247.97,
-      "totalValue": 28797.97,
-      "traderCount": 2,
-      "confidence": 0.981,
-      "url": "https://polymarket.com/event/us-obtains-iranian-enriched-uranium-by-december-31-725-733-123-574-634"
-    },
-    {
-      "marketSlug": "arg-bar-aaj-2026-09-07-aaj",
-      "question": "Will AA Argentinos Juniors win on 2026-09-07?",
-      "side": "YES",
-      "yesValue": 16146.45,
-      "noValue": 7922.28,
-      "totalValue": 24068.73,
-      "traderCount": 2,
-      "confidence": 0.671,
-      "url": "https://polymarket.com/event/arg-bar-aaj-2026-09-07-aaj"
-    },
-    {
-      "marketSlug": "mlb-stl-sf-2026-09-07-total-7pt5",
-      "question": "St. Louis Cardinals vs. San Francisco Giants: O/U 7.5",
+      "marketSlug": "atp-martine-forti-2026-09-08",
+      "question": "Genoa: Pedro Martinez vs Francesco Forti",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 15323.56,
-      "totalValue": 15323.56,
+      "noValue": 6913.16,
+      "totalValue": 6913.16,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-stl-sf-2026-09-07-total-7pt5"
-    },
-    {
-      "marketSlug": "bra-vit-gre-2026-09-07-vit",
-      "question": "Will EC Vitória win on 2026-09-07?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 11821.86,
-      "totalValue": 11821.86,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/bra-vit-gre-2026-09-07-vit"
+      "url": "https://polymarket.com/event/atp-martine-forti-2026-09-08"
     },
     {
       "marketSlug": "will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election",
       "question": "Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the next Russian parliamentary election?",
       "side": "YES",
-      "yesValue": 8031.08,
+      "yesValue": 5744.85,
       "noValue": 0.0,
-      "totalValue": 8031.08,
+      "totalValue": 5744.85,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election"
+    },
+    {
+      "marketSlug": "atp-onclin-perot-2026-09-07",
+      "question": "Cassis: Gauthier Onclin vs Raphael Perot",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 4279.06,
+      "totalValue": 4279.06,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-onclin-perot-2026-09-07"
+    },
+    {
+      "marketSlug": "atp-alkaya-torre-2026-09-07",
+      "question": "Istanbul 3: Mert Alkaya vs Tiago Torres",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 3435.46,
+      "totalValue": 3435.46,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-alkaya-torre-2026-09-07"
     }
   ]
 }
