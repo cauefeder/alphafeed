@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-20T12:54:08.477333+00:00",
+  "generatedAt": "2026-09-20T22:13:21.509187+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 30,
+  "signalCount": 37,
   "signals": [
     {
       "marketSlug": "will-jd-vance-win-the-2028-us-presidential-election",
@@ -17,6 +17,28 @@
       "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-us-presidential-election"
     },
     {
+      "marketSlug": "nfl-no-bal-2026-09-20-spread-home-8pt5",
+      "question": "Spread: BAL (-8.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 782060.17,
+      "totalValue": 782060.17,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-no-bal-2026-09-20-spread-home-8pt5"
+    },
+    {
+      "marketSlug": "nfl-was-dal-2026-09-20",
+      "question": "Commanders vs. Cowboys",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 754184.95,
+      "totalValue": 754184.95,
+      "traderCount": 5,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-was-dal-2026-09-20"
+    },
+    {
       "marketSlug": "will-no-fed-rate-cuts-happen-in-2026",
       "question": "Will no Fed rate cuts happen in 2026?",
       "side": "YES",
@@ -28,15 +50,26 @@
       "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026"
     },
     {
-      "marketSlug": "nfl-pit-ne-2026-09-20",
-      "question": "Steelers vs. Patriots",
+      "marketSlug": "nfl-pit-ne-2026-09-20-total-41pt5",
+      "question": "Steelers vs. Patriots: O/U 41.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 342894.65,
-      "totalValue": 342894.65,
-      "traderCount": 3,
+      "noValue": 479182.49,
+      "totalValue": 479182.49,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-pit-ne-2026-09-20"
+      "url": "https://polymarket.com/event/nfl-pit-ne-2026-09-20-total-41pt5"
+    },
+    {
+      "marketSlug": "nfl-min-chi-2026-09-20-spread-home-4pt5",
+      "question": "Spread: Bears (-4.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 293781.77,
+      "totalValue": 293781.77,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-min-chi-2026-09-20-spread-home-4pt5"
     },
     {
       "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
@@ -50,14 +83,25 @@
       "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
     },
     {
+      "marketSlug": "nfl-min-chi-2026-09-20-total-47pt5",
+      "question": "Vikings vs. Bears: O/U 47.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 281065.55,
+      "totalValue": 281065.55,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-min-chi-2026-09-20-total-47pt5"
+    },
+    {
       "marketSlug": "will-alexandria-ocasio-cortez-win-the-2028-democratic-presidential-nomination-653",
       "question": "Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?",
       "side": "NO",
-      "yesValue": 54033.54,
-      "noValue": 204500.0,
-      "totalValue": 258533.54,
+      "yesValue": 53142.88,
+      "noValue": 205250.0,
+      "totalValue": 258392.88,
       "traderCount": 3,
-      "confidence": 0.791,
+      "confidence": 0.794,
       "url": "https://polymarket.com/event/will-alexandria-ocasio-cortez-win-the-2028-democratic-presidential-nomination-653"
     },
     {
@@ -75,23 +119,45 @@
       "marketSlug": "will-united-russia-er-gain-the-most-seats-in-the-next-russian-parliamentary-election",
       "question": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
       "side": "YES",
-      "yesValue": 229943.05,
-      "noValue": 4340.85,
-      "totalValue": 234283.9,
-      "traderCount": 3,
-      "confidence": 0.981,
+      "yesValue": 209803.72,
+      "noValue": 0.0,
+      "totalValue": 209803.72,
+      "traderCount": 2,
+      "confidence": 1.0,
       "url": "https://polymarket.com/event/will-united-russia-er-gain-the-most-seats-in-the-next-russian-parliamentary-election"
     },
     {
-      "marketSlug": "nfl-min-chi-2026-09-20",
-      "question": "Vikings vs. Bears",
+      "marketSlug": "nfl-cle-tb-2026-09-20",
+      "question": "Browns vs. Buccaneers",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 211675.62,
-      "totalValue": 211675.62,
-      "traderCount": 4,
+      "noValue": 191364.59,
+      "totalValue": 191364.59,
+      "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-min-chi-2026-09-20"
+      "url": "https://polymarket.com/event/nfl-cle-tb-2026-09-20"
+    },
+    {
+      "marketSlug": "nfl-gb-nyj-2026-09-20-spread-away-3pt5",
+      "question": "Spread: Packers (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 188029.48,
+      "totalValue": 188029.48,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-gb-nyj-2026-09-20-spread-away-3pt5"
+    },
+    {
+      "marketSlug": "nfl-phi-ten-2026-09-20-spread-away-7pt5",
+      "question": "Spread: Eagles (-7.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 122771.72,
+      "totalValue": 122771.72,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-phi-ten-2026-09-20-spread-away-7pt5"
     },
     {
       "marketSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031",
@@ -105,25 +171,14 @@
       "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031"
     },
     {
-      "marketSlug": "nfl-min-chi-2026-09-20-spread-home-4pt5",
-      "question": "Spread: Bears (-4.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 117299.26,
-      "totalValue": 117299.26,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-min-chi-2026-09-20-spread-home-4pt5"
-    },
-    {
       "marketSlug": "bitcoin-all-time-high-by-december-31-2026",
       "question": "Bitcoin all time high by December 31, 2026?",
       "side": "NO",
-      "yesValue": 560.0,
-      "noValue": 85024.72,
-      "totalValue": 85584.72,
+      "yesValue": 645.0,
+      "noValue": 84259.14,
+      "totalValue": 84904.14,
       "traderCount": 2,
-      "confidence": 0.993,
+      "confidence": 0.992,
       "url": "https://polymarket.com/event/bitcoin-all-time-high-by-december-31-2026"
     },
     {
@@ -131,63 +186,52 @@
       "question": "Will the Republican Party control the House after the 2026 Midterm elections?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 78216.3,
-      "totalValue": 78216.3,
-      "traderCount": 3,
+      "noValue": 80066.32,
+      "totalValue": 80066.32,
+      "traderCount": 4,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-the-republican-party-control-the-house-after-the-2026-midterm-elections"
-    },
-    {
-      "marketSlug": "epl-bou-liv-2026-09-20-liv",
-      "question": "Will Liverpool FC win on 2026-09-20?",
-      "side": "NO",
-      "yesValue": 23213.29,
-      "noValue": 46635.9,
-      "totalValue": 69849.19,
-      "traderCount": 2,
-      "confidence": 0.668,
-      "url": "https://polymarket.com/event/epl-bou-liv-2026-09-20-liv"
     },
     {
       "marketSlug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
       "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
       "side": "YES",
-      "yesValue": 50051.34,
-      "noValue": 6500.0,
-      "totalValue": 56551.34,
+      "yesValue": 49516.04,
+      "noValue": 7500.0,
+      "totalValue": 57016.04,
       "traderCount": 3,
-      "confidence": 0.885,
+      "confidence": 0.868,
       "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
     },
     {
       "marketSlug": "clarity-act-signed-into-law-in-2026",
       "question": "Clarity Act (H.R.3633) signed into law in 2026?",
       "side": "NO",
-      "yesValue": 434.8,
-      "noValue": 51452.5,
-      "totalValue": 51887.3,
+      "yesValue": 407.84,
+      "noValue": 51672.5,
+      "totalValue": 52080.34,
       "traderCount": 2,
       "confidence": 0.992,
       "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
     },
     {
-      "marketSlug": "will-new-people-nl-gain-the-most-seats-in-the-next-russian-parliamentary-election",
-      "question": "Will New People (NL) gain the most seats in the next Russian parliamentary election?",
+      "marketSlug": "nfl-was-dal-2026-09-20-total-51pt5",
+      "question": "Commanders vs. Cowboys: O/U 51.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 31426.72,
-      "totalValue": 31426.72,
-      "traderCount": 3,
+      "noValue": 33760.82,
+      "totalValue": 33760.82,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-new-people-nl-gain-the-most-seats-in-the-next-russian-parliamentary-election"
+      "url": "https://polymarket.com/event/nfl-was-dal-2026-09-20-total-51pt5"
     },
     {
       "marketSlug": "will-no-qualifying-diplomatic-us-iran-meeting-occur-by-september-30-2026-20260622185050763",
       "question": "Will no qualifying diplomatic US-Iran meeting occur by September 30, 2026?",
       "side": "YES",
-      "yesValue": 30495.74,
+      "yesValue": 31492.51,
       "noValue": 0.0,
-      "totalValue": 30495.74,
+      "totalValue": 31492.51,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-no-qualifying-diplomatic-us-iran-meeting-occur-by-september-30-2026-20260622185050763"
@@ -196,34 +240,56 @@
       "marketSlug": "will-1-fed-rate-cut-happen-in-2026",
       "question": "Will 1 Fed rate cut happen in 2026?",
       "side": "NO",
-      "yesValue": 244.42,
-      "noValue": 26573.18,
-      "totalValue": 26817.6,
-      "traderCount": 2,
-      "confidence": 0.991,
+      "yesValue": 504.12,
+      "noValue": 26492.45,
+      "totalValue": 26996.57,
+      "traderCount": 3,
+      "confidence": 0.981,
       "url": "https://polymarket.com/event/will-1-fed-rate-cut-happen-in-2026"
     },
     {
-      "marketSlug": "cs2-vit-furia-2026-09-20",
-      "question": "Counter-Strike: Vitality vs FURIA (BO3) - StarLadder StarSeries Playoffs",
+      "marketSlug": "will-new-people-nl-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+      "question": "Will New People (NL) gain the most seats in the next Russian parliamentary election?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 23141.09,
-      "totalValue": 23141.09,
-      "traderCount": 2,
+      "noValue": 26596.61,
+      "totalValue": 26596.61,
+      "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-vit-furia-2026-09-20"
+      "url": "https://polymarket.com/event/will-new-people-nl-gain-the-most-seats-in-the-next-russian-parliamentary-election"
     },
     {
       "marketSlug": "will-anthropic-ipo-by-december-31-2026-546-128-719",
       "question": "Will Anthropic IPO by December 31, 2026?",
       "side": "YES",
-      "yesValue": 16103.98,
+      "yesValue": 16926.81,
       "noValue": 0.0,
-      "totalValue": 16103.98,
+      "totalValue": 16926.81,
       "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-anthropic-ipo-by-december-31-2026-546-128-719"
+    },
+    {
+      "marketSlug": "another-fed-rate-hike-in-2026",
+      "question": "Another Fed rate hike in 2026?",
+      "side": "YES",
+      "yesValue": 14158.0,
+      "noValue": 0.0,
+      "totalValue": 14158.0,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/another-fed-rate-hike-in-2026"
+    },
+    {
+      "marketSlug": "us-x-iran-diplomatic-meeting-by-september-30-2026",
+      "question": "US x Iran diplomatic meeting by September 30, 2026?",
+      "side": "YES",
+      "yesValue": 7036.36,
+      "noValue": 5800.41,
+      "totalValue": 12836.77,
+      "traderCount": 2,
+      "confidence": 0.548,
+      "url": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-september-30-2026"
     },
     {
       "marketSlug": "iran-leadership-change-by-december-31-974-976-658-482-568-685-996-469-827",
@@ -246,17 +312,6 @@
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027"
-    },
-    {
-      "marketSlug": "us-x-iran-diplomatic-meeting-by-september-30-2026",
-      "question": "US x Iran diplomatic meeting by September 30, 2026?",
-      "side": "NO",
-      "yesValue": 3047.12,
-      "noValue": 8238.9,
-      "totalValue": 11286.03,
-      "traderCount": 2,
-      "confidence": 0.73,
-      "url": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-september-30-2026"
     },
     {
       "marketSlug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
@@ -295,11 +350,11 @@
       "marketSlug": "will-anthropics-valuation-hit-high-2pt5t-by-december-31-169",
       "question": "Will Anthropic's valuation hit (HIGH) $2.5T by December 31?",
       "side": "NO",
-      "yesValue": 838.13,
-      "noValue": 6098.19,
-      "totalValue": 6936.33,
+      "yesValue": 748.01,
+      "noValue": 6668.12,
+      "totalValue": 7416.13,
       "traderCount": 2,
-      "confidence": 0.879,
+      "confidence": 0.899,
       "url": "https://polymarket.com/event/will-anthropics-valuation-hit-high-2pt5t-by-december-31-169"
     },
     {
@@ -307,21 +362,32 @@
       "question": "Fed rate cut by October 2026 meeting?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 6402.56,
-      "totalValue": 6402.56,
+      "noValue": 6405.79,
+      "totalValue": 6405.79,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/fed-rate-cut-by-october-2026-meeting-199-747"
     },
     {
+      "marketSlug": "mls-mia-sdg-2026-09-20-spread-home-1pt5",
+      "question": "Spread: Inter Miami CF (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 4851.68,
+      "totalValue": 4851.68,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mls-mia-sdg-2026-09-20-spread-home-1pt5"
+    },
+    {
       "marketSlug": "us-x-iran-ceasefire-continues-through-october-31-20260917",
       "question": "US x Iran ceasefire continues through October 31?",
       "side": "NO",
-      "yesValue": 1166.06,
-      "noValue": 3300.0,
-      "totalValue": 4466.06,
+      "yesValue": 1282.67,
+      "noValue": 3030.0,
+      "totalValue": 4312.67,
       "traderCount": 2,
-      "confidence": 0.739,
+      "confidence": 0.703,
       "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-october-31-20260917"
     },
     {
@@ -329,11 +395,22 @@
       "question": "Iran leadership change by September 30?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 3405.98,
-      "totalValue": 3405.98,
+      "noValue": 3409.44,
+      "totalValue": 3409.44,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/iran-leadership-change-by-september-30-20260629144005163-739-824"
+    },
+    {
+      "marketSlug": "us-x-iran-ceasefire-continues-through-september-30-20260917",
+      "question": "US x Iran ceasefire continues through September 30?",
+      "side": "YES",
+      "yesValue": 2102.61,
+      "noValue": 0.0,
+      "totalValue": 2102.61,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-september-30-20260917"
     }
   ]
 }
