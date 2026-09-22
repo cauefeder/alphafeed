@@ -1,53 +1,97 @@
 {
-  "generatedAt": "2026-09-22T13:09:06.609649+00:00",
+  "generatedAt": "2026-09-22T22:45:44.772964+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 4,
+  "signalCount": 8,
   "signals": [
+    {
+      "marketSlug": "mlb-cin-atl-2026-09-22",
+      "question": "Cincinnati Reds vs. Atlanta Braves",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 2509235.16,
+      "totalValue": 2509235.16,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-cin-atl-2026-09-22"
+    },
+    {
+      "marketSlug": "atp-ratti-coria-2026-09-21",
+      "question": "Buenos Aires 2: Lucio Ratti vs Federico Coria",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 240706.68,
+      "totalValue": 240706.68,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-ratti-coria-2026-09-21"
+    },
     {
       "marketSlug": "bitcoin-all-time-high-by-december-31-2026",
       "question": "Bitcoin all time high by December 31, 2026?",
       "side": "NO",
-      "yesValue": 1160.69,
-      "noValue": 79530.54,
-      "totalValue": 80691.22,
+      "yesValue": 987.08,
+      "noValue": 81106.74,
+      "totalValue": 82093.82,
       "traderCount": 2,
-      "confidence": 0.986,
+      "confidence": 0.988,
       "url": "https://polymarket.com/event/bitcoin-all-time-high-by-december-31-2026"
     },
     {
-      "marketSlug": "wta-crawley-monnet-2026-09-22",
-      "question": "Ankara: Fiona Crawley vs Carole Monnet",
+      "marketSlug": "mlb-stl-pit-2026-09-22",
+      "question": "St. Louis Cardinals vs. Pittsburgh Pirates",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 68643.38,
-      "totalValue": 68643.38,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-crawley-monnet-2026-09-22"
-    },
-    {
-      "marketSlug": "wta-palicov-linana-2026-09-21",
-      "question": "Tolentino: Barbora Palicova vs Alicia Herrero Linana",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 20749.59,
-      "totalValue": 20749.59,
+      "noValue": 61459.86,
+      "totalValue": 61459.86,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-palicov-linana-2026-09-21"
+      "url": "https://polymarket.com/event/mlb-stl-pit-2026-09-22"
     },
     {
-      "marketSlug": "wta-krejcik-friedsa-2026-09-21",
-      "question": "Singapore Open: Barbora Krejcikova vs Anna-Lena Friedsam",
+      "marketSlug": "mlb-tb-nyy-2026-09-22",
+      "question": "Tampa Bay Rays vs. New York Yankees",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 10316.17,
-      "totalValue": 10316.17,
+      "noValue": 50327.42,
+      "totalValue": 50327.42,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-krejcik-friedsa-2026-09-21"
+      "url": "https://polymarket.com/event/mlb-tb-nyy-2026-09-22"
+    },
+    {
+      "marketSlug": "mlb-mil-phi-2026-09-22",
+      "question": "Milwaukee Brewers vs. Philadelphia Phillies",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 35232.01,
+      "totalValue": 35232.01,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-mil-phi-2026-09-22"
+    },
+    {
+      "marketSlug": "atp-krueger-gorzny-2026-09-22",
+      "question": "San Diego 2: Mitchell Krueger vs Sebastian Gorzny",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 31757.83,
+      "totalValue": 31757.83,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-krueger-gorzny-2026-09-22"
+    },
+    {
+      "marketSlug": "mlb-wsh-det-2026-09-22",
+      "question": "Washington Nationals vs. Detroit Tigers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 27157.47,
+      "totalValue": 27157.47,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-wsh-det-2026-09-22"
     }
   ]
 }
