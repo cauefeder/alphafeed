@@ -1,108 +1,53 @@
 {
-  "generatedAt": "2026-09-21T23:01:40.095072+00:00",
+  "generatedAt": "2026-09-22T13:09:06.609649+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 4,
   "signals": [
     {
-      "marketSlug": "will-alexandria-ocasio-cortez-win-the-2028-democratic-presidential-nomination-653",
-      "question": "Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?",
+      "marketSlug": "bitcoin-all-time-high-by-december-31-2026",
+      "question": "Bitcoin all time high by December 31, 2026?",
       "side": "NO",
-      "yesValue": 54017.43,
-      "noValue": 203875.0,
-      "totalValue": 257892.43,
+      "yesValue": 1160.69,
+      "noValue": 79530.54,
+      "totalValue": 80691.22,
       "traderCount": 2,
-      "confidence": 0.791,
-      "url": "https://polymarket.com/event/will-alexandria-ocasio-cortez-win-the-2028-democratic-presidential-nomination-653"
+      "confidence": 0.986,
+      "url": "https://polymarket.com/event/bitcoin-all-time-high-by-december-31-2026"
     },
     {
-      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-      "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
-      "side": "YES",
-      "yesValue": 189377.3,
-      "noValue": 18483.98,
-      "totalValue": 207861.28,
-      "traderCount": 3,
-      "confidence": 0.911,
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
-    },
-    {
-      "marketSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031",
-      "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+      "marketSlug": "wta-crawley-monnet-2026-09-22",
+      "question": "Ankara: Fiona Crawley vs Carole Monnet",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 112007.93,
-      "totalValue": 112007.93,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031"
-    },
-    {
-      "marketSlug": "mlb-tor-bal-2026-09-21",
-      "question": "Toronto Blue Jays vs. Baltimore Orioles",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 86339.45,
-      "totalValue": 86339.45,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-tor-bal-2026-09-21"
-    },
-    {
-      "marketSlug": "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
-      "question": "Will the Republican Party control the House after the 2026 Midterm elections?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 62889.73,
-      "totalValue": 62889.73,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-the-republican-party-control-the-house-after-the-2026-midterm-elections"
-    },
-    {
-      "marketSlug": "atp-shick-maloney-2026-09-21",
-      "question": "San Diego 2: Braden Shick vs Patrick Maloney",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 61689.4,
-      "totalValue": 61689.4,
+      "noValue": 68643.38,
+      "totalValue": 68643.38,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-shick-maloney-2026-09-21"
+      "url": "https://polymarket.com/event/wta-crawley-monnet-2026-09-22"
     },
     {
-      "marketSlug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-      "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
-      "side": "YES",
-      "yesValue": 15984.17,
-      "noValue": 7500.0,
-      "totalValue": 23484.17,
-      "traderCount": 2,
-      "confidence": 0.681,
-      "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
-    },
-    {
-      "marketSlug": "will-anthropic-ipo-by-december-31-2026-546-128-719",
-      "question": "Will Anthropic IPO by December 31, 2026?",
-      "side": "YES",
-      "yesValue": 16884.93,
-      "noValue": 0.0,
-      "totalValue": 16884.93,
+      "marketSlug": "wta-palicov-linana-2026-09-21",
+      "question": "Tolentino: Barbora Palicova vs Alicia Herrero Linana",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 20749.59,
+      "totalValue": 20749.59,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-anthropic-ipo-by-december-31-2026-546-128-719"
+      "url": "https://polymarket.com/event/wta-palicov-linana-2026-09-21"
     },
     {
-      "marketSlug": "arg-bar-riv1-2026-09-21-bar",
-      "question": "Will CA Barracas Central win on 2026-09-21?",
+      "marketSlug": "wta-krejcik-friedsa-2026-09-21",
+      "question": "Singapore Open: Barbora Krejcikova vs Anna-Lena Friedsam",
       "side": "NO",
-      "yesValue": 644.63,
-      "noValue": 7311.87,
-      "totalValue": 7956.5,
+      "yesValue": 0.0,
+      "noValue": 10316.17,
+      "totalValue": 10316.17,
       "traderCount": 2,
-      "confidence": 0.919,
-      "url": "https://polymarket.com/event/arg-bar-riv1-2026-09-21-bar"
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/wta-krejcik-friedsa-2026-09-21"
     }
   ]
 }
