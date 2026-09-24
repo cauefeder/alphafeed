@@ -1,130 +1,86 @@
 {
-  "generatedAt": "2026-09-23T22:42:34.507147+00:00",
+  "generatedAt": "2026-09-24T13:17:18.385282+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 11,
+  "signalCount": 7,
   "signals": [
     {
-      "marketSlug": "cs2-lg6-3dmax-2026-09-23",
-      "question": "Counter-Strike: Luminosity vs 3DMAX (BO5) - Logitech G Play Connect Playoffs",
+      "marketSlug": "val-tyloo-g21-2026-09-24",
+      "question": "Valorant: TYLOO vs G2 Esports (BO3) - VCT Champions Group C",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 90584.47,
-      "totalValue": 90584.47,
+      "noValue": 101411.7,
+      "totalValue": 101411.7,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-lg6-3dmax-2026-09-23"
+      "url": "https://polymarket.com/event/val-tyloo-g21-2026-09-24"
     },
     {
-      "marketSlug": "mlb-cin-atl-2026-09-23",
-      "question": "Cincinnati Reds vs. Atlanta Braves",
+      "marketSlug": "nfl-atl-gb-2026-09-25-total-43pt5",
+      "question": "Falcons vs. Packers: O/U 43.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 67965.53,
-      "totalValue": 67965.53,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cin-atl-2026-09-23"
-    },
-    {
-      "marketSlug": "mlb-tor-bal-2026-09-23",
-      "question": "Toronto Blue Jays vs. Baltimore Orioles",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 57319.28,
-      "totalValue": 57319.28,
+      "noValue": 46294.01,
+      "totalValue": 46294.01,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-tor-bal-2026-09-23"
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-total-43pt5"
     },
     {
-      "marketSlug": "mlb-cle-bos-2026-09-23",
-      "question": "Cleveland Guardians vs. Boston Red Sox",
+      "marketSlug": "nfl-atl-gb-2026-09-25-spread-home-5pt5",
+      "question": "Spread: Packers (-5.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 47879.52,
-      "totalValue": 47879.52,
+      "noValue": 41703.5,
+      "totalValue": 41703.5,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cle-bos-2026-09-23"
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-spread-home-5pt5"
     },
     {
-      "marketSlug": "mlb-cws-kc-2026-09-23",
-      "question": "Chicago White Sox vs. Kansas City Royals",
+      "marketSlug": "nfl-atl-gb-2026-09-25",
+      "question": "Falcons vs. Packers",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 46169.44,
-      "totalValue": 46169.44,
+      "noValue": 40027.22,
+      "totalValue": 40027.22,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-cws-kc-2026-09-23"
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25"
     },
     {
-      "marketSlug": "mlb-tb-nyy-2026-09-23",
-      "question": "Tampa Bay Rays vs. New York Yankees",
+      "marketSlug": "nfl-atl-gb-2026-09-25-spread-home-4pt5",
+      "question": "Spread: Packers (-4.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 43994.58,
-      "totalValue": 43994.58,
+      "noValue": 35562.66,
+      "totalValue": 35562.66,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-tb-nyy-2026-09-23"
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-spread-home-4pt5"
     },
     {
-      "marketSlug": "mlb-mil-phi-2026-09-23",
-      "question": "Milwaukee Brewers vs. Philadelphia Phillies",
+      "marketSlug": "nfl-hou-ind-2026-09-27-spread-away-2pt5",
+      "question": "Spread: Texans (-2.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 39945.62,
-      "totalValue": 39945.62,
+      "noValue": 31058.07,
+      "totalValue": 31058.07,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mil-phi-2026-09-23"
+      "url": "https://polymarket.com/event/nfl-hou-ind-2026-09-27-spread-away-2pt5"
     },
     {
-      "marketSlug": "mlb-ari-col-2026-09-23",
-      "question": "Arizona Diamondbacks vs. Colorado Rockies",
+      "marketSlug": "nfl-atl-gb-2026-09-25-total-44pt5",
+      "question": "Falcons vs. Packers: O/U 44.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 38682.68,
-      "totalValue": 38682.68,
+      "noValue": 27990.88,
+      "totalValue": 27990.88,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-ari-col-2026-09-23"
-    },
-    {
-      "marketSlug": "mlb-nym-tex-2026-09-23",
-      "question": "New York Mets vs. Texas Rangers",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 37257.55,
-      "totalValue": 37257.55,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-nym-tex-2026-09-23"
-    },
-    {
-      "marketSlug": "mlb-stl-pit-2026-09-23",
-      "question": "St. Louis Cardinals vs. Pittsburgh Pirates",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 28503.08,
-      "totalValue": 28503.08,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-stl-pit-2026-09-23"
-    },
-    {
-      "marketSlug": "mlb-mia-chc-2026-09-23",
-      "question": "Miami Marlins vs. Chicago Cubs",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 16693.57,
-      "totalValue": 16693.57,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-mia-chc-2026-09-23"
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-total-44pt5"
     }
   ]
 }
