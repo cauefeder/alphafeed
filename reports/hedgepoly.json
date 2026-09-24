@@ -1,42 +1,97 @@
 {
-  "generatedAt": "2026-09-24T13:17:18.385282+00:00",
+  "generatedAt": "2026-09-24T23:02:01.149970+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 7,
+  "signalCount": 16,
   "signals": [
     {
-      "marketSlug": "val-tyloo-g21-2026-09-24",
-      "question": "Valorant: TYLOO vs G2 Esports (BO3) - VCT Champions Group C",
+      "marketSlug": "nfl-atl-gb-2026-09-25-spread-home-4pt5",
+      "question": "Spread: Packers (-4.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 101411.7,
-      "totalValue": 101411.7,
-      "traderCount": 2,
+      "noValue": 601035.46,
+      "totalValue": 601035.46,
+      "traderCount": 5,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/val-tyloo-g21-2026-09-24"
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-spread-home-4pt5"
     },
     {
-      "marketSlug": "nfl-atl-gb-2026-09-25-total-43pt5",
-      "question": "Falcons vs. Packers: O/U 43.5",
+      "marketSlug": "mlb-mil-phi-2026-09-24",
+      "question": "Milwaukee Brewers vs. Philadelphia Phillies",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 46294.01,
-      "totalValue": 46294.01,
-      "traderCount": 3,
+      "noValue": 118829.41,
+      "totalValue": 118829.41,
+      "traderCount": 4,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-total-43pt5"
+      "url": "https://polymarket.com/event/mlb-mil-phi-2026-09-24"
     },
     {
       "marketSlug": "nfl-atl-gb-2026-09-25-spread-home-5pt5",
       "question": "Spread: Packers (-5.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 41703.5,
-      "totalValue": 41703.5,
-      "traderCount": 2,
+      "noValue": 105380.22,
+      "totalValue": 105380.22,
+      "traderCount": 4,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-spread-home-5pt5"
+    },
+    {
+      "marketSlug": "nfl-sea-was-2026-09-27-spread-away-7pt5",
+      "question": "Spread: Seahawks (-7.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 101287.13,
+      "totalValue": 101287.13,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-sea-was-2026-09-27-spread-away-7pt5"
+    },
+    {
+      "marketSlug": "nfl-nyj-det-2026-09-27",
+      "question": "Jets vs. Lions",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 101190.08,
+      "totalValue": 101190.08,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-nyj-det-2026-09-27"
+    },
+    {
+      "marketSlug": "nfl-atl-gb-2026-09-25-total-43pt5",
+      "question": "Falcons vs. Packers: O/U 43.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 85233.03,
+      "totalValue": 85233.03,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-total-43pt5"
+    },
+    {
+      "marketSlug": "atp-blanc-andrade-2026-09-24",
+      "question": "San Diego 2: Darwin Blanch vs Andres Andrade",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 71173.65,
+      "totalValue": 71173.65,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-blanc-andrade-2026-09-24"
+    },
+    {
+      "marketSlug": "nfl-atl-gb-2026-09-25-total-44pt5",
+      "question": "Falcons vs. Packers: O/U 44.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 52012.43,
+      "totalValue": 52012.43,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-total-44pt5"
     },
     {
       "marketSlug": "nfl-atl-gb-2026-09-25",
@@ -50,37 +105,81 @@
       "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25"
     },
     {
-      "marketSlug": "nfl-atl-gb-2026-09-25-spread-home-4pt5",
-      "question": "Spread: Packers (-4.5)",
+      "marketSlug": "mlb-cle-bos-2026-09-24",
+      "question": "Cleveland Guardians vs. Boston Red Sox",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 35562.66,
-      "totalValue": 35562.66,
+      "noValue": 36679.07,
+      "totalValue": 36679.07,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-spread-home-4pt5"
+      "url": "https://polymarket.com/event/mlb-cle-bos-2026-09-24"
     },
     {
       "marketSlug": "nfl-hou-ind-2026-09-27-spread-away-2pt5",
       "question": "Spread: Texans (-2.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 31058.07,
-      "totalValue": 31058.07,
+      "noValue": 31402.58,
+      "totalValue": 31402.58,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-hou-ind-2026-09-27-spread-away-2pt5"
     },
     {
-      "marketSlug": "nfl-atl-gb-2026-09-25-total-44pt5",
-      "question": "Falcons vs. Packers: O/U 44.5",
+      "marketSlug": "cfb-hawaii-wyom-2026-09-26-spread-away-2pt5",
+      "question": "Spread: Hawai'i (-2.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 27990.88,
-      "totalValue": 27990.88,
+      "noValue": 28667.87,
+      "totalValue": 28667.87,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-gb-2026-09-25-total-44pt5"
+      "url": "https://polymarket.com/event/cfb-hawaii-wyom-2026-09-26-spread-away-2pt5"
+    },
+    {
+      "marketSlug": "cfb-hawaii-wyom-2026-09-26",
+      "question": "Hawai'i vs. Wyoming",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 27213.22,
+      "totalValue": 27213.22,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-hawaii-wyom-2026-09-26"
+    },
+    {
+      "marketSlug": "nfl-kc-mia-2026-09-27-spread-away-10pt5",
+      "question": "Spread: Chiefs (-10.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 17959.81,
+      "totalValue": 17959.81,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-kc-mia-2026-09-27-spread-away-10pt5"
+    },
+    {
+      "marketSlug": "mlb-cle-bos-2026-09-24-total-6pt5",
+      "question": "Cleveland Guardians vs. Boston Red Sox: O/U 6.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 14432.89,
+      "totalValue": 14432.89,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-cle-bos-2026-09-24-total-6pt5"
+    },
+    {
+      "marketSlug": "cfb-hawaii-wyom-2026-09-26-spread-away-3pt5",
+      "question": "Spread: Hawai'i (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 13947.49,
+      "totalValue": 13947.49,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-hawaii-wyom-2026-09-26-spread-away-3pt5"
     }
   ]
 }
