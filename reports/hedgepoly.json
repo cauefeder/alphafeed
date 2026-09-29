@@ -1,8 +1,42 @@
 {
-  "generatedAt": "2026-09-29T14:40:32.254207+00:00",
+  "generatedAt": "2026-09-29T23:28:13.075915+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 0,
-  "signals": []
+  "signalCount": 3,
+  "signals": [
+    {
+      "marketSlug": "mlb-cws-hou-2026-09-29",
+      "question": "Chicago White Sox vs. Houston Astros",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 311822.08,
+      "totalValue": 311822.08,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-cws-hou-2026-09-29"
+    },
+    {
+      "marketSlug": "wnba-las-ind-2026-09-29",
+      "question": "Las Vegas Aces vs. Indiana Fever",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 42515.85,
+      "totalValue": 42515.85,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/wnba-las-ind-2026-09-29"
+    },
+    {
+      "marketSlug": "mlb-cws-hou-2026-09-29-total-8pt5",
+      "question": "Chicago White Sox vs. Houston Astros: O/U 8.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 15741.39,
+      "totalValue": 15741.39,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-cws-hou-2026-09-29-total-8pt5"
+    }
+  ]
 }
