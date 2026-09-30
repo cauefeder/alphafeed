@@ -1,20 +1,31 @@
 {
-  "generatedAt": "2026-09-30T14:40:12.822483+00:00",
+  "generatedAt": "2026-09-30T23:30:43.560860+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 1,
+  "signalCount": 2,
   "signals": [
     {
-      "marketSlug": "wta-kostovi-galfi-2026-09-30",
-      "question": "Adana: Teodora Kostovic vs Dalma Galfi",
+      "marketSlug": "mlb-cws-hou-2026-09-30",
+      "question": "Chicago White Sox vs. Houston Astros",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 34456.44,
-      "totalValue": 34456.44,
+      "noValue": 292853.11,
+      "totalValue": 292853.11,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-cws-hou-2026-09-30"
+    },
+    {
+      "marketSlug": "nfl-la-phi-2026-10-04-spread-away-3pt5",
+      "question": "Spread: Rams (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 23745.08,
+      "totalValue": 23745.08,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-kostovi-galfi-2026-09-30"
+      "url": "https://polymarket.com/event/nfl-la-phi-2026-10-04-spread-away-3pt5"
     }
   ]
 }
