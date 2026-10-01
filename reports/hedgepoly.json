@@ -1,17 +1,39 @@
 {
-  "generatedAt": "2026-10-01T15:09:37.815092+00:00",
+  "generatedAt": "2026-10-01T23:42:19.727006+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 3,
+  "signalCount": 6,
   "signals": [
+    {
+      "marketSlug": "nfl-pit-cle-2026-10-02",
+      "question": "Steelers vs. Browns",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 348673.33,
+      "totalValue": 348673.33,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-pit-cle-2026-10-02"
+    },
+    {
+      "marketSlug": "nfl-pit-cle-2026-10-02-total-44pt5",
+      "question": "Steelers vs. Browns: O/U 44.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 103737.48,
+      "totalValue": 103737.48,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-pit-cle-2026-10-02-total-44pt5"
+    },
     {
       "marketSlug": "nfl-pit-cle-2026-10-02-spread-home-3pt5",
       "question": "Spread: Browns (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 86779.2,
-      "totalValue": 86779.2,
+      "noValue": 99789.49,
+      "totalValue": 99789.49,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-pit-cle-2026-10-02-spread-home-3pt5"
@@ -32,11 +54,22 @@
       "question": "Spread: Rams (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 23745.08,
-      "totalValue": 23745.08,
+      "noValue": 33248.52,
+      "totalValue": 33248.52,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-la-phi-2026-10-04-spread-away-3pt5"
+    },
+    {
+      "marketSlug": "mlb-phi-atl-2026-10-01-spread-away-1pt5",
+      "question": "Spread: Philadelphia Phillies (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 17276.01,
+      "totalValue": 17276.01,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-phi-atl-2026-10-01-spread-away-1pt5"
     }
   ]
 }
