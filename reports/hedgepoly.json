@@ -1,163 +1,75 @@
 {
-  "generatedAt": "2026-10-02T23:34:56.573826+00:00",
+  "generatedAt": "2026-10-03T13:05:45.699654+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 14,
+  "signalCount": 6,
   "signals": [
     {
-      "marketSlug": "cfb-pitt-vtech-2026-10-02-spread-home-2pt5",
-      "question": "Spread: Virginia Tech (-2.5)",
+      "marketSlug": "will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761",
+      "question": "Will Manchester City win the 2026-27 English Premier League (EPL) Championship?",
+      "side": "NO",
+      "yesValue": 214499.87,
+      "noValue": 366014.16,
+      "totalValue": 580514.04,
+      "traderCount": 2,
+      "confidence": 0.631,
+      "url": "https://polymarket.com/event/will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761"
+    },
+    {
+      "marketSlug": "cs2-g2-navi-2026-10-03",
+      "question": "Counter-Strike: G2 vs Natus Vincere (BO3) - ESL Pro League Group Stage",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 408827.54,
-      "totalValue": 408827.54,
+      "noValue": 81080.19,
+      "totalValue": 81080.19,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-pitt-vtech-2026-10-02-spread-home-2pt5"
+      "url": "https://polymarket.com/event/cs2-g2-navi-2026-10-03"
     },
     {
-      "marketSlug": "cfb-librty-del-2026-10-02-total-51pt5",
-      "question": "Liberty vs. Delaware: O/U 51.5",
+      "marketSlug": "cs2-lg6-nemi1-2026-10-03",
+      "question": "Counter-Strike: Luminosity vs Nemiga (BO3) - Stake Ranked Episode 4 Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 63925.53,
-      "totalValue": 63925.53,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-librty-del-2026-10-02-total-51pt5"
-    },
-    {
-      "marketSlug": "cfb-pitt-vtech-2026-10-02-spread-home-1pt5",
-      "question": "Spread: Virginia Tech (-1.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 30052.63,
-      "totalValue": 30052.63,
+      "noValue": 65634.8,
+      "totalValue": 65634.8,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-pitt-vtech-2026-10-02-spread-home-1pt5"
+      "url": "https://polymarket.com/event/cs2-lg6-nemi1-2026-10-03"
     },
     {
-      "marketSlug": "nfl-la-phi-2026-10-04-spread-away-3pt5",
-      "question": "Spread: Rams (-3.5)",
+      "marketSlug": "cs2-vit-1win-2026-10-03",
+      "question": "Counter-Strike: Vitality vs 1WIN (BO3) - ESL Pro League Group Stage",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 25954.49,
-      "totalValue": 25954.49,
+      "noValue": 37608.9,
+      "totalValue": 37608.9,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-la-phi-2026-10-04-spread-away-3pt5"
+      "url": "https://polymarket.com/event/cs2-vit-1win-2026-10-03"
     },
     {
-      "marketSlug": "cfb-byu-tcu-2026-10-03-spread-away-6pt5",
-      "question": "Spread: BYU (-6.5)",
+      "marketSlug": "nfl-ind-was-2026-10-04-spread-away-3pt5",
+      "question": "Spread: Colts (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 22841.0,
-      "totalValue": 22841.0,
+      "noValue": 27882.6,
+      "totalValue": 27882.6,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-byu-tcu-2026-10-03-spread-away-6pt5"
+      "url": "https://polymarket.com/event/nfl-ind-was-2026-10-04-spread-away-3pt5"
     },
     {
-      "marketSlug": "cfb-wash-usc-2026-10-03-spread-home-9pt5",
-      "question": "Spread: USC (-9.5)",
+      "marketSlug": "nfl-mia-min-2026-10-04-spread-home-3pt5",
+      "question": "Spread: Vikings (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 21426.14,
-      "totalValue": 21426.14,
+      "noValue": 23173.67,
+      "totalValue": 23173.67,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-wash-usc-2026-10-03-spread-home-9pt5"
-    },
-    {
-      "marketSlug": "nfl-ne-buf-2026-10-04-total-49pt5",
-      "question": "Patriots vs. Bills: O/U 49.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 20879.72,
-      "totalValue": 20879.72,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-ne-buf-2026-10-04-total-49pt5"
-    },
-    {
-      "marketSlug": "nfl-det-car-2026-10-05-total-50pt5",
-      "question": "Lions vs. Panthers: O/U 50.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 20720.94,
-      "totalValue": 20720.94,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-det-car-2026-10-05-total-50pt5"
-    },
-    {
-      "marketSlug": "nfl-det-car-2026-10-05-total-51pt5",
-      "question": "Lions vs. Panthers: O/U 51.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 18033.3,
-      "totalValue": 18033.3,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-det-car-2026-10-05-total-51pt5"
-    },
-    {
-      "marketSlug": "cfb-ohio-kentst-2026-10-03-spread-away-3pt5",
-      "question": "Spread: Ohio (-3.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 17473.6,
-      "totalValue": 17473.6,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-ohio-kentst-2026-10-03-spread-away-3pt5"
-    },
-    {
-      "marketSlug": "cfb-pennst-nw-2026-10-02",
-      "question": "Penn State vs. Northwestern",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 17221.01,
-      "totalValue": 17221.01,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-pennst-nw-2026-10-02"
-    },
-    {
-      "marketSlug": "nfl-ari-nyg-2026-10-04-total-44pt5",
-      "question": "Cardinals vs. Giants: O/U 44.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 8399.77,
-      "totalValue": 8399.77,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-ari-nyg-2026-10-04-total-44pt5"
-    },
-    {
-      "marketSlug": "cfb-pitt-vtech-2026-10-02-total-55pt5",
-      "question": "Pittsburgh vs. Virginia Tech: O/U 55.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 8377.15,
-      "totalValue": 8377.15,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-pitt-vtech-2026-10-02-total-55pt5"
-    },
-    {
-      "marketSlug": "cfb-stan-wake-2026-10-03-spread-home-13pt5",
-      "question": "Spread: Wake Forest (-13.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 5950.15,
-      "totalValue": 5950.15,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-stan-wake-2026-10-03-spread-home-13pt5"
+      "url": "https://polymarket.com/event/nfl-mia-min-2026-10-04-spread-home-3pt5"
     }
   ]
 }
