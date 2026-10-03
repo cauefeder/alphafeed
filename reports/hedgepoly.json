@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T13:05:45.699654+00:00",
+  "generatedAt": "2026-10-03T22:43:03.330816+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 6,
+  "signalCount": 14,
   "signals": [
     {
       "marketSlug": "will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761",
@@ -17,59 +17,147 @@
       "url": "https://polymarket.com/event/will-manchester-city-win-the-2026-27-english-premier-league-epl-championship-20260701200428761"
     },
     {
-      "marketSlug": "cs2-g2-navi-2026-10-03",
-      "question": "Counter-Strike: G2 vs Natus Vincere (BO3) - ESL Pro League Group Stage",
+      "marketSlug": "cfb-ohiost-iowa-2026-10-03-spread-away-14pt5",
+      "question": "Spread: Ohio State (-14.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 81080.19,
-      "totalValue": 81080.19,
+      "noValue": 225583.55,
+      "totalValue": 225583.55,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-g2-navi-2026-10-03"
+      "url": "https://polymarket.com/event/cfb-ohiost-iowa-2026-10-03-spread-away-14pt5"
     },
     {
-      "marketSlug": "cs2-lg6-nemi1-2026-10-03",
-      "question": "Counter-Strike: Luminosity vs Nemiga (BO3) - Stake Ranked Episode 4 Playoffs",
+      "marketSlug": "nfl-gb-tb-2026-10-04",
+      "question": "Packers vs. Buccaneers",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 65634.8,
-      "totalValue": 65634.8,
-      "traderCount": 2,
+      "noValue": 93617.48,
+      "totalValue": 93617.48,
+      "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-lg6-nemi1-2026-10-03"
+      "url": "https://polymarket.com/event/nfl-gb-tb-2026-10-04"
     },
     {
-      "marketSlug": "cs2-vit-1win-2026-10-03",
-      "question": "Counter-Strike: Vitality vs 1WIN (BO3) - ESL Pro League Group Stage",
+      "marketSlug": "cfb-aubrn-tenn-2026-10-03-spread-home-6pt5",
+      "question": "Spread: Tennessee (-6.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 37608.9,
-      "totalValue": 37608.9,
+      "noValue": 88745.23,
+      "totalValue": 88745.23,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-aubrn-tenn-2026-10-03-spread-home-6pt5"
+    },
+    {
+      "marketSlug": "cfb-lou-ncst-2026-10-03-spread-away-3pt5",
+      "question": "Spread: Louisville (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 71531.53,
+      "totalValue": 71531.53,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-vit-1win-2026-10-03"
+      "url": "https://polymarket.com/event/cfb-lou-ncst-2026-10-03-spread-away-3pt5"
+    },
+    {
+      "marketSlug": "cfb-lou-ncst-2026-10-03",
+      "question": "Louisville vs. NC State",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 54206.81,
+      "totalValue": 54206.81,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-lou-ncst-2026-10-03"
+    },
+    {
+      "marketSlug": "cfb-army-loutch-2026-10-03",
+      "question": "Army vs. Louisiana Tech",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 50752.28,
+      "totalValue": 50752.28,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-army-loutch-2026-10-03"
+    },
+    {
+      "marketSlug": "cfb-wash-usc-2026-10-03-spread-home-9pt5",
+      "question": "Spread: USC (-9.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 49382.08,
+      "totalValue": 49382.08,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-wash-usc-2026-10-03-spread-home-9pt5"
+    },
+    {
+      "marketSlug": "cfb-ohiost-iowa-2026-10-03-total-45pt5",
+      "question": "Ohio State vs. Iowa: O/U 45.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 46366.85,
+      "totalValue": 46366.85,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-ohiost-iowa-2026-10-03-total-45pt5"
     },
     {
       "marketSlug": "nfl-ind-was-2026-10-04-spread-away-3pt5",
       "question": "Spread: Colts (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 27882.6,
-      "totalValue": 27882.6,
+      "noValue": 35652.75,
+      "totalValue": 35652.75,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-ind-was-2026-10-04-spread-away-3pt5"
     },
     {
-      "marketSlug": "nfl-mia-min-2026-10-04-spread-home-3pt5",
-      "question": "Spread: Vikings (-3.5)",
+      "marketSlug": "lol-c9-ly-2026-10-03",
+      "question": "LoL: Cloud9 vs LYON (BO5) - LCS Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 23173.67,
-      "totalValue": 23173.67,
+      "noValue": 34131.66,
+      "totalValue": 34131.66,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-mia-min-2026-10-04-spread-home-3pt5"
+      "url": "https://polymarket.com/event/lol-c9-ly-2026-10-03"
+    },
+    {
+      "marketSlug": "cfb-aubrn-tenn-2026-10-03",
+      "question": "Auburn vs. Tennessee",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 31835.15,
+      "totalValue": 31835.15,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-aubrn-tenn-2026-10-03"
+    },
+    {
+      "marketSlug": "cfb-fl-missr-2026-10-03-spread-away-5pt5",
+      "question": "Spread: Florida (-5.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 27555.25,
+      "totalValue": 27555.25,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-fl-missr-2026-10-03-spread-away-5pt5"
+    },
+    {
+      "marketSlug": "cfb-old-gast-2026-10-03-spread-home-2pt5",
+      "question": "Spread: Georgia State (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 25240.17,
+      "totalValue": 25240.17,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-old-gast-2026-10-03-spread-home-2pt5"
     }
   ]
 }
