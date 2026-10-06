@@ -1,75 +1,108 @@
 {
-  "generatedAt": "2026-10-05T16:51:28.591575+00:00",
+  "generatedAt": "2026-10-06T01:08:34.060724+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 6,
+  "signalCount": 9,
   "signals": [
     {
-      "marketSlug": "will-jd-vance-win-the-2028-us-presidential-election",
-      "question": "Will JD Vance win the 2028 US Presidential Election?",
+      "marketSlug": "nfl-atl-no-2026-10-06",
+      "question": "Falcons vs. Saints",
       "side": "NO",
-      "yesValue": 87901.89,
-      "noValue": 414655.37,
-      "totalValue": 502557.26,
-      "traderCount": 2,
-      "confidence": 0.825,
-      "url": "https://polymarket.com/event/will-jd-vance-win-the-2028-us-presidential-election"
+      "yesValue": 0.0,
+      "noValue": 862194.17,
+      "totalValue": 862194.17,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06"
     },
     {
       "marketSlug": "us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696",
       "question": "US announces end of Iranian blockade by October 31, 2026?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 124616.21,
-      "totalValue": 124616.21,
+      "noValue": 130736.21,
+      "totalValue": 130736.21,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696"
     },
     {
-      "marketSlug": "cs2-vit-fal2-2026-10-05",
-      "question": "Counter-Strike: Vitality vs Team Falcons (BO3) - ESL Pro League Group Stage",
+      "marketSlug": "nhl-wpg-pit-2026-10-05",
+      "question": "Jets vs. Penguins",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 104896.77,
-      "totalValue": 104896.77,
-      "traderCount": 2,
+      "noValue": 86540.52,
+      "totalValue": 86540.52,
+      "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-vit-fal2-2026-10-05"
-    },
-    {
-      "marketSlug": "cs2-m80-tyloo-2026-10-05",
-      "question": "Counter-Strike: M80 vs TYLOO (BO3) - ESL Pro League Group Stage",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 104519.37,
-      "totalValue": 104519.37,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-m80-tyloo-2026-10-05"
+      "url": "https://polymarket.com/event/nhl-wpg-pit-2026-10-05"
     },
     {
       "marketSlug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
       "question": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 64444.26,
-      "totalValue": 64444.26,
+      "noValue": 65937.17,
+      "totalValue": 65937.17,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876"
     },
     {
-      "marketSlug": "nfl-atl-no-2026-10-06",
-      "question": "Falcons vs. Saints",
+      "marketSlug": "mlb-nyy-tb-2026-10-05",
+      "question": "New York Yankees vs. Tampa Bay Rays",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 53615.71,
-      "totalValue": 53615.71,
+      "noValue": 54702.73,
+      "totalValue": 54702.73,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06"
+      "url": "https://polymarket.com/event/mlb-nyy-tb-2026-10-05"
+    },
+    {
+      "marketSlug": "nfl-atl-no-2026-10-06-total-48pt5",
+      "question": "Falcons vs. Saints: O/U 48.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 53255.52,
+      "totalValue": 53255.52,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06-total-48pt5"
+    },
+    {
+      "marketSlug": "nhl-sj-dal-2026-10-05",
+      "question": "Sharks vs. Stars",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 40712.02,
+      "totalValue": 40712.02,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nhl-sj-dal-2026-10-05"
+    },
+    {
+      "marketSlug": "nfl-atl-no-2026-10-06-spread-home-1pt5",
+      "question": "Spread: Saints (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 12517.91,
+      "totalValue": 12517.91,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06-spread-home-1pt5"
+    },
+    {
+      "marketSlug": "nfl-atl-no-2026-10-06-spread-away-3pt5",
+      "question": "Spread: Falcons (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 11008.32,
+      "totalValue": 11008.32,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06-spread-away-3pt5"
     }
   ]
 }
