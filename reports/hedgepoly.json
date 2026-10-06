@@ -1,108 +1,64 @@
 {
-  "generatedAt": "2026-10-06T01:08:34.060724+00:00",
+  "generatedAt": "2026-10-06T14:47:24.281256+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 5,
   "signals": [
     {
-      "marketSlug": "nfl-atl-no-2026-10-06",
-      "question": "Falcons vs. Saints",
+      "marketSlug": "cs2-9z-bb3-2026-10-06",
+      "question": "Counter-Strike: 9z vs BetBoom Team (BO3) - ESL Pro League Group Stage",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 862194.17,
-      "totalValue": 862194.17,
+      "noValue": 378294.19,
+      "totalValue": 378294.19,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06"
+      "url": "https://polymarket.com/event/cs2-9z-bb3-2026-10-06"
+    },
+    {
+      "marketSlug": "cs2-lgc-m80-2026-10-06",
+      "question": "Counter-Strike: Legacy vs M80 (BO3) - ESL Pro League Group Stage",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 190088.99,
+      "totalValue": 190088.99,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cs2-lgc-m80-2026-10-06"
     },
     {
       "marketSlug": "us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696",
       "question": "US announces end of Iranian blockade by October 31, 2026?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 130736.21,
-      "totalValue": 130736.21,
+      "noValue": 134985.21,
+      "totalValue": 134985.21,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696"
-    },
-    {
-      "marketSlug": "nhl-wpg-pit-2026-10-05",
-      "question": "Jets vs. Penguins",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 86540.52,
-      "totalValue": 86540.52,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nhl-wpg-pit-2026-10-05"
     },
     {
       "marketSlug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
       "question": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 65937.17,
-      "totalValue": 65937.17,
+      "noValue": 65439.53,
+      "totalValue": 65439.53,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876"
     },
     {
-      "marketSlug": "mlb-nyy-tb-2026-10-05",
-      "question": "New York Yankees vs. Tampa Bay Rays",
+      "marketSlug": "cs2-g2-prv-2026-10-06",
+      "question": "Counter-Strike: G2 vs PARIVISION (BO3) - ESL Pro League Group Stage",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 54702.73,
-      "totalValue": 54702.73,
+      "noValue": 32948.61,
+      "totalValue": 32948.61,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/mlb-nyy-tb-2026-10-05"
-    },
-    {
-      "marketSlug": "nfl-atl-no-2026-10-06-total-48pt5",
-      "question": "Falcons vs. Saints: O/U 48.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 53255.52,
-      "totalValue": 53255.52,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06-total-48pt5"
-    },
-    {
-      "marketSlug": "nhl-sj-dal-2026-10-05",
-      "question": "Sharks vs. Stars",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 40712.02,
-      "totalValue": 40712.02,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nhl-sj-dal-2026-10-05"
-    },
-    {
-      "marketSlug": "nfl-atl-no-2026-10-06-spread-home-1pt5",
-      "question": "Spread: Saints (-1.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 12517.91,
-      "totalValue": 12517.91,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06-spread-home-1pt5"
-    },
-    {
-      "marketSlug": "nfl-atl-no-2026-10-06-spread-away-3pt5",
-      "question": "Spread: Falcons (-3.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 11008.32,
-      "totalValue": 11008.32,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-atl-no-2026-10-06-spread-away-3pt5"
+      "url": "https://polymarket.com/event/cs2-g2-prv-2026-10-06"
     }
   ]
 }
