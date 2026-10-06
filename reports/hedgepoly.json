@@ -1,39 +1,17 @@
 {
-  "generatedAt": "2026-10-06T14:47:24.281256+00:00",
+  "generatedAt": "2026-10-06T23:35:41.337703+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 5,
+  "signalCount": 7,
   "signals": [
-    {
-      "marketSlug": "cs2-9z-bb3-2026-10-06",
-      "question": "Counter-Strike: 9z vs BetBoom Team (BO3) - ESL Pro League Group Stage",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 378294.19,
-      "totalValue": 378294.19,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-9z-bb3-2026-10-06"
-    },
-    {
-      "marketSlug": "cs2-lgc-m80-2026-10-06",
-      "question": "Counter-Strike: Legacy vs M80 (BO3) - ESL Pro League Group Stage",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 190088.99,
-      "totalValue": 190088.99,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-lgc-m80-2026-10-06"
-    },
     {
       "marketSlug": "us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696",
       "question": "US announces end of Iranian blockade by October 31, 2026?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 134985.21,
-      "totalValue": 134985.21,
+      "noValue": 137694.5,
+      "totalValue": 137694.5,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696"
@@ -43,22 +21,66 @@
       "question": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 65439.53,
-      "totalValue": 65439.53,
+      "noValue": 68176.55,
+      "totalValue": 68176.55,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876"
     },
     {
-      "marketSlug": "cs2-g2-prv-2026-10-06",
-      "question": "Counter-Strike: G2 vs PARIVISION (BO3) - ESL Pro League Group Stage",
+      "marketSlug": "mlb-lad-atl-2026-10-06",
+      "question": "Los Angeles Dodgers vs. Atlanta Braves",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 32948.61,
-      "totalValue": 32948.61,
+      "noValue": 41234.78,
+      "totalValue": 41234.78,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-g2-prv-2026-10-06"
+      "url": "https://polymarket.com/event/mlb-lad-atl-2026-10-06"
+    },
+    {
+      "marketSlug": "cfb-soumis-troy-2026-10-06-total-51pt5",
+      "question": "Southern Miss vs. Troy: O/U 51.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 29927.38,
+      "totalValue": 29927.38,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-soumis-troy-2026-10-06-total-51pt5"
+    },
+    {
+      "marketSlug": "mls-chi-vwh-2026-07-16-total-3pt5",
+      "question": "Chicago Fire FC vs. Vancouver Whitecaps FC: O/U 3.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 28608.65,
+      "totalValue": 28608.65,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mls-chi-vwh-2026-07-16-total-3pt5"
+    },
+    {
+      "marketSlug": "mlb-lad-atl-2026-10-06-total-6pt5",
+      "question": "Los Angeles Dodgers vs. Atlanta Braves: O/U 6.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 26256.28,
+      "totalValue": 26256.28,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/mlb-lad-atl-2026-10-06-total-6pt5"
+    },
+    {
+      "marketSlug": "val-nrg-t1-2026-10-07",
+      "question": "Valorant: NRG vs T1 (BO3) - VCT Champions Playoffs",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 19657.1,
+      "totalValue": 19657.1,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/val-nrg-t1-2026-10-07"
     }
   ]
 }
