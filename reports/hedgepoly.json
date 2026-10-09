@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-08T15:16:06.855446+00:00",
+  "generatedAt": "2026-10-09T00:09:38.915900+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 17,
   "signals": [
     {
       "marketSlug": "2026-balance-of-power-d-senate-d-house-949",
       "question": "2026 Balance of Power: D Senate, D House",
       "side": "YES",
-      "yesValue": 1237880.94,
-      "noValue": 580154.14,
-      "totalValue": 1818035.08,
+      "yesValue": 1218386.76,
+      "noValue": 596048.77,
+      "totalValue": 1814435.53,
       "traderCount": 2,
-      "confidence": 0.681,
+      "confidence": 0.671,
       "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949"
     },
     {
@@ -21,33 +21,44 @@
       "question": "US announces end of Iranian blockade by October 31, 2026?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 178635.59,
-      "totalValue": 178635.59,
+      "noValue": 186515.74,
+      "totalValue": 186515.74,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696"
     },
     {
-      "marketSlug": "will-donald-trump-win-the-nobel-peace-prize-in-2026-382",
-      "question": "Will Donald Trump win the Nobel Peace Prize in 2026?",
-      "side": "NO",
-      "yesValue": 754.49,
-      "noValue": 99549.99,
-      "totalValue": 100304.47,
-      "traderCount": 2,
-      "confidence": 0.992,
-      "url": "https://polymarket.com/event/will-donald-trump-win-the-nobel-peace-prize-in-2026-382"
-    },
-    {
-      "marketSlug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
-      "question": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
+      "marketSlug": "cfb-sala-arkst-2026-10-08",
+      "question": "South Alabama vs. Arkansas State",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 69752.41,
-      "totalValue": 69752.41,
+      "noValue": 99160.84,
+      "totalValue": 99160.84,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876"
+      "url": "https://polymarket.com/event/cfb-sala-arkst-2026-10-08"
+    },
+    {
+      "marketSlug": "cfb-sfl-utsa-2026-10-08-spread-home-6pt5",
+      "question": "Spread: UTSA (-6.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 71305.94,
+      "totalValue": 71305.94,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-sfl-utsa-2026-10-08-spread-home-6pt5"
+    },
+    {
+      "marketSlug": "cfb-sala-arkst-2026-10-08-spread-home-3pt5",
+      "question": "Spread: Arkansas State (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 56485.39,
+      "totalValue": 56485.39,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-sala-arkst-2026-10-08-spread-home-3pt5"
     },
     {
       "marketSlug": "will-karen-bass-win-the-2026-los-angeles-mayoral-election",
@@ -65,44 +76,121 @@
       "question": "Spread: Cowboys (-9.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 41802.83,
-      "totalValue": 41802.83,
+      "noValue": 47128.06,
+      "totalValue": 47128.06,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-tb-dal-2026-10-09-spread-home-9pt5"
-    },
-    {
-      "marketSlug": "nfl-tb-dal-2026-10-09-total-47pt5",
-      "question": "Buccaneers vs. Cowboys: O/U 47.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 20918.47,
-      "totalValue": 20918.47,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-tb-dal-2026-10-09-total-47pt5"
     },
     {
       "marketSlug": "nfl-tb-dal-2026-10-09",
       "question": "Buccaneers vs. Cowboys",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 18027.27,
-      "totalValue": 18027.27,
-      "traderCount": 2,
+      "noValue": 43986.02,
+      "totalValue": 43986.02,
+      "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-tb-dal-2026-10-09"
+    },
+    {
+      "marketSlug": "cfb-msrst-wkent-2026-10-08",
+      "question": "Missouri State vs. Western Kentucky",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 42083.33,
+      "totalValue": 42083.33,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-msrst-wkent-2026-10-08"
+    },
+    {
+      "marketSlug": "nhl-utah-bos-2026-10-08-spread-away-1pt5",
+      "question": "Spread: Utah (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 39279.72,
+      "totalValue": 39279.72,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nhl-utah-bos-2026-10-08-spread-away-1pt5"
+    },
+    {
+      "marketSlug": "will-yulia-navalnaya-win-the-nobel-peace-prize-in-2026-261",
+      "question": "Will Yulia Navalnaya win the Nobel Peace Prize in 2026?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 29496.77,
+      "totalValue": 29496.77,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-yulia-navalnaya-win-the-nobel-peace-prize-in-2026-261"
+    },
+    {
+      "marketSlug": "nfl-chi-gb-2026-10-11",
+      "question": "Bears vs. Packers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 28688.99,
+      "totalValue": 28688.99,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-chi-gb-2026-10-11"
+    },
+    {
+      "marketSlug": "nfl-tb-dal-2026-10-09-total-47pt5",
+      "question": "Buccaneers vs. Cowboys: O/U 47.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 21715.36,
+      "totalValue": 21715.36,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-tb-dal-2026-10-09-total-47pt5"
+    },
+    {
+      "marketSlug": "nfl-tb-dal-2026-10-09-spread-home-7pt5",
+      "question": "Spread: Cowboys (-7.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 16918.88,
+      "totalValue": 16918.88,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-tb-dal-2026-10-09-spread-home-7pt5"
     },
     {
       "marketSlug": "nfl-chi-gb-2026-10-11-spread-away-2pt5",
       "question": "Spread: Bears (-2.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 16306.64,
-      "totalValue": 16306.64,
+      "noValue": 16371.91,
+      "totalValue": 16371.91,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-chi-gb-2026-10-11-spread-away-2pt5"
+    },
+    {
+      "marketSlug": "nfl-tb-dal-2026-10-09-total-48pt5",
+      "question": "Buccaneers vs. Cowboys: O/U 48.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 12651.31,
+      "totalValue": 12651.31,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-tb-dal-2026-10-09-total-48pt5"
+    },
+    {
+      "marketSlug": "nfl-tb-dal-2026-10-09-spread-home-8pt5",
+      "question": "Spread: Cowboys (-8.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 9871.71,
+      "totalValue": 9871.71,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-tb-dal-2026-10-09-spread-home-8pt5"
     }
   ]
 }
