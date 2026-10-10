@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-09T23:50:02.542723+00:00",
+  "generatedAt": "2026-10-10T14:16:49.509004+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 13,
+  "signalCount": 17,
   "signals": [
     {
       "marketSlug": "2026-balance-of-power-d-senate-d-house-949",
       "question": "2026 Balance of Power: D Senate, D House",
       "side": "YES",
-      "yesValue": 1432899.46,
-      "noValue": 758435.52,
-      "totalValue": 2191334.98,
+      "yesValue": 959372.58,
+      "noValue": 462000.0,
+      "totalValue": 1421372.58,
       "traderCount": 2,
-      "confidence": 0.654,
+      "confidence": 0.675,
       "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949"
     },
     {
@@ -21,88 +21,132 @@
       "question": "US announces end of Iranian blockade by October 31, 2026?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 193578.41,
-      "totalValue": 193578.41,
+      "noValue": 198271.22,
+      "totalValue": 198271.22,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-by-october-31-2026-20260727171711632-895-372-622-413-171-454-592-696"
     },
     {
-      "marketSlug": "cfb-flst-lou-2026-10-09-total-59pt5",
-      "question": "Florida State vs. Louisville: O/U 59.5",
+      "marketSlug": "cs2-aur1-vit-2026-10-10",
+      "question": "Counter-Strike: Aurora Gaming vs Vitality (BO3) - ESL Pro League Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 80339.87,
-      "totalValue": 80339.87,
+      "noValue": 179581.93,
+      "totalValue": 179581.93,
+      "traderCount": 6,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cs2-aur1-vit-2026-10-10"
+    },
+    {
+      "marketSlug": "bun-aug-bay-2026-10-10-spread-away-2pt5",
+      "question": "Spread: FC Bayern München (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 102939.55,
+      "totalValue": 102939.55,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-flst-lou-2026-10-09-total-59pt5"
+      "url": "https://polymarket.com/event/bun-aug-bay-2026-10-10-spread-away-2pt5"
     },
     {
       "marketSlug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
       "question": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 69005.95,
-      "totalValue": 69005.95,
+      "noValue": 82442.2,
+      "totalValue": 82442.2,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876"
     },
     {
-      "marketSlug": "cfb-iowast-byu-2026-10-09-spread-home-10pt5",
-      "question": "Spread: BYU (-10.5)",
+      "marketSlug": "cs2-aur1-vit-2026-10-10-map-handicap-home-1pt5",
+      "question": "Map Handicap: VIT (-1.5) vs Aurora Gaming (+1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 54457.6,
-      "totalValue": 54457.6,
-      "traderCount": 2,
+      "noValue": 78945.99,
+      "totalValue": 78945.99,
+      "traderCount": 4,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-iowast-byu-2026-10-09-spread-home-10pt5"
+      "url": "https://polymarket.com/event/cs2-aur1-vit-2026-10-10-map-handicap-home-1pt5"
     },
     {
       "marketSlug": "will-karen-bass-win-the-2026-los-angeles-mayoral-election",
       "question": "Will Karen Bass win the 2026 Los Angeles mayoral election?",
       "side": "YES",
-      "yesValue": 34887.22,
-      "noValue": 18877.93,
-      "totalValue": 53765.15,
+      "yesValue": 41612.47,
+      "noValue": 14389.33,
+      "totalValue": 56001.8,
       "traderCount": 2,
-      "confidence": 0.649,
+      "confidence": 0.743,
       "url": "https://polymarket.com/event/will-karen-bass-win-the-2026-los-angeles-mayoral-election"
+    },
+    {
+      "marketSlug": "nfl-sf-sea-2026-10-11-spread-away-3pt5",
+      "question": "Spread: 49ers (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 46540.4,
+      "totalValue": 46540.4,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-sf-sea-2026-10-11-spread-away-3pt5"
     },
     {
       "marketSlug": "nfl-chi-gb-2026-10-11",
       "question": "Bears vs. Packers",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 29768.59,
-      "totalValue": 29768.59,
+      "noValue": 30149.9,
+      "totalValue": 30149.9,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-chi-gb-2026-10-11"
     },
     {
-      "marketSlug": "nhl-ana-wpg-2026-10-09-total-6pt5",
-      "question": "Ducks vs. Jets: O/U 6.5",
+      "marketSlug": "nfl-den-lac-2026-10-11-spread-home-3pt5",
+      "question": "Spread: Chargers (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 20917.91,
-      "totalValue": 20917.91,
+      "noValue": 29139.51,
+      "totalValue": 29139.51,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nhl-ana-wpg-2026-10-09-total-6pt5"
+      "url": "https://polymarket.com/event/nfl-den-lac-2026-10-11-spread-home-3pt5"
     },
     {
-      "marketSlug": "cfb-flst-lou-2026-10-09-spread-home-3pt5",
-      "question": "Spread: Louisville (-3.5)",
+      "marketSlug": "nfl-det-ari-2026-10-11-spread-home-3pt5",
+      "question": "Spread: Cardinals (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 16894.14,
-      "totalValue": 16894.14,
-      "traderCount": 3,
+      "noValue": 28647.01,
+      "totalValue": 28647.01,
+      "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-flst-lou-2026-10-09-spread-home-3pt5"
+      "url": "https://polymarket.com/event/nfl-det-ari-2026-10-11-spread-home-3pt5"
+    },
+    {
+      "marketSlug": "nfl-cin-mia-2026-10-11-spread-home-3pt5",
+      "question": "Spread: Dolphins (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 24104.3,
+      "totalValue": 24104.3,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-cin-mia-2026-10-11-spread-home-3pt5"
+    },
+    {
+      "marketSlug": "nfl-hou-ten-2026-10-11",
+      "question": "Texans vs. Titans",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 19898.1,
+      "totalValue": 19898.1,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-hou-ten-2026-10-11"
     },
     {
       "marketSlug": "nfl-chi-gb-2026-10-11-spread-away-2pt5",
@@ -138,15 +182,15 @@
       "url": "https://polymarket.com/event/cfb-sc-fl-2026-10-10-total-59pt5"
     },
     {
-      "marketSlug": "cfb-iowa-wash-2026-10-09-spread-home-2pt5",
-      "question": "Spread: Washington (-2.5)",
+      "marketSlug": "dota2-pari-aur1-2026-10-10",
+      "question": "Dota 2: PARIVISION vs Aurora (BO3) - BLAST Slam Playoffs",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 9123.3,
-      "totalValue": 9123.3,
+      "noValue": 6549.71,
+      "totalValue": 6549.71,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cfb-iowa-wash-2026-10-09-spread-home-2pt5"
+      "url": "https://polymarket.com/event/dota2-pari-aur1-2026-10-10"
     }
   ]
 }
