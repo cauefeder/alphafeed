@@ -1,17 +1,28 @@
 {
-  "generatedAt": "2026-10-12T17:27:13.159309+00:00",
+  "generatedAt": "2026-10-13T01:50:30.486754+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 2,
+  "signalCount": 8,
   "signals": [
+    {
+      "marketSlug": "nfl-buf-la-2026-10-13",
+      "question": "Bills vs. Rams",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 637369.03,
+      "totalValue": 637369.03,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-buf-la-2026-10-13"
+    },
     {
       "marketSlug": "nfl-buf-la-2026-10-13-spread-home-3pt5",
       "question": "Spread: Rams (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 445778.69,
-      "totalValue": 445778.69,
+      "noValue": 610237.13,
+      "totalValue": 610237.13,
       "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-buf-la-2026-10-13-spread-home-3pt5"
@@ -20,12 +31,67 @@
       "marketSlug": "lal-ray-bil-2026-10-10-ray",
       "question": "Will Rayo Vallecano de Madrid win on 2026-10-10?",
       "side": "NO",
-      "yesValue": 13310.63,
-      "noValue": 74658.05,
-      "totalValue": 87968.68,
+      "yesValue": 13877.04,
+      "noValue": 73682.12,
+      "totalValue": 87559.16,
       "traderCount": 2,
-      "confidence": 0.849,
+      "confidence": 0.842,
       "url": "https://polymarket.com/event/lal-ray-bil-2026-10-10-ray"
+    },
+    {
+      "marketSlug": "will-steve-hilton-win-the-california-governor-election-in-2026",
+      "question": "Will Steve Hilton win the California Governor Election in 2026?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 41007.12,
+      "totalValue": 41007.12,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-steve-hilton-win-the-california-governor-election-in-2026"
+    },
+    {
+      "marketSlug": "nhl-las-min-2026-10-12-total-5pt5",
+      "question": "Golden Knights vs. Wild: O/U 5.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 22950.19,
+      "totalValue": 22950.19,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nhl-las-min-2026-10-12-total-5pt5"
+    },
+    {
+      "marketSlug": "will-apple-be-the-largest-company-in-the-world-by-market-cap-on-december-31-291",
+      "question": "Will Apple be the largest company in the world by market cap on December 31?",
+      "side": "YES",
+      "yesValue": 2086.16,
+      "noValue": 0.0,
+      "totalValue": 2086.16,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-apple-be-the-largest-company-in-the-world-by-market-cap-on-december-31-291"
+    },
+    {
+      "marketSlug": "will-kylian-mbapp-win-the-2026-ballon-dor",
+      "question": "Will Kylian Mbappé win the 2026 Ballon d'Or?",
+      "side": "YES",
+      "yesValue": 1814.03,
+      "noValue": 0.0,
+      "totalValue": 1814.03,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-kylian-mbapp-win-the-2026-ballon-dor"
+    },
+    {
+      "marketSlug": "will-lionel-messi-win-the-2026-ballon-dor",
+      "question": "Will Lionel Messi win the 2026 Ballon d'Or?",
+      "side": "YES",
+      "yesValue": 1233.88,
+      "noValue": 0.0,
+      "totalValue": 1233.88,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-lionel-messi-win-the-2026-ballon-dor"
     }
   ]
 }
