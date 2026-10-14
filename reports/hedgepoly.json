@@ -1,75 +1,64 @@
 {
-  "generatedAt": "2026-10-14T13:21:11.108495+00:00",
+  "generatedAt": "2026-10-14T22:59:59.669706+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 6,
+  "signalCount": 5,
   "signals": [
     {
-      "marketSlug": "wta-sabalen-annli-2026-10-14",
-      "question": "Wuhan Tennis Open: Aryna Sabalenka vs Ann Li",
+      "marketSlug": "mlb-mil-lad-2026-10-14",
+      "question": "Milwaukee Brewers vs. Los Angeles Dodgers",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 213929.97,
-      "totalValue": 213929.97,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-sabalen-annli-2026-10-14"
-    },
-    {
-      "marketSlug": "ucl-mnc-psg-2026-10-14-mnc",
-      "question": "Will Manchester City FC win on 2026-10-14?",
-      "side": "YES",
-      "yesValue": 195918.71,
-      "noValue": 0.0,
-      "totalValue": 195918.71,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/ucl-mnc-psg-2026-10-14-mnc"
-    },
-    {
-      "marketSlug": "ucl-mnc-psg-2026-10-14-psg",
-      "question": "Will Paris Saint-Germain FC win on 2026-10-14?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 99386.52,
-      "totalValue": 99386.52,
+      "noValue": 250228.06,
+      "totalValue": 250228.06,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/ucl-mnc-psg-2026-10-14-psg"
+      "url": "https://polymarket.com/event/mlb-mil-lad-2026-10-14"
     },
     {
       "marketSlug": "lal-ray-bil-2026-10-10-ray",
       "question": "Will Rayo Vallecano de Madrid win on 2026-10-10?",
       "side": "NO",
-      "yesValue": 1455.59,
-      "noValue": 80694.95,
-      "totalValue": 82150.54,
+      "yesValue": 1310.03,
+      "noValue": 84153.31,
+      "totalValue": 85463.34,
       "traderCount": 2,
-      "confidence": 0.982,
+      "confidence": 0.985,
       "url": "https://polymarket.com/event/lal-ray-bil-2026-10-10-ray"
     },
     {
       "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
       "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
       "side": "YES",
-      "yesValue": 61878.85,
+      "yesValue": 60506.71,
       "noValue": 0.0,
-      "totalValue": 61878.85,
+      "totalValue": 60506.71,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
     },
     {
-      "marketSlug": "atp-paul-bergs-2026-10-13",
-      "question": "Shanghai Rolex Masters: Tommy Paul vs Zizou Bergs",
+      "marketSlug": "cfb-kenest-msrst-2026-10-14-spread-away-3pt5",
+      "question": "Spread: Kennesaw State (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 28984.0,
-      "totalValue": 28984.0,
+      "noValue": 23130.78,
+      "totalValue": 23130.78,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/atp-paul-bergs-2026-10-13"
+      "url": "https://polymarket.com/event/cfb-kenest-msrst-2026-10-14-spread-away-3pt5"
+    },
+    {
+      "marketSlug": "mls-fcc-ner-2026-10-14-fcc",
+      "question": "Will FC Cincinnati win on 2026-10-14?",
+      "side": "YES",
+      "yesValue": 3748.52,
+      "noValue": 3183.91,
+      "totalValue": 6932.42,
+      "traderCount": 2,
+      "confidence": 0.541,
+      "url": "https://polymarket.com/event/mls-fcc-ner-2026-10-14-fcc"
     }
   ]
 }
