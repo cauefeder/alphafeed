@@ -1,42 +1,75 @@
 {
-  "generatedAt": "2026-10-13T23:37:16.396786+00:00",
+  "generatedAt": "2026-10-14T13:21:11.108495+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 3,
+  "signalCount": 6,
   "signals": [
+    {
+      "marketSlug": "wta-sabalen-annli-2026-10-14",
+      "question": "Wuhan Tennis Open: Aryna Sabalenka vs Ann Li",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 213929.97,
+      "totalValue": 213929.97,
+      "traderCount": 4,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/wta-sabalen-annli-2026-10-14"
+    },
+    {
+      "marketSlug": "ucl-mnc-psg-2026-10-14-mnc",
+      "question": "Will Manchester City FC win on 2026-10-14?",
+      "side": "YES",
+      "yesValue": 195918.71,
+      "noValue": 0.0,
+      "totalValue": 195918.71,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/ucl-mnc-psg-2026-10-14-mnc"
+    },
+    {
+      "marketSlug": "ucl-mnc-psg-2026-10-14-psg",
+      "question": "Will Paris Saint-Germain FC win on 2026-10-14?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 99386.52,
+      "totalValue": 99386.52,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/ucl-mnc-psg-2026-10-14-psg"
+    },
     {
       "marketSlug": "lal-ray-bil-2026-10-10-ray",
       "question": "Will Rayo Vallecano de Madrid win on 2026-10-10?",
       "side": "NO",
-      "yesValue": 15859.47,
-      "noValue": 70266.4,
-      "totalValue": 86125.87,
+      "yesValue": 1455.59,
+      "noValue": 80694.95,
+      "totalValue": 82150.54,
       "traderCount": 2,
-      "confidence": 0.816,
+      "confidence": 0.982,
       "url": "https://polymarket.com/event/lal-ray-bil-2026-10-10-ray"
     },
     {
-      "marketSlug": "will-steve-hilton-win-the-california-governor-election-in-2026",
-      "question": "Will Steve Hilton win the California Governor Election in 2026?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 40900.72,
-      "totalValue": 40900.72,
+      "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
+      "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+      "side": "YES",
+      "yesValue": 61878.85,
+      "noValue": 0.0,
+      "totalValue": 61878.85,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-steve-hilton-win-the-california-governor-election-in-2026"
+      "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
     },
     {
-      "marketSlug": "will-kylian-mbapp-win-the-2026-ballon-dor",
-      "question": "Will Kylian Mbappé win the 2026 Ballon d'Or?",
-      "side": "YES",
-      "yesValue": 2038.6,
-      "noValue": 0.0,
-      "totalValue": 2038.6,
+      "marketSlug": "atp-paul-bergs-2026-10-13",
+      "question": "Shanghai Rolex Masters: Tommy Paul vs Zizou Bergs",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 28984.0,
+      "totalValue": 28984.0,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-kylian-mbapp-win-the-2026-ballon-dor"
+      "url": "https://polymarket.com/event/atp-paul-bergs-2026-10-13"
     }
   ]
 }
