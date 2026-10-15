@@ -1,53 +1,31 @@
 {
-  "generatedAt": "2026-10-15T13:06:37.662375+00:00",
+  "generatedAt": "2026-10-15T22:54:58.887467+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 4,
+  "signalCount": 2,
   "signals": [
     {
-      "marketSlug": "wta-krueger-swiatek-2026-10-15",
-      "question": "Wuhan Tennis Open: Ashlyn Krueger vs Iga Swiatek",
+      "marketSlug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
+      "question": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 86201.33,
-      "totalValue": 86201.33,
+      "noValue": 61309.5,
+      "totalValue": 61309.5,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/wta-krueger-swiatek-2026-10-15"
+      "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876"
     },
     {
-      "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-      "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
-      "side": "YES",
-      "yesValue": 57008.94,
-      "noValue": 0.0,
-      "totalValue": 57008.94,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
-    },
-    {
-      "marketSlug": "lol-we-bro2-2026-10-15",
-      "question": "LoL: Team WE vs HANJIN BRION (BO5) - Demacia Cup Global Invitational Playoffs",
+      "marketSlug": "wta-olmo-masarov-2026-10-15",
+      "question": "Mallorca: Ane Mintegi Del Olmo vs Rebeka Masarova",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 19715.23,
-      "totalValue": 19715.23,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-we-bro2-2026-10-15"
-    },
-    {
-      "marketSlug": "cs2-9z-fal2-2026-10-15",
-      "question": "Counter-Strike: 9z vs Team Falcons (BO3) - Thunderpick World Championship Group A",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 17554.4,
-      "totalValue": 17554.4,
+      "noValue": 53832.02,
+      "totalValue": 53832.02,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/cs2-9z-fal2-2026-10-15"
+      "url": "https://polymarket.com/event/wta-olmo-masarov-2026-10-15"
     }
   ]
 }
