@@ -1,20 +1,75 @@
 {
-  "generatedAt": "2026-10-16T22:33:41.096855+00:00",
+  "generatedAt": "2026-10-17T12:00:49.067881+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 1,
+  "signalCount": 6,
   "signals": [
     {
-      "marketSlug": "lol-fur-c9-2026-10-16-game-handicap-home-2pt5",
-      "question": "Game Handicap: C9 (-2.5) vs FURIA Esports (+2.5)",
+      "marketSlug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
+      "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 50691.35,
-      "totalValue": 50691.35,
+      "noValue": 150268.73,
+      "totalValue": 150268.73,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lol-fur-c9-2026-10-16-game-handicap-home-2pt5"
+      "url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel"
+    },
+    {
+      "marketSlug": "lol-fox1-we-2026-10-17-game3",
+      "question": "LoL: BNK FEARX vs Team WE - Game 3 Winner",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 86544.66,
+      "totalValue": 86544.66,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/lol-fox1-we-2026-10-17-game3"
+    },
+    {
+      "marketSlug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
+      "question": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 64936.46,
+      "totalValue": 64936.46,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876"
+    },
+    {
+      "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
+      "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+      "side": "YES",
+      "yesValue": 57363.86,
+      "noValue": 0.0,
+      "totalValue": 57363.86,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
+    },
+    {
+      "marketSlug": "epl-mac-ips-2026-10-17-spread-home-1pt5",
+      "question": "Spread: Manchester City FC (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 49650.0,
+      "totalValue": 49650.0,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/epl-mac-ips-2026-10-17-spread-home-1pt5"
+    },
+    {
+      "marketSlug": "clarity-act-signed-into-law-in-2026",
+      "question": "Clarity Act (H.R.3633) signed into law in 2026?",
+      "side": "YES",
+      "yesValue": 9887.74,
+      "noValue": 0.0,
+      "totalValue": 9887.74,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
     }
   ]
 }
