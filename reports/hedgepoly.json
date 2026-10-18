@@ -1,108 +1,119 @@
 {
-  "generatedAt": "2026-10-18T12:28:48.295521+00:00",
+  "generatedAt": "2026-10-18T22:14:33.293522+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 9,
+  "signalCount": 10,
   "signals": [
     {
-      "marketSlug": "epl-bri-cry-2026-10-18-bri",
-      "question": "Will Brighton & Hove Albion FC win on 2026-10-18?",
-      "side": "YES",
-      "yesValue": 2189008.89,
-      "noValue": 258790.54,
-      "totalValue": 2447799.43,
-      "traderCount": 5,
-      "confidence": 0.894,
-      "url": "https://polymarket.com/event/epl-bri-cry-2026-10-18-bri"
-    },
-    {
-      "marketSlug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
-      "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
+      "marketSlug": "nfl-buf-lv-2026-10-18",
+      "question": "Bills vs. Raiders",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 148196.05,
-      "totalValue": 148196.05,
+      "noValue": 770498.58,
+      "totalValue": 770498.58,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel"
+      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18"
     },
     {
-      "marketSlug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-      "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+      "marketSlug": "bra-gre-cru-2026-10-18-cru",
+      "question": "Will Cruzeiro EC win on 2026-10-18?",
       "side": "YES",
-      "yesValue": 62058.94,
+      "yesValue": 414970.61,
       "noValue": 0.0,
-      "totalValue": 62058.94,
+      "totalValue": 414970.61,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
+      "url": "https://polymarket.com/event/bra-gre-cru-2026-10-18-cru"
     },
     {
-      "marketSlug": "nfl-chi-atl-2026-10-18",
-      "question": "Bears vs. Falcons",
+      "marketSlug": "nfl-buf-lv-2026-10-18-spread-away-4pt5",
+      "question": "Spread: Bills (-4.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 53325.81,
-      "totalValue": 53325.81,
+      "noValue": 256483.4,
+      "totalValue": 256483.4,
       "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-chi-atl-2026-10-18"
+      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-spread-away-4pt5"
     },
     {
-      "marketSlug": "nfl-lac-kc-2026-10-18-spread-home-7pt5",
-      "question": "Spread: Chiefs (-7.5)",
+      "marketSlug": "nfl-ari-la-2026-10-18",
+      "question": "Cardinals vs. Rams",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 34648.61,
-      "totalValue": 34648.61,
-      "traderCount": 2,
+      "noValue": 103412.38,
+      "totalValue": 103412.38,
+      "traderCount": 3,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-lac-kc-2026-10-18-spread-home-7pt5"
+      "url": "https://polymarket.com/event/nfl-ari-la-2026-10-18"
     },
     {
       "marketSlug": "nfl-dal-gb-2026-10-19-spread-home-1pt5",
       "question": "Spread: Packers (-1.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 22983.44,
-      "totalValue": 22983.44,
+      "noValue": 42670.43,
+      "totalValue": 42670.43,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-dal-gb-2026-10-19-spread-home-1pt5"
     },
     {
-      "marketSlug": "nfl-ten-ind-2026-10-18-spread-home-6pt5",
-      "question": "Spread: Colts (-6.5)",
+      "marketSlug": "nfl-lac-kc-2026-10-18-spread-home-7pt5",
+      "question": "Spread: Chiefs (-7.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 22034.06,
-      "totalValue": 22034.06,
+      "noValue": 20894.74,
+      "totalValue": 20894.74,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-ten-ind-2026-10-18-spread-home-6pt5"
+      "url": "https://polymarket.com/event/nfl-lac-kc-2026-10-18-spread-home-7pt5"
     },
     {
-      "marketSlug": "nfl-bal-cle-2026-10-18-spread-away-3pt5",
-      "question": "Spread: Ravens (-3.5)",
+      "marketSlug": "nfl-buf-lv-2026-10-18-total-54pt5",
+      "question": "Bills vs. Raiders: O/U 54.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 12619.65,
-      "totalValue": 12619.65,
+      "noValue": 18546.3,
+      "totalValue": 18546.3,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-bal-cle-2026-10-18-spread-away-3pt5"
+      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-total-54pt5"
     },
     {
-      "marketSlug": "clarity-act-signed-into-law-in-2026",
-      "question": "Clarity Act (H.R.3633) signed into law in 2026?",
-      "side": "YES",
-      "yesValue": 8916.62,
-      "noValue": 0.0,
-      "totalValue": 8916.62,
+      "marketSlug": "nfl-lac-kc-2026-10-18",
+      "question": "Chargers vs. Chiefs",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 12769.04,
+      "totalValue": 12769.04,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-lac-kc-2026-10-18"
+    },
+    {
+      "marketSlug": "nfl-buf-lv-2026-10-18-spread-away-5pt5",
+      "question": "Spread: Bills (-5.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 10743.52,
+      "totalValue": 10743.52,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
+      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-spread-away-5pt5"
+    },
+    {
+      "marketSlug": "nfl-buf-lv-2026-10-18-total-52pt5",
+      "question": "Bills vs. Raiders: O/U 52.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 9584.41,
+      "totalValue": 9584.41,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-total-52pt5"
     }
   ]
 }
