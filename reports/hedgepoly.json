@@ -1,119 +1,53 @@
 {
-  "generatedAt": "2026-10-18T22:14:33.293522+00:00",
+  "generatedAt": "2026-10-19T15:19:17.080339+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 10,
+  "signalCount": 4,
   "signals": [
     {
-      "marketSlug": "nfl-buf-lv-2026-10-18",
-      "question": "Bills vs. Raiders",
+      "marketSlug": "nfl-was-sf-2026-10-20-total-52pt5",
+      "question": "Commanders vs. 49ers: O/U 52.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 770498.58,
-      "totalValue": 770498.58,
+      "noValue": 151071.27,
+      "totalValue": 151071.27,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18"
+      "url": "https://polymarket.com/event/nfl-was-sf-2026-10-20-total-52pt5"
     },
     {
-      "marketSlug": "bra-gre-cru-2026-10-18-cru",
-      "question": "Will Cruzeiro EC win on 2026-10-18?",
+      "marketSlug": "lal-ray-bil-2026-10-10-bil",
+      "question": "Will Athletic Club win on 2026-10-10?",
       "side": "YES",
-      "yesValue": 414970.61,
-      "noValue": 0.0,
-      "totalValue": 414970.61,
+      "yesValue": 22313.17,
+      "noValue": 5147.32,
+      "totalValue": 27460.49,
+      "traderCount": 2,
+      "confidence": 0.813,
+      "url": "https://polymarket.com/event/lal-ray-bil-2026-10-10-bil"
+    },
+    {
+      "marketSlug": "lal-ray-bil-2026-10-10-total-2pt5",
+      "question": "Rayo Vallecano de Madrid vs. Athletic Club: O/U 2.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 23596.82,
+      "totalValue": 23596.82,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/bra-gre-cru-2026-10-18-cru"
+      "url": "https://polymarket.com/event/lal-ray-bil-2026-10-10-total-2pt5"
     },
     {
-      "marketSlug": "nfl-buf-lv-2026-10-18-spread-away-4pt5",
-      "question": "Spread: Bills (-4.5)",
+      "marketSlug": "clarity-act-signed-into-law-in-2026",
+      "question": "Clarity Act (H.R.3633) signed into law in 2026?",
       "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 256483.4,
-      "totalValue": 256483.4,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-spread-away-4pt5"
-    },
-    {
-      "marketSlug": "nfl-ari-la-2026-10-18",
-      "question": "Cardinals vs. Rams",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 103412.38,
-      "totalValue": 103412.38,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-ari-la-2026-10-18"
-    },
-    {
-      "marketSlug": "nfl-dal-gb-2026-10-19-spread-home-1pt5",
-      "question": "Spread: Packers (-1.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 42670.43,
-      "totalValue": 42670.43,
+      "yesValue": 2600.0,
+      "noValue": 6190.06,
+      "totalValue": 8790.06,
       "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-dal-gb-2026-10-19-spread-home-1pt5"
-    },
-    {
-      "marketSlug": "nfl-lac-kc-2026-10-18-spread-home-7pt5",
-      "question": "Spread: Chiefs (-7.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 20894.74,
-      "totalValue": 20894.74,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-lac-kc-2026-10-18-spread-home-7pt5"
-    },
-    {
-      "marketSlug": "nfl-buf-lv-2026-10-18-total-54pt5",
-      "question": "Bills vs. Raiders: O/U 54.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 18546.3,
-      "totalValue": 18546.3,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-total-54pt5"
-    },
-    {
-      "marketSlug": "nfl-lac-kc-2026-10-18",
-      "question": "Chargers vs. Chiefs",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 12769.04,
-      "totalValue": 12769.04,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-lac-kc-2026-10-18"
-    },
-    {
-      "marketSlug": "nfl-buf-lv-2026-10-18-spread-away-5pt5",
-      "question": "Spread: Bills (-5.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 10743.52,
-      "totalValue": 10743.52,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-spread-away-5pt5"
-    },
-    {
-      "marketSlug": "nfl-buf-lv-2026-10-18-total-52pt5",
-      "question": "Bills vs. Raiders: O/U 52.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 9584.41,
-      "totalValue": 9584.41,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nfl-buf-lv-2026-10-18-total-52pt5"
+      "confidence": 0.704,
+      "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
     }
   ]
 }
