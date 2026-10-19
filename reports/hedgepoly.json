@@ -1,30 +1,63 @@
 {
-  "generatedAt": "2026-10-19T15:19:17.080339+00:00",
+  "generatedAt": "2026-10-19T23:19:43.568146+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 4,
+  "signalCount": 6,
   "signals": [
+    {
+      "marketSlug": "nfl-was-sf-2026-10-20",
+      "question": "Commanders vs. 49ers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 394250.0,
+      "totalValue": 394250.0,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-was-sf-2026-10-20"
+    },
     {
       "marketSlug": "nfl-was-sf-2026-10-20-total-52pt5",
       "question": "Commanders vs. 49ers: O/U 52.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 151071.27,
-      "totalValue": 151071.27,
+      "noValue": 156732.77,
+      "totalValue": 156732.77,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-was-sf-2026-10-20-total-52pt5"
     },
     {
+      "marketSlug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
+      "question": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 123427.88,
+      "totalValue": 123427.88,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-the-republican-party-control-the-senate-after-the-2026-midterm-elections"
+    },
+    {
+      "marketSlug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
+      "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 56063.93,
+      "totalValue": 56063.93,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel"
+    },
+    {
       "marketSlug": "lal-ray-bil-2026-10-10-bil",
       "question": "Will Athletic Club win on 2026-10-10?",
       "side": "YES",
-      "yesValue": 22313.17,
-      "noValue": 5147.32,
-      "totalValue": 27460.49,
+      "yesValue": 22075.8,
+      "noValue": 5195.88,
+      "totalValue": 27271.67,
       "traderCount": 2,
-      "confidence": 0.813,
+      "confidence": 0.809,
       "url": "https://polymarket.com/event/lal-ray-bil-2026-10-10-bil"
     },
     {
@@ -32,22 +65,11 @@
       "question": "Rayo Vallecano de Madrid vs. Athletic Club: O/U 2.5",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 23596.82,
-      "totalValue": 23596.82,
+      "noValue": 23353.84,
+      "totalValue": 23353.84,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/lal-ray-bil-2026-10-10-total-2pt5"
-    },
-    {
-      "marketSlug": "clarity-act-signed-into-law-in-2026",
-      "question": "Clarity Act (H.R.3633) signed into law in 2026?",
-      "side": "NO",
-      "yesValue": 2600.0,
-      "noValue": 6190.06,
-      "totalValue": 8790.06,
-      "traderCount": 2,
-      "confidence": 0.704,
-      "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
     }
   ]
 }
