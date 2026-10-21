@@ -1,52 +1,41 @@
 {
-  "generatedAt": "2026-10-20T22:57:02.438796+00:00",
+  "generatedAt": "2026-10-21T13:29:47.555523+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 5,
+  "signalCount": 4,
   "signals": [
     {
-      "marketSlug": "nba-phi-nyk-2026-10-20-spread-home-4pt5",
-      "question": "Spread: Knicks (-4.5)",
+      "marketSlug": "nba-sac-lac-2026-10-21-spread-home-4pt5",
+      "question": "Spread: Clippers (-4.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 113394.21,
-      "totalValue": 113394.21,
+      "noValue": 59688.75,
+      "totalValue": 59688.75,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-phi-nyk-2026-10-20-spread-home-4pt5"
+      "url": "https://polymarket.com/event/nba-sac-lac-2026-10-21-spread-home-4pt5"
     },
     {
-      "marketSlug": "nba-phi-nyk-2026-10-20-total-231pt5",
-      "question": "76ers vs. Knicks: O/U 231.5",
+      "marketSlug": "nba-sac-lac-2026-10-21-spread-home-5pt5",
+      "question": "Spread: Clippers (-5.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 103308.11,
-      "totalValue": 103308.11,
+      "noValue": 15663.45,
+      "totalValue": 15663.45,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-phi-nyk-2026-10-20-total-231pt5"
-    },
-    {
-      "marketSlug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
-      "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 56848.04,
-      "totalValue": 56848.04,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel"
+      "url": "https://polymarket.com/event/nba-sac-lac-2026-10-21-spread-home-5pt5"
     },
     {
       "marketSlug": "clarity-act-signed-into-law-in-2026",
       "question": "Clarity Act (H.R.3633) signed into law in 2026?",
       "side": "NO",
-      "yesValue": 2450.0,
-      "noValue": 6209.65,
-      "totalValue": 8659.65,
+      "yesValue": 2525.0,
+      "noValue": 6199.86,
+      "totalValue": 8724.85,
       "traderCount": 2,
-      "confidence": 0.717,
+      "confidence": 0.711,
       "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
     },
     {
@@ -54,8 +43,8 @@
       "question": "Will no Fed rate cuts happen in 2026?",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 862.89,
-      "totalValue": 862.89,
+      "noValue": 801.08,
+      "totalValue": 801.08,
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026"
