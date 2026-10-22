@@ -1,20 +1,53 @@
 {
-  "generatedAt": "2026-10-22T13:31:00.963085+00:00",
+  "generatedAt": "2026-10-22T22:59:12.772935+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 1,
+  "signalCount": 4,
   "signals": [
     {
-      "marketSlug": "bkkbl-mob-lg-2026-10-22",
-      "question": "Mobis Phoebus vs. LG Sakers",
+      "marketSlug": "nba-cle-phi-2026-10-22",
+      "question": "Cavaliers vs. 76ers",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 26963.53,
-      "totalValue": 26963.53,
+      "noValue": 818470.57,
+      "totalValue": 818470.57,
+      "traderCount": 5,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-cle-phi-2026-10-22"
+    },
+    {
+      "marketSlug": "nba-den-okc-2026-10-22-spread-home-8pt5",
+      "question": "Spread: Thunder (-8.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 142829.42,
+      "totalValue": 142829.42,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-den-okc-2026-10-22-spread-home-8pt5"
+    },
+    {
+      "marketSlug": "nba-cle-phi-2026-10-22-total-237pt5",
+      "question": "Cavaliers vs. 76ers: O/U 237.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 103516.6,
+      "totalValue": 103516.6,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/bkkbl-mob-lg-2026-10-22"
+      "url": "https://polymarket.com/event/nba-cle-phi-2026-10-22-total-237pt5"
+    },
+    {
+      "marketSlug": "nba-cle-phi-2026-10-22-total-236pt5",
+      "question": "Cavaliers vs. 76ers: O/U 236.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 38193.62,
+      "totalValue": 38193.62,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-cle-phi-2026-10-22-total-236pt5"
     }
   ]
 }
