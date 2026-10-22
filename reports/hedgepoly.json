@@ -1,75 +1,20 @@
 {
-  "generatedAt": "2026-10-21T23:02:27.690383+00:00",
+  "generatedAt": "2026-10-22T13:31:00.963085+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 6,
+  "signalCount": 1,
   "signals": [
     {
-      "marketSlug": "mls-fcc-dcu-2026-09-05-fcc",
-      "question": "Will FC Cincinnati win on 2026-09-05?",
-      "side": "YES",
-      "yesValue": 170351.75,
-      "noValue": 0.0,
-      "totalValue": 170351.75,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/mls-fcc-dcu-2026-09-05-fcc"
-    },
-    {
-      "marketSlug": "nba-mil-was-2026-10-21",
-      "question": "Bucks vs. Wizards",
+      "marketSlug": "bkkbl-mob-lg-2026-10-22",
+      "question": "Mobis Phoebus vs. LG Sakers",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 69051.12,
-      "totalValue": 69051.12,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-mil-was-2026-10-21"
-    },
-    {
-      "marketSlug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
-      "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 57632.15,
-      "totalValue": 57632.15,
+      "noValue": 26963.53,
+      "totalValue": 26963.53,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel"
-    },
-    {
-      "marketSlug": "nba-min-mia-2026-10-21",
-      "question": "Timberwolves vs. Heat",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 16063.47,
-      "totalValue": 16063.47,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-min-mia-2026-10-21"
-    },
-    {
-      "marketSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-      "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
-      "side": "YES",
-      "yesValue": 6250.0,
-      "noValue": 5154.62,
-      "totalValue": 11404.62,
-      "traderCount": 2,
-      "confidence": 0.548,
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
-    },
-    {
-      "marketSlug": "clarity-act-signed-into-law-in-2026",
-      "question": "Clarity Act (H.R.3633) signed into law in 2026?",
-      "side": "NO",
-      "yesValue": 2575.0,
-      "noValue": 6193.33,
-      "totalValue": 8768.32,
-      "traderCount": 2,
-      "confidence": 0.706,
-      "url": "https://polymarket.com/event/clarity-act-signed-into-law-in-2026"
+      "url": "https://polymarket.com/event/bkkbl-mob-lg-2026-10-22"
     }
   ]
 }
