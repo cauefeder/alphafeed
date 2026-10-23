@@ -1,31 +1,185 @@
 {
-  "generatedAt": "2026-10-23T13:07:04.238340+00:00",
+  "generatedAt": "2026-10-23T22:55:06.464222+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 2,
+  "signalCount": 16,
   "signals": [
     {
-      "marketSlug": "nba-nop-uta-2026-10-23",
-      "question": "Pelicans vs. Jazz",
+      "marketSlug": "nba-chi-mil-2026-10-23",
+      "question": "Bulls vs. Bucks",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 27225.14,
-      "totalValue": 27225.14,
+      "noValue": 1289938.77,
+      "totalValue": 1289938.77,
+      "traderCount": 5,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-chi-mil-2026-10-23"
+    },
+    {
+      "marketSlug": "nba-chi-mil-2026-10-23-spread-home-1pt5",
+      "question": "Spread: Bucks (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 166532.88,
+      "totalValue": 166532.88,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-nop-uta-2026-10-23"
+      "url": "https://polymarket.com/event/nba-chi-mil-2026-10-23-spread-home-1pt5"
+    },
+    {
+      "marketSlug": "nba-nyk-bos-2026-10-23-spread-home-2pt5",
+      "question": "Spread: Celtics (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 134859.41,
+      "totalValue": 134859.41,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-nyk-bos-2026-10-23-spread-home-2pt5"
+    },
+    {
+      "marketSlug": "nfl-tb-car-2026-10-25-spread-home-3pt5",
+      "question": "Spread: Panthers (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 104465.34,
+      "totalValue": 104465.34,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-tb-car-2026-10-25-spread-home-3pt5"
+    },
+    {
+      "marketSlug": "nba-tor-was-2026-10-23-spread-away-8pt5",
+      "question": "Spread: Raptors (-8.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 87141.26,
+      "totalValue": 87141.26,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-tor-was-2026-10-23-spread-away-8pt5"
+    },
+    {
+      "marketSlug": "atp-assche-musetti-2026-10-23",
+      "question": "Lyon Open: Luca Van Assche vs Lorenzo Musetti",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 75829.3,
+      "totalValue": 75829.3,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/atp-assche-musetti-2026-10-23"
+    },
+    {
+      "marketSlug": "nba-atl-cha-2026-10-23-spread-away-2pt5",
+      "question": "Spread: Hawks (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 68579.28,
+      "totalValue": 68579.28,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-atl-cha-2026-10-23-spread-away-2pt5"
     },
     {
       "marketSlug": "nba-tor-was-2026-10-23",
       "question": "Raptors vs. Wizards",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 14736.89,
-      "totalValue": 14736.89,
-      "traderCount": 2,
+      "noValue": 68368.41,
+      "totalValue": 68368.41,
+      "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nba-tor-was-2026-10-23"
+    },
+    {
+      "marketSlug": "nba-dal-ind-2026-10-23",
+      "question": "Mavericks vs. Pacers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 66380.94,
+      "totalValue": 66380.94,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-dal-ind-2026-10-23"
+    },
+    {
+      "marketSlug": "nba-por-sac-2026-10-23-total-233pt5",
+      "question": "Trail Blazers vs. Kings: O/U 233.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 46696.74,
+      "totalValue": 46696.74,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-por-sac-2026-10-23-total-233pt5"
+    },
+    {
+      "marketSlug": "nba-min-orl-2026-10-23",
+      "question": "Timberwolves vs. Magic",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 45770.76,
+      "totalValue": 45770.76,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-min-orl-2026-10-23"
+    },
+    {
+      "marketSlug": "nba-dal-ind-2026-10-23-spread-home-7pt5",
+      "question": "Spread: Pacers (-7.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 37742.57,
+      "totalValue": 37742.57,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-dal-ind-2026-10-23-spread-home-7pt5"
+    },
+    {
+      "marketSlug": "nba-mem-gsw-2026-10-23-spread-home-4pt5",
+      "question": "Spread: Warriors (-4.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 36212.42,
+      "totalValue": 36212.42,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-mem-gsw-2026-10-23-spread-home-4pt5"
+    },
+    {
+      "marketSlug": "nba-chi-mil-2026-10-23-spread-home-3pt5",
+      "question": "Spread: Bucks (-3.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 31482.4,
+      "totalValue": 31482.4,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-chi-mil-2026-10-23-spread-home-3pt5"
+    },
+    {
+      "marketSlug": "nba-nop-uta-2026-10-23-total-239pt5",
+      "question": "Pelicans vs. Jazz: O/U 239.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 27705.41,
+      "totalValue": 27705.41,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-nop-uta-2026-10-23-total-239pt5"
+    },
+    {
+      "marketSlug": "nba-chi-mil-2026-10-23-spread-home-6pt5",
+      "question": "Spread: Bucks (-6.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 23515.21,
+      "totalValue": 23515.21,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-chi-mil-2026-10-23-spread-home-6pt5"
     }
   ]
 }
