@@ -1,53 +1,31 @@
 {
-  "generatedAt": "2026-10-22T22:59:12.772935+00:00",
+  "generatedAt": "2026-10-23T13:07:04.238340+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 4,
+  "signalCount": 2,
   "signals": [
     {
-      "marketSlug": "nba-cle-phi-2026-10-22",
-      "question": "Cavaliers vs. 76ers",
+      "marketSlug": "nba-nop-uta-2026-10-23",
+      "question": "Pelicans vs. Jazz",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 818470.57,
-      "totalValue": 818470.57,
-      "traderCount": 5,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-cle-phi-2026-10-22"
-    },
-    {
-      "marketSlug": "nba-den-okc-2026-10-22-spread-home-8pt5",
-      "question": "Spread: Thunder (-8.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 142829.42,
-      "totalValue": 142829.42,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-den-okc-2026-10-22-spread-home-8pt5"
-    },
-    {
-      "marketSlug": "nba-cle-phi-2026-10-22-total-237pt5",
-      "question": "Cavaliers vs. 76ers: O/U 237.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 103516.6,
-      "totalValue": 103516.6,
+      "noValue": 27225.14,
+      "totalValue": 27225.14,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-cle-phi-2026-10-22-total-237pt5"
+      "url": "https://polymarket.com/event/nba-nop-uta-2026-10-23"
     },
     {
-      "marketSlug": "nba-cle-phi-2026-10-22-total-236pt5",
-      "question": "Cavaliers vs. 76ers: O/U 236.5",
+      "marketSlug": "nba-tor-was-2026-10-23",
+      "question": "Raptors vs. Wizards",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 38193.62,
-      "totalValue": 38193.62,
+      "noValue": 14736.89,
+      "totalValue": 14736.89,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-cle-phi-2026-10-22-total-236pt5"
+      "url": "https://polymarket.com/event/nba-tor-was-2026-10-23"
     }
   ]
 }
