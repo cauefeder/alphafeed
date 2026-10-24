@@ -1,53 +1,152 @@
 {
-  "generatedAt": "2026-10-24T12:28:50.483035+00:00",
+  "generatedAt": "2026-10-24T22:16:02.989051+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 5,
+  "signalCount": 15,
   "signals": [
     {
-      "marketSlug": "epl-ast-mac-2026-10-24-mac",
-      "question": "Will Manchester City FC win on 2026-10-24?",
-      "side": "YES",
-      "yesValue": 609260.0,
-      "noValue": 0.0,
-      "totalValue": 609260.0,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ast-mac-2026-10-24-mac"
-    },
-    {
-      "marketSlug": "epl-ast-mac-2026-10-24-total-3pt5",
-      "question": "Aston Villa FC vs. Manchester City FC: O/U 3.5",
+      "marketSlug": "cfb-byu-ucf-2026-10-24",
+      "question": "BYU vs. UCF",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 117812.52,
-      "totalValue": 117812.52,
+      "noValue": 310380.98,
+      "totalValue": 310380.98,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-byu-ucf-2026-10-24"
+    },
+    {
+      "marketSlug": "cfb-tenn-sc-2026-10-24",
+      "question": "Tennessee vs. South Carolina",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 111579.19,
+      "totalValue": 111579.19,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/epl-ast-mac-2026-10-24-total-3pt5"
+      "url": "https://polymarket.com/event/cfb-tenn-sc-2026-10-24"
     },
     {
       "marketSlug": "nfl-tb-car-2026-10-25-spread-home-3pt5",
       "question": "Spread: Panthers (-3.5)",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 104465.34,
-      "totalValue": 104465.34,
+      "noValue": 110088.5,
+      "totalValue": 110088.5,
       "traderCount": 3,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-tb-car-2026-10-25-spread-home-3pt5"
     },
     {
-      "marketSlug": "lal-ray-elc-2026-10-24-total-2pt5",
-      "question": "Rayo Vallecano de Madrid vs. Elche CF: O/U 2.5",
+      "marketSlug": "lol-ly-kc-2026-10-24",
+      "question": "LoL: LYON vs Karmine Corp (BO1) - Worlds Group Stage",
       "side": "NO",
       "yesValue": 0.0,
-      "noValue": 87095.8,
-      "totalValue": 87095.8,
+      "noValue": 95506.08,
+      "totalValue": 95506.08,
       "traderCount": 2,
       "confidence": 1.0,
-      "url": "https://polymarket.com/event/lal-ray-elc-2026-10-24-total-2pt5"
+      "url": "https://polymarket.com/event/lol-ly-kc-2026-10-24"
+    },
+    {
+      "marketSlug": "nba-bkn-cle-2026-10-24-total-227pt5",
+      "question": "Nets vs. Cavaliers: O/U 227.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 89647.19,
+      "totalValue": 89647.19,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-bkn-cle-2026-10-24-total-227pt5"
+    },
+    {
+      "marketSlug": "nba-mia-cha-2026-10-24",
+      "question": "Heat vs. Hornets",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 86817.31,
+      "totalValue": 86817.31,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-mia-cha-2026-10-24"
+    },
+    {
+      "marketSlug": "nba-nop-den-2026-10-24",
+      "question": "Pelicans vs. Nuggets",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 72111.98,
+      "totalValue": 72111.98,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-nop-den-2026-10-24"
+    },
+    {
+      "marketSlug": "nba-bkn-cle-2026-10-24-spread-home-11pt5",
+      "question": "Spread: Cavaliers (-11.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 71132.96,
+      "totalValue": 71132.96,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-bkn-cle-2026-10-24-spread-home-11pt5"
+    },
+    {
+      "marketSlug": "cfb-tenn-sc-2026-10-24-spread-home-2pt5",
+      "question": "Spread: South Carolina (-2.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 59739.57,
+      "totalValue": 59739.57,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/cfb-tenn-sc-2026-10-24-spread-home-2pt5"
+    },
+    {
+      "marketSlug": "nba-sas-dal-2026-10-24-spread-away-12pt5",
+      "question": "Spread: Spurs (-12.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 48191.4,
+      "totalValue": 48191.4,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-sas-dal-2026-10-24-spread-away-12pt5"
+    },
+    {
+      "marketSlug": "nfl-tb-car-2026-10-25-spread-home-7pt5",
+      "question": "Spread: Panthers (-7.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 45538.51,
+      "totalValue": 45538.51,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-tb-car-2026-10-25-spread-home-7pt5"
+    },
+    {
+      "marketSlug": "nba-nop-den-2026-10-24-total-237pt5",
+      "question": "Pelicans vs. Nuggets: O/U 237.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 33297.98,
+      "totalValue": 33297.98,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-nop-den-2026-10-24-total-237pt5"
+    },
+    {
+      "marketSlug": "nba-sas-dal-2026-10-24-spread-away-14pt5",
+      "question": "Spread: Spurs (-14.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 31263.88,
+      "totalValue": 31263.88,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-sas-dal-2026-10-24-spread-away-14pt5"
     },
     {
       "marketSlug": "nfl-kc-sea-2026-10-26-spread-away-3pt5",
@@ -59,6 +158,17 @@
       "traderCount": 2,
       "confidence": 1.0,
       "url": "https://polymarket.com/event/nfl-kc-sea-2026-10-26-spread-away-3pt5"
+    },
+    {
+      "marketSlug": "nba-mia-cha-2026-10-24-spread-away-1pt5",
+      "question": "Spread: Heat (-1.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 23945.13,
+      "totalValue": 23945.13,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-mia-cha-2026-10-24-spread-away-1pt5"
     }
   ]
 }
