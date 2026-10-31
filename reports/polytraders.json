@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T14:20:12.327704+00:00",
+  "generatedAt": "2026-10-31T23:06:49.628034+00:00",
   "timePeriod": "WEEK",
   "bankroll": 100.0,
   "tradersChecked": 83,
@@ -8,17 +8,17 @@
     "CRYPTO": 22,
     "POLITICS": 11
   },
-  "positionsScanned": 976,
+  "positionsScanned": 1009,
   "opportunities": [
     {
       "title": "Will Anthropic IPO by December 31, 2026?",
       "outcome": "Yes",
       "slug": "will-anthropic-ipo-by-december-31-2026-546-128-719",
       "url": "https://polymarket.com/event/will-anthropic-ipo-by-december-31-2026-546-128-719",
-      "curPrice": 0.855,
+      "curPrice": 0.8545,
       "estimatedEdge": 0.0627,
       "kellyBet": 10.0,
-      "kellyFull": 0.4324,
+      "kellyFull": 0.4309,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -27,18 +27,18 @@
       ],
       "countSignal": 0.03,
       "sizeSignal": 1.0,
-      "totalExposure": 22657.45,
-      "weightedAvgEntry": 0.8956
+      "totalExposure": 20674.91,
+      "weightedAvgEntry": 0.8925
     },
     {
       "title": "Will Samuel Alito announce his retirement by December 31, 2026?",
       "outcome": "No",
       "slug": "will-samuel-alito-announce-his-retirement-by-december-31-2026-573-343-622",
       "url": "https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by-december-31-2026-573-343-622",
-      "curPrice": 0.845,
+      "curPrice": 0.855,
       "estimatedEdge": 0.0614,
-      "kellyBet": 9.91,
-      "kellyFull": 0.3963,
+      "kellyBet": 10.0,
+      "kellyFull": 0.4237,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -47,8 +47,48 @@
       ],
       "countSignal": 0.0159,
       "sizeSignal": 1.0,
-      "totalExposure": 24208.98,
+      "totalExposure": 24495.47,
       "weightedAvgEntry": 0.8919
+    },
+    {
+      "title": "Will RZP-Zehut win 6-7 seats in the 2026 Knesset elections?",
+      "outcome": "Yes",
+      "slug": "will-rzp-zehut-win-6-7-seats-in-the-2026-knesset-elections",
+      "url": "https://polymarket.com/event/will-rzp-zehut-win-6-7-seats-in-the-2026-knesset-elections",
+      "curPrice": 0.8385,
+      "estimatedEdge": 0.062,
+      "kellyBet": 9.6,
+      "kellyFull": 0.3838,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "lava-lava",
+        "0x6bAB66c4BB24c96Ed14dccA0f0979B38a6830FE5-1760703674960"
+      ],
+      "countSignal": 0.0221,
+      "sizeSignal": 1.0,
+      "totalExposure": 2212.79,
+      "weightedAvgEntry": 0.8498
+    },
+    {
+      "title": "Will Anthropic IPO by December 15, 2026?",
+      "outcome": "Yes",
+      "slug": "will-anthropic-ipo-by-december-15-2026",
+      "url": "https://polymarket.com/event/will-anthropic-ipo-by-december-15-2026",
+      "curPrice": 0.83,
+      "estimatedEdge": 0.0627,
+      "kellyBet": 9.22,
+      "kellyFull": 0.3688,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "TheReturnOfDarthMaul",
+        "ArmageddonRewardsBilly"
+      ],
+      "countSignal": 0.03,
+      "sizeSignal": 1.0,
+      "totalExposure": 13173.07,
+      "weightedAvgEntry": 0.85
     },
     {
       "title": "Will Bitcoin dip to $60,000 by December 31, 2026?",
@@ -67,58 +107,38 @@
       ],
       "countSignal": 0.0325,
       "sizeSignal": 1.0,
-      "totalExposure": 37635.2,
+      "totalExposure": 37689.46,
       "weightedAvgEntry": 0.8271
     },
     {
-      "title": "Timberwolves vs. Spurs",
-      "outcome": "Spurs",
-      "slug": "nba-min-sas-2026-10-31",
-      "url": "https://polymarket.com/event/nba-min-sas-2026-10-31",
-      "curPrice": 0.825,
-      "estimatedEdge": 0.0614,
-      "kellyBet": 8.78,
-      "kellyFull": 0.351,
+      "title": "Spread: Bills (-13.5)",
+      "outcome": "Ravens",
+      "slug": "nfl-bal-buf-2026-11-01-spread-home-13pt5",
+      "url": "https://polymarket.com/event/nfl-bal-buf-2026-11-01-spread-home-13pt5",
+      "curPrice": 0.805,
+      "estimatedEdge": 0.0673,
+      "kellyBet": 8.63,
+      "kellyFull": 0.345,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
         "HomeRunHazard",
-        "takeormake"
+        "UpTheBlues"
       ],
-      "countSignal": 0.0265,
+      "countSignal": 0.0809,
       "sizeSignal": 1.0,
-      "totalExposure": 5175.73,
-      "weightedAvgEntry": 0.8235
-    },
-    {
-      "title": "Will Anthropic IPO by December 15, 2026?",
-      "outcome": "Yes",
-      "slug": "will-anthropic-ipo-by-december-15-2026",
-      "url": "https://polymarket.com/event/will-anthropic-ipo-by-december-15-2026",
-      "curPrice": 0.815,
-      "estimatedEdge": 0.0627,
-      "kellyBet": 8.47,
-      "kellyFull": 0.3389,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
-        "TheReturnOfDarthMaul",
-        "ArmageddonRewardsBilly"
-      ],
-      "countSignal": 0.03,
-      "sizeSignal": 1.0,
-      "totalExposure": 12935.01,
-      "weightedAvgEntry": 0.85
+      "totalExposure": 38011.48,
+      "weightedAvgEntry": 0.8099
     },
     {
       "title": "Will Bitcoin dip to $55,000 by December 31, 2026?",
       "outcome": "No",
       "slug": "will-bitcoin-dip-to-55000-by-december-31-2026-527-627-868-745-188-361-314-673-612-946-821-624-855-557-684-381-884-939-182-939-516",
       "url": "https://polymarket.com/event/will-bitcoin-dip-to-55000-by-december-31-2026-527-627-868-745-188-361-314-673-612-946-821-624-855-557-684-381-884-939-182-939-516",
-      "curPrice": 0.885,
-      "estimatedEdge": 0.0344,
-      "kellyBet": 7.47,
-      "kellyFull": 0.2989,
+      "curPrice": 0.875,
+      "estimatedEdge": 0.0411,
+      "kellyBet": 8.23,
+      "kellyFull": 0.3292,
       "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -128,7 +148,7 @@
       ],
       "countSignal": 0.0856,
       "sizeSignal": 1.0,
-      "totalExposure": 104346.62,
+      "totalExposure": 103167.56,
       "weightedAvgEntry": 0.8358
     },
     {
@@ -136,10 +156,10 @@
       "outcome": "No",
       "slug": "will-anthropics-valuation-hit-high-3pt0t-by-december-31",
       "url": "https://polymarket.com/event/will-anthropics-valuation-hit-high-3pt0t-by-december-31",
-      "curPrice": 0.79,
+      "curPrice": 0.795,
       "estimatedEdge": 0.0627,
-      "kellyBet": 7.46,
-      "kellyFull": 0.2986,
+      "kellyBet": 7.65,
+      "kellyFull": 0.3059,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -148,7 +168,7 @@
       ],
       "countSignal": 0.03,
       "sizeSignal": 1.0,
-      "totalExposure": 87121.94,
+      "totalExposure": 86821.11,
       "weightedAvgEntry": 0.8204
     },
     {
@@ -173,34 +193,54 @@
       "weightedAvgEntry": 0.8053
     },
     {
-      "title": "LoL: LOS vs LYON (BO3) - Worlds Group Stage",
-      "outcome": "LYON",
-      "slug": "lol-los-ly-2026-10-31",
-      "url": "https://polymarket.com/event/lol-los-ly-2026-10-31",
+      "title": "Spread: Browns (-3.5)",
+      "outcome": "Steelers",
+      "slug": "nfl-cle-pit-2026-11-01-spread-away-3pt5",
+      "url": "https://polymarket.com/event/nfl-cle-pit-2026-11-01-spread-away-3pt5",
       "curPrice": 0.755,
-      "estimatedEdge": 0.061,
-      "kellyBet": 6.22,
-      "kellyFull": 0.2489,
+      "estimatedEdge": 0.0673,
+      "kellyBet": 6.87,
+      "kellyFull": 0.2746,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "jakepaulthegoat2008",
-        "TAIWANNUMBERONE"
+        "HomeRunHazard",
+        "UpTheBlues"
       ],
-      "countSignal": 0.067,
+      "countSignal": 0.0809,
       "sizeSignal": 1.0,
-      "totalExposure": 11081.65,
-      "weightedAvgEntry": 0.7473
+      "totalExposure": 20715.69,
+      "weightedAvgEntry": 0.7599
+    },
+    {
+      "title": "Spread: Bills (-10.5)",
+      "outcome": "Ravens",
+      "slug": "nfl-bal-buf-2026-11-01-spread-home-10pt5",
+      "url": "https://polymarket.com/event/nfl-bal-buf-2026-11-01-spread-home-10pt5",
+      "curPrice": 0.755,
+      "estimatedEdge": 0.0673,
+      "kellyBet": 6.87,
+      "kellyFull": 0.2746,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "HomeRunHazard",
+        "UpTheBlues"
+      ],
+      "countSignal": 0.0809,
+      "sizeSignal": 1.0,
+      "totalExposure": 23637.71,
+      "weightedAvgEntry": 0.7625
     },
     {
       "title": "Will Ulf Kristersson be the next Prime Minister of Sweden?",
       "outcome": "No",
       "slug": "will-ulf-kristersson-be-the-next-prime-minister-of-sweden",
       "url": "https://polymarket.com/event/will-ulf-kristersson-be-the-next-prime-minister-of-sweden",
-      "curPrice": 0.7415,
+      "curPrice": 0.7615,
       "estimatedEdge": 0.0616,
-      "kellyBet": 5.96,
-      "kellyFull": 0.2384,
+      "kellyBet": 6.46,
+      "kellyFull": 0.2584,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -209,7 +249,7 @@
       ],
       "countSignal": 0.0181,
       "sizeSignal": 1.0,
-      "totalExposure": 10213.3,
+      "totalExposure": 10488.78,
       "weightedAvgEntry": 0.8374
     },
     {
@@ -229,18 +269,18 @@
       ],
       "countSignal": 0.01,
       "sizeSignal": 1.0,
-      "totalExposure": 30900.5,
-      "weightedAvgEntry": 0.8022
+      "totalExposure": 34443.25,
+      "weightedAvgEntry": 0.7946
     },
     {
       "title": "Will Mary Peltola win the Alaska Senate race in 2026?",
       "outcome": "Yes",
       "slug": "will-mary-peltola-win-the-alaska-senate-race-in-2026",
       "url": "https://polymarket.com/event/will-mary-peltola-win-the-alaska-senate-race-in-2026",
-      "curPrice": 0.715,
+      "curPrice": 0.725,
       "estimatedEdge": 0.0616,
-      "kellyBet": 5.41,
-      "kellyFull": 0.2162,
+      "kellyBet": 5.6,
+      "kellyFull": 0.2241,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -249,38 +289,39 @@
       ],
       "countSignal": 0.018,
       "sizeSignal": 1.0,
-      "totalExposure": 7864.99,
+      "totalExposure": 7974.99,
       "weightedAvgEntry": 0.7527
     },
     {
-      "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
-      "outcome": "Yes",
-      "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-      "curPrice": 0.705,
-      "estimatedEdge": 0.0626,
-      "kellyBet": 5.3,
-      "kellyFull": 0.2121,
-      "nSmartTraders": 2,
+      "title": "Will an independent win the Nebraska Senate race in 2026?",
+      "outcome": "No",
+      "slug": "will-an-independent-win-the-nebraska-senate-race-in-2026",
+      "url": "https://polymarket.com/event/will-an-independent-win-the-nebraska-senate-race-in-2026",
+      "curPrice": 0.735,
+      "estimatedEdge": 0.0557,
+      "kellyBet": 5.25,
+      "kellyFull": 0.2102,
+      "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "TheReturnOfDarthMaul",
-        "0x4E72c22CD76f9973a48aedfd79FeEAaCC8B7FFb9-1778811541343"
+        "BreakTheBank",
+        "0x448861155279dbf833d041b963e3ac854599e319",
+        "0x9b129aD05Bc0a8df3C73DfCC66fE75252DaEC2D5-1778811687225"
       ],
-      "countSignal": 0.0285,
+      "countSignal": 0.1037,
       "sizeSignal": 1.0,
-      "totalExposure": 127074.36,
-      "weightedAvgEntry": 0.7572
+      "totalExposure": 34846.96,
+      "weightedAvgEntry": 0.7153
     },
     {
       "title": "Another Fed rate hike in 2026?",
       "outcome": "Yes",
       "slug": "another-fed-rate-hike-in-2026",
       "url": "https://polymarket.com/event/another-fed-rate-hike-in-2026",
-      "curPrice": 0.695,
+      "curPrice": 0.705,
       "estimatedEdge": 0.0616,
-      "kellyBet": 5.05,
-      "kellyFull": 0.2021,
+      "kellyBet": 5.22,
+      "kellyFull": 0.2089,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -289,28 +330,70 @@
       ],
       "countSignal": 0.0181,
       "sizeSignal": 1.0,
-      "totalExposure": 76792.54,
+      "totalExposure": 77897.47,
       "weightedAvgEntry": 0.8048
+    },
+    {
+      "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+      "outcome": "Yes",
+      "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
+      "curPrice": 0.7,
+      "estimatedEdge": 0.0626,
+      "kellyBet": 5.21,
+      "kellyFull": 0.2086,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "TheReturnOfDarthMaul",
+        "0x4E72c22CD76f9973a48aedfd79FeEAaCC8B7FFb9-1778811541343"
+      ],
+      "countSignal": 0.0285,
+      "sizeSignal": 1.0,
+      "totalExposure": 126131.28,
+      "weightedAvgEntry": 0.7574
+    },
+    {
+      "title": "Hawks vs. Pelicans",
+      "outcome": "Hawks",
+      "slug": "nba-atl-nop-2026-10-31",
+      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31",
+      "curPrice": 0.655,
+      "estimatedEdge": 0.0692,
+      "kellyBet": 5.01,
+      "kellyFull": 0.2005,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "googleplay",
+        "HomeRunHazard",
+        "monkeymashingkeyboard"
+      ],
+      "countSignal": 0.1611,
+      "sizeSignal": 1.0,
+      "totalExposure": 344881.86,
+      "weightedAvgEntry": 0.6478
     },
     {
       "title": "Will Аndrey Gyurov win the next Bulgarian presidential election?",
       "outcome": "No",
       "slug": "will-ndrey-gyurov-win-the-next-bulgarian-presidential-election",
       "url": "https://polymarket.com/event/will-ndrey-gyurov-win-the-next-bulgarian-presidential-election",
-      "curPrice": 0.675,
-      "estimatedEdge": 0.0617,
-      "kellyBet": 4.75,
-      "kellyFull": 0.19,
-      "nSmartTraders": 2,
+      "curPrice": 0.67,
+      "estimatedEdge": 0.0624,
+      "kellyBet": 4.73,
+      "kellyFull": 0.189,
+      "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
         "flawfence",
+        "anoin123",
         "0x4E72c22CD76f9973a48aedfd79FeEAaCC8B7FFb9-1778811541343"
       ],
-      "countSignal": 0.0193,
+      "countSignal": 0.0265,
       "sizeSignal": 1.0,
-      "totalExposure": 10103.15,
-      "weightedAvgEntry": 0.7568
+      "totalExposure": 15071.82,
+      "weightedAvgEntry": 0.7584
     },
     {
       "title": "Will Iliana Iotova win the next Bulgarian presidential election?",
@@ -330,50 +413,92 @@
       ],
       "countSignal": 0.0161,
       "sizeSignal": 1.0,
-      "totalExposure": 44675.48,
-      "weightedAvgEntry": 0.7332
-    },
-    {
-      "title": "LoL: Karmine Corp vs Movistar KOI (BO3) - Worlds Group Stage",
-      "outcome": "Karmine Corp",
-      "slug": "lol-kc-mkoi-2026-10-31",
-      "url": "https://polymarket.com/event/lol-kc-mkoi-2026-10-31",
-      "curPrice": 0.625,
-      "estimatedEdge": 0.0624,
-      "kellyBet": 4.16,
-      "kellyFull": 0.1663,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
-        "jakepaulthegoat2008",
-        "TAIWANNUMBERONE"
-      ],
-      "countSignal": 0.067,
-      "sizeSignal": 1.0,
-      "totalExposure": 193812.62,
-      "weightedAvgEntry": 0.6195
+      "totalExposure": 44995.15,
+      "weightedAvgEntry": 0.7324
     },
     {
       "title": "Will the Republicans win the Nebraska Senate race in 2026?",
       "outcome": "Yes",
       "slug": "will-the-republicans-win-the-nebraska-senate-race-in-2026",
       "url": "https://polymarket.com/event/will-the-republicans-win-the-nebraska-senate-race-in-2026",
-      "curPrice": 0.755,
-      "estimatedEdge": 0.0372,
-      "kellyBet": 3.8,
-      "kellyFull": 0.152,
-      "nSmartTraders": 4,
+      "curPrice": 0.735,
+      "estimatedEdge": 0.0464,
+      "kellyBet": 4.38,
+      "kellyFull": 0.1752,
+      "nSmartTraders": 5,
       "totalTradersChecked": 83,
       "smartTraderNames": [
         "BreakTheBank",
         "0x448861155279dbf833d041b963e3ac854599e319",
         "anoin123",
+        "Bigggggggg",
         "flawfence"
       ],
-      "countSignal": 0.1058,
+      "countSignal": 0.1069,
       "sizeSignal": 1.0,
-      "totalExposure": 59140.77,
-      "weightedAvgEntry": 0.7086
+      "totalExposure": 58190.67,
+      "weightedAvgEntry": 0.7017
+    },
+    {
+      "title": "Thunder vs. Rockets",
+      "outcome": "Rockets",
+      "slug": "nba-okc-hou-2026-10-31",
+      "url": "https://polymarket.com/event/nba-okc-hou-2026-10-31",
+      "curPrice": 0.575,
+      "estimatedEdge": 0.0651,
+      "kellyBet": 3.83,
+      "kellyFull": 0.1533,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "jakepaulthegoat2008",
+        "drainedandpoor"
+      ],
+      "countSignal": 0.0745,
+      "sizeSignal": 1.0,
+      "totalExposure": 108324.44,
+      "weightedAvgEntry": 0.5727
+    },
+    {
+      "title": "Spread: Hawks (-4.5)",
+      "outcome": "Hawks",
+      "slug": "nba-atl-nop-2026-10-31-spread-away-4pt5",
+      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31-spread-away-4pt5",
+      "curPrice": 0.525,
+      "estimatedEdge": 0.0726,
+      "kellyBet": 3.82,
+      "kellyFull": 0.1529,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "googleplay",
+        "monkeymashingkeyboard"
+      ],
+      "countSignal": 0.1532,
+      "sizeSignal": 1.0,
+      "totalExposure": 183289.17,
+      "weightedAvgEntry": 0.5234
+    },
+    {
+      "title": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+      "outcome": "No",
+      "slug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
+      "url": "https://polymarket.com/event/will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
+      "curPrice": 0.715,
+      "estimatedEdge": 0.0425,
+      "kellyBet": 3.73,
+      "kellyFull": 0.1491,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "BreakTheBank",
+        "0x448861155279dbf833d041b963e3ac854599e319",
+        "e46m3"
+      ],
+      "countSignal": 0.1406,
+      "sizeSignal": 1.0,
+      "totalExposure": 80393.95,
+      "weightedAvgEntry": 0.6735
     },
     {
       "title": "Will Athletic Club win on 2026-10-10?",
@@ -396,35 +521,14 @@
       "weightedAvgEntry": 0.6131
     },
     {
-      "title": "Will an independent win the Nebraska Senate race in 2026?",
-      "outcome": "No",
-      "slug": "will-an-independent-win-the-nebraska-senate-race-in-2026",
-      "url": "https://polymarket.com/event/will-an-independent-win-the-nebraska-senate-race-in-2026",
-      "curPrice": 0.765,
-      "estimatedEdge": 0.0349,
-      "kellyBet": 3.71,
-      "kellyFull": 0.1485,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
-        "BreakTheBank",
-        "0x448861155279dbf833d041b963e3ac854599e319",
-        "0x9b129aD05Bc0a8df3C73DfCC66fE75252DaEC2D5-1778811687225"
-      ],
-      "countSignal": 0.1037,
-      "sizeSignal": 1.0,
-      "totalExposure": 36269.28,
-      "weightedAvgEntry": 0.7153
-    },
-    {
       "title": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
       "outcome": "No",
       "slug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
       "url": "https://polymarket.com/event/will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
-      "curPrice": 0.5795,
+      "curPrice": 0.581,
       "estimatedEdge": 0.0616,
-      "kellyBet": 3.66,
-      "kellyFull": 0.1466,
+      "kellyBet": 3.68,
+      "kellyFull": 0.1471,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -433,7 +537,7 @@
       ],
       "countSignal": 0.0181,
       "sizeSignal": 1.0,
-      "totalExposure": 78468.62,
+      "totalExposure": 78671.74,
       "weightedAvgEntry": 0.6042
     },
     {
@@ -478,35 +582,34 @@
       "weightedAvgEntry": 0.5937
     },
     {
-      "title": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
-      "outcome": "No",
-      "slug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
-      "url": "https://polymarket.com/event/will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
-      "curPrice": 0.715,
-      "estimatedEdge": 0.0409,
-      "kellyBet": 3.59,
-      "kellyFull": 0.1436,
-      "nSmartTraders": 3,
+      "title": "Kings vs. Grizzlies: O/U 232.5",
+      "outcome": "Under",
+      "slug": "nba-sac-mem-2026-10-31-total-232pt5",
+      "url": "https://polymarket.com/event/nba-sac-mem-2026-10-31-total-232pt5",
+      "curPrice": 0.555,
+      "estimatedEdge": 0.0641,
+      "kellyBet": 3.6,
+      "kellyFull": 0.1441,
+      "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "BreakTheBank",
-        "0x448861155279dbf833d041b963e3ac854599e319",
-        "e46m3"
+        "HomeRunHazard",
+        "monkeymashingkeyboard"
       ],
-      "countSignal": 0.1406,
+      "countSignal": 0.0611,
       "sizeSignal": 1.0,
-      "totalExposure": 85677.29,
-      "weightedAvgEntry": 0.6713
+      "totalExposure": 20110.09,
+      "weightedAvgEntry": 0.5529
     },
     {
       "title": "Will the Democratic Party win the NC-13 House seat?",
       "outcome": "No",
       "slug": "will-the-democratic-party-win-the-nc-13-house-seat",
       "url": "https://polymarket.com/event/will-the-democratic-party-win-the-nc-13-house-seat",
-      "curPrice": 0.56,
+      "curPrice": 0.575,
       "estimatedEdge": 0.0607,
-      "kellyBet": 3.45,
-      "kellyFull": 0.1379,
+      "kellyBet": 3.57,
+      "kellyFull": 0.1427,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -515,8 +618,54 @@
       ],
       "countSignal": 0.0073,
       "sizeSignal": 1.0,
-      "totalExposure": 13106.2,
+      "totalExposure": 13457.25,
       "weightedAvgEntry": 0.6418
+    },
+    {
+      "title": "Spread: 76ers (-1.5)",
+      "outcome": "Hornets",
+      "slug": "nba-phi-cha-2026-10-31-spread-away-1pt5",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-spread-away-1pt5",
+      "curPrice": 0.42,
+      "estimatedEdge": 0.0827,
+      "kellyBet": 3.57,
+      "kellyFull": 0.1426,
+      "nSmartTraders": 5,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "googleplay",
+        "monkeymashingkeyboard",
+        "HomeRunHazard",
+        "UpTheBlues",
+        "takeormake"
+      ],
+      "countSignal": 0.2526,
+      "sizeSignal": 1.0,
+      "totalExposure": 335567.36,
+      "weightedAvgEntry": 0.5179
+    },
+    {
+      "title": "76ers vs. Hornets",
+      "outcome": "Hornets",
+      "slug": "nba-phi-cha-2026-10-31",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31",
+      "curPrice": 0.38,
+      "estimatedEdge": 0.0858,
+      "kellyBet": 3.46,
+      "kellyFull": 0.1383,
+      "nSmartTraders": 8,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "BreakTheBank",
+        "googleplay",
+        "monkeymashingkeyboard",
+        "HomeRunHazard",
+        "takeormake"
+      ],
+      "countSignal": 0.2862,
+      "sizeSignal": 1.0,
+      "totalExposure": 589590.63,
+      "weightedAvgEntry": 0.473
     },
     {
       "title": "Will the Republicans win the Iowa Senate race in 2026?",
@@ -539,50 +688,93 @@
       "weightedAvgEntry": 0.5902
     },
     {
-      "title": "Will Modena FC 2018 win on 2026-10-31?",
-      "outcome": "No",
-      "slug": "itsb-mod-man-2026-10-31-mod",
-      "url": "https://polymarket.com/event/itsb-mod-man-2026-10-31-mod",
-      "curPrice": 0.525,
-      "estimatedEdge": 0.0635,
-      "kellyBet": 3.34,
-      "kellyFull": 0.1336,
+      "title": "Hawks vs. Pelicans: O/U 239.5",
+      "outcome": "Over",
+      "slug": "nba-atl-nop-2026-10-31-total-239pt5",
+      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31-total-239pt5",
+      "curPrice": 0.505,
+      "estimatedEdge": 0.0654,
+      "kellyBet": 3.3,
+      "kellyFull": 0.1321,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "UpTheBlues",
-        "RN1"
+        "monkeymashingkeyboard",
+        "chongchong37"
       ],
-      "countSignal": 0.0851,
+      "countSignal": 0.0596,
       "sizeSignal": 1.0,
-      "totalExposure": 16387.17,
-      "weightedAvgEntry": 0.5188
+      "totalExposure": 17675.0,
+      "weightedAvgEntry": 0.53
     },
     {
-      "title": "Will Wigan Athletic FC win on 2026-10-31?",
-      "outcome": "Yes",
-      "slug": "el1-wig-bro-2026-10-31-wig",
-      "url": "https://polymarket.com/event/el1-wig-bro-2026-10-31-wig",
-      "curPrice": 0.485,
-      "estimatedEdge": 0.0677,
-      "kellyBet": 3.28,
-      "kellyFull": 0.1314,
-      "nSmartTraders": 2,
+      "title": "Spread: Cavaliers (-8.5)",
+      "outcome": "Bucks",
+      "slug": "nba-cle-mil-2026-10-31-spread-away-8pt5",
+      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31-spread-away-8pt5",
+      "curPrice": 0.475,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 3.2,
+      "kellyFull": 0.1279,
+      "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "UpTheBlues",
-        "RN1"
+        "monkeymashingkeyboard",
+        "HomeRunHazard",
+        "takeormake"
       ],
-      "countSignal": 0.0851,
+      "countSignal": 0.0797,
       "sizeSignal": 1.0,
-      "totalExposure": 24567.55,
-      "weightedAvgEntry": 0.4932
+      "totalExposure": 58008.4,
+      "weightedAvgEntry": 0.4773
     },
     {
-      "title": "76ers vs. Hornets",
+      "title": "Spread: 76ers (-2.5)",
       "outcome": "Hornets",
-      "slug": "nba-phi-cha-2026-10-31",
-      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31",
+      "slug": "nba-phi-cha-2026-10-31-spread-away-2pt5",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-spread-away-2pt5",
+      "curPrice": 0.465,
+      "estimatedEdge": 0.0683,
+      "kellyBet": 3.19,
+      "kellyFull": 0.1277,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "UpTheBlues",
+        "takeormake",
+        "keeptheblueflagflyinghigh"
+      ],
+      "countSignal": 0.0926,
+      "sizeSignal": 1.0,
+      "totalExposure": 5604.86,
+      "weightedAvgEntry": 0.5338
+    },
+    {
+      "title": "Spread: 76ers (-3.5)",
+      "outcome": "Hornets",
+      "slug": "nba-phi-cha-2026-10-31-spread-away-3pt5",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-spread-away-3pt5",
+      "curPrice": 0.51,
+      "estimatedEdge": 0.0625,
+      "kellyBet": 3.19,
+      "kellyFull": 0.1275,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "HomeRunHazard",
+        "takeormake",
+        "keeptheblueflagflyinghigh"
+      ],
+      "countSignal": 0.0277,
+      "sizeSignal": 1.0,
+      "totalExposure": 25004.87,
+      "weightedAvgEntry": 0.5663
+    },
+    {
+      "title": "Spread: Hawks (-4.5)",
+      "outcome": "Pelicans",
+      "slug": "nba-atl-nop-2026-10-31-spread-away-4pt5",
+      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31-spread-away-4pt5",
       "curPrice": 0.475,
       "estimatedEdge": 0.0655,
       "kellyBet": 3.12,
@@ -590,45 +782,63 @@
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "monkeymashingkeyboard",
-        "HomeRunHazard"
+        "HomeRunHazard",
+        "monkeymashingkeyboard"
       ],
       "countSignal": 0.0611,
       "sizeSignal": 1.0,
-      "totalExposure": 27846.19,
-      "weightedAvgEntry": 0.4785
+      "totalExposure": 57909.69,
+      "weightedAvgEntry": 0.4897
     },
     {
-      "title": "Spread: Cavaliers (-8.5)",
-      "outcome": "Bucks",
-      "slug": "nba-cle-mil-2026-10-31-spread-away-8pt5",
-      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31-spread-away-8pt5",
-      "curPrice": 0.455,
-      "estimatedEdge": 0.068,
-      "kellyBet": 3.12,
-      "kellyFull": 0.1247,
-      "nSmartTraders": 4,
+      "title": "Cavaliers vs. Bucks: O/U 235.5",
+      "outcome": "Over",
+      "slug": "nba-cle-mil-2026-10-31-total-235pt5",
+      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31-total-235pt5",
+      "curPrice": 0.505,
+      "estimatedEdge": 0.0593,
+      "kellyBet": 2.99,
+      "kellyFull": 0.1197,
+      "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "monkeymashingkeyboard",
-        "drainedandpoor",
         "HomeRunHazard",
         "takeormake"
       ],
-      "countSignal": 0.0885,
+      "countSignal": 0.0265,
       "sizeSignal": 1.0,
-      "totalExposure": 54209.66,
-      "weightedAvgEntry": 0.4817
+      "totalExposure": 11858.58,
+      "weightedAvgEntry": 0.5
+    },
+    {
+      "title": "Spread: Cavaliers (-9.5)",
+      "outcome": "Cavaliers",
+      "slug": "nba-cle-mil-2026-10-31-spread-away-9pt5",
+      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31-spread-away-9pt5",
+      "curPrice": 0.485,
+      "estimatedEdge": 0.0613,
+      "kellyBet": 2.98,
+      "kellyFull": 0.119,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "HomeRunHazard",
+        "chongchong37"
+      ],
+      "countSignal": 0.0144,
+      "sizeSignal": 1.0,
+      "totalExposure": 19541.94,
+      "weightedAvgEntry": 0.4881
     },
     {
       "title": "Will the Democrats win the Kansas Senate race in 2026?",
       "outcome": "No",
       "slug": "will-the-democrats-win-the-kansas-senate-race-in-2026",
       "url": "https://polymarket.com/event/will-the-democrats-win-the-kansas-senate-race-in-2026",
-      "curPrice": 0.48,
+      "curPrice": 0.485,
       "estimatedEdge": 0.0613,
-      "kellyBet": 2.95,
-      "kellyFull": 0.1179,
+      "kellyBet": 2.98,
+      "kellyFull": 0.119,
       "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -638,48 +848,94 @@
       ],
       "countSignal": 0.0143,
       "sizeSignal": 1.0,
-      "totalExposure": 14265.01,
-      "weightedAvgEntry": 0.6876
+      "totalExposure": 16420.46,
+      "weightedAvgEntry": 0.6622
     },
     {
-      "title": "Will the Republican Party win the NC-03 House seat?",
+      "title": "Will the Democrats win the Texas Senate race in 2026?",
       "outcome": "Yes",
-      "slug": "will-the-republican-party-win-the-nc-03-house-seat",
-      "url": "https://polymarket.com/event/will-the-republican-party-win-the-nc-03-house-seat",
-      "curPrice": 0.57,
-      "estimatedEdge": 0.0487,
-      "kellyBet": 2.83,
-      "kellyFull": 0.1133,
-      "nSmartTraders": 2,
+      "slug": "will-the-democrats-win-the-texas-senate-race-in-2026",
+      "url": "https://polymarket.com/event/will-the-democrats-win-the-texas-senate-race-in-2026",
+      "curPrice": 0.705,
+      "estimatedEdge": 0.0349,
+      "kellyBet": 2.96,
+      "kellyFull": 0.1182,
+      "nSmartTraders": 4,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "lava-lava",
-        "Bigggggggg"
+        "0x448861155279dbf833d041b963e3ac854599e319",
+        "anoin123",
+        "flawfence",
+        "lava-lava"
       ],
-      "countSignal": 0.0026,
+      "countSignal": 0.0173,
       "sizeSignal": 1.0,
-      "totalExposure": 1950.54,
-      "weightedAvgEntry": 0.5509
+      "totalExposure": 65929.21,
+      "weightedAvgEntry": 0.6617
     },
     {
-      "title": "LoL: Hanwha Life Esports vs Bilibili Gaming (BO3) - Worlds Group Stage",
-      "outcome": "Bilibili Gaming",
-      "slug": "lol-hle1-blg-2026-10-31",
-      "url": "https://polymarket.com/event/lol-hle1-blg-2026-10-31",
-      "curPrice": 0.415,
-      "estimatedEdge": 0.0618,
-      "kellyBet": 2.64,
-      "kellyFull": 0.1057,
-      "nSmartTraders": 2,
+      "title": "Bitcoin Up or Down - October 31, 7:05PM-7:10PM ET",
+      "outcome": "Down",
+      "slug": "btc-updown-5m-1793487900",
+      "url": "https://polymarket.com/event/btc-updown-5m-1793487900",
+      "curPrice": 0.395,
+      "estimatedEdge": 0.0672,
+      "kellyBet": 2.78,
+      "kellyFull": 0.111,
+      "nSmartTraders": 4,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "arcsine-barrister",
+        "dangerously-skip-permissions",
+        "GoodFallen",
+        "wzbbb"
+      ],
+      "countSignal": 0.0795,
+      "sizeSignal": 1.0,
+      "totalExposure": 3298.94,
+      "weightedAvgEntry": 0.4991
+    },
+    {
+      "title": "Will the Democrats win the Iowa Senate race in 2026?",
+      "outcome": "Yes",
+      "slug": "will-the-democrats-win-the-iowa-senate-race-in-2026",
+      "url": "https://polymarket.com/event/will-the-democrats-win-the-iowa-senate-race-in-2026",
+      "curPrice": 0.445,
+      "estimatedEdge": 0.0609,
+      "kellyBet": 2.74,
+      "kellyFull": 0.1097,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "BreakTheBank",
+        "flawfence",
+        "0x448861155279dbf833d041b963e3ac854599e319"
+      ],
+      "countSignal": 0.0986,
+      "sizeSignal": 1.0,
+      "totalExposure": 19424.42,
+      "weightedAvgEntry": 0.4334
+    },
+    {
+      "title": "Hawks vs. Pelicans",
+      "outcome": "Pelicans",
+      "slug": "nba-atl-nop-2026-10-31",
+      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31",
+      "curPrice": 0.345,
+      "estimatedEdge": 0.0714,
+      "kellyBet": 2.73,
+      "kellyFull": 0.109,
+      "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
         "jakepaulthegoat2008",
-        "TAIWANNUMBERONE"
+        "monkeymashingkeyboard",
+        "HomeRunHazard"
       ],
-      "countSignal": 0.067,
+      "countSignal": 0.1268,
       "sizeSignal": 1.0,
-      "totalExposure": 76973.94,
-      "weightedAvgEntry": 0.4086
+      "totalExposure": 94847.63,
+      "weightedAvgEntry": 0.3592
     },
     {
       "title": "Will the Republicans win the Iowa Senate race in 2026?",
@@ -687,9 +943,9 @@
       "slug": "will-the-republicans-win-the-iowa-senate-race-in-2026",
       "url": "https://polymarket.com/event/will-the-republicans-win-the-iowa-senate-race-in-2026",
       "curPrice": 0.445,
-      "estimatedEdge": 0.0573,
-      "kellyBet": 2.58,
-      "kellyFull": 0.1033,
+      "estimatedEdge": 0.0577,
+      "kellyBet": 2.6,
+      "kellyFull": 0.104,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -698,38 +954,79 @@
       ],
       "countSignal": 0.0928,
       "sizeSignal": 1.0,
-      "totalExposure": 26634.0,
-      "weightedAvgEntry": 0.4288
+      "totalExposure": 28446.01,
+      "weightedAvgEntry": 0.4295
     },
     {
-      "title": "Rolex Paris Masters, Qualification: Tallon Griekspoor vs Benjamin Bonzi",
-      "outcome": "Benjamin Bonzi",
-      "slug": "atp-grieksp-bonzi-2026-10-31",
-      "url": "https://polymarket.com/event/atp-grieksp-bonzi-2026-10-31",
-      "curPrice": 0.565,
-      "estimatedEdge": 0.0446,
-      "kellyBet": 2.56,
-      "kellyFull": 0.1025,
+      "title": "UFC Fight Night: Dakota Hope vs. Francis Marshall (Featherweight, Main Card)",
+      "outcome": "Dakota Hope",
+      "slug": "ufc-dhope-fra8-2026-10-31",
+      "url": "https://polymarket.com/event/ufc-dhope-fra8-2026-10-31",
+      "curPrice": 0.355,
+      "estimatedEdge": 0.0644,
+      "kellyBet": 2.5,
+      "kellyFull": 0.0999,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "RN1",
+        "monkeymashingkeyboard",
+        "UpTheBlues"
+      ],
+      "countSignal": 0.1261,
+      "sizeSignal": 1.0,
+      "totalExposure": 9869.35,
+      "weightedAvgEntry": 0.3453
+    },
+    {
+      "title": "76ers vs. Hornets: O/U 219.5",
+      "outcome": "Over",
+      "slug": "nba-phi-cha-2026-10-31-total-219pt5",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-total-219pt5",
+      "curPrice": 0.38,
+      "estimatedEdge": 0.0618,
+      "kellyBet": 2.49,
+      "kellyFull": 0.0996,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "keeptheblueflagflyinghigh",
+        "takeormake"
+      ],
+      "countSignal": 0.0197,
+      "sizeSignal": 1.0,
+      "totalExposure": 1537.3,
+      "weightedAvgEntry": 0.4842
+    },
+    {
+      "title": "76ers vs. Hornets: O/U 211.5",
+      "outcome": "Under",
+      "slug": "nba-phi-cha-2026-10-31-total-211pt5",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-total-211pt5",
+      "curPrice": 0.37,
+      "estimatedEdge": 0.0614,
+      "kellyBet": 2.44,
+      "kellyFull": 0.0975,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "HomeRunHazard",
+        "chongchong37",
         "keeptheblueflagflyinghigh"
       ],
-      "countSignal": 0.0134,
+      "countSignal": 0.0156,
       "sizeSignal": 1.0,
-      "totalExposure": 21614.71,
-      "weightedAvgEntry": 0.5378
+      "totalExposure": 20257.61,
+      "weightedAvgEntry": 0.4888
     },
     {
       "title": "Will the Democrats win the Texas Senate race in 2026?",
       "outcome": "No",
       "slug": "will-the-democrats-win-the-texas-senate-race-in-2026",
       "url": "https://polymarket.com/event/will-the-democrats-win-the-texas-senate-race-in-2026",
-      "curPrice": 0.285,
+      "curPrice": 0.295,
       "estimatedEdge": 0.0684,
-      "kellyBet": 2.39,
-      "kellyFull": 0.0956,
+      "kellyBet": 2.42,
+      "kellyFull": 0.097,
       "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -739,7 +1036,7 @@
       ],
       "countSignal": 0.0928,
       "sizeSignal": 1.0,
-      "totalExposure": 36394.29,
+      "totalExposure": 37671.29,
       "weightedAvgEntry": 0.3047
     },
     {
@@ -747,10 +1044,10 @@
       "outcome": "Yes",
       "slug": "will-the-republicans-win-the-texas-senate-race-in-2026",
       "url": "https://polymarket.com/event/will-the-republicans-win-the-texas-senate-race-in-2026",
-      "curPrice": 0.285,
+      "curPrice": 0.295,
       "estimatedEdge": 0.0682,
-      "kellyBet": 2.39,
-      "kellyFull": 0.0954,
+      "kellyBet": 2.42,
+      "kellyFull": 0.0968,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -759,51 +1056,30 @@
       ],
       "countSignal": 0.0913,
       "sizeSignal": 1.0,
-      "totalExposure": 36554.03,
+      "totalExposure": 37836.63,
       "weightedAvgEntry": 0.3055
     },
     {
-      "title": "Counter-Strike: Nemiga vs FURIA (BO5) - PGL Masters Bucharest Playoffs",
-      "outcome": "Nemiga",
-      "slug": "cs2-nemi1-furia-2026-10-31",
-      "url": "https://polymarket.com/event/cs2-nemi1-furia-2026-10-31",
-      "curPrice": 0.325,
-      "estimatedEdge": 0.0638,
-      "kellyBet": 2.36,
-      "kellyFull": 0.0945,
-      "nSmartTraders": 5,
+      "title": "Cavaliers vs. Bucks",
+      "outcome": "Bucks",
+      "slug": "nba-cle-mil-2026-10-31",
+      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31",
+      "curPrice": 0.245,
+      "estimatedEdge": 0.0703,
+      "kellyBet": 2.33,
+      "kellyFull": 0.0931,
+      "nSmartTraders": 4,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "NS13",
-        "RN1",
-        "CORGII",
+        "monkeymashingkeyboard",
+        "jakepaulthegoat2008",
         "drainedandpoor",
         "takeormake"
       ],
-      "countSignal": 0.0419,
+      "countSignal": 0.1462,
       "sizeSignal": 1.0,
-      "totalExposure": 104561.4,
-      "weightedAvgEntry": 0.3256
-    },
-    {
-      "title": "Will the Democrats win the Iowa Senate race in 2026?",
-      "outcome": "Yes",
-      "slug": "will-the-democrats-win-the-iowa-senate-race-in-2026",
-      "url": "https://polymarket.com/event/will-the-democrats-win-the-iowa-senate-race-in-2026",
-      "curPrice": 0.445,
-      "estimatedEdge": 0.0514,
-      "kellyBet": 2.32,
-      "kellyFull": 0.0927,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
-        "flawfence",
-        "0x448861155279dbf833d041b963e3ac854599e319"
-      ],
-      "countSignal": 0.0086,
-      "sizeSignal": 1.0,
-      "totalExposure": 8821.67,
-      "weightedAvgEntry": 0.4296
+      "totalExposure": 59383.33,
+      "weightedAvgEntry": 0.2411
     },
     {
       "title": "Will Bitcoin reach $90,000 by December 31, 2026?",
@@ -826,34 +1102,34 @@
       "weightedAvgEntry": 0.3216
     },
     {
-      "title": "Will oil be at least $80 on November 2 and the Republicans win the Senate?",
+      "title": "Will oil be at least $85 on November 2 and the Republicans win the Senate?",
       "outcome": "Yes",
-      "slug": "oil-at-least-80-on-november-2-and-the-republicans-win-the-senate",
-      "url": "https://polymarket.com/event/oil-at-least-80-on-november-2-and-the-republicans-win-the-senate",
-      "curPrice": 0.2745,
-      "estimatedEdge": 0.0653,
-      "kellyBet": 2.25,
-      "kellyFull": 0.09,
+      "slug": "oil-at-least-85-on-november-2-and-the-republicans-win-the-senate",
+      "url": "https://polymarket.com/event/oil-at-least-85-on-november-2-and-the-republicans-win-the-senate",
+      "curPrice": 0.2645,
+      "estimatedEdge": 0.0655,
+      "kellyBet": 2.23,
+      "kellyFull": 0.0891,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
         "e46m3",
-        "0x9b129aD05Bc0a8df3C73DfCC66fE75252DaEC2D5-1778811687225"
+        "0x4E72c22CD76f9973a48aedfd79FeEAaCC8B7FFb9-1778811541343"
       ],
-      "countSignal": 0.0588,
+      "countSignal": 0.0613,
       "sizeSignal": 1.0,
-      "totalExposure": 3856.09,
-      "weightedAvgEntry": 0.2942
+      "totalExposure": 1024.77,
+      "weightedAvgEntry": 0.2654
     },
     {
       "title": "Will Ethereum dip to $1,750 by December 31, 2026?",
       "outcome": "Yes",
       "slug": "will-ethereum-dip-to-1750-by-december-31-2026-20260806184731889",
       "url": "https://polymarket.com/event/will-ethereum-dip-to-1750-by-december-31-2026-20260806184731889",
-      "curPrice": 0.175,
+      "curPrice": 0.165,
       "estimatedEdge": 0.0737,
-      "kellyBet": 2.23,
-      "kellyFull": 0.0894,
+      "kellyBet": 2.21,
+      "kellyFull": 0.0883,
       "nSmartTraders": 4,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -864,8 +1140,28 @@
       ],
       "countSignal": 0.1526,
       "sizeSignal": 1.0,
-      "totalExposure": 50976.09,
-      "weightedAvgEntry": 0.1915
+      "totalExposure": 48715.28,
+      "weightedAvgEntry": 0.1912
+    },
+    {
+      "title": "Will oil be at least $80 on November 2 and the Republicans win the Senate?",
+      "outcome": "Yes",
+      "slug": "oil-at-least-80-on-november-2-and-the-republicans-win-the-senate",
+      "url": "https://polymarket.com/event/oil-at-least-80-on-november-2-and-the-republicans-win-the-senate",
+      "curPrice": 0.2605,
+      "estimatedEdge": 0.0653,
+      "kellyBet": 2.21,
+      "kellyFull": 0.0883,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "e46m3",
+        "0x9b129aD05Bc0a8df3C73DfCC66fE75252DaEC2D5-1778811687225"
+      ],
+      "countSignal": 0.0588,
+      "sizeSignal": 1.0,
+      "totalExposure": 3659.42,
+      "weightedAvgEntry": 0.2942
     },
     {
       "title": "2026 Balance of Power: R Senate, D House",
@@ -890,76 +1186,34 @@
       "weightedAvgEntry": 0.2798
     },
     {
-      "title": "Rolex Paris Masters, Qualification: Tallon Griekspoor vs Benjamin Bonzi",
-      "outcome": "Tallon Griekspoor",
-      "slug": "atp-grieksp-bonzi-2026-10-31",
-      "url": "https://polymarket.com/event/atp-grieksp-bonzi-2026-10-31",
-      "curPrice": 0.435,
-      "estimatedEdge": 0.0494,
-      "kellyBet": 2.18,
-      "kellyFull": 0.0873,
+      "title": "Spread: Cavaliers (-10.5)",
+      "outcome": "Bucks",
+      "slug": "nba-cle-mil-2026-10-31-spread-away-10pt5",
+      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31-spread-away-10pt5",
+      "curPrice": 0.555,
+      "estimatedEdge": 0.0385,
+      "kellyBet": 2.16,
+      "kellyFull": 0.0866,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "RN1",
-        "keeptheblueflagflyinghigh"
-      ],
-      "countSignal": 0.0134,
-      "sizeSignal": 1.0,
-      "totalExposure": 16336.63,
-      "weightedAvgEntry": 0.4156
-    },
-    {
-      "title": "Cavaliers vs. Bucks",
-      "outcome": "Bucks",
-      "slug": "nba-cle-mil-2026-10-31",
-      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31",
-      "curPrice": 0.225,
-      "estimatedEdge": 0.0672,
-      "kellyBet": 2.17,
-      "kellyFull": 0.0868,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
         "monkeymashingkeyboard",
-        "drainedandpoor",
-        "takeormake"
+        "drainedandpoor"
       ],
-      "countSignal": 0.0806,
-      "sizeSignal": 1.0,
-      "totalExposure": 42090.05,
-      "weightedAvgEntry": 0.2414
-    },
-    {
-      "title": "Chelsea FC vs. Manchester United FC: O/U 2.5",
-      "outcome": "Over",
-      "slug": "epl-che-mun-2026-10-31-total-2pt5",
-      "url": "https://polymarket.com/event/epl-che-mun-2026-10-31-total-2pt5",
-      "curPrice": 0.275,
-      "estimatedEdge": 0.0619,
-      "kellyBet": 2.13,
-      "kellyFull": 0.0853,
-      "nSmartTraders": 3,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
-        "Jsram",
-        "chongchong37",
-        "RN1"
-      ],
-      "countSignal": 0.0209,
-      "sizeSignal": 1.0,
-      "totalExposure": 21457.36,
-      "weightedAvgEntry": 0.5463
+      "countSignal": 0.062,
+      "sizeSignal": 0.5982,
+      "totalExposure": 598.22,
+      "weightedAvgEntry": 0.5479
     },
     {
       "title": "Will Oklahoma City Thunder win the 2027 NBA Finals?",
       "outcome": "Yes",
       "slug": "will-oklahoma-city-thunder-win-the-2027-nba-finals",
       "url": "https://polymarket.com/event/will-oklahoma-city-thunder-win-the-2027-nba-finals",
-      "curPrice": 0.135,
+      "curPrice": 0.13,
       "estimatedEdge": 0.0732,
-      "kellyBet": 2.12,
-      "kellyFull": 0.0846,
+      "kellyBet": 2.1,
+      "kellyFull": 0.0841,
       "nSmartTraders": 3,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -969,7 +1223,7 @@
       ],
       "countSignal": 0.1467,
       "sizeSignal": 1.0,
-      "totalExposure": 28000.59,
+      "totalExposure": 26963.53,
       "weightedAvgEntry": 0.1726
     },
     {
@@ -1035,6 +1289,47 @@
       "weightedAvgEntry": 0.2525
     },
     {
+      "title": "Sioux Falls: Liam Draxl vs Sebastian Dominko",
+      "outcome": "Sebastian Dominko",
+      "slug": "atp-draxl-dominko-2026-10-31",
+      "url": "https://polymarket.com/event/atp-draxl-dominko-2026-10-31",
+      "curPrice": 0.155,
+      "estimatedEdge": 0.0678,
+      "kellyBet": 2.0,
+      "kellyFull": 0.0802,
+      "nSmartTraders": 3,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "UpTheBlues",
+        "RN1",
+        "keeptheblueflagflyinghigh"
+      ],
+      "countSignal": 0.0863,
+      "sizeSignal": 1.0,
+      "totalExposure": 14733.12,
+      "weightedAvgEntry": 0.54
+    },
+    {
+      "title": "Will Mary Peltola win the Alaska Senate race in 2026?",
+      "outcome": "No",
+      "slug": "will-mary-peltola-win-the-alaska-senate-race-in-2026",
+      "url": "https://polymarket.com/event/will-mary-peltola-win-the-alaska-senate-race-in-2026",
+      "curPrice": 0.275,
+      "estimatedEdge": 0.0566,
+      "kellyBet": 1.95,
+      "kellyFull": 0.0781,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "BreakTheBank",
+        "lava-lava"
+      ],
+      "countSignal": 0.0915,
+      "sizeSignal": 1.0,
+      "totalExposure": 18141.7,
+      "weightedAvgEntry": 0.258
+    },
+    {
       "title": "Will JD Vance win the 2028 US Presidential Election?",
       "outcome": "Yes",
       "slug": "will-jd-vance-win-the-2028-us-presidential-election",
@@ -1053,28 +1348,48 @@
       ],
       "countSignal": 0.0357,
       "sizeSignal": 1.0,
-      "totalExposure": 523889.13,
+      "totalExposure": 431639.13,
       "weightedAvgEntry": 0.5
     },
     {
-      "title": "No one announced as next James Bond?",
-      "outcome": "Yes",
-      "slug": "no-one-announced-as-next-james-bond",
-      "url": "https://polymarket.com/event/no-one-announced-as-next-james-bond",
-      "curPrice": 0.1805,
-      "estimatedEdge": 0.061,
-      "kellyBet": 1.86,
-      "kellyFull": 0.0744,
+      "title": "Spread: 76ers (-4.5)",
+      "outcome": "Hornets",
+      "slug": "nba-phi-cha-2026-10-31-spread-away-4pt5",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-spread-away-4pt5",
+      "curPrice": 0.56,
+      "estimatedEdge": 0.0336,
+      "kellyBet": 1.91,
+      "kellyFull": 0.0763,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "anoin123",
-        "qwen300.fund"
+        "takeormake",
+        "keeptheblueflagflyinghigh"
       ],
-      "countSignal": 0.0106,
+      "countSignal": 0.0197,
+      "sizeSignal": 0.5741,
+      "totalExposure": 574.13,
+      "weightedAvgEntry": 0.5527
+    },
+    {
+      "title": "Will Dan Sullivan win the Alaska Senate race in 2026?",
+      "outcome": "Yes",
+      "slug": "will-dan-sullivan-win-the-alaska-senate-race-in-2026",
+      "url": "https://polymarket.com/event/will-dan-sullivan-win-the-alaska-senate-race-in-2026",
+      "curPrice": 0.275,
+      "estimatedEdge": 0.0543,
+      "kellyBet": 1.87,
+      "kellyFull": 0.075,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "BreakTheBank",
+        "lava-lava"
+      ],
+      "countSignal": 0.0915,
       "sizeSignal": 1.0,
-      "totalExposure": 7545.71,
-      "weightedAvgEntry": 0.2318
+      "totalExposure": 29164.4,
+      "weightedAvgEntry": 0.2547
     },
     {
       "title": "Will Édouard Philippe win the 2027 French presidential election?",
@@ -1097,74 +1412,34 @@
       "weightedAvgEntry": 0.1519
     },
     {
-      "title": "Will Mary Peltola win the Alaska Senate race in 2026?",
-      "outcome": "No",
-      "slug": "will-mary-peltola-win-the-alaska-senate-race-in-2026",
-      "url": "https://polymarket.com/event/will-mary-peltola-win-the-alaska-senate-race-in-2026",
-      "curPrice": 0.285,
-      "estimatedEdge": 0.0498,
-      "kellyBet": 1.74,
-      "kellyFull": 0.0697,
+      "title": "Kansas vs. TCU",
+      "outcome": "Kansas",
+      "slug": "cfb-kan-tcu-2026-10-31",
+      "url": "https://polymarket.com/event/cfb-kan-tcu-2026-10-31",
+      "curPrice": 0.125,
+      "estimatedEdge": 0.0612,
+      "kellyBet": 1.75,
+      "kellyFull": 0.07,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "BreakTheBank",
-        "lava-lava"
+        "TAIWANNUMBERONE",
+        "RN1"
       ],
-      "countSignal": 0.0915,
+      "countSignal": 0.0135,
       "sizeSignal": 1.0,
-      "totalExposure": 18801.4,
-      "weightedAvgEntry": 0.258
-    },
-    {
-      "title": "Will oil be at least $85 on November 2 and the Republicans win the Senate?",
-      "outcome": "Yes",
-      "slug": "oil-at-least-85-on-november-2-and-the-republicans-win-the-senate",
-      "url": "https://polymarket.com/event/oil-at-least-85-on-november-2-and-the-republicans-win-the-senate",
-      "curPrice": 0.291,
-      "estimatedEdge": 0.0488,
-      "kellyBet": 1.72,
-      "kellyFull": 0.0688,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
-        "e46m3",
-        "0x4E72c22CD76f9973a48aedfd79FeEAaCC8B7FFb9-1778811541343"
-      ],
-      "countSignal": 0.0613,
-      "sizeSignal": 1.0,
-      "totalExposure": 1127.36,
-      "weightedAvgEntry": 0.2654
-    },
-    {
-      "title": "Will Dan Sullivan win the Alaska Senate race in 2026?",
-      "outcome": "Yes",
-      "slug": "will-dan-sullivan-win-the-alaska-senate-race-in-2026",
-      "url": "https://polymarket.com/event/will-dan-sullivan-win-the-alaska-senate-race-in-2026",
-      "curPrice": 0.285,
-      "estimatedEdge": 0.0475,
-      "kellyBet": 1.66,
-      "kellyFull": 0.0665,
-      "nSmartTraders": 2,
-      "totalTradersChecked": 83,
-      "smartTraderNames": [
-        "BreakTheBank",
-        "lava-lava"
-      ],
-      "countSignal": 0.0915,
-      "sizeSignal": 1.0,
-      "totalExposure": 30224.92,
-      "weightedAvgEntry": 0.2547
+      "totalExposure": 4725.8,
+      "weightedAvgEntry": 0.6984
     },
     {
       "title": "Will Ethereum dip to $1,500 by December 31, 2026?",
       "outcome": "Yes",
       "slug": "will-ethereum-dip-to-1500-by-december-31-2026-865-787",
       "url": "https://polymarket.com/event/will-ethereum-dip-to-1500-by-december-31-2026-865-787",
-      "curPrice": 0.1215,
-      "estimatedEdge": 0.0521,
-      "kellyBet": 1.48,
-      "kellyFull": 0.0593,
+      "curPrice": 0.106,
+      "estimatedEdge": 0.0623,
+      "kellyBet": 1.74,
+      "kellyFull": 0.0697,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
@@ -1173,28 +1448,48 @@
       ],
       "countSignal": 0.0699,
       "sizeSignal": 1.0,
-      "totalExposure": 5062.04,
+      "totalExposure": 4416.26,
       "weightedAvgEntry": 0.1
     },
     {
-      "title": "Spread: Hawks (-4.5)",
-      "outcome": "Pelicans",
-      "slug": "nba-atl-nop-2026-10-31-spread-away-4pt5",
-      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31-spread-away-4pt5",
-      "curPrice": 0.505,
-      "estimatedEdge": 0.0256,
-      "kellyBet": 1.29,
-      "kellyFull": 0.0518,
+      "title": "Spread: Hornets (-1.5)",
+      "outcome": "Hornets",
+      "slug": "nba-phi-cha-2026-10-31-spread-home-1pt5",
+      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-spread-home-1pt5",
+      "curPrice": 0.37,
+      "estimatedEdge": 0.0336,
+      "kellyBet": 1.34,
+      "kellyFull": 0.0534,
       "nSmartTraders": 2,
       "totalTradersChecked": 83,
       "smartTraderNames": [
-        "drainedandpoor",
-        "monkeymashingkeyboard"
+        "takeormake",
+        "keeptheblueflagflyinghigh"
       ],
-      "countSignal": 0.062,
-      "sizeSignal": 0.3372,
-      "totalExposure": 337.22,
-      "weightedAvgEntry": 0.5043
+      "countSignal": 0.0197,
+      "sizeSignal": 0.5312,
+      "totalExposure": 531.23,
+      "weightedAvgEntry": 0.5006
+    },
+    {
+      "title": "Will Republicans win Iowa and Kansas, and lose Alaska, Maine, Michigan, Ohio, and Texas?",
+      "outcome": "Yes",
+      "slug": "2026-senate-map-r-ia-ks",
+      "url": "https://polymarket.com/event/2026-senate-map-r-ia-ks",
+      "curPrice": 0.11,
+      "estimatedEdge": 0.0272,
+      "kellyBet": 0.76,
+      "kellyFull": 0.0306,
+      "nSmartTraders": 2,
+      "totalTradersChecked": 83,
+      "smartTraderNames": [
+        "flawfence",
+        "BreakTheBank"
+      ],
+      "countSignal": 0.0958,
+      "sizeSignal": 1.0,
+      "totalExposure": 47683.36,
+      "weightedAvgEntry": 0.0497
     }
   ]
 }
