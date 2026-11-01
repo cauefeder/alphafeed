@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-01T14:47:05.370930+00:00",
+  "generatedAt": "2026-11-01T23:24:07.225585+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 2,
+  "signalCount": 6,
   "signals": [
     {
       "marketSlug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
@@ -26,6 +26,50 @@
       "traderCount": 2,
       "confidence": 0.6,
       "url": "https://polymarket.com/event/will-the-republican-party-control-the-house-after-the-2026-midterm-elections"
+    },
+    {
+      "marketSlug": "nfl-kc-den-2026-11-01",
+      "question": "Chiefs vs. Broncos",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 95358.77,
+      "totalValue": 95358.77,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-kc-den-2026-11-01"
+    },
+    {
+      "marketSlug": "nfl-phi-was-2026-11-02-spread-home-6pt5",
+      "question": "Spread: Commanders (-6.5)",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 74064.49,
+      "totalValue": 74064.49,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nfl-phi-was-2026-11-02-spread-home-6pt5"
+    },
+    {
+      "marketSlug": "nba-bkn-ind-2026-11-01",
+      "question": "Nets vs. Pacers",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 35796.5,
+      "totalValue": 35796.5,
+      "traderCount": 3,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-bkn-ind-2026-11-01"
+    },
+    {
+      "marketSlug": "nba-tor-lal-2026-11-01-total-224pt5",
+      "question": "Raptors vs. Lakers: O/U 224.5",
+      "side": "NO",
+      "yesValue": 0.0,
+      "noValue": 23800.8,
+      "totalValue": 23800.8,
+      "traderCount": 2,
+      "confidence": 1.0,
+      "url": "https://polymarket.com/event/nba-tor-lal-2026-11-01-total-224pt5"
     }
   ]
 }
