@@ -1,43 +1,10 @@
 {
-  "generatedAt": "2026-10-31T23:06:51.042160+00:00",
+  "generatedAt": "2026-11-01T14:47:05.370930+00:00",
   "topN": 25,
   "minPositionValue": 200.0,
   "minTraders": 2,
-  "signalCount": 13,
+  "signalCount": 2,
   "signals": [
-    {
-      "marketSlug": "nba-phi-cha-2026-10-31",
-      "question": "76ers vs. Hornets",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 463704.99,
-      "totalValue": 463704.99,
-      "traderCount": 6,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31"
-    },
-    {
-      "marketSlug": "nba-atl-nop-2026-10-31",
-      "question": "Hawks vs. Pelicans",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 429824.28,
-      "totalValue": 429824.28,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31"
-    },
-    {
-      "marketSlug": "nba-phi-cha-2026-10-31-spread-away-1pt5",
-      "question": "Spread: 76ers (-1.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 346223.63,
-      "totalValue": 346223.63,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-phi-cha-2026-10-31-spread-away-1pt5"
-    },
     {
       "marketSlug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
       "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
@@ -50,103 +17,15 @@
       "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
     },
     {
-      "marketSlug": "nba-atl-nop-2026-10-31-spread-away-4pt5",
-      "question": "Spread: Hawks (-4.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 230006.22,
-      "totalValue": 230006.22,
-      "traderCount": 3,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31-spread-away-4pt5"
-    },
-    {
       "marketSlug": "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
       "question": "Will the Republican Party control the House after the 2026 Midterm elections?",
       "side": "YES",
-      "yesValue": 84842.43,
+      "yesValue": 85079.96,
       "noValue": 56700.0,
-      "totalValue": 141542.43,
+      "totalValue": 141779.96,
       "traderCount": 2,
-      "confidence": 0.599,
+      "confidence": 0.6,
       "url": "https://polymarket.com/event/will-the-republican-party-control-the-house-after-the-2026-midterm-elections"
-    },
-    {
-      "marketSlug": "nba-okc-hou-2026-10-31",
-      "question": "Thunder vs. Rockets",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 108324.44,
-      "totalValue": 108324.44,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-okc-hou-2026-10-31"
-    },
-    {
-      "marketSlug": "wnba-atl-gsv-2026-10-31-total-142pt5",
-      "question": "Atlanta Dream vs. Golden State Valkyries: O/U 142.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 92566.37,
-      "totalValue": 92566.37,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/wnba-atl-gsv-2026-10-31-total-142pt5"
-    },
-    {
-      "marketSlug": "nba-atl-nop-2026-10-31-total-240pt5",
-      "question": "Hawks vs. Pelicans: O/U 240.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 79102.65,
-      "totalValue": 79102.65,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-atl-nop-2026-10-31-total-240pt5"
-    },
-    {
-      "marketSlug": "nba-cle-mil-2026-10-31",
-      "question": "Cavaliers vs. Bucks",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 74105.96,
-      "totalValue": 74105.96,
-      "traderCount": 4,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31"
-    },
-    {
-      "marketSlug": "nba-cle-mil-2026-10-31-spread-away-8pt5",
-      "question": "Spread: Cavaliers (-8.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 66871.87,
-      "totalValue": 66871.87,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31-spread-away-8pt5"
-    },
-    {
-      "marketSlug": "nba-cle-mil-2026-10-31-spread-away-9pt5",
-      "question": "Spread: Cavaliers (-9.5)",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 40662.54,
-      "totalValue": 40662.54,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-cle-mil-2026-10-31-spread-away-9pt5"
-    },
-    {
-      "marketSlug": "nba-okc-hou-2026-10-31-total-220pt5",
-      "question": "Thunder vs. Rockets: O/U 220.5",
-      "side": "NO",
-      "yesValue": 0.0,
-      "noValue": 19857.09,
-      "totalValue": 19857.09,
-      "traderCount": 2,
-      "confidence": 1.0,
-      "url": "https://polymarket.com/event/nba-okc-hou-2026-10-31-total-220pt5"
     }
   ]
 }
