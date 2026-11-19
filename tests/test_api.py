@@ -225,7 +225,7 @@ def test_fetch_polymarket_enriches_and_sorts_by_edge(monkeypatch):
     assert markets[0]["uncertainty"] == 1.0  # 1 - |0.5 - 0.5|*2
 
 
-def test_fetch_polymarket_returns_empty_on_http_failure(monkeypatch):
+def test_fetch_polymarket_raises_on_http_failure(monkeypatch):
     import backend.server as srv
 
     def boom(timeout):
@@ -233,7 +233,10 @@ def test_fetch_polymarket_returns_empty_on_http_failure(monkeypatch):
 
     monkeypatch.setattr(srv.httpx, "Client", boom)
     srv._cache.clear()
-    assert srv._fetch_polymarket() == []
+    from fastapi import HTTPException
+    with pytest.raises(HTTPException) as exc:
+        srv._fetch_polymarket()
+    assert exc.value.status_code == 502
 
 
 def test_fetch_polymarket_skips_malformed_entries(monkeypatch):
@@ -285,3 +288,46 @@ def test_macro_report_round_trip(client, tmp_reports):
     assert r.status_code == 200
     assert r.json()["totalMarkets"] == 7
 
+
+
+def test_missing_report_directory_is_degraded(client, tmp_reports, monkeypatch):
+    from backend import server as srv
+    monkeypatch.setattr(srv, "REPORTS_DIR", tmp_reports / "absent")
+    result = client.get("/api/health").json()
+    assert result["status"] == "degraded"
+    assert len(result["reports"]) == 4
+    assert all(r["status"] == "missing" for r in result["reports"].values())
+
+
+def test_missing_timestamp_is_unknown(client, tmp_reports):
+    (tmp_reports / "poly2.json").write_text("{}")
+    assert client.get("/api/health").json()["reports"]["poly2"]["status"] == "unknown"
+
+
+def test_failed_market_fetch_not_cached(client, monkeypatch):
+    from backend import server as srv
+    from fastapi import HTTPException
+    srv._cache.clear()
+    def fail():
+        raise HTTPException(status_code=502)
+    monkeypatch.setattr(srv, "_fetch_polymarket", fail)
+    assert client.get("/api/polymarket").status_code == 502
+    assert "polymarket" not in srv._cache
+    monkeypatch.setattr(srv, "_fetch_polymarket", lambda: [])
+    assert client.get("/api/polymarket").json()["count"] == 0
+
+
+def test_cached_snapshot_preserves_timestamp_and_is_shared(client, monkeypatch):
+    from backend import server as srv
+    srv._cache.clear()
+    calls = []
+    def fetch():
+        calls.append(1)
+        return []
+    monkeypatch.setattr(srv, "_fetch_polymarket", fetch)
+    first = client.get("/api/polymarket").json()
+    second = client.get("/api/polymarket").json()
+    overview = client.get("/api/overview").json()
+    assert first["fetchedAt"] == second["fetchedAt"] == overview["generatedAt"]
+    assert len(calls) == 1
+    assert first["scoreType"] == "market_attention_heuristic_not_predictive_edge"

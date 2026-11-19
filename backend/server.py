@@ -149,11 +149,11 @@ def _fetch_polymarket() -> list[dict]:
             resp.raise_for_status()
             data = resp.json()
     except Exception as exc:
-        logger.warning("Polymarket fetch failed: %s", exc)
-        return []
+        logger.warning("Polymarket fetch failed: %s", type(exc).__name__)
+        raise HTTPException(status_code=502, detail="Polymarket upstream unavailable") from exc
 
     if not isinstance(data, list):
-        return []
+        raise HTTPException(status_code=502, detail="Invalid Polymarket upstream response")
 
     out: list[dict] = []
     for m in data:
@@ -187,6 +187,8 @@ def _fetch_polymarket() -> list[dict]:
         except Exception as exc:
             logger.debug("Skipping market entry: %s", exc)
 
+    if data and not out:
+        raise HTTPException(status_code=502, detail="No valid markets in upstream response")
     out.sort(key=lambda x: x["edgeScore"], reverse=True)
     logger.info("Polymarket: enriched %d markets", len(out))
     return out
@@ -216,27 +218,27 @@ _REPORT_STALE_HOURS = 26  # flag as stale if older than this (covers 24h cron + 
 def health() -> dict:
     now = datetime.now(timezone.utc)
     reports: dict[str, dict] = {}
-    if REPORTS_DIR.exists():
-        for name in ["polytraders", "poly2", "quant_report", "hedgepoly"]:
-            path = REPORTS_DIR / f"{name}.json"
-            if not path.exists():
-                reports[name] = {"status": "missing"}
+    for name in ["polytraders", "poly2", "quant_report", "hedgepoly"]:
+        path = REPORTS_DIR / f"{name}.json"
+        if not path.exists():
+            reports[name] = {"status": "missing"}
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            gen = data.get("generatedAt")
+            if not gen:
+                reports[name] = {"status": "unknown", "age_hours": None}
                 continue
-            try:
-                data = json.loads(path.read_text(encoding="utf-8"))
-                gen = data.get("generatedAt")
-                if gen:
-                    dt = datetime.fromisoformat(gen.replace("Z", "+00:00"))
-                    age_h = round((now - dt).total_seconds() / 3600, 1)
-                    reports[name] = {
-                        "status": "stale" if age_h > _REPORT_STALE_HOURS else "ok",
-                        "age_hours": age_h,
-                        "generatedAt": gen,
-                    }
-                else:
-                    reports[name] = {"status": "ok", "age_hours": None}
-            except Exception as exc:
-                reports[name] = {"status": "error", "detail": str(exc)}
+            dt = datetime.fromisoformat(gen.replace("Z", "+00:00"))
+            age_h = (now - dt).total_seconds() / 3600
+            status = "error" if age_h < -5 / 60 else ("stale" if age_h > _REPORT_STALE_HOURS else "ok")
+            reports[name] = {
+                "status": status,
+                "age_hours": round(age_h, 1),
+                "generatedAt": gen,
+            }
+        except Exception as exc:
+            reports[name] = {"status": "error", "detail": type(exc).__name__}
 
     overall = "ok" if all(r.get("status") == "ok" for r in reports.values()) else "degraded"
     return {
@@ -246,33 +248,39 @@ def health() -> dict:
     }
 
 
+def _market_snapshot() -> dict:
+    def fetch():
+        markets = _fetch_polymarket()
+        return {
+            "markets": markets,
+            "count": len(markets),
+            "fetchedAt": datetime.now(timezone.utc).isoformat(),
+            "scoreType": "market_attention_heuristic_not_predictive_edge",
+        }
+    return _cached("polymarket", CACHE_TTL["polymarket"], fetch)
+
+
 @app.get("/api/polymarket")
 @limiter.limit("30/minute")
 def polymarket(request: Request) -> dict:
-    markets = _cached("polymarket", CACHE_TTL["polymarket"], _fetch_polymarket)
-    return {
-        "markets": markets,
-        "count": len(markets),
-        "fetchedAt": datetime.now(timezone.utc).isoformat(),
-    }
+    return _market_snapshot()
 
 
 @app.get("/api/overview")
 @limiter.limit("30/minute")
 def overview(request: Request) -> dict:
-    def _build():
-        markets = _fetch_polymarket()
-        high_edge = [m for m in markets if m["edgeScore"] > _EDGE_HIGH_THRESHOLD]
-        return {
-            "polymarket": {
-                "total": len(markets),
-                "highEdge": len(high_edge),
-                "top3": markets[:3],
-            },
-            "generatedAt": datetime.now(timezone.utc).isoformat(),
-        }
-
-    return _cached("overview", CACHE_TTL["overview"], _build)
+    snapshot = _market_snapshot()
+    markets = snapshot["markets"]
+    high_edge = [m for m in markets if m["edgeScore"] > _EDGE_HIGH_THRESHOLD]
+    return {
+        "polymarket": {
+            "total": len(markets),
+            "highEdge": len(high_edge),
+            "top3": markets[:3],
+            "scoreType": snapshot["scoreType"],
+        },
+        "generatedAt": snapshot["fetchedAt"],
+    }
 
 
 @app.get("/api/kelly-signals")
